@@ -22,7 +22,7 @@ title: Anker PowerExpand Elite 13-in-1 Thunderbolt 3 Dock
 
 Ankerが最近(といっても国内の販売開始は12月中旬頃だったはずなので、かれこれ一ヶ月は経過している)発売した、PowerExpand Elite 13-in-one Thunderbolt 3 Dockを購入したので、unboxing & review noteを書いておきます。
 
-{{< figure src="images/product.jpg" >}}
+![](images/product.jpg)
 
 実はこの商品自体は海外では大分前に発売されており、個人的には国内の発売を今か今かと待ち望んでいた形でした。発売即購入・・・といきたかったのですが、そこはAnker。良さそうな新商品はすぐに完売と相成ってしまったのでありました。
 
@@ -37,7 +37,7 @@ Ankerが最近(といっても国内の販売開始は12月中旬頃だったは
 * 比較的安い
     * 大体このスペック(Thunderbolt 3 dock)だと約3万というのは最も安い方の値段で、高い物だと4万〜5万程度します。同時に発売されたThunderbolt 3ではないほうのドックは2万円程度ですが、Type-Cポートが少ないのです。
 
-{{< figure src="images/cabling.png" >}}
+![](images/cabling.png)
 
 現在の配線はこんな感じです。最初、PowerExpand - ディスプレイ間もtype-C to type-Cケーブルでつないでみたのですが、何か遅延があるのか、カクついているのか、マウスカーソルの動きに違和感がすごかったので、試しにHDMIでつないでみたところ、違和感がなくなったためHDMIでの接続としました。ウェブカメラはディスプレイのtype-Aポートにつないでおり、これをPowerExpandまで引き延ばすと取り回しが良くなさそうだったので、ディスプレイとPowerExpandの間にもう一本type-A to type-Cのケーブルを配線し、ウェブカメラは引き続きディスプレイのダウンストリームポートに接続するという形にしました。
 
@@ -45,27 +45,27 @@ Ankerが最近(といっても国内の販売開始は12月中旬頃だったは
 
 以下unboxing。
 
-{{< figure src="images/PXL_20210122_023730942-1.jpg" >}}
+![](images/PXL_20210122_023730942-1.jpg)
 
-{{< figure src="images/PXL_20210122_023738621.jpg" >}}
+![](images/PXL_20210122_023738621.jpg)
 
-{{< figure src="images/PXL_20210122_023801087.jpg" >}}
+![](images/PXL_20210122_023801087.jpg)
 
-{{< figure src="images/PXL_20210122_023824554.jpg" >}}
+![](images/PXL_20210122_023824554.jpg)
 
-{{< figure src="images/PXL_20210122_023912747.jpg" >}}
+![](images/PXL_20210122_023912747.jpg)
 
-{{< figure src="images/PXL_20210122_023925651.jpg" >}}
+![](images/PXL_20210122_023925651.jpg)
 
 
 
-{{< figure src="images/PXL_20210122_023951313.jpg" >}}
+![](images/PXL_20210122_023951313.jpg)
 
-{{< figure src="images/PXL_20210122_024057681.NIGHT.jpg" >}}
+![](images/PXL_20210122_024057681.NIGHT.jpg)
 
-{{< figure src="images/PXL_20210122_024110717.jpg" >}}
+![](images/PXL_20210122_024110717.jpg)
 
-{{< figure src="images/PXL_20210122_064950710.jpg" >}}
+![](images/PXL_20210122_064950710.jpg)
 
 
 

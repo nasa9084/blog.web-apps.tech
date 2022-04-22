@@ -16,4 +16,4 @@ Androidユーザであったために買えなかったAppleデバイス、そ�
 
 そんな私もiPhoneを買ったことによりApple Watchが買える！という事でApple Watch series 7を購入しました。
 
-{{< figure src="images/IMG_1391.jpg" >}}
+![](images/IMG_1391.jpg)

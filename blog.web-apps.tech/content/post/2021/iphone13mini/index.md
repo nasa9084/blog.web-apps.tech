@@ -24,19 +24,19 @@ iPad miniも買いましたが、買うかどうか一晩悩んだ結果発売�
 
 以下開封写真です:
 
-{{< figure src="images/F88B6496-A4C3-4482-98B5-2559179A38E0.JPEG" >}}
+![](images/F88B6496-A4C3-4482-98B5-2559179A38E0.JPEG)
 
-{{< figure src="images/EECF6EBA-21BE-4AF4-83BC-92C7B2989211.JPEG" >}}
+![](images/EECF6EBA-21BE-4AF4-83BC-92C7B2989211.JPEG)
 
-{{< figure src="images/988D0431-8F4B-41DB-A851-40F1AFC8658C.JPEG" >}}
+![](images/988D0431-8F4B-41DB-A851-40F1AFC8658C.JPEG)
 
-{{< figure src="images/0F84E98A-A244-4AC4-BA92-DA610BD88C14.JPEG" >}}
+![](images/0F84E98A-A244-4AC4-BA92-DA610BD88C14.JPEG)
 
-{{< figure src="images/EEC0617E-38A1-4FE0-810E-E52687BE1078.JPEG" >}}
+![](images/EEC0617E-38A1-4FE0-810E-E52687BE1078.JPEG)
 
-{{< figure src="images/BFEFDA5A-AB64-4EF8-8EE4-E1B39C41B385.JPEG" >}}
+![](images/BFEFDA5A-AB64-4EF8-8EE4-E1B39C41B385.JPEG)
 
-{{< figure src="images/IMG_0027.jpg" >}}
+![](images/IMG_0027.jpg)
 
 
 

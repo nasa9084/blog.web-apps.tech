@@ -20,7 +20,7 @@ COVID-19が猛威を振るい、自宅で勤務するようになり早一年、
 
 ## Overview
 
-{{< figure src="images/PXL_20210411_135744662.jpg" >}}
+![](images/PXL_20210411_135744662.jpg)
 
 全体像としてはこんな感じ。デスクは[ニトリの組み合わせフリーデスク プレフェ](https://www.nitori-net.jp/ec/feature/combineablefreedeskprefee/)を使用しています。天板の幅は140cmです。最近腰痛がアレでアレなので、昇降デスクにしたい気持ちがあります。写真には写っていませんが、イスは[アーロンチェア](https://www.hermanmiller.com/ja_jp/products/seating/office-chairs/aeron-chairs/product-details/)を使用していて、足下には[エルゴノミクスフットレスト](https://amzn.to/3t8DcRb)を置いています。
 
@@ -28,11 +28,11 @@ COVID-19が猛威を振るい、自宅で勤務するようになり早一年、
 
 ## モニタの上
 
-{{< figure src="images/PXL_20210411_135852385.jpg" >}}
+![](images/PXL_20210411_135852385.jpg)
 
 マイクは[AKG LYRA](https://amzn.to/3wNL7VZ)です。USB type-Cで接続するタイプのコンデンサマイクで、[AnkerのType-C to Type-Aケーブル](https://amzn.to/3dRjiUl)を使用して接続しています。[Rode PSA1](https://amzn.to/3uEoLEE)というマイクアームを使用して、マイクがモニタの上に来るように設置しています。マイクアームには[SwitchBot 温湿度計](https://amzn.to/326Qh1w)をくっつけています。
 
-{{< figure src="images/PXL_20210411_142249465.jpg" >}}
+![](images/PXL_20210411_142249465.jpg)
 
 ウェブカメラは大昔に安く購入した[バッファロー BSW20KM15](https://www.buffalo.jp/product/detail/bsw20km15bk.html)というものを使っていて、最近の良い感じのウェブカメラに買い換えたいな、と思っています。[ロジクールのStreamCam](https://amzn.to/2QjIPNW)とか良さそう。まぁ特に不満は感じていないですが。
 
@@ -40,7 +40,7 @@ COVID-19が猛威を振るい、自宅で勤務するようになり早一年、
 
 ## 手元
 
-{{< figure src="images/PXL_20210411_135837318.jpg" >}}
+![](images/PXL_20210411_135837318.jpg)
 
 手元はこんな感じ。トラックパッドが結構好きなので、[Magic Trackpad 2](https://www.apple.com/jp/shop/product/MJ2R2J/A/magic-trackpad-2-%E3%82%B7%E3%83%AB%E3%83%90%E3%83%BC)を使用しています。[Magic Trackpad 2用のリストレスト](https://amzn.to/3wLS4qC)を使用しています。
 
@@ -62,7 +62,7 @@ PCは[Twelve South BookArc for MacBook](https://amzn.to/3uDgUav)に立ててい�
 
 ## 机の下
 
-{{< figure src="images/PXL_20210411_140041506.jpg" >}}
+![](images/PXL_20210411_140041506.jpg)
 
 デスク下にはニトリのくっつけられるマグネットヒーターをマグネットではなくマジックテープでくっつけていますが、正直数えるほどしか使用していないので処分してしまうかもしれません。
 

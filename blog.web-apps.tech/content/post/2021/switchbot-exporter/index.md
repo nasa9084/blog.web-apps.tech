@@ -107,7 +107,7 @@ switchbot_meter_temperature + ignoring (device_name) group_left(device_name) swi
 
 後はGrafanaなどを使用すると良い感じにグラフを書くことができます。
 
-{{< figure src="images/----------2021-03-23-14.22.05.png" >}}
+![](images/----------2021-03-23-14.22.05.png)
 
 できるだけAPI rate limitに影響を与えないよう、`device_list`はキャッシュして、起動時以降は`device_list`の取得をしないようにしてありますので、デバイスの増減があった場合はSIGHUPを送るか、`/-/reload`にアクセスして`device_list`を更新して下さい。
 
