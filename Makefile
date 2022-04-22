@@ -1,3 +1,6 @@
+DOMAIN = blog.web-apps.tech
+THIS_YEAR ?= $(shell date +%Y)
+
 .PHONY: help
 help: ## Show this help.
 	@awk 'BEGIN {FS = ":.*?## "} /^[a-zA-Z_-]+:.*?## / {sub("\\\\n",sprintf("\n%22c"," "), $$2);printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
@@ -20,4 +23,7 @@ update-theme: ## Update PaperMod theme
 
 .PHONY: serve
 serve: ## serve locally for development.
-	@cd blog.web-apps.tech; hugo server --baseURL "http://localhost" --environment development
+	@cd $(DOMAIN); hugo server --baseURL "http://localhost" --environment development
+
+new/%:
+	@cd $(DOMAIN); hugo new --kind post --editor=emacs post/$(THIS_YEAR)/$(notdir $@)
