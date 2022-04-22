@@ -14,6 +14,10 @@ module-init: ## Initialize required submodules.
 	@echo "Initializing submodules..." 1>&2
 	@git submodule update --init --recursive --depth 1
 
+update-theme: ## Update PaperMod theme
+	@git submodule update --remote --merge
+
+
 .PHONY: serve
 serve: ## serve locally for development.
 	@cd blog.web-apps.tech; hugo server --baseURL "http://localhost" --environment development
