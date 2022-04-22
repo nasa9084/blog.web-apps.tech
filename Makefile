@@ -23,7 +23,7 @@ update-theme: ## Update PaperMod theme
 
 .PHONY: serve
 serve: ## serve locally for development.
-	@cd $(DOMAIN); hugo server --baseURL "http://localhost" --environment development
+	@cd $(DOMAIN); hugo server --baseURL "http://localhost" --environment development --buildDrafts
 
 new/%:
 	@cd $(DOMAIN); hugo new --kind post --editor=emacs post/$(THIS_YEAR)/$(notdir $@)
