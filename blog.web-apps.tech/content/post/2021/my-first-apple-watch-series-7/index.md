@@ -5,7 +5,7 @@ description: ""
 draft: false
 cover:
   image: images/IMG_1388.jpg
-slug: ren-sheng-chu-apple-watch-series-7
+slug: my-first-apple-watch-series-7
 title: 人生初Apple Watch (series 7)
 ---
 
@@ -17,6 +17,3 @@ Androidユーザであったために買えなかったAppleデバイス、そ�
 そんな私もiPhoneを買ったことによりApple Watchが買える！という事でApple Watch series 7を購入しました。
 
 {{< figure src="images/IMG_1391.jpg" >}}
-
-
-
