@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>USB type-C on something tech.</title><link>https://blog.web-apps.tech/categories/USB-type-C/</link><description>Recent content in USB type-C on something tech.</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><copyright>&amp;copy; @nasa9084</copyright><lastBuildDate>Sun, 16 May 2021 15:08:14 +0000</lastBuildDate><atom:link href="https://blog.web-apps.tech/categories/USB-type-C/index.xml" rel="self" type="application/rss+xml"/><item><title>最近のWebカメラってすごい、の件</title><link>https://blog.web-apps.tech/anker-powerconf-c300/</link><pubDate>Sun, 16 May 2021 15:08:14 +0000</pubDate><guid>https://blog.web-apps.tech/anker-powerconf-c300/</guid><description>どうもAnker大好き人間です。ケーブル類は大体Ankerだし、Thunderbolt 3 Dock もAnkerだし、充電器もヘッドホン もAnkerです。
+そんなAnkerから、新しくWebカメラが発売されたということで、購入したらすごかったのです。
+購入したのはAnker PowerConf C300 。Amazonで7,990円で購入できます。LogicoolのStreamCam を買いたいな、と思っていたところのAnkerからの新商品、値段も半額以下、という事で即購入に至りました。
+箱は最近よくあるぴったりでしっかりしたタイプの箱です。ぴったりすぎて開けるのにちょっと時間がかかる奴ですね。高級感はあります。写真ではざらざらしたかんじのテクスチャっぽく見えますが、これは印刷で、手触りはすべすべです。
+これまでのAnker製品によく入っていたHappy/Not Happyカードではあんく、&amp;ldquo;WHAT DO YOU THINK OUR WORK?&amp;ldquo;というカードが入っていました。PowerConfシリーズではこの紙なんでしょうかね。 ケーブルはType-C to Type-Cケーブルが付属しています。この手のWebカメラは本体からケーブルが伸びている事が多いので、ケーブル交換ができるのはとても嬉しい点ですね。
+外部ディスプレイを使っていると、Webカメラは大体ディスプレイのUSBポートを使うと思うんですが、Type-CからUSB-Aに変換するためのコネクタも入っているので安心(?)です(Type-Cの仕様的には全然安心じゃないんですが)
+プライバシー保護用の蓋みたいなものもついているのはなんだか時代を感じさせますね。
+これまで使っていたWebカメラと並べた様子はこんな感じ。サイズは結構大きくなりましたね。
+古い方のカメラで、ライトをつけないとこんな感じでした。一般的なご家庭は大体そうだと思うんですが、壁に机をくっつける配置にしていると夕方以降逆光になる、という問題があり、顔がとても暗くなります。
+結果として、ライト を購入して明るさを確保したりなんかしている人も多いと思います。私もその一人でした。ライトをつければまぁもちろん明るくはなります。
+新しいカメラではこの通り。ライトなしでも頭が適当にボサボサなのがバレて恥ずかしいくらいには明るく映ります。これは本当に感動。
+比較用にライトをつけてみました。むしろちょっと明るすぎる位ですね。これはライトはもうお役御免かもしれません。
+加えて、専用のアプリで細かい設定をする事ができます。解像度の調整、fps、画角、明るさやコントラストなどが設定できるほか、人の顔を追跡するような設定もできます。 このアプリの良いところは、他のメーカーで良くあるような、常駐させておかなければ設定が反映されないような類いのモノではなく、設定したらアプリを閉じても設定が反映され続ける、というところですね。
+総じて、非常に満足度が高く、コストパフォーマンスに優れた商品だと思いました。流石Anker。</description></item><item><title>Anker PowerExpand Elite 13-in-1 Thunderbolt 3 Dock</title><link>https://blog.web-apps.tech/anker-powerexpand-elite-13-in-1/</link><pubDate>Fri, 22 Jan 2021 07:47:47 +0000</pubDate><guid>https://blog.web-apps.tech/anker-powerexpand-elite-13-in-1/</guid><description>Ankerが最近(といっても国内の販売開始は12月中旬頃だったはずなので、かれこれ一ヶ月は経過している)発売した、PowerExpand Elite 13-in-one Thunderbolt 3 Dockを購入したので、unboxing &amp;amp; review noteを書いておきます。
+実はこの商品自体は海外では大分前に発売されており、個人的には国内の発売を今か今かと待ち望んでいた形でした。発売即購入・・・といきたかったのですが、そこはAnker。良さそうな新商品はすぐに完売と相成ってしまったのでありました。
+個人的にこの商品を選んだのは、以下のような理由があります:
+USB Type-Cポートが複数ある USB Type-Cポートが4つあり、うち二つはThunderbolt 3ポートです。一つはPCとつなぐことになるため、都合2つUSB Type-Cのポートが増える計算になります。弊宅ではケーブルをできるだけUSB Type-C to USB Type-Cに統一しようとしているため、USB Type-Cポートを増やすことができるというのが最優先事項でした。 余計なポートが少ない USB Type-Cポートを増やすというのが主目的なため、多くのドックにありがちな「いろんなポートがついてるよ！」は無駄でしかないという気持ちでした。光デジタルオーディオやSDカード、USB Type-AやEthernetも正直不要です。が、世の中の人はたくさんポートがついているものをほしがっているのか、Type-Cのポートを増やすだけ、という物はほぼ存在しておらず・・・ 比較的小さい 世の中のドックは大きいんです。USB Type-Cポートを増やしたいだけなのに(以下略 比較的安い 大体このスペック(Thunderbolt 3 dock)だと約3万というのは最も安い方の値段で、高い物だと4万〜5万程度します。同時に発売されたThunderbolt 3ではないほうのドックは2万円程度ですが、Type-Cポートが少ないのです。 現在の配線はこんな感じです。最初、PowerExpand - ディスプレイ間もtype-C to type-Cケーブルでつないでみたのですが、何か遅延があるのか、カクついているのか、マウスカーソルの動きに違和感がすごかったので、試しにHDMIでつないでみたところ、違和感がなくなったためHDMIでの接続としました。ウェブカメラはディスプレイのtype-Aポートにつないでおり、これをPowerExpandまで引き延ばすと取り回しが良くなさそうだったので、ディスプレイとPowerExpandの間にもう一本type-A to type-Cのケーブルを配線し、ウェブカメラは引き続きディスプレイのダウンストリームポートに接続するという形にしました。
+現状マイク(AKG Lyra)とキーボード(Ergodash)がPCに直接接続されているので、これをPowerExpandに接続する形にまとめられれば、PCのポートは一つで済むという事になり、取り回しが非常に楽になりそうです。マイクはtype-C接続なのでそのまま特に問題なく接続できそうですが、キーボードはmicro-Bなので、今更micro-Bのケーブルを増やしたくもないですし、どうするかはちょっと検討することになりそうです。
+以下unboxing。</description></item></channel></rss>

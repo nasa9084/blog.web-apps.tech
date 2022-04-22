@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>okinawa on something tech.</title><link>https://blog.web-apps.tech/categories/okinawa/</link><description>Recent content in okinawa on something tech.</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><copyright>&amp;copy; @nasa9084</copyright><lastBuildDate>Sun, 04 Mar 2018 13:44:24 +0000</lastBuildDate><atom:link href="https://blog.web-apps.tech/categories/okinawa/index.xml" rel="self" type="application/rss+xml"/><item><title>YAPC::Okinawa 2018 ONNASONに行ってきました</title><link>https://blog.web-apps.tech/yapc_okinawa_2018/</link><pubDate>Sun, 04 Mar 2018 13:44:24 +0000</pubDate><guid>https://blog.web-apps.tech/yapc_okinawa_2018/</guid><description>YAPC::Fukuoka 2017 HAKATA (行ってきたときの記事はこちら )に引き続き、YAPC::Okinawa 2018 ONNASON に行ってきました。 YAPCはPerlのイベントで、&amp;ldquo;Yet Another Perl Conference&amp;quot;の略です。twitterハッシュタグは前回に引き続き#yapcjapan でした(#yapcokinawa もよく使われていたようです)。
+沖縄は昨年6月にOSC 2017 Okinawa で行って以来二度目です。 YAPC当日はすごい雨で、YAPC::Hokkaidoで大雪だったことを思い出し、「端っこでYAPCをやると何かが起きるのでは」などと言われる具合でした。
+今回は直前までホテルが取れなかったものの、過去のYAPCでホテルを取らずに行って適当になんとかなったので、なんとかなるだろうと思っていましたが、直前に東横インを確保できたので、宿無し旅行ではありませんでした。
+YAPC::Okinawa 2018 ONNASON 今回は会場がOIST だったため(OISTは那覇市内から車で約一時間)、多くの人がスタッフが手配した往復バスでの参加となりました。 そのため、寝坊する人は少なく(いなくはなかったようです)、私もオープニングから参加できました。
+オープニングはCodeHex 氏。
+オープニングを行ったA会場は非常に広く、なんと全席にコンセントがついているという素晴らしいホールでした。
+ノベルティはこんな感じ。特筆すべきはDeNAさんのQi充電器でしょうか。しかし私はQi対応端末を持っていないので使えないのが残念・・・・ 毎度恒例、ネコトーストラボさんのサイリュームもあります。
+YAPC::Hokkaidoから行われてきたチェックインスタンプラリーもココで一区切り。 コンプリート特典として、JPAのラクダさんのシャチハタスタンプをいただきました。
+トークでは、「レイヤー0(電波)からレイヤー8(交渉事)までできる人を募集しています」や、「無曖昧でない」など、会場がどっと沸く名言(迷言？)がいくつか飛び出ました。
+個人的には、@moznionさん のInlineモジュールの話や、新屋さん の正規表現の話が非常に面白かったと思います。 特に、正規表現の話ではバックトラックと曖昧な正規表現の相性が悪い、といった技術的な話にとどまらず、文脈自由文法など、計算理論にまで踏み込んだトークとなっており、OISTという会場でのトークに相応しい素晴らしい内容だったと思います。
+次回のお話 次回YAPCは東京 だそうです！現在はまだテザーサイトがある程度で、日程、会場は調整中とのことでした。</description></item></channel></rss>

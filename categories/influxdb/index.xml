@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>influxdb on something tech.</title><link>https://blog.web-apps.tech/categories/influxdb/</link><description>Recent content in influxdb on something tech.</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><copyright>&amp;copy; @nasa9084</copyright><lastBuildDate>Sat, 18 Feb 2017 09:45:00 +0000</lastBuildDate><atom:link href="https://blog.web-apps.tech/categories/influxdb/index.xml" rel="self" type="application/rss+xml"/><item><title>InfluxDBを触ってみた</title><link>https://blog.web-apps.tech/play_influxdb/</link><pubDate>Sat, 18 Feb 2017 09:45:00 +0000</pubDate><guid>https://blog.web-apps.tech/play_influxdb/</guid><description>NoSQLを使うことも一般的になってきた昨今ですが、NoSQLの一種に、時系列データベース (Time Series Database; TSDB)と呼ばれるものが有ります。 TSDBはその名のとおり、時系列データを取り扱うことに特化したDBです。 サーバ監視したログデータや、センサデータなんかを取り扱うことが得意なDBということですね。
+そのうち、DB-ENGINES のDB-Engines Ranking of Time Series DBMS で一位を取っているInfluxDBを触ってみました。
+InfluxDBの公式ドキュメントはInfluxData | Documentation | InfluxDB Version 1.2 Documentation にあります。
+参考にした資料・実行環境 今回はQiita/DockerのInfluxDBとGrafanaでdweet.ioのデータを可視化する の前半を参考に、Docker上でInfluxDBを実行してみました。 なお、上記の記事中では、~tutum/influxdb~というイメージを使用していますが、現在はInfluxDBオフィシャルのイメージが提供されていますので、そちらを利用します。 最新の安定版を利用しますので、InfluxDBのバージョンは1.2.0です。
+InfluxDBコンテナを起動する 早速InfluxDBコンテナを起動してみます。
+$ docker pull influxdb $ docker run --name influxdb_test -p 8083:8083 -p 8086:8086 influxdb これだけです。簡単ですね。Exposeしているポートの中身は以下のようになっています。
+8083: Admin Web インターフェース 8086: HTTP API Admin UIにアクセスする Admin UIにアクセスしてみます。 InfluxDBにはWebアクセスできるUIがついています。
+まずはコンテナのIPを調べてみましょう。
+$ docker inspect influxdb_test HostConfig &amp;gt; NetworkSettings &amp;gt; Networks &amp;gt; bridge &amp;gt; IPAddress にコンテナのIPが記載されています。 今回は172.</description></item></channel></rss>

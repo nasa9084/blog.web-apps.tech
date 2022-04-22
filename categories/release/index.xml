@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>release on something tech.</title><link>https://blog.web-apps.tech/categories/release/</link><description>Recent content in release on something tech.</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><copyright>&amp;copy; @nasa9084</copyright><lastBuildDate>Mon, 28 Aug 2017 01:41:47 +0000</lastBuildDate><atom:link href="https://blog.web-apps.tech/categories/release/index.xml" rel="self" type="application/rss+xml"/><item><title>Go 1.9 is released</title><link>https://blog.web-apps.tech/go-1-9-is-released/</link><pubDate>Mon, 28 Aug 2017 01:41:47 +0000</pubDate><guid>https://blog.web-apps.tech/go-1-9-is-released/</guid><description>先日2017年8月24日にGo 1.9がリリースされました。 ダウンロードページ からダウンロード可能です。
+最大の変更点はGo1.9rc1 is released! でもお伝えしたように、&amp;lt;strong&amp;gt;Type Alias&amp;lt;/strong&amp;gt; でしょう。 型名に対して別名をつけることができる機能です。
+また、そのほかにも多くの変更が加えられています。 リリースノートはこちら です。
+以下では、いくつか変更点を見ていきます。
+Ports Go 1.9から新しく2つのOSと1つのプロセッサアーキテクチャがサポートされています。
+POWER8 IBMのPOWER8プロセッサがサポートされています。 GOARCH=ppc64またはGOARCH=ppc64leで使用することができます。
+FreeBSD FreeBSD 9.3で動作します。。。が、すでにFreeBSDはサポート切れです。(なんでや・・・・) Go 1.10からはFreeBSD 10.3+で動作する様になる予定です。
+OpenBSD 6.0 OpenBSD 6.0がサポートされました。 かわりに、Go 1.9ではOpenBSD5.9をサポートしていません。
+Parallel Compilation パッケージの関数を並列コンパイルできるようになりました。 並列コンパイルはデフォルトでONになっており、無効化するには環境変数でGO19CONCURRENTCOMPILATIONを0に設定します。
+Vendor matching with ./&amp;hellip; これまで、./...というディレクトリ表現はvendorディレクトリも含んでいました。しかし、go testの場合などvendorディレクトリは含まれない方がうれしい場合も多く、実際glide nvなどでvendorディレクトリを含まないディレクトリマッチングが実装されていました。 go1.9からは./...にはvendorディレクトリが含まれないようになり、vendorディレクトリにマッチさせたい場合は./vendor/...と書く必要があります。
+Moved GOROOT Go 1.9から、GOROOTが移動となりました。 起動されたパスから自動でGOROOTを探索します。 これにより、Goのインストールパスが違う場所に移動しても、Goのツール類は継続して使える用になりました。
+Compiler Toolchain 複素数の割り算がC99準拠となりました。 Doc 長い引数リストは省略されます。 これはgo docで生成されるコードの可読性向上のためです。 また、構造体フィールドのドキュメンテーションがサポートされました。go doc http.Client.Jarなどでどうなったのか確認することができます。
+env go env -jsonフラグによりJSON出力することができるようになりました。
+Test go testコマンドに-listフラグが追加されました。 これに正規表現で引数を与えることで、テスト名・ベンチマーク名・Exampleテスト名を調べることができます。</description></item><item><title>Go1.9rc1 is released!</title><link>https://blog.web-apps.tech/go1-9rc1_is_released/</link><pubDate>Wed, 26 Jul 2017 01:24:00 +0000</pubDate><guid>https://blog.web-apps.tech/go1-9rc1_is_released/</guid><description>Go1.9rc1がリリースされました！ そこで、Go1.9のリリースノートをさらっと見てみようと思います。 (まだrc1なので、今後変更される場合があります。ご注意を)
+全部見ていくと、結構な量になりそうなので、すぐに影響のありそうな部分だけ、軽く見ていきましょう。
+type alias Go1.9ではType Aliasというものが導入されます。 これはその名の通り、型に別名をつけられるというもの。 言葉で説明するより、コードを見た方が早いと思いますので、コードを用意しました。
+package main import ( &amp;#34;fmt&amp;#34; &amp;#34;log&amp;#34; ) type T1 struct { ID string Name string } type T2 = T1 func main() { t := T1{ ID: &amp;#34;id&amp;#34;, Name: &amp;#34;Taro&amp;#34;, } log.Println(&amp;#34;call t1.Call()&amp;#34;) fmt.Println(t.Call()) log.Println(&amp;#34;call t2.Call2()&amp;#34;) fmt.Println(t.Call2()) return 0 } func (t *T1) Call() string { return &amp;#34;hello, &amp;#34; + t.</description></item></channel></rss>

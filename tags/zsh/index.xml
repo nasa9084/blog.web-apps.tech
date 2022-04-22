@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>zsh on something tech.</title><link>https://blog.web-apps.tech/tags/zsh/</link><description>Recent content in zsh on something tech.</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><copyright>&amp;copy; @nasa9084</copyright><lastBuildDate>Wed, 20 May 2020 02:54:27 +0000</lastBuildDate><atom:link href="https://blog.web-apps.tech/tags/zsh/index.xml" rel="self" type="application/rss+xml"/><item><title>rustで書かれたlsの代替コマンドexaをインストールしてみた</title><link>https://blog.web-apps.tech/replacing-ls-with-exa/</link><pubDate>Wed, 20 May 2020 02:54:27 +0000</pubDate><guid>https://blog.web-apps.tech/replacing-ls-with-exa/</guid><description>twitterでおのかちお氏(鍵垢なのでここでは紹介できないが)が&amp;lt;code&amp;gt;exa&amp;lt;/code&amp;gt; というlsの代替コマンドを試してみている、ということでスクショをアップしており、これがなかなか良さそうであったので、探してインストールしてみました。
+website の説明によると、
+A modern replacement for ls.
+トのことで、色をつけれたり、早かったり、tree viewができたり、Gitのステータスを表示できたりするらしい。
+macの場合、homebrew でインストールできるようなので早速インストールしてみます。
+$ brew install exa very easyですね。使ってみましょう。
+なるほど、デフォルトの表示はlsと同じくgrid viewなんですね。ホームにディレクトリしかないのでわかりにくいですけど、字が太いですね。あとklaussinani/hyper-pokemon を使っている都合で、色は表示されません・・・
+アイコン付きで表示してみましょう。アイコンを表示したい場合は--iconsオプションをつければ良い、とのこと。
+おや、表示されないですね。これは困った。まぁこの手の問題は(見た目から言っても)フォントがインストールされてないために発生しているのだろう、とあたりをつけつつ、issueを検索します。
+するとどうやら nerd fonts というフォントがアイコン表示用に使用されているようです。これをインストールしてみます。
+$ brew tap homebrew/cask-fonts ==&amp;gt; Tapping homebrew/cask-fonts Cloning into &amp;#39;/usr/local/Homebrew/Library/Taps/homebrew/homebrew-cask-fonts&amp;#39;... remote: Enumerating objects: 19, done. remote: Counting objects: 100% (19/19), done. remote: Compressing objects: 100% (14/14), done. remote: Total 35658 (delta 8), reused 9 (delta 5), pack-reused 35639 Receiving objects: 100% (35658/35658), 6.</description></item><item><title>cut vs. parameter expansion</title><link>https://blog.web-apps.tech/cut-vs-parameter-expansion/</link><pubDate>Mon, 26 Feb 2018 08:07:11 +0000</pubDate><guid>https://blog.web-apps.tech/cut-vs-parameter-expansion/</guid><description>TL;DR:: bash/zsh parameter expansion is faster than cut.
+which is faster? Consider you want to take out hostname from URL or IP with port like some.mysql.server:3306 or 192.168.1.10:3306 using bash/zsh. There are some way to do this.
+The first way is using cut command:
+$ TARGET=&amp;#34;192.168.1.10:3306&amp;#34; $ echo ${TARGET} | cut -d &amp;#34;:&amp;#34; -f 1 Now printed 192.168.1.10 on your screen.
+The second way is using &amp;ldquo;shell parameter expansion&amp;rdquo;, which is functions of bash/zsh built-in.</description></item></channel></rss>

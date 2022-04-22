@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>macos on something tech.</title><link>https://blog.web-apps.tech/categories/macos/</link><description>Recent content in macos on something tech.</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><copyright>&amp;copy; @nasa9084</copyright><lastBuildDate>Tue, 02 Feb 2021 06:49:47 +0000</lastBuildDate><atom:link href="https://blog.web-apps.tech/categories/macos/index.xml" rel="self" type="application/rss+xml"/><item><title>Firefox 83で導入されたピンチズームを無効にする</title><link>https://blog.web-apps.tech/disable-firefox-83-pinch-zoom/</link><pubDate>Tue, 02 Feb 2021 06:49:47 +0000</pubDate><guid>https://blog.web-apps.tech/disable-firefox-83-pinch-zoom/</guid><description>11月7日にリリースされたFirefox 83 では、タッチスクリーン/タッチパッドを搭載したデバイスでのピンチズームがサポートされました。
+が、私としてはスクロールしたいだけなのにズームされてしまったりと誤動作が多く、使いづらいなーと感じましたので、無効化しましたが、設定画面からは無効化できなかったのでメモを残しておきます。
+about:config を開く zoomで検索しapz.allow_zoomingをfalseに設定する 以上です。</description></item><item><title>Kubernetes-powered Docker for mac is released!</title><link>https://blog.web-apps.tech/kubernetes-powerd_docker_for_mac/</link><pubDate>Thu, 14 Dec 2017 05:03:01 +0000</pubDate><guid>https://blog.web-apps.tech/kubernetes-powerd_docker_for_mac/</guid><description>DockerCon EU 2017で、DockerがKubernetesを統合・サポートすると発表されました が、本日ついにKubernetesサポート版Docker for macが(Edgeリリースですが)リリースされました！
+これにより、macを使用している場合は(おそらく過去最も簡単に)開発用Kubernetesクラスタを起動することができるようになりました！
+この記事では、Docker for macでKubernetesを立ちあげる手順をまとめておきます。
+Kubernetesの起動手順 Docker for macのStable版を利用している場合、Edge版をインストールする必要があります。 Install Docker for mac のページから、Edge Channelのインストーラをダウンロードし、インストールします。 Dockerを終了させておけば、Stable版を自分でアンインストールする必要はありません1。 Edge版をインストールし、Dockerの設定画面を開くと、以下の様にKubernetesタブが追加されています！！
+Kubernetesタブで、Kubernetesの有効化・無効化を簡単に切り替えることができます。
+Enable Kubernetesにチェックを入れ(Show system containersはお好みで)、Apply &amp;amp; Restartボタンを押すと、「Kubernetesの初回インストールは少し時間かかるけど、インストールする？」という確認画面が出るので、Installを押します。
+一応プログレスバーが出るのですが、余り意味はありませんでした・・・ 数分でインストールが終わります。
+無事インストールが終了したら、Closeを押したあと、設定画面を閉じます。
+この時点で、DockerメニューにもKubernetesのステータスが表示されています。
+今回私はShow system containersをオンにしたので、docker ps2するとKubernetesの動作に必要なコンテナが起動しています。 DNS、API Server、Etcd、Scheduler、Proxyと最小限の構成ですね。
+kubectlが自動でインストールされるのかどうかは・・・・わかりませんでした。(すでにインストール済みだったため) kubectlがインストール済みの場合、自動でコンフィグが追加され、以下のコマンドでcontextを選択することで操作できるようになります。
+$ kubectl config use-context docker-for-desktop kubectl get nodesすると、確かに1ノード構成でクラスタが立ち上がっているのがわかります。
+Edge版の初回起動時にアンインストールされます&amp;#160;&amp;#x21a9;&amp;#xfe0e;
+docker container lsと打つのは面倒ですね&amp;#160;&amp;#x21a9;&amp;#xfe0e;</description></item><item><title>emacs-macでtwittering-modeを使った際に毎回PINを聞かれる問題の解消</title><link>https://blog.web-apps.tech/emacs-mac-twittering-mode-every-asked-pin/</link><pubDate>Tue, 09 May 2017 00:49:00 +0000</pubDate><guid>https://blog.web-apps.tech/emacs-mac-twittering-mode-every-asked-pin/</guid><description>twitterのクライアントとして、日頃からemacs上で動くクライアントの&amp;quot;twittering-mode&amp;quot;を使用しています。 ところが最近、新しいmacにインストールしたemacs-macでtwittering-modeを起動すると、毎回twitterのPINを聞かれるようになってしまいました。 毎回、毎回、起動時の暗号化フェーズで
+Encrypt failed Exit と言われ・・・・ 以前使っていたmacではこのようなことが無かったため、困っていたのですが、以下の手順により解決できました。
+背景 結論から言うと、これはGnuPGのバージョンが新しくなったことによる問題でした。 GnuPG2.1.0から、gpg-agentとpinentryと呼ばれる二つのソフトウェアの利用が必須となりました。 twittering-mode事態はgpg-agentやpinentryが必須でも基本的に問題なく動作するようにはなっているハズ・・・でした。 しかし、これらのソフトウェアの必須化に伴って、これまで標準入力から入力できていたパスフレーズが標準入力から入力できなくなっており、そのために暗号化に失敗して毎回PINを聞く・・・という状態になっていたようです。
+解決策 みんな大好きarch wiki に解決策がありました。 まず、~/.gnupg/gpg-agent.confに以下のように記述します。
+allow-loopback-pinentry つぎに、~/.gnupg/gpg.confに以下のように記述します。
+pinentry-mode loopback 最後に、gpg-agentを再起動します。 コマンドラインから、
+$ gpgconf --kill gpg-agent でgpg-agentを再起動できます。
+以上で、twittering-modeが正常に使用できるようになるはずです。</description></item><item><title>MySQL on docker macな開発環境でローカルからMySQLに接続する</title><link>https://blog.web-apps.tech/mysql_on_docker_on_mac/</link><pubDate>Tue, 02 May 2017 06:57:00 +0000</pubDate><guid>https://blog.web-apps.tech/mysql_on_docker_on_mac/</guid><description>MySQLをdocker上に立てることで、ローカルの環境を汚さずにMySQLを使ったアプリケーションの開発を行うことができます。 特に、練習段階や、動作確認などの場合、 test_hogehoge な感じのデータベースやテーブルを作ってしまい、後片付けをしないために汚くなっていく、なんてこと、あるんじゃないでしょうか。
+さて、MySQL on dockerへの接続、今までローカルにMySQLを入れて開発していたのでちょっと躓きました。
+$ docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD password mysql:latest 上記のように起動した場合、次のようにコマンドを実行することで接続することができます。
+$ mysql -u hoge -p -h 127.0.0.1 --port 3306 特にポイントなのが、-h 127.0.0.1の部分。localhostにしてしまうと、socketで接続しようとして、エラーになっちゃうんですね。 ここでしばらく悩みました。。。
+以上、簡単ですがメモがてら。</description></item></channel></rss>

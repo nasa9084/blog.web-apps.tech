@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>ansible on something tech.</title><link>https://blog.web-apps.tech/tags/ansible/</link><description>Recent content in ansible on something tech.</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><copyright>&amp;copy; @nasa9084</copyright><lastBuildDate>Mon, 13 Dec 2021 10:45:28 +0000</lastBuildDate><atom:link href="https://blog.web-apps.tech/tags/ansible/index.xml" rel="self" type="application/rss+xml"/><item><title>ansible.builtin.fileのmodeパラメータは頭に0が必要</title><link>https://blog.web-apps.tech/ansible-builtin-file-mode-leading-zero/</link><pubDate>Mon, 13 Dec 2021 10:45:28 +0000</pubDate><guid>https://blog.web-apps.tech/ansible-builtin-file-mode-leading-zero/</guid><description>多分ほとんどのケースでは気にすることもなく0755とか0644とか書くと思うんですが、特殊な属性を付ける必要があるときに困るよ、という話。
+世の中にはSUIDとかSGIDとかスティッキービットとかいう、特殊な属性がありまして、例えば基本のファイルパーミッションが0755でSUIDを指定したいという場合はchmodで言うとchmod 4755 path/to/fileといった感じになるんですけれども、ansible.builtin.fileのmodeパラメータでは以下の様に書くとパーサが10進数として解釈して訳の分からんことになってしまいます。
+ansible.builtin.file: path: path/to/file mode: 4755 これはこう書く必要があります:
+ansible.builtin.file: path: path/to/file mode: 04755 もしくはこう:
+ansible.builtin.file: path: path/to/file mode: &amp;#39;4755&amp;#39; これは例えば、結構古いAnsible playbookなんかで、
+file: path=path/to/file mode=4755 とか書いていたやつを書き直したりしたときに注意が必要です。
+まぁ、公式ドキュメントに書いてある んですけど、そうは言ってもみんなそんなに細かいところまで読んでないでしょ、という。
+You must either add a leading zero so that Ansible&amp;rsquo;s YAML parser knows it is an octal number (like 0644 or 01777) or quote it (like &amp;lsquo;644&amp;rsquo; or &amp;lsquo;1777&amp;rsquo;) so Ansible receives a string and can do its own conversion from string into number.</description></item><item><title>kubesprayを使用してkubernetes clusterを構築する(2)</title><link>https://blog.web-apps.tech/deploy-k8s-with-kubespray-2/</link><pubDate>Fri, 23 Feb 2018 14:45:49 +0000</pubDate><guid>https://blog.web-apps.tech/deploy-k8s-with-kubespray-2/</guid><description>3ヶ月ほど前に、kubesprayを使用してkubernetes clusterを構築する という、kubespray とkubespray-cliを使用してKubernetesクラスタを構築する記事を書きました。 しかし、kubespray-cliはすでにdeprecatedだということなので 、kubespray-cliを使用せずにkubesprayでクラスタを構築する手順をまとめておきます。
+要件 kubesprayを使用してkubernetesクラスタを構築するための要件は以下のようになっています。
+ansible 2.4以降とpython-netaddr (python-netaddrを忘れがちなので注意) pip install ansible netaddr Jinja 2.9以降(ansibleの依存でインストールされると思います) 構築先サーバがインターネットに接続できること 構築先サーバでswapが無効化されていること 構築先サーバでIPv4 forwardingが有効になっていること sysctl -w net.ipv4.ip_forward=1する(再起動するまで) /etc/sysctl.confにnet.ipv4.ip_forward = 1と記入する(再起動後) Ansibleを実行するマシンから構築先サーバにSSH鍵が渡されていること ファイアウォールが無効化されていること ファイアウォールの設定をしっかりできる人は有効でも また、kubesprayには(kubespray-cliのような)inventory生成ツールが付属されており、これを利用する場合はpython3系である必要が有ります。
+構成 前回の記事同様、以下のIPを持った三台のサーバを対象として構築してみます。
+192.168.1.11 192.168.1.12 192.168.1.13 それぞれ、IPv4 forwardingが有効化され、firewalldを無効化し、Python 3をインストール済みのCentOS 7のサーバとします。また、kubesprayを実行するローカルマシンから、各サーバのrootユーザにSSH鍵を配置1済みとします。
+手順 準備 まず、kubesprayをダウンロードします。
+$ git clone https://github.com/kubernetes-incubator/kubespray $ cd kubespray リポジトリのクローンが完了したら、ansibleなどの依存モジュールを導入します2。
+kubespray$ pip install -r requirements.txt 次に、ansible用のインベントリを作成します。</description></item><item><title>kubesprayを使用してkubernetes clusterを構築する</title><link>https://blog.web-apps.tech/deploy-k8s-cluster-using-kubespray/</link><pubDate>Thu, 30 Nov 2017 09:04:06 +0000</pubDate><guid>https://blog.web-apps.tech/deploy-k8s-cluster-using-kubespray/</guid><description>注意: 情報が古くなっています。新しい情報にあわせて記事を書いた ので、そちらをご覧ください。
+kubespray はproduction readyなkubernetes(k8s)クラスタを構成できるツールです。 Ansible をベースに作られているため、任意のサーバでk8sクラスタを構成できます。
+今回は、3台のVMを用意してクラスタを構成してみます1。
+検証環境 今回用意したVMは以下の構成です。
+2Core 8GB RAM 80GB HDD CentOS 7 IPアドレスは以下の様になっているものとします。
+192.168.1.11 192.168.1.12 192.168.1.13 また、kubesprayを実行するローカルの環境はmacOS Sierraです。 各ホストのrootユーザに対してSSH鍵は配置済み、firewalldは無効化されているとします。
+requirements 実行する環境に、Ansible が必要なため、pipでインストールします。23
+$ pip install ansible install kubespray-cli kubespray自体もpipでインストールします。
+$ pip install kubespray prepare 設定ファイルを生成するため、kubespray prepareを使用します。
+$ kubespray prepare --nodes node1[ansible_ssh_host=192.168.1.11] node2[ansible_ssh_host=192.168.1.12] node3[ansible_ssh_host=192.168.1.13] deploy 以下のコマンドでk8sクラスタをデプロイします。
+$ kubespray deploy -u root -n flannel 今回は&amp;lt;code&amp;gt;flannel&amp;lt;/code&amp;gt; ネットワークプラグインで構成しました。 kubesprayは、次のネットワークプラグインを使用してクラスタを構成することができます。
+flannel 4 calico 5 canal contiv 6 weave 7 あとは構成が終了するのを待つだけです。</description></item><item><title>Kolla-AnsibleでOpenStack Ocata環境を構築する</title><link>https://blog.web-apps.tech/kolla-ansible-ocata/</link><pubDate>Wed, 04 Oct 2017 06:12:37 +0000</pubDate><guid>https://blog.web-apps.tech/kolla-ansible-ocata/</guid><description>OpenStack Kollaを用いると、比較的簡単にOpenStack on Docker環境を構築することができます。
+今回はKolla-Ansibleを使用してall-in-one構成で4.0.0(Ocata)環境を構築してみます。</description></item><item><title>Kolla-ansible precheckで発生するエラーの対処</title><link>https://blog.web-apps.tech/kolla-ansible-precheck-error/</link><pubDate>Fri, 29 Sep 2017 14:20:16 +0000</pubDate><guid>https://blog.web-apps.tech/kolla-ansible-precheck-error/</guid><description>「OpenStack Kolla(Ocata)環境の構築」を参考にOpenStack Kollaのセットアップを行っていたら、エラーが出ました。</description></item></channel></rss>

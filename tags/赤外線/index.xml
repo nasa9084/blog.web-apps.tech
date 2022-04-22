@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>赤外線 on something tech.</title><link>https://blog.web-apps.tech/tags/%E8%B5%A4%E5%A4%96%E7%B7%9A/</link><description>Recent content in 赤外線 on something tech.</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><copyright>&amp;copy; @nasa9084</copyright><lastBuildDate>Thu, 25 Feb 2021 03:17:53 +0000</lastBuildDate><atom:link href="https://blog.web-apps.tech/tags/%E8%B5%A4%E5%A4%96%E7%B7%9A/index.xml" rel="self" type="application/rss+xml"/><item><title>SwitchBot APIのGoクライアント、go-switchbotを書いた</title><link>https://blog.web-apps.tech/go-switchbot/</link><pubDate>Thu, 25 Feb 2021 03:17:53 +0000</pubDate><guid>https://blog.web-apps.tech/go-switchbot/</guid><description>SwitchBot は所謂IoT機器を扱っているメーカーで、温度計を専用のハブ経由でインターネットに接続し、アプリから室温を確認したり、室温によってエアコンの設定を変更する、などといったホームオートメーションに役立つガジェットを複数販売しています。
+しかし、それらのデータを確認できるのはSwitchBotのアプリからか、Bluetooth経由だけ、という状況で、私もHTTPのAPIを用意してくれたら良いのに、とずっと思っていました。
+ところが昨日、社のSlackで、こちらのissue を共有してもらい、どうやら昨年12月ごろにはHTTPのAPI が使えるようになっていたっぽいことが分かりました。
+我が家にはHub Miniもあり、インターネットに接続してある状態ですから、早速次の手順でtokenを手に入れて試してみました:
+スマホでSwitchBotのアプリを開く プロフィールタブ &amp;gt; 設定と進み、アプリバージョンを10回連打する 開発者向けオプションが表示されるので、開いてトークンを取得する Authorizationヘッダにトークンを入れ、https://api.switch-bot.com/v1.0/devices にGETでリクエストを投げてみる 結果、確かに自宅のSwitchBotデバイスの一覧を取得することができました。
+こうしちゃいられねぇ！と深夜に書いたGolang用のSwitchBotクライアントがこちらです:
+https://github.com/nasa9084/go-switchbot ドキュメントはpkg.go.inなどで見て下さい: https://pkg.go.dev/github.com/nasa9084/go-switchbot 今回はFunctional Option PatternとGoogleっぽいAPIの合わせ技構成にしてみました。
+例えば、デバイスの一覧を取得したい場合は次の様にすると取得することができます。
+client := switchbot.New(&amp;#34;SET_YOUR_SWITCHBOT_OPEN_TOKEN&amp;#34;) physical, virtual, _ := client.Device().List(context.Background()) 第一返値のphysicalはSwitchbotデバイスの事で、第二返値のvirtualは赤外線で通信するデバイスの事です。SwitchBot APIでは、SwitchBotデバイスの事を物理デバイス、赤外線で接続するデバイス(エアコンなど)のことをvirtual remote deviceと区別して扱います。
+API rate limitは1,000 request / dayとなっていて、あまり多いという訳ではないですが、例えば数分に一回、あるいは一時間に一回室温を取って記録するようなPrometheus Exporterを記述するといったことが捗ると思いますので、SwitchBotデバイスを使っている方は是非使ってみて下さい！</description></item><item><title>Raspberry Pi zero W + IR</title><link>https://blog.web-apps.tech/raspberry-pi-zero-w-ir/</link><pubDate>Tue, 30 Jul 2019 15:11:28 +0000</pubDate><guid>https://blog.web-apps.tech/raspberry-pi-zero-w-ir/</guid><description>家で転がっていた使われないでいたRaspberry Pi zero Wを使って、家庭内のリモコン機器を自動化しようと思い立ち、秋葉原くんだりまで行って諸々部品を買ってきました。
+ゴミを二つほど生成したのち、最終的に動くモノができましたので備忘録的に残しておきます。
+pic.twitter.com/e55qxX5GL6
+&amp;mdash; nasa9084@某某某某(0x1a) (@nasa9084) July 29, 2019 主に「格安スマートリモコンの作り方 」を参考にしました。部品を購入した店は秋月電子で、商品ページの下の方にある「店舗情報」のリンクをクリックすると店内のどの棚に商品があるのかわかり便利です。どの部品も特に珍しい部品ではないため、商品自体がなくなっているようなことは(Pi zero用ユニバーサル基板をのぞき)まず無いように思えます。また、手持ちで0Ω抵抗が(なぜか)在庫してあったため、ジャンパ線代わりに使用しています。 一番見つけづらかったのがPi zero用ユニバーサル基板ですが、これは店の中ではなく、外のRaspberry Pi関連部品が置いてあるところにありました。
+上記のQiita記事はさほど古いモノではないため、価格も変わってなかったように思えますが、動くモノができるまでにゴミを二つほど生成した都合上、三倍程度のコストがかかりました。回路周りや半田付けがあまり得意ではない人は覚悟(というほどの額ではないですが)しておいた方が(材料を余分に買っておいた方が)良いでしょう。
+余談ですが部品を購入した際、近くのあきばおーでTranscendのmicro SDが安くなっていたため、大して使い道も考えずに32GBのモノを5枚ほど購入しました。
+ほとんどの情報は参考にしたQiita記事にまとまっているため詳細は端折りますが、変更点として赤LEDを足してあります。ピカッと可視光が光るので、実行されたということを確認するのに便利です。
+参考記事には実際の配線図だけはなかったので、紹介します。
+上図が部品面、下図が半田面です。MOSFET 2N7000は平らな面が図の上側、MOSFET IRFU9024NPBFは放熱板(?)が図の下側、赤外線LEDは欠けている側(カソード？)が図の右側、赤LEDは欠けている側が図の左側、赤外線受光モジュールOSRB38C9AAは受光部が図の上側を向くように配置します。私は受光モジュールは図の下方向に向けて折り、受光部が天を向くような形にしました。 ブレッドボード上で配線してそのまま基板に移植したような形になっているため、複雑な配線もなく比較的簡単かと思います。 IRFU9024NPBFの左下はジャンパなので、半田面で配線してもかまいません(私は0Ω抵抗を使用した関係で部品面を通しています)。
+実際に配線したもの。右側に温度センサを追加しています 赤外線コードの学習・実行も参考記事通りpigpioを使用しましたが、毎度SSHしてコマンドを実行するのは面倒なため、GoでAPIサーバを実装しました。Goで赤外線をGPIOでいい感じにアレするようなパッケージが見当たらなかったので、GoからPythonのスクリプトを叩くという残念なコードになっております。いいパッケージがあれば誰か教えてください。
+systemdかなんかでデーモン化したりなんかして起動しておくと、例えば、
+$ curl http://raspberrypi.local/playback?key=light:off とかすると部屋の電気が消せます。素晴らしい。
+今のところ外部に公開してはいないのですが、外部に公開すると他のサービスとの連携(例えばIFTTT)ができないので、公開したい気持ちがあります。とはいえ、外からむやみに部屋の電気をあれこれされても困るし(だれもやらないとは思いますが)、そのまま公開するのも難しいな、と思っているところです。
+とりあえずは扇風機とか、そのあたりをなんかいい感じにアレしたいですね。</description></item></channel></rss>

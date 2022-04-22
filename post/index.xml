@@ -1,0 +1,1049 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on something tech.</title><link>https://blog.web-apps.tech/post/</link><description>Recent content in Posts on something tech.</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><copyright>&amp;copy; @nasa9084</copyright><lastBuildDate>Sun, 20 Mar 2022 14:14:15 +0000</lastBuildDate><atom:link href="https://blog.web-apps.tech/post/index.xml" rel="self" type="application/rss+xml"/><item><title>GitHubがgit://を無効にした件</title><link>https://blog.web-apps.tech/github-disabled-git-protocol/</link><pubDate>Sun, 20 Mar 2022 14:14:15 +0000</pubDate><guid>https://blog.web-apps.tech/github-disabled-git-protocol/</guid><description>TL;DR GitHubからgitプロトコル(git://github.comで始まるURL)でgit cloneする設定になっている人が居たらSSHプロトコル(git@github.comで始まるURL)を使うように設定変更しましょう
+wez/weztermという端末エミュレータを知って、使ってみようかと思い、ドキュメントに従ってbrew tapしたときのことでした。次の様なエラーが発生して、tapできません。
+$ brew tap wez/wezterm ==&amp;gt; Tapping wez/wezterm Cloning into &amp;#39;/opt/homebrew/Library/Taps/wez/homebrew-wezterm&amp;#39;... fatal: remote error: The unauthenticated git protocol on port 9418 is no longer supported. Please see https://github.blog/2021-09-01-improving-git-protocol-security-github/ for more information. Error: Failure while executing; `git clone https://github.com/wez/homebrew-wezterm /opt/homebrew/Library/Taps/wez/homebrew-wezterm --origin=origin --template=` exited with 128. 指定された記事 を見てみると、git://で始まるURLでのアクセス==gitプロトコルでのアクセスを無効化したようです。 自分の&amp;lt;code&amp;gt;.gitconfig&amp;lt;/code&amp;gt;を見てみると 、確かに https://github.com の代わりに git://github.com を使うという設定がされています。
+[url &amp;#34;git@github.com:&amp;#34;] pushInsteadOf = git://github.com/ pushInsteadOf = https://github.com/ [url &amp;#34;git://github.com/&amp;#34;] insteadOf = https://github.com/ GitHubによるとこれまでもgitプロトコルでのアクセスは読み取り専用だったようですが、ご丁寧にpushInsteadOfで git@github.</description></item><item><title>Retrospective: 2021</title><link>https://blog.web-apps.tech/retrospective-2021/</link><pubDate>Thu, 30 Dec 2021 02:00:00 +0000</pubDate><guid>https://blog.web-apps.tech/retrospective-2021/</guid><description>1月 動画編集がちょっと楽しくなってきた頃で、毎日AmongUsの動画を作って上げてた。AmongUsやるDiscord鯖を作ったのもこのあたり。DaVinci Resolveでモーショングラフィックスやり始めてみてめっちゃ楽しかった。
+案外それっぽいモーショングラフィックスとか作れるもんだなーと思うなど https://t.co/mhuQFVErv4
+&amp;mdash; nasa9084@某某某某(0x1b) (@nasa9084) January 23, 2021 この時期に買ったコミックスでまどろみバーメイド が面白いです。kindle unlimited加入者は5巻まで読めるので読んでください。特にお酒が好きな人。
+nasa9084/broadcast-memo リポジトリを作った。
+2月 Switchbot APIを発見したのでnasa9084/go-switchbot を作った。相変わらず動画は毎日アップしてた。
+それ以外はまぁ特になし
+3月 オフィス移転して、新宿から四谷になった。まぁ、目下リモートワークであんまり影響はなし。
+異動乃至転職をしよう、と割と真剣に考え始めた。チーム内で真面目にやろうとしてる人を見て面倒だなって感じてしまったので、チームから心が離れてるな、と強く自覚したのが理由。
+ergodash2台目(bluetooth化)を作った。今も使ってます。
+nasa9084/switchbot-exporter を書いたけど、あんまり見てない。
+この辺で動画投稿ペースは落ちてきた。
+4月 笑顔のたえない職場です というコミックスが面白いです。
+スピーカーを買い、モニタを増設し、大体今のデスク環境が整ったのがこの辺。
+5月 バイオリンを買った。結局練習は続いていません。Ankerの新製品であるところのwebカメラを買って、最近のwebカメラってこんなに画質いいんだ！と驚いたり。
+社でやったゴールデンウィーク自由研究発表会で良かった発表ランキング1位を獲得した。なお内容は各社の牛乳でヨーグルトを作って比較してみたという内容でした。
+LINE MOBILEからLINEMOに乗り換えた。メイン回線は変わらずiij mio。
+6月 UNDERTALEめっちゃ面白かった。
+7月 1回目の新型コロナウイルスワクチンを接種した。
+8月 2回目の新型コロナウイルスワクチンを接種した。
+異世界失格 が面白いです。
+Huawei Band 6を買って、割と満足はしてた。が、今はapple watchに乗り換えてしまったので使ってない。南無。プール行ったときだけ使ってます。
+なんだかんだ真面目に仕事をしてました。
+9月 iPhone 13 miniとiPad miniを買いました。iPhoneは9年ぶりです。
+10月 Engineering Infrastructure室からLINE Platform Developmentセンター1 Communication and Service Integration室のSREチームに異動しました。使ってる技術も、業務知識もガラッと変わったので何も分からなくなりました。今も何も分からん。
+社内のエンジニアレベルも上がり、昇給し、異動前にやってた業務がきちんと評価してもらえた事がわかりめでたしめでたし。
+あとはapple watch買いました。
+11月 LINEスタンプを作り始めた。iPad Proはこのために買った(が1年放置してた)。皆さんスタンプ買って下さい。</description></item><item><title>ansible.builtin.fileのmodeパラメータは頭に0が必要</title><link>https://blog.web-apps.tech/ansible-builtin-file-mode-leading-zero/</link><pubDate>Mon, 13 Dec 2021 10:45:28 +0000</pubDate><guid>https://blog.web-apps.tech/ansible-builtin-file-mode-leading-zero/</guid><description>多分ほとんどのケースでは気にすることもなく0755とか0644とか書くと思うんですが、特殊な属性を付ける必要があるときに困るよ、という話。
+世の中にはSUIDとかSGIDとかスティッキービットとかいう、特殊な属性がありまして、例えば基本のファイルパーミッションが0755でSUIDを指定したいという場合はchmodで言うとchmod 4755 path/to/fileといった感じになるんですけれども、ansible.builtin.fileのmodeパラメータでは以下の様に書くとパーサが10進数として解釈して訳の分からんことになってしまいます。
+ansible.builtin.file: path: path/to/file mode: 4755 これはこう書く必要があります:
+ansible.builtin.file: path: path/to/file mode: 04755 もしくはこう:
+ansible.builtin.file: path: path/to/file mode: &amp;#39;4755&amp;#39; これは例えば、結構古いAnsible playbookなんかで、
+file: path=path/to/file mode=4755 とか書いていたやつを書き直したりしたときに注意が必要です。
+まぁ、公式ドキュメントに書いてある んですけど、そうは言ってもみんなそんなに細かいところまで読んでないでしょ、という。
+You must either add a leading zero so that Ansible&amp;rsquo;s YAML parser knows it is an octal number (like 0644 or 01777) or quote it (like &amp;lsquo;644&amp;rsquo; or &amp;lsquo;1777&amp;rsquo;) so Ansible receives a string and can do its own conversion from string into number.</description></item><item><title>人生初Apple Watch (series 7)</title><link>https://blog.web-apps.tech/ren-sheng-chu-apple-watch-series-7/</link><pubDate>Tue, 19 Oct 2021 23:49:46 +0000</pubDate><guid>https://blog.web-apps.tech/ren-sheng-chu-apple-watch-series-7/</guid><description>これまで私は基本的にAndroid端末を使うことが多く、初めて持ったスマートフォンであるGalaxy Sを始め、ほとんどのスマホ人生をAndroid端末とともに歩んできました。これまで最初で最後のiPhone端末はiPhone 5のみで、今回iPhone 13 miniを購入した のは8年ぶりの事です。 Androidユーザであったために買えなかったAppleデバイス、それがApple Watchです。Androidデバイスでも使えるスマートウォッチはもちろんあります。私もfitbit Versa を使っていました。しかし、Apple Watchには遠く及びません。iDでの決裁もできない(現行のfitbit Versa 3/Senseはsuicaには対応している)し、何よりソロループがありません。 一日の大半をPCに向かってキーボードをカチャカチャするという虚業に従事していますから、時計のバックルというのは結構いづい(注：大半の人に伝わらない表現なのは理解しているけど他の表現がない)のです。
+そんな私もiPhoneを買ったことによりApple Watchが買える！という事でApple Watch series 7を購入しました。</description></item><item><title>iPad mini 6を買って1週間半経った</title><link>https://blog.web-apps.tech/ipad-mini-6/</link><pubDate>Tue, 19 Oct 2021 23:29:54 +0000</pubDate><guid>https://blog.web-apps.tech/ipad-mini-6/</guid><description>みんなが待ってたiPad。そうiPad miniです。私は過去に会社のお下がりでもらったiPad mini第2世代を使っていたことがありますが、その後iPad Pro 第一世代(2018)に買い換え、今に至ります。Youtubeや読書に使用するにはちょっと大きいな、と思いつつ、なんだかんだ便利に使ったり使わなかったりしていました。iPad miniは良いサイズだったな、なんて思いながら。 とはいえ、iPad Proのベゼルレスデザインを体感すると、(ちょっとダサい)従来のiPad miniに戻る気にはなれず、ベゼルレスデザインのiPad miniがでたら買おうと思っていました。
+そして今年、第六世代iPad miniとしてベゼルレスデザインのモノが発売されたので購入しました。なんだかんだ安くはないので、一晩悩んだ結果発売日に入手することはできず、10月9日到着でした。
+今回購入したのはスペースグレイのiPad mini 第六世代 Wi-Fi + Cellularモデル、ストレージは256GBです。iPad Proも256GBのモノを使用していて、ストレージが大きく余っているので正直256GBは多すぎると思ったのですが、64GBか256GBという二つの選択肢を考えたとき、64GBは流石に小さすぎるだろう、と考え256GBを選択しました。MacBook Proですら256でストレージが余っている(最近ゲーム実況動画編集をするようになって、動画の為に外付けSSDを買ったけど)ため、iPad miniのストレージも枯渇することはおそらく無いと思います。
+ケースは安定の公式Smart Folioを購入。iPad Pro用のモノとは異なり、アップルのロゴがエンボス加工されています。これはこれで良いですね。
+iPad Proとサイズを比較するとこんな感じ。ざっくり半分くらいの大きさです。身長176センチ(最近1センチほど伸びました)の私だと片手でホールドできるくらいのサイズ感です。
+著作権的なアレをアレするためモザイクをかけていますが、マンガを読むのに非常にちょうど良いサイズです。おそらく小説やビジネス書など、他の書籍にも良いでしょう(技術書は大判の事も多いしiPad Proの方が読みやすいかも知れない)
+本機はiPad Airと同じくtouch IDですが、個人的にはiPadはface IDの方が良いかな、という気がしました。家の中で使うことが多い端末ですから、マスクをしている事も無いため、face IDの方がボタンに指を持っていくという動作が不要なため便利です。 また、これは慣れの問題もあるとは思いますが、ボリュームボタンが画面左上部(ランドスケープでは左下)というのは少し操作しづらいように感じました。これはiPad Proとボタンの位置が違うから戸惑っているだけかも知れません。画面の向きによってボタンの方向が変わる(右側、上側が+になる)のは直感的で良いので、iPad Proにもバックポート(?)してほしいものです。</description></item><item><title>DroneCIでパイプライン全体をfailさせずに後続のジョブを停止する</title><link>https://blog.web-apps.tech/droneci_early_return/</link><pubDate>Mon, 18 Oct 2021 07:38:35 +0000</pubDate><guid>https://blog.web-apps.tech/droneci_early_return/</guid><description>例えばmono repoで特定のディレクトリに変更があったときにだけジョブを実行したい、という様なケース。DroneCIのconditionはディレクトリ単位での変更でステップを実行するかという分岐はできません。かといってfailさせてしまうと、対象のディレクトリに変更がない場合はいつもfailする事になり、実際に問題があってfailしているのかどうなのか分からない、という事態に陥ります。
+そんなときは exit 78 すると良いようです。 exit 78 したステップはsuccess、後続のステップは実行されず、(depends_on で設定しているような)後続のパイプラインは実行されます。
+Reference How to exit a Pipeline early without Failing</description></item><item><title>iPhone 13 miniを買った</title><link>https://blog.web-apps.tech/iphone13mini/</link><pubDate>Sun, 26 Sep 2021 13:19:01 +0000</pubDate><guid>https://blog.web-apps.tech/iphone13mini/</guid><description>新型コロナウイルス感染症ワクチンの副反応(ということにした)で、iPhone 13 miniを購入しました。色はミッドナイトで、128GBのモデルです。 日々のご飯の写真くらいしか写真は撮らないし、大きいスマホは好きになれないのでminiを選択しました。これまで使用していたPixel 4が64GBのモデルだったので、ストレージは倍になったことになります。AppleCare+ 盗難・紛失プラン for iPhone 13 miniもつけて、107,600円でした。 最後にiPhoneを使っていたのはiPhone 5なので、実に8年ぶりくらいのiPhoneです。
+iPad miniも買いましたが、買うかどうか一晩悩んだ結果発売日に届きませんでした。
+以下開封写真です:</description></item><item><title>bashのhere-documentは一時ファイルを作成するらしい</title><link>https://blog.web-apps.tech/bash-here-document-makes-tmp-file/</link><pubDate>Wed, 08 Sep 2021 09:33:25 +0000</pubDate><guid>https://blog.web-apps.tech/bash-here-document-makes-tmp-file/</guid><description>皆さん使ってますか、here-document。bashでいうとこういう奴:
+cat &amp;lt;&amp;lt;EOF this is here document EOF 出力はこう:
+this is here document 複数行に渡るテキストをリテラルとして表現したい場合に便利ですね。で、shellscriptからREST APIにリクエストを投げたくて、here-documentを使ってJSONをべたっとスクリプト内で書いてたんですけど、こんなエラーが出てました(パスはもちろん違いますよ。念のため。):
+/path/to/shellscript/using/here-document.sh: line 179: cannot create temp file for here-document: No space left on device 全然知らなかったけど、here-documentって一時ファイルを作成するんですね。確かめてみます。
+$ docker run -it --rm centos:7 bash [root@8017e5e28d6e /]# yum install -y strace (中略) [root@8017e5e28d6e /]# cat &amp;lt;&amp;lt;EOF &amp;gt; script.sh &amp;gt; cat &amp;lt;&amp;lt;EOS &amp;gt; foo &amp;gt; bar &amp;gt; baz &amp;gt; EOS &amp;gt; EOF [root@8017e5e28d6e /]# strace -f bash script.sh |&amp;amp; grep tmp [pid 61] stat(&amp;#34;/tmp&amp;#34;, {st_mode=S_IFDIR|S_ISVTX|0777, st_size=4096, .</description></item><item><title>Huawei Band 6を買った</title><link>https://blog.web-apps.tech/huawei-band-6/</link><pubDate>Mon, 30 Aug 2021 04:12:05 +0000</pubDate><guid>https://blog.web-apps.tech/huawei-band-6/</guid><description>TL;DR: 割と良い。
+スマートウォッチは長いことfitbit versa を使用していたのですが、最近プールに行くようになり、プール内で使用できるレギュレーションに対応したスマートウォッチ/スマートバンドが欲しいと思っていました。
+私が行っているプールのスマートウォッチ/スマートバンドのレギュレーションは次の様になっています:
+ベルト幅が30mm以下でディスプレイがベルト幅および厚みから出ないものは使用可能 柔らかい素材のカバー等で覆えば使用可能 シリコン製カバーまたはウォッチスーツで覆えば使用可能 fitbit versaは一つ目のレギュレーションにマッチしていないため、柔らかい素材のカバー・シリコン製カバー・ウォッチスーツで覆えば使用可能、ということです。 とはいえ、fitbit versaはもう2世代型落ちのモデルです。ディスプレイを覆うカバーを見つけるのがそもそも難しい(あるにはあるけど)ですし、シリコン製カバーは何故か6個単位でしか売っていない ため、私の結論としてはレギュレーションにマッチするスマートバンドを買うのが早い、となりました。
+じゃぁなにを買おうか、と考えたときに、私はPixelユーザですしfitbitのユーザでもありますから、Googleによるfitbitの買収を受けて、fitbitから良い感じの新製品が出るのを待ちたいという気持ちもありますから、あまりコストを掛けるわけにもいかないな、と考え、選択肢は自然とHuaweiかXiaomiの二択となりました。
+いろいろ検討しましたが、最終的にはmi band 6 の丸っこいデザインより、Huawei Band 6 の四角いデザインの方が通知などが見やすそうですし、画面もほどよく大きい、という事でHuawei Band 6を選択しました。
+以下開封写真です。
+外箱はこんな感じ。一応amazon.co.jp販売の日本正規代理店品と書かれたモノを購入したのですが、日本語はシールで修正しているような外箱でちょっと不安な感じがあります。まぁ気にしても仕方ないでしょう。安いし。
+箱を開けると本体がこんな感じで入っています。まぁわかりやすいはわかりやすいですね。
+箱に入っていたものはこれで全部です。本体、充電ケーブル、WARRANTY CARD、クイックスタートガイドですね。クイックスタートガイドは本当に必要最小限の情報だけが書いてあるという感じで、詳細はWebから説明書をダウンロードしてね！という事でQRコードが書いてありました。
+今のところ購入から二週間弱使用しましたが不満点は次の二つです:
+HUAWEI BAND 6、お値段も含めて割と満足してるけど、保護フィルムにまともなのがなさそう（これはこのクラスのものに気を使いすぎかも）なのと、ツイートをしたときに通知が来ちゃうのが微妙ポイント
+&amp;mdash; nasa9084@某某某某(0x1b) (@nasa9084) August 27, 2021 まぁ保護フィルムはこのクラスの製品に保護フィルムをつけようというのが間違っているのかも知れませんが。 ツイートをしたときに通知が来ちゃうのは、「tweetをしました」という通知が一瞬通知欄に出るためそれを認識してしまっている、という事でHuawei Band側の問題と言うよりはtwitterアプリ側の問題の様な気もしますね。
+あとはまぁ、ウォッチフェイスを作ってみた、みたいなブログを書こうと思ってはいたんですが、環境のセットアップがまぁまぁめんどくさそうというか、バンドとスマホの情報同期にはHuawei Healthというアプリをスマホにインストールするんですが、ウォッチフェイスを作ってテストするにはこれのベータ版？開発版？をインストールしなければならないということなのでやめました。諦めて既製のウォッチフェイスを使うことにします。
+以上です。</description></item><item><title>剥がれかけたSesame 3を貼り直す</title><link>https://blog.web-apps.tech/re-sticking-sesame3/</link><pubDate>Thu, 12 Aug 2021 13:20:12 +0000</pubDate><guid>https://blog.web-apps.tech/re-sticking-sesame3/</guid><description>弊宅ではCANDYHOUSEのSESAME3 というスマートロック製品を使用していて、付属の両面テープで貼るだけ、剥がすときも跡が残らず便利！という最高の製品なんですが、最近少し剥がれてきてしまいました。
+電池切れや故障などの有事に備えて鍵は持って歩いているので問題ないと言えば問題ないのですが、そうは言っても不便な思いはしたくないですし、完全に剥がれてしまってからバタバタするのもイヤなので張り直しをしました。
+公式から交換用の両面テープも販売されてはいる のですが、明らかに3Mのコマンドタブ ですし、割高っぽい印象を受けたので近所のカインズで購入してきました。(実際比較してみるとヨドバシ.comでは8枚で300円弱 なのに対し、CANDYHOUSEから買うと4枚で350円と倍程度の値段設定となっています)
+たまたまカインズに行ったときに思い出して適当に買ってきてしまったため私はMサイズを購入しましたが、元々ついていたモノと比べると多分Lサイズだったので皆さんはLサイズを購入すると良いです。カインズではどのサイズも値段が同じでしたが、ヨドバシ.comではLサイズが若干安いようです。
+SESAME本体の形に合わせてコマンドタブをカットし、貼り付けます。剥がすときに引っ張る部分は電池ボックスの中に折り込んでおきます。
+無事しっかり貼ることができました。めでたしめでたし。</description></item><item><title>aタグのping属性</title><link>https://blog.web-apps.tech/atagunopingshu-xing/</link><pubDate>Mon, 02 Aug 2021 14:55:54 +0000</pubDate><guid>https://blog.web-apps.tech/atagunopingshu-xing/</guid><description>私は基本的に業務・趣味の両方でGoを書いていると言うこともあり、ソースコードの管理はGOPATH方式で管理しています。しかしGOPATH方式で管理していると、ライブラリの挙動確認やらなんやらで使う書き捨てのコードをどこに置くか、という問題がある。 src/github.com/nasa9084/... に置くというのも一つの手ではあるものの、社内のGitリポジトリやらGitHubやらにアップするつもりもないコードを他の、GitHubやらなんやらで管理されているリポジトリと同じ場所に置くと一覧性や検索性が下がるし、やりたくはないので、普段はそういった直ぐにいらなくなるコードは src/practice というディレクトリに配置しています。
+毎回書き殴った後に削除をする、というまめな性格はしていないので、結果として二度と日の目を見ないことがほとんどなコード片が貯まっていくので定期的にクリーンアップを行っています。書き殴りのコードとはいえ、何かヒントが残っているかもしれないので、削除前にチラチラと内容を確認しながら削除していくのですけれど、そういえばそんなの調べたな、なんて思うコード片がたまに見つかったりする訳です。
+今回発見したのはタイトルにもあるとおり、aタグのping属性です。W3C発行(発行、という表現が正しいのかどうかもよく分かっていないですけど)のHTML仕様が廃止となり、WHATWGのHTML仕様、HTML Living Standardに置き換えられる、との話を6月頃に見て、なるほどなーなんてちょろっと調べて、HTML Living Standardではaタグのping属性ってのがある、という情報にたどり着き、そして実際どんな挙動なのか、とコードを書いた、という経緯だったと思います。
+実際のコード片がこちら: index.html:
+&amp;lt;!doctype html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;/&amp;gt; &amp;lt;title&amp;gt;Document&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; first page &amp;lt;a href=&amp;#34;second.html&amp;#34; ping=&amp;#34;http://localhost:8080/ping&amp;#34;&amp;gt;second&amp;lt;/a&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; second.html:
+&amp;lt;!doctype html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;/&amp;gt; &amp;lt;title&amp;gt;Document&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; second page &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; main.go:
+package main import ( &amp;#34;log&amp;#34; &amp;#34;net/http&amp;#34; ) func main() { http.</description></item><item><title>dateコマンドで簡単な時間計算をする</title><link>https://blog.web-apps.tech/calcurate-datetime-in-shell/</link><pubDate>Tue, 13 Jul 2021 03:52:44 +0000</pubDate><guid>https://blog.web-apps.tech/calcurate-datetime-in-shell/</guid><description>shellscript内で時間計算をしたい事がある。例えば、「最終実行から10分経過していたらxxxをする」という様なケース。定期的にファイルを生成したい、といった簡単なユースケースであれば、findコマンドあたりでファイルの変更タイムスタンプを調べるといった方法でも実現可能ではあるけれど、「ファイルの中に記載された時間から10分経過しているかどうか調べる」なんて事もあるでしょう(あった)。 shellscriptで時間の計算するのって面倒そうなんだよな・・・と思っていたのですけれど、私のユースケースだとそれほど難しくなくて、dateコマンドで大体なんとかなるという事が分かったのでメモしておきます。
+時間を比較する 二つの時間を比較したい。これは対象の時間がUnix時間で表現されていれば非常に簡単で、dateコマンドを使用する必要すら無く、test乃至[で普通に比較ができます。もちろん取り扱いは数字として取り扱うことになるので、比較演算子として-ltか-gtを使用します。
+# 1626146220 = 2021-07-13T12:17 # 1626146340 = 2021-07-13T12:19 if [ 1626146220 -lt 1626146340 ]; then echo hello fi # Output: # hello 対象の時間がUnix時間で表現されていない場合、Unix時間に変換して比較するのがおそらく最も簡単です。dateコマンドで一度時間をパースして、Unix時間の形で出力します。パースには-d / --dateオプションを使用します。Unix時間として出力するためのフォーマット文字は%sです。
+if [ $(date -d &amp;#39;2021-07-13T12:17&amp;#39; +%s) -lt $(date -d &amp;#39;2021-07-13T12:19&amp;#39; +%s) ] then echo hello fi # Output: # hello -d / --date オプションは一般的なフォーマットの日付文字列をよしなにパースしてくれます。詳しいフォーマットはGNU Coreutilsのマニュアル などを見ると良いでしょう。
+n分前/n分後を求める 扨、ここからが本題なのですが、n分前/n分後を計算してみましょう。といっても、dateコマンドを使用すると非常に簡単に求めることが可能です。
+まずは現在時刻から1時間後を求めてみましょう。-d / --dateオプションに加算したい時間を渡すだけです。
+date +%R date -d &amp;#39;1 hour&amp;#39; +%R # Output: # 12:34 # 13:34 hourの他にも、yearやmonth、day、minuteなどそれっぽいモノは大体使用することができます。珍しいところだとfortnight(2週間)を使うこともできます。 単に1 hourと書くのがなんとなく気持ち悪いという人はnowやtoday、thisなどを使用してより自然言語っぽい感じで書くこともできます</description></item><item><title>梅仕事2021 (2)</title><link>https://blog.web-apps.tech/ume-2021-2/</link><pubDate>Fri, 18 Jun 2021 15:34:24 +0000</pubDate><guid>https://blog.web-apps.tech/ume-2021-2/</guid><description>先だって梅シロップを漬け、既に半分以上梅シロップを消化してしまった今日この頃、大分遅くなってしまったものの今年も梅酒を仕込みました。 就職で関東に出てきてから今年で4L瓶が5本目と相成りました。 本年は面倒くさがっている間にあれよあれよと日が経ってしまい、近所の西友では4L瓶が買えなくなる始末でありましたがなんとか4L瓶を調達する事に成功し、無事仕込みを済ませることができました。
+今年はあまり時間が無かったこともあり、梅は近所の西友で調達した南高梅(大玉)です。割と傷も少なく良い香りのする梅で、西友侮りがたし、といったところですね。おそらく1kgと思われる袋が980円(税抜)でした。
+酒は今年は初めて日本酒を使用。実は以前から日本酒で梅酒を仕込むというのはやってみたいと思ってはいたのですが、通常店頭で販売されている日本酒は梅酒を仕込むには度数が足りないため、梅酒(乃至果実酒)用のものを調達する必要がある、という面倒さがあり、店頭でそういった梅酒用の日本酒が販売されているのを発見したことがなかったため、これまでは挑戦してきませんでした。 今年はむやみやたらにAmazonのポイントが貯まっていたという事もあり、Amazonでいろいろと探したところ、果実酒用の日本酒が販売されていたためこちらを購入しました。
+苗場酒造という酒蔵の苗場山「果実酒用日本酒」、度数が20%のものです。Amazon で本体価格が1,800円、送料が500円です。
+日本酒を使うのは初めてのため、砂糖は特に奇をてらわず一般的な氷砂糖を使用しました。
+作り方は特に例年と変わらず、洗ってへたを取った梅と砂糖を瓶に入れ、上から酒を注ぎ入れるだけです。日本酒の場合米の甘みがあるため砂糖は控えめで良い、という事でしたので、酒に付属してきたレシピにあわせて氷砂糖の量は500gとしました。例年は1kgで使用しているため、例年の半分です。
+このあとは砂糖が溶けるまでは時々振ってあげて、砂糖が溶けたら放置です。自家製梅酒大体3ヶ月程度からが飲み頃と言われていますから、9月くらいになったら味見をして、そのあとはまた数年放置されることとなります。
+最後に、昨年は2017年に漬けた梅酒を飲んで締めたようなので 今年は2018年に漬けた梅酒を飲んで締めようと思います。
+ラベルによると2017年は久米仙と氷砂糖を使用したようです。泡盛ですね。意外と癖もなく、飲みやすく仕上がっています。
+今年の梅酒も美味しく漬かることを祈って。</description></item><item><title>梅仕事2021 (1)</title><link>https://blog.web-apps.tech/ume-2021-1/</link><pubDate>Wed, 26 May 2021 07:53:09 +0000</pubDate><guid>https://blog.web-apps.tech/ume-2021-1/</guid><description>向暑の候皆様いかがお過ごしでしょうか。近所の西友で梅酒関連の商品が店頭に並びはじめているのを見て季節を感じる今日この頃です。
+例年梅酒と梅シロップを漬けるわけですが、漬けっぱなしで放置している梅酒はさておき梅シロップはできればシーズン中に二回は仕込みたい、という気持ちがあり、店頭で梅の実を発見してとりあえず購入してきました。
+まだ出始めですから、まだかなり青い実ではありますが、急ぎ一発目の梅シロップを仕込みました。
+手順自体は例年とそう変わるモノではなく、昨年梅シロップをつけていた空き瓶をアルコールで消毒した後、洗って水気を切りへたを取った梅の実と砂糖を交互に積んでおいておきます。昨年 は中ザラ糖を使用した、との記録がありましたが今年は気分で三温糖をセレクトしました。特に深い理由はありません。三温糖はしっとりとしており、積み上げるのも容易ですし、粉末状なので隙間にも入っていきやすく取り扱いがしやすい様に感じました。氷砂糖はうまく積んでいくことを考えると意外と難しいです。
+うまいこと梅を砂糖の中に埋める事ができ、上から見ると梅が出てしまっているということもありませんから、今年は酢を入れない方針で行ってみようと思います。
+大粒の実が店頭に並びはじめたら梅酒も漬けたい所存です。</description></item><item><title>最近のWebカメラってすごい、の件</title><link>https://blog.web-apps.tech/anker-powerconf-c300/</link><pubDate>Sun, 16 May 2021 15:08:14 +0000</pubDate><guid>https://blog.web-apps.tech/anker-powerconf-c300/</guid><description>どうもAnker大好き人間です。ケーブル類は大体Ankerだし、Thunderbolt 3 Dock もAnkerだし、充電器もヘッドホン もAnkerです。
+そんなAnkerから、新しくWebカメラが発売されたということで、購入したらすごかったのです。
+購入したのはAnker PowerConf C300 。Amazonで7,990円で購入できます。LogicoolのStreamCam を買いたいな、と思っていたところのAnkerからの新商品、値段も半額以下、という事で即購入に至りました。
+箱は最近よくあるぴったりでしっかりしたタイプの箱です。ぴったりすぎて開けるのにちょっと時間がかかる奴ですね。高級感はあります。写真ではざらざらしたかんじのテクスチャっぽく見えますが、これは印刷で、手触りはすべすべです。
+これまでのAnker製品によく入っていたHappy/Not Happyカードではあんく、&amp;ldquo;WHAT DO YOU THINK OUR WORK?&amp;ldquo;というカードが入っていました。PowerConfシリーズではこの紙なんでしょうかね。 ケーブルはType-C to Type-Cケーブルが付属しています。この手のWebカメラは本体からケーブルが伸びている事が多いので、ケーブル交換ができるのはとても嬉しい点ですね。
+外部ディスプレイを使っていると、Webカメラは大体ディスプレイのUSBポートを使うと思うんですが、Type-CからUSB-Aに変換するためのコネクタも入っているので安心(?)です(Type-Cの仕様的には全然安心じゃないんですが)
+プライバシー保護用の蓋みたいなものもついているのはなんだか時代を感じさせますね。
+これまで使っていたWebカメラと並べた様子はこんな感じ。サイズは結構大きくなりましたね。
+古い方のカメラで、ライトをつけないとこんな感じでした。一般的なご家庭は大体そうだと思うんですが、壁に机をくっつける配置にしていると夕方以降逆光になる、という問題があり、顔がとても暗くなります。
+結果として、ライト を購入して明るさを確保したりなんかしている人も多いと思います。私もその一人でした。ライトをつければまぁもちろん明るくはなります。
+新しいカメラではこの通り。ライトなしでも頭が適当にボサボサなのがバレて恥ずかしいくらいには明るく映ります。これは本当に感動。
+比較用にライトをつけてみました。むしろちょっと明るすぎる位ですね。これはライトはもうお役御免かもしれません。
+加えて、専用のアプリで細かい設定をする事ができます。解像度の調整、fps、画角、明るさやコントラストなどが設定できるほか、人の顔を追跡するような設定もできます。 このアプリの良いところは、他のメーカーで良くあるような、常駐させておかなければ設定が反映されないような類いのモノではなく、設定したらアプリを閉じても設定が反映され続ける、というところですね。
+総じて、非常に満足度が高く、コストパフォーマンスに優れた商品だと思いました。流石Anker。</description></item><item><title>RAMマウントをQi対応にする</title><link>https://blog.web-apps.tech/ram-mounts-plus-qi/</link><pubDate>Tue, 27 Apr 2021 03:26:23 +0000</pubDate><guid>https://blog.web-apps.tech/ram-mounts-plus-qi/</guid><description>バイク乗りの皆さん、スマホホルダーは何を使っていますか？色々と選択肢はありますが、しっかりとしたものを使いたいと考えた時、RAMマウントを使っている人も多いでしょう。
+加えて、バイクからUSB電源を引いてスマホを充電している人もいるでしょう。そうした場合、どこぞに駐車をして、スマホを取り外すたびにケーブルを抜いて、また走り出すときにケーブルを挿して、というのは少しばかり面倒じゃないでしょうか？
+世の中、面倒だという事柄にはそれを面倒ではなくするソリューションがあるもので、無接点充電対応のスマホホルダーなるものが販売されています。
+こういったモノを購入しても良いのですが、やはりスマホをしっかりホールドしてくれるという点でできれば安心安全のRAMマウントを使い続けたい気持ちがありました。 そう考えていたところ、世の中には防水仕様のQi充電器というモノが存在するという事を知りました。
+正直この手のものは屋内で使うモノだと思っていたので、どういうユースケースがあって防水仕様になっているのかはよく分からないのですが、私にとっては渡りに船、幸いなことに超薄型という事なのでなおのこと私のユースケースにぴったりということで商品がこちらです
+友人の@tagucch に誕生日プレゼントとして送ってもらいました。感謝。
+2021-05-06追記: Pixel 4とは相性が悪かった(Pixel 4ではうまく充電できず、iPhone XRで試したら充電できた)ため、本品はiPhoneを使っている妹に譲りRAMマウントは再びQi非対応となりました。無念。iPhoneユーザは本商品で問題ないはず。多分。
+扨、実際これをRAMマウントに設置できるか、というところが問題ですが・・・
+RAMマウントは汎用のスマホホルダーですので、ちゃんと余裕があります！ここに適当に突っ込んでみたところ、スマホのホールド感も問題なく設置できそうです。
+何故か丸い両面テープも付属していたので、おあつらえ向き、という感じで適当に両面テープで(本当は屋外用の両面テープを使った方がいいんでしょうが&amp;amp;屋外用の両面テープも持っては居るのですが)ぺたっと
+うまく貼ることができました。これ自体は普通のUSB給電ですので、これまでケーブルを挿していたUSBポートからケーブルを抜き、代わりにQi充電器のケーブルを挿します。
+キーをオンにしてスマホを設置したところ無事に充電できました。 RAMマウントは中心部分は回転しないので、スマホの取り付け・取り外しも問題ありませんでした。
+めでたしめでたし。</description></item><item><title>Desk Tour 2021.04</title><link>https://blog.web-apps.tech/desk-tour-2021-04/</link><pubDate>Sun, 11 Apr 2021 15:12:31 +0000</pubDate><guid>https://blog.web-apps.tech/desk-tour-2021-04/</guid><description>COVID-19が猛威を振るい、自宅で勤務するようになり早一年、少しずつ機材を増やし、入れ替え、作業環境を改善してきました。自分のデスクを紹介するDesk Tourの流行も少し落ち着いたところではありますが、ここで一度デスク環境を記録がてらご紹介します。
+Overview 全体像としてはこんな感じ。デスクはニトリの組み合わせフリーデスク プレフェ を使用しています。天板の幅は140cmです。最近腰痛がアレでアレなので、昇降デスクにしたい気持ちがあります。写真には写っていませんが、イスはアーロンチェア を使用していて、足下にはエルゴノミクスフットレスト を置いています。
+ディスプレイはLG 27UK850-W という4K 27インチのディスプレイ2枚をモニターアーム(右がHP 、右がエルゴトロン 。HPのものもエルゴトロンのOEM商品なのでロゴ以外は実質同じ)で設置しています。右はHDMI接続、左はDisplayPort接続でつないでいて、わざわざType-C接続のモニタを買う必要が無かったな、と思っています。
+モニタの上 マイクはAKG LYRA です。USB type-Cで接続するタイプのコンデンサマイクで、AnkerのType-C to Type-Aケーブル を使用して接続しています。Rode PSA1 というマイクアームを使用して、マイクがモニタの上に来るように設置しています。マイクアームにはSwitchBot 温湿度計 をくっつけています。
+ウェブカメラは大昔に安く購入したバッファロー BSW20KM15 というものを使っていて、最近の良い感じのウェブカメラに買い換えたいな、と思っています。ロジクールのStreamCam とか良さそう。まぁ特に不満は感じていないですが。
+日中は窓が机の奥にあるので特にライトとかは必要無いんですが、夕方になるとすぐ暗くなるのでライトも用意しました。UlanziのVL49 というライトをなんかぐねぐねするやつ で設置しています。モニタ裏のアームにクリップ(の強い奴)で止めるような形です。
+手元 手元はこんな感じ。トラックパッドが結構好きなので、Magic Trackpad 2 を使用しています。Magic Trackpad 2用のリストレスト を使用しています。
+キーボードはErgodash を使用していて、最近BLE Micro Pro で無線化しました。配線が減ってデスクの上がすっきりし、最高ですが時々接続が不安定になります。キーボード用のリストレストはFILCO Majestouch Wrist Rest &amp;amp;ldquo;Macaron&amp;amp;rdquo; の17mm厚を使用しています。ちょっと厚いので、12mmの方でも良かったかな、という感じ。
+ゲームをするときはロジクール MX Master 3 for Mac とRazer Tartarus Pro を使ってます。Razer Synapse、Macにも対応してくれ。</description></item><item><title>switchbot-exporterを書いた</title><link>https://blog.web-apps.tech/switchbot-exporter/</link><pubDate>Tue, 23 Mar 2021 09:00:00 +0000</pubDate><guid>https://blog.web-apps.tech/switchbot-exporter/</guid><description>先だって、SwitchBot APIのGo言語用クライアント実装であるgithub.com/nasa9084/go-switchbot を書いた、という記事 を書きましたが、これを使用してPrometheusでSwitchBot温湿度計 の情報を収集できるswitchbot-exporter を書いてみたので紹介します。
+switchbot-exporterはblackbox exporter のように、起動時にはターゲットを指定せず、Prometheusがメトリクスを収集する際にrelabel_configでターゲットを与えるタイプのexporterです。 起動時に必要な情報はSwitchBotアプリから取得できるOpenTokenのみです。OpenTokenはコマンドラインオプションか、環境変数SWITCHBOT_OPENTOKEN経由で渡すことができます。
+$ switchbot-exporter -switchbot.opentoken=blahblahblah # or $ SWITCHBOT_OPENTOKEN=blahblahblah switchbot-exporter docker image も用意してありますので、例えばKubernetes上で動かすこともできます:
+--- apiVersion: apps/v1 kind: Deployment metadata: name: switchbot-exporter spec: revisionHistoryLimit: 3 selector: matchLabels: app: switchbot-exporter template: metadata: labels: app: switchbot-exporter spec: containers: - name: switchbot-exporter image: nasa9084/switchbot-exporter:0.1.0 ports: - protocol: TCP containerPort: 8080 env: - name: SWITCHBOT_OPENTOKEN valueFrom: secretKeyRef: name: switchbot key: opentoken --- apiVersion: v1 kind: Service metadata: name: switchbot-exporter spec: ports: - protocol: TCP port: 8080 targetPort: 8080 selector: app: switchbot-exporter このようにして起動した後、README に記載のあるようにprometheusの設定をします</description></item><item><title>SwitchBot APIのGoクライアント、go-switchbotを書いた</title><link>https://blog.web-apps.tech/go-switchbot/</link><pubDate>Thu, 25 Feb 2021 03:17:53 +0000</pubDate><guid>https://blog.web-apps.tech/go-switchbot/</guid><description>SwitchBot は所謂IoT機器を扱っているメーカーで、温度計を専用のハブ経由でインターネットに接続し、アプリから室温を確認したり、室温によってエアコンの設定を変更する、などといったホームオートメーションに役立つガジェットを複数販売しています。
+しかし、それらのデータを確認できるのはSwitchBotのアプリからか、Bluetooth経由だけ、という状況で、私もHTTPのAPIを用意してくれたら良いのに、とずっと思っていました。
+ところが昨日、社のSlackで、こちらのissue を共有してもらい、どうやら昨年12月ごろにはHTTPのAPI が使えるようになっていたっぽいことが分かりました。
+我が家にはHub Miniもあり、インターネットに接続してある状態ですから、早速次の手順でtokenを手に入れて試してみました:
+スマホでSwitchBotのアプリを開く プロフィールタブ &amp;gt; 設定と進み、アプリバージョンを10回連打する 開発者向けオプションが表示されるので、開いてトークンを取得する Authorizationヘッダにトークンを入れ、https://api.switch-bot.com/v1.0/devices にGETでリクエストを投げてみる 結果、確かに自宅のSwitchBotデバイスの一覧を取得することができました。
+こうしちゃいられねぇ！と深夜に書いたGolang用のSwitchBotクライアントがこちらです:
+https://github.com/nasa9084/go-switchbot ドキュメントはpkg.go.inなどで見て下さい: https://pkg.go.dev/github.com/nasa9084/go-switchbot 今回はFunctional Option PatternとGoogleっぽいAPIの合わせ技構成にしてみました。
+例えば、デバイスの一覧を取得したい場合は次の様にすると取得することができます。
+client := switchbot.New(&amp;#34;SET_YOUR_SWITCHBOT_OPEN_TOKEN&amp;#34;) physical, virtual, _ := client.Device().List(context.Background()) 第一返値のphysicalはSwitchbotデバイスの事で、第二返値のvirtualは赤外線で通信するデバイスの事です。SwitchBot APIでは、SwitchBotデバイスの事を物理デバイス、赤外線で接続するデバイス(エアコンなど)のことをvirtual remote deviceと区別して扱います。
+API rate limitは1,000 request / dayとなっていて、あまり多いという訳ではないですが、例えば数分に一回、あるいは一時間に一回室温を取って記録するようなPrometheus Exporterを記述するといったことが捗ると思いますので、SwitchBotデバイスを使っている方は是非使ってみて下さい！</description></item><item><title>Firefox 83で導入されたピンチズームを無効にする</title><link>https://blog.web-apps.tech/disable-firefox-83-pinch-zoom/</link><pubDate>Tue, 02 Feb 2021 06:49:47 +0000</pubDate><guid>https://blog.web-apps.tech/disable-firefox-83-pinch-zoom/</guid><description>11月7日にリリースされたFirefox 83 では、タッチスクリーン/タッチパッドを搭載したデバイスでのピンチズームがサポートされました。
+が、私としてはスクロールしたいだけなのにズームされてしまったりと誤動作が多く、使いづらいなーと感じましたので、無効化しましたが、設定画面からは無効化できなかったのでメモを残しておきます。
+about:config を開く zoomで検索しapz.allow_zoomingをfalseに設定する 以上です。</description></item><item><title>チカの南蛮漬け</title><link>https://blog.web-apps.tech/tika-no-nanbanduke/</link><pubDate>Fri, 29 Jan 2021 13:17:22 +0000</pubDate><guid>https://blog.web-apps.tech/tika-no-nanbanduke/</guid><description>チカはワカサギを少し大きくしたような小型の魚で、北海道では割とよく食べていた魚でした。上京してからはほとんど売られているのを見ず、たまに近所の西友や東武百貨店池袋店地下の鮮魚売り場で売られているのを見る程度です。
+天ぷらやフライなどで食べられることもある魚ではありますが、我が家では専ら南蛮漬けとして食卓に並んでいました。チカを見かけるとついつい買ってしまうのですが、今日も買ってしまったので南蛮漬けの紹介をします。
+材料はこちら。チカ1パック(100gあたり127円で、250gくらい入っていました)、玉ねぎ、パプリカです。我が家では実際のところ、魚より野菜が大量に入っている南蛮漬けが好きなこともあり、チカに対してかなりの量の野菜を入れます。玉ねぎは時期的に新たまねぎが売られていたので新たまねぎにしましたが、普通の玉ねぎでも問題ありません。チカも売っていなければワカサギを使うこともできます。パプリカは時期が悪いのか若干高かったです。
+まずは野菜を切っていきます。
+これを
+こうして
+こうです。パプリカはスライスすると水分が結構出ます。
+キッチンペーパーなどを敷いたバットに乗せ、軽く塩をして冷蔵庫で休ませ、少し水を抜きます。
+次は玉ねぎ。写真は二つですが結局三つ使いました。
+皮を剥いて、
+こうです。
+パプリカと同じく、キッチンペーパーなどを敷いたバットに載せ、軽く塩をして冷蔵庫で少し休ませます。特に、普通の玉ねぎを使う場合は空気にさらすことで辛味が抜けるので空気に触れる面積を広くするようにほぐしておきましょう。
+このぐらいのタイミングで漬けダレ用の出汁を引いておきます。面倒なら出汁の素をお湯で溶いても良いです。
+チカは軽く洗って、水気をしっかり切り(キッチンペーパーなどを使って！)ます。我が家ではワタなどは取ったりしませんが、気になる人は腹を開いてワタを抜いても良いと思います。
+何か手頃な袋などに入れて、
+片栗粉をまぶします。
+袋に空気を入れて適当に振るとうまくまぶすことができます。
+ピンボケしていますが、漬けダレです。砂糖大さじ3、醤油大さじ2、減塩醤油大さじ2(無ければ普通の醤油でもOK)、酢100cc、出汁200cc、輪切り唐辛子を適量です。これに揚げた魚やらなんやらを突っ込めば大体美味しいです。 玉ねぎ3、パプリカ2だと、更にこの倍量で漬けダレを作ります。
+漬けダレができたら、適当に温めた油を用意し、
+チカを突っ込みます。写真では三匹しか入れてませんが、温度が下がりすぎないように適当に突っ込みます。この後更に四匹くらい突っ込みました。
+なんか雰囲気で火が通ったっぽくなったら軽く油を切って、熱いうちに漬けダレに落とします。なんか泡が大きくなってきたり、良い感じの色がついたりしてきたら火が通ったと思って大丈夫でしょう。あとはひたすら、
+揚げて、
+ageて、
+漬けダレへ。
+冷蔵庫で休ませて少し水分を抜いた野菜と和えて、</description></item><item><title>Soundcore Life Q30</title><link>https://blog.web-apps.tech/soundcore-life-q30/</link><pubDate>Tue, 26 Jan 2021 06:42:34 +0000</pubDate><guid>https://blog.web-apps.tech/soundcore-life-q30/</guid><description>最近、Among Us というゲームにはまっておりまして、友人とのプレイ動画をYoutubeで配信 なぞしているのですが、その際、リモートワークで自宅勤務になってからあまり使用されていなかったヘッドホンを使用しています。
+これまで使用していたヘッドホンは某社の社長からお下がりで頂いたbeats studio wireless なんですが、多少年数が経っているというのもあり、充電ポートがmicroUSB type-Bです。オフィスで使っている分には、専用のケーブルを一本用意しておいて、退勤時に充電するという運用でうまくいっていたものの、ここしばらくは自宅のケーブル類をなんとかtype-Cに統一しようとしていたことも相まってmicroUSBのケーブルを自宅で出しっぱなしにするというのは避けたいという気持ちが強くなりました。
+そんなわけでtype-C充電のヘッドホンがほしいな〜と思っていたのですが、beatsの新しめのモデルは相変わらずmicroUSB充電で、かといってSONYとかBOSEとかの上位モデルを買うかというと、Anker PowerExpand Elite とか買っちゃったのでちょっと散財しすぎかな、と思っておりました。
+そんな折に目に入ったのがSoundcore Life Q30 でした。
+ヘッドホンを購入しよう、と思ったときに個人的にはいくつか条件があり、まず一つは上述のtype-Cで充電できること。加えてオーバーイヤー型であること、ANC がついていること、というあたりを条件としました。Soundcore Life Q30は多少形が好みではない感じがあるものの、どうせ基本は自宅で使うだけだし、価格も安いという事で購入に踏み切りました。
+Soundcoreはみんな大好きAnkerのサブブランド(?)で、これまでにはスピーカー を購入したことがありました。Web上のレビューも悪くなく、比較的安心して購入することができました。
+箱はAnker製品にありがちなシンプル・・・という路線ではなく、Soundcore製品にありがちな写真+文字という感じのおしゃれな箱。最近(といってももう数年単位とかだと思いますが)こういう箱のオーディオ製品多いですよね。
+しかし梱包レベルはAnkerという感じ。ケースに入ったヘッドホンがそのまま箱に入っています。ウケる。
+ケーブル類は小さい巾着袋に入って同梱されていました。この巾着が結構触り心地が良いです。
+付属していたケーブルはUSB type-A to USB type-Cケーブルと、AUXケーブルです。このAUXケーブルでつないで有線で音楽を聴けばハイレゾにも対応しているとか。そんなに音質のいい音楽を最近は聴かないので、あまり意味は無いですが。
+飛行機とかで無線NGな時に音楽を聴きたい人にはいいかも。
+中の仕切りは固定されているわけではなく、ただの梱包材だった模様。
+梱包材を外してしまうと収納方法が分からなくなりそうですが、そういった可能性も考慮してか収納方法のタグがついてました。安心。
+装着感としては側圧が結構やさしめな様に感じます。眼鏡をかけて数時間装着しても痛くありませんでした。
+まだ使い始めなので音質等はレビューできませんが、以上、開封レビューでした。</description></item><item><title>Anker PowerExpand Elite 13-in-1 Thunderbolt 3 Dock</title><link>https://blog.web-apps.tech/anker-powerexpand-elite-13-in-1/</link><pubDate>Fri, 22 Jan 2021 07:47:47 +0000</pubDate><guid>https://blog.web-apps.tech/anker-powerexpand-elite-13-in-1/</guid><description>Ankerが最近(といっても国内の販売開始は12月中旬頃だったはずなので、かれこれ一ヶ月は経過している)発売した、PowerExpand Elite 13-in-one Thunderbolt 3 Dockを購入したので、unboxing &amp;amp; review noteを書いておきます。
+実はこの商品自体は海外では大分前に発売されており、個人的には国内の発売を今か今かと待ち望んでいた形でした。発売即購入・・・といきたかったのですが、そこはAnker。良さそうな新商品はすぐに完売と相成ってしまったのでありました。
+個人的にこの商品を選んだのは、以下のような理由があります:
+USB Type-Cポートが複数ある USB Type-Cポートが4つあり、うち二つはThunderbolt 3ポートです。一つはPCとつなぐことになるため、都合2つUSB Type-Cのポートが増える計算になります。弊宅ではケーブルをできるだけUSB Type-C to USB Type-Cに統一しようとしているため、USB Type-Cポートを増やすことができるというのが最優先事項でした。 余計なポートが少ない USB Type-Cポートを増やすというのが主目的なため、多くのドックにありがちな「いろんなポートがついてるよ！」は無駄でしかないという気持ちでした。光デジタルオーディオやSDカード、USB Type-AやEthernetも正直不要です。が、世の中の人はたくさんポートがついているものをほしがっているのか、Type-Cのポートを増やすだけ、という物はほぼ存在しておらず・・・ 比較的小さい 世の中のドックは大きいんです。USB Type-Cポートを増やしたいだけなのに(以下略 比較的安い 大体このスペック(Thunderbolt 3 dock)だと約3万というのは最も安い方の値段で、高い物だと4万〜5万程度します。同時に発売されたThunderbolt 3ではないほうのドックは2万円程度ですが、Type-Cポートが少ないのです。 現在の配線はこんな感じです。最初、PowerExpand - ディスプレイ間もtype-C to type-Cケーブルでつないでみたのですが、何か遅延があるのか、カクついているのか、マウスカーソルの動きに違和感がすごかったので、試しにHDMIでつないでみたところ、違和感がなくなったためHDMIでの接続としました。ウェブカメラはディスプレイのtype-Aポートにつないでおり、これをPowerExpandまで引き延ばすと取り回しが良くなさそうだったので、ディスプレイとPowerExpandの間にもう一本type-A to type-Cのケーブルを配線し、ウェブカメラは引き続きディスプレイのダウンストリームポートに接続するという形にしました。
+現状マイク(AKG Lyra)とキーボード(Ergodash)がPCに直接接続されているので、これをPowerExpandに接続する形にまとめられれば、PCのポートは一つで済むという事になり、取り回しが非常に楽になりそうです。マイクはtype-C接続なのでそのまま特に問題なく接続できそうですが、キーボードはmicro-Bなので、今更micro-Bのケーブルを増やしたくもないですし、どうするかはちょっと検討することになりそうです。
+以下unboxing。</description></item><item><title>2020年買って良かった物</title><link>https://blog.web-apps.tech/2020-good-buy/</link><pubDate>Wed, 23 Dec 2020 16:38:13 +0000</pubDate><guid>https://blog.web-apps.tech/2020-good-buy/</guid><description>世間の波に乗って、書いてみる。
+ガジェット類 Anker PowerWave 10 Pad(改善版) ワイヤレス充電器は安物だったり、ノベルティでもらった物だったりしか使ったことがなかったためあまりいい印象がなかったが(といってもこれも別に高くはないけど)、改めてちゃんと買って見たら充電速度も十分でかなり良い。 サンワサプライケーブルトレー(メッシュ・汎用タイプ) CB-CT5 クランプでデスク下に付けるタイプのケーブルトレー。デスクの上が大分すっきりした。キーボードの配線だけは現状どうしようもないので、なんとかしたい。 スリムな人間工学的なリストレストマジックトラックパッド2世代 明らかにアレっぽい感じの商品名で、実際梱包の感じがアレだったけど商品自体はそこそこちゃんとしてる。机との相性が良くないのか、手首がかゆくなる事がちょいちょいあったけど、これを使い始めてからはそういったことも無くなった。 Twelve South BookArc for MacBook (Space Grey) 結構ずっとほしかったものの、スタンドだけでこの値段は・・・と思ってためらっていたが、最終的に購入し、机の上が広くなったので大変満足。 メガネ関連 SIMON アンチフォグ このご時世、メガネをしている人は絶対買った方が良い。これを使っていないで「マスクすると眼鏡が曇るから・・・」というのは甘え。マジで全く曇らなくなり世界が変わるので、最寄りのビックカメラ or amazonで即購入してください。 メガロック ミニ 軽めのフレームで、視力が悪くて薄型レンズにしているひとに特にオススメ。 キッチン用品類 Iwatani たこ焼きプレート CB-P-TAF Iwatani 焼肉プレート小 CB-P-Y2 我が家で使用しているIwataniのカセットコンロをホットプレートのごとく使用することができる焼き肉プレートとたこ焼きプレート。大阪の人が「たこ焼きは絶対ガス火で作った方がいい」という気持ちも分かるようになったし、ちゃんと油が下に落ちる焼き肉プレートはかなり快適。ホットプレートと違って、熱源とプレートが別売のものなので、どちらかが使えなくなってもダメになった物だけ買い換えればよい、というのも大変よいところ。 貝印 バターケース バターケースというより、バターカッターとして使用。カットした後のバターは山崎実業 バルブ付き密閉バターケース に入れている。個包装のカット済みバターより安く、同程度の利便性を得られるのでバターをよく使う人にオススメ。 OXO シリコン スパチュラ M 実家にいたときはゴムべらなんて製菓の時にしか使わないと思っていたけど、料理に使っても便利と言うことを実家を離れてから知ったので、100円のじゃなくてそこそこちゃんとしたのを買った。溶ける心配も無いし(100円のは柄が溶けそう)、使いやすい。 超強力 マグネットフック Cosego 6個入 こちらも100円の物から買い換え。磁力も強く、割と何でも掛けることができて便利。4人前用のパエリアパンくらいの重さになると、一つでは支えきれなくなる程度の力がある。 山崎実業 戸棚下調味料ラック 細かい調味料類(こういうの とかこういうの 、なおこれらはあまり良くなかった)を置いておくのに便利。</description></item><item><title>バックアップはちゃんと取りましょう、という話</title><link>https://blog.web-apps.tech/we-need-backup/</link><pubDate>Tue, 06 Oct 2020 06:18:33 +0000</pubDate><guid>https://blog.web-apps.tech/we-need-backup/</guid><description>諸般の事情・・・というか単純に本ブログを動かしていたサーバーがどうやら壊れたようで(すぐに作業できる場所に置いてない)、とりあえずクラウド上に同じような環境を作ってバックアップからリストアしたんですが、最後にバックアップ取ってから何本か記事を書いていた物が消失しました。
+皆さんちゃんとバックアップは定期的にとりましょう。
+以上です。</description></item><item><title>Rakuten Mini unpacking</title><link>https://blog.web-apps.tech/rakuten-mini-unpacking/</link><pubDate>Sat, 13 Jun 2020 11:27:54 +0000</pubDate><guid>https://blog.web-apps.tech/rakuten-mini-unpacking/</guid><description>昨日、何かと今話題のRakuten Mini (C330) が届きましたので、開封・セットアップしました。
+外箱はシンプルな感じ。このタイプの箱、最近流行ですね。届いた内容物としては、
+Rakuten Mini Rakuten Mini初期設定方法のご案内 Rakuten Mobile eSIM版 START GUIDE の三つでした。
+箱の底面には何も書いてありません。ちょっと作りが甘いというか、蓋が大きいように見えます。が、Appleの作りの良い箱とかはぴったりすぎてちょっと開けにくいので、これくらい緩い方がむしろ開けやすいかも。
+開けると早速端末がお目見え。小さくて可愛いです。色はクリムゾンレッドを選択しました。少し落ち着いた感じの赤で良い感じ。
+付属品はこんな感じ。本体の他、ペライチの説明書、充電用のケーブル、充電アダプタ、イヤホン変換ケーブルが入っていました。
+充電アダプタは5V1Aで、急速充電には対応していないようです。多分。写真でもわかるとは思うんですが、コンセント側が少し小さい台形になっているので、コンセントの状況によっては使いづらいかもしれません。
+説明書は小さく、半分に折りたたまれているだけの紙なので、情報は非常に少ないですね。
+イヤホン変換ケーブルはPixel 4だと付属していなくて、Google Storeで1,320円 なので、有線のイヤホンを使いたい人には嬉しいかも。私は使いませんが・・・。
+本体を保護していたフィルム？を剥がしたらこんな感じ。つやのある色で、あまり安っぽい感じはありません。Rの文字とFelicaマークは銀色です。白は背面が白、側面がシルバーなので、側面がメッキっぽい感じの赤とかだったらやだなぁ・・・と思っていたのですが、そんなこともなく、違和感のない色合いになっています。
+カメラは(イマドキのスマホはだいたいそうですが)若干飛び出ています。が、0.5mmに満たないくらいしか飛び出ていないので、あんまり気にする必要はなさそうです。
+写真で言うところの左下の角にストラップホールがあり、これは最近の端末としては結構珍しいように思えます。
+画面側。まぁ特筆すべきことは特にないですね。画面向かって右側に電源ボタンと音量ボタンがあります。
+サイズ比較のため、SAPICAと重ねてみました。普段はPASMOを使っているんですが、東武カード一体型のため、写真には使えなかったんですよね・・・
+幅はカードと同じか少し小さいくらいで、長さはカードより長いです。こうしてみるとかなり小さいですね。
+起動するとホーム画面はこんな感じです。なんだかちょっと高齢者向けあるいは子供向けの端末っぽい気もしますが、小さい画面で扱いやすい、なかなか悪くないホーム画面だと思います。ベゼルが大きいスマホは久々に持ったので、ちょっと違和感があります。
+初期IMEはiWnn IMEとか言うやつで、わたしはATOKに入れ替えました。フリック入力は思ったより余裕で、twitterくらいなら全然不便を感じません。一方でQWERTYキーボードによる入力はやはりちょっと厳しい感じ。入力自体はできますが、ちょっと疲れてしまいそうです。
+まぁ1円で手に入り、Felica搭載、顔認証でロック解除ができ、ジーンズのコインポケットに入る小ささ、回線料金も一年は無料ですから、興味があったら申し込んでみても良いのではないでしょうか。特に、Falicaを搭載していない端末をメインで使っている方は決済用端末として購入してみても悪くは無いと思いますよ。事務手数料も無料というか、むしろポイントでプラスになりますしね。</description></item><item><title>梅仕事2020</title><link>https://blog.web-apps.tech/ume-2020/</link><pubDate>Sat, 06 Jun 2020 16:53:33 +0000</pubDate><guid>https://blog.web-apps.tech/ume-2020/</guid><description>6月ですね。梅の季節でございます。 数日前から近所の西友でも梅の実やらなんやらが店頭に並び始めまして、あぁ6月か、と感じる次第です。 20歳になった6月から毎年梅酒やら梅シロップやらを作ってまして、シロップはまぁ家族も飲みますし、そもそもそれほど(少なくとも年単位では)日持ちする物ではありませんから、作っては消費し、という感じですが、梅酒は(あまり自宅で酒を飲まないので)毎年4L瓶が増え続けています。就職して関東に出てくるまでに作った物は実家に置いてきてしまったのですが、どこかのタイミングで引き取りたい気持ちがありますね。 まぁそこまでの物を置いてきたとはいっても、関東に出てきてからかれこれ4年、4L瓶も今年で4本目、札幌に置いてきた物と合わせると8本になりますから、なんとか圧縮するなりする必要がありそうです。
+扨、今年は池袋にある東武百貨店の地下食料品売り場で南高梅を購入してきました。約1kg(1kgをちょっと超えるくらい)で1500円でした。2kgほど買いましたので、3000円ですね。スーパーで買うと大体1000円/kg位ですが、そこは百貨店、実も大きく、傷がほとんど無い良い梅です。
+梅酒用にはまだ青い実を、梅シロップ用には比較的熟していそうな黄色い実を選んできました。
+20歳の時に作ったときに、このように水に実を漬けて、あく抜き(?)をせよという情報を見たため、何も考えずに毎年このように水に漬けていますが、わりとさっとあげてしまうので、実際効果というか、意味があるのかどうかは不明です。
+瓶は特に特別な物は使用していなくて、西友で買ってきました。680円です。昨年梅シロップに使用した瓶は洗うのをサボって放置したため、再使用するのはちょっといやだな、と思ったので捨ててしまいました。
+さっと水で洗った後(本当はちゃんと洗った方が良いと思うんですけど、でかくて洗いにくいのでさっとで済ませてしまいます。毎年。特に問題は発生していません)、アルコール製剤を拭きかけて消毒します。特に梅シロップは酒が入らない分、ちゃんと消毒しておかないと変なことになりかねません。
+例年は氷砂糖を使用して作っていたのですが、今年は何の影響やら氷砂糖が完売だったので、思い切ってザラメを選択してみました。1kgあたり228円です。
+まずは梅シロップを仕込んでいきます。
+水からあげた梅の実をキッチンペーパーで拭いて水気を取り、爪楊枝でへたをとり、砂糖に埋めます。瓶に梅を敷き詰める、砂糖を上からかける、梅を敷き詰める、砂糖をかける、という感じです。
+梅は金気を嫌う、というはなしがありますが、これはまぁいろいろと理由があるようで、曰く、梅の酸で金属が腐食するので金属の道具を使うのは良くない、だとか、曰く、金属の道具では梅の実を傷つけやすく、傷がつくとカビなどの原因になったり、見た目や味が悪くなったりするから良くないのである、だとか。まぁ理由がないということは無いはずですので、素直に先達の言葉に従い、金属の道具を使わずにやっていきましょう。
+梅シロップは酢を入れるレシピと酢を入れないレシピがありますが、個人的にはむやみに発酵されたりカビられたりしても困りますし、液体が入った方が呼び水的な感じで早くできるかな、という気持ちで酢を少量入れています。効果のほどは不明です。今年はたまたまリンゴ酢があったので、これを使用してみました。大さじ三ほど適当にかけておきます。
+梅シロップの仕込みが終わったら次は梅酒です。今年は宝酒造の「果実酒の季節」を使用します。近年どこのスーパーでもよく売られている甲類焼酎ですね。毎年梅酒を仕込んでいますが、実は果実酒の季節は使ったことがありませんでした。特にここ数年は麦焼酎で漬けてみたり、泡盛で漬けてみたりしていたので、ホワイトリカー自体使用していませんでした。
+毎年氷砂糖でやっていたので、酒の方をいろいろ試していたのですが、今年は前述の様にザラメを使用しており、砂糖側の条件を変えたので、まぁ果実酒用のホワイトリカーなら余計な匂いもなかろうということでこれを選んでみました。1.8Lで1258円です。
+開封してみて驚いたんですが、この「果実酒の季節」、全然匂いしないんですね。まぁ、もちろんアルコールの匂いは多少しますが、それでも全然匂いがない。なるほど、確かにこれは果実酒向きっぽい。
+梅酒も最初の手順はシロップと同様です。梅を水から取り出し、キッチンペーパーで拭き、へたを取り、敷き詰め、砂糖をかけ、敷き詰め、砂糖をかけ・・・です。
+詰め終わったら上から酒をドバドバと流し込みます。ザラメを使用しているからだと思いますが、すでに茶色い色です。これはなんかちょっと楽しみですね。
+この後は数日ごとに軽く振るなり混ぜるなりしてあげて、梅のエキスを抽出していきます。氷砂糖だと大体3ヶ月から半年くらいで飲めるようになるんですが、ザラメでも同様なのかどうかはよくわかりません。まぁそもそも一年以上経たないと味見もろくにしないので、気長に待つことにします。
+最後に2017年、つまり就職で関東に出てきた年の梅酒を引っ張り出してきて一杯やりました。大分角も取れて飲みやすくなっていましたね。この年はレシピを瓶に貼っていなかったので、どういうレシピで作ったのかはよく覚えてないんですが、とりあえず美味しかったのでよしとします。</description></item><item><title>AKG LYRAを購入した</title><link>https://blog.web-apps.tech/akg-lyra/</link><pubDate>Mon, 01 Jun 2020 08:29:47 +0000</pubDate><guid>https://blog.web-apps.tech/akg-lyra/</guid><description>ようやく緊急事態宣言が解除され、むやみにガジェットを買う理由がなくなってしまった皆様、いかがお過ごしでしょうか。
+新型コロナウイルス感染症拡大防止の観点から、ﾍｲｼｬでも数ヶ月ほどリモートワーク(余談ですがWFH、という字面をついついWTFと空目してしまうのは私だけでしょうか)をしてきたわけですが、弊宅にはまともなマイクというものがありませんでした。しばらくはかなり前に購入したWebカメラ、BuffaloのBSW20KM15 の音声入力を使っていたのですが、何度か聞き取りにくい、と言われたので(大半は問題ないと言ってくれたのですが、まぁ理由付けのようなものです)、ある程度のUSBマイクを購入することを決意しました。
+とはいえ、社内外でおすすめされたオーディオテクニカ AT2020USB&amp;#43; はそれこそみんなリモートワークをしているのが理由、と言わんばかりにどこを見ても在庫がない、という状態です。在庫復活はいつになることやら、、、と思いながらSOUNDHOUSE を眺めていたところ、AKG LYRA という何やらよさげな見た目をしたマイクが一押しっぽい感じでしたので、つい勢いで購入しました。今となってはAKG LYRAもお取り寄せ、となってしまっていますが、購入時点では1週間ほどで入荷予定ということでしたので、まぁそれくらいなら待とうか、ということで即注文、5月22日に届きました。
+This is my new gear、な訳です。Youtubeではすでにそこそこ国内外のレビュー動画が投稿されており、それをぼーっと眺めたりもしていたので、そこそこサイズが大きい、というのはわかっていたのですが、届いてみたら予想以上に外箱が大きく驚きました。
+適当に何かサイズ感のわかる物はなかろうか、と思って手元を探したのですが、どうにもしっくりくる物がなく、唯一しっくりきたのがNINTENDO SWITCHでしたので、比較のために置いてみたのが次の写真です。
+なかなかのサイズ感ですね。この手の物はスタンドと本体がバラバラになっていて、到着してから自分で組み立てる、ということになるのが良くあるパターンだと思うのですが、本製品はすでにガッチャンコされた状態で梱包されているので、外箱が大きくなったようでした。
+なんて入り方をしているのでしょう。。。
+取り出した本体がこちら。比較用にティッシュの箱を置いています。外箱の比較もティッシュでよかった説。結構良いサイズですね。まぁけっして小さくはありませんが、そこそこ重量があり安定していますし、高さもそこそこあるので普通の姿勢で安心してしゃべることができます。
+音質ですが、他のマイクは使ったことがないので、はっきり言って良くわかりません。しかし、ちゃんと聞こえてはいるようです。良かった良かった。PCとの接続はANKERのC2Cケーブル を使っていますが、特に問題ないようです。
+個人的にはマイク側のMUTEボタンと、ZOOMなどのミュートが連動できたらなお良いと思うのですが、どなたか方法をご存じだったら教えて下さい。</description></item><item><title>rustで書かれたlsの代替コマンドexaをインストールしてみた</title><link>https://blog.web-apps.tech/replacing-ls-with-exa/</link><pubDate>Wed, 20 May 2020 02:54:27 +0000</pubDate><guid>https://blog.web-apps.tech/replacing-ls-with-exa/</guid><description>twitterでおのかちお氏(鍵垢なのでここでは紹介できないが)が&amp;lt;code&amp;gt;exa&amp;lt;/code&amp;gt; というlsの代替コマンドを試してみている、ということでスクショをアップしており、これがなかなか良さそうであったので、探してインストールしてみました。
+website の説明によると、
+A modern replacement for ls.
+トのことで、色をつけれたり、早かったり、tree viewができたり、Gitのステータスを表示できたりするらしい。
+macの場合、homebrew でインストールできるようなので早速インストールしてみます。
+$ brew install exa very easyですね。使ってみましょう。
+なるほど、デフォルトの表示はlsと同じくgrid viewなんですね。ホームにディレクトリしかないのでわかりにくいですけど、字が太いですね。あとklaussinani/hyper-pokemon を使っている都合で、色は表示されません・・・
+アイコン付きで表示してみましょう。アイコンを表示したい場合は--iconsオプションをつければ良い、とのこと。
+おや、表示されないですね。これは困った。まぁこの手の問題は(見た目から言っても)フォントがインストールされてないために発生しているのだろう、とあたりをつけつつ、issueを検索します。
+するとどうやら nerd fonts というフォントがアイコン表示用に使用されているようです。これをインストールしてみます。
+$ brew tap homebrew/cask-fonts ==&amp;gt; Tapping homebrew/cask-fonts Cloning into &amp;#39;/usr/local/Homebrew/Library/Taps/homebrew/homebrew-cask-fonts&amp;#39;... remote: Enumerating objects: 19, done. remote: Counting objects: 100% (19/19), done. remote: Compressing objects: 100% (14/14), done. remote: Total 35658 (delta 8), reused 9 (delta 5), pack-reused 35639 Receiving objects: 100% (35658/35658), 6.</description></item><item><title>Gmail Filter as Code</title><link>https://blog.web-apps.tech/gmail-filter-as-code/</link><pubDate>Fri, 08 May 2020 01:00:00 +0000</pubDate><guid>https://blog.web-apps.tech/gmail-filter-as-code/</guid><description>@yamamoto_febc さんのブログ記事 で、jessfraz/gmailfilters というツールを知りました。なんでも、GmailのフィルタをTOMLで管理するツール、とのこと(実際の使用例などはkakakakakkuさんの記事 で紹介されています)。 それは素敵っぽい、ということで触ってみたところ、実際良い物っぽい感じはあったものの、TOMLというのが(個人的に)つらいし、releasedなバージョンではexportができない(機能自体はmasterにあるものの、一年前に機能開発されてからリリースが打たれていない、という点がちょっと不安)という二点が気になりました。 特にTOMLはどうにも好きになれず、やはりYAMLで書きたい、という気持ちが強かった+GWの自由研究が決まらなかったので自前で書き直し、これをGmail as Code (今はfilterしか管理できないけど、他の設定も管理できるようにしたい)からgmac と名付けました。
+YAMLで設定したい
+&amp;mdash; nasa9084@某某某某(0x1b) (@nasa9084) April 27, 2020 GMaC - Gmail as Code 大枠の挙動としては、jessfraz/gmailfiltersとそれほど変わりません。Gmail APIをgoogle.golang.org/api/gmail/v1 を使用して叩いているのも同じです。 jessfraz/gmailfiltersと比較して、違う点として次の様なものがあります:
+TOMLではなくYAMLで設定を記述する Gmail Web UIに比較的近い設定項目 jessfraz/gmailfiltersも実装しているArchiveやDeleteなどはもちろん実装 条件/アクションを個別に設定する形にした jessfraz/gmailfiltersみたいに全部まとまってるとわかりにくくない？ larger_thanやsubject、has_attachmentといった条件も追加 starやimportant、category(私は使ってないけど)といったアクションも追加 OAuthの際に認証/認可ページを自動で開き、OAuth callbackも受ける jessfraz/gmailfiltersはURLと、OAuth tokenをコピペする必要がある credentials.jsonおよびtoken.json (OAuthの認証ファイル)を特定の場所に置き、そこから読み込む jessfraz/gmailfiltersは毎回ファイルパスを指定する必要がある kubectl-likeなサブコマンド配置 get/applyが個別に行え、(k8sに慣れている人は)比較的なじみやすいはず jessfraz/gmailfiltersはオプションフラグで挙動を変える方針っぽい CIで使いやすい(と思う) credentials.jsonを標準入力から読める OAuth refresh tokenを環境変数で指定できる jessfraz/gmailfiltersはファイルからのみ (そこそこ)ちゃんとテストを書いている 全部とはいえないけど・・・ jessfraz/gmailfiltersはほとんどテストがなくてちょっと怖い (そこそこ)ドキュメントを整備してある README.</description></item><item><title>YOBYBO CARD20</title><link>https://blog.web-apps.tech/yobybo-card20/</link><pubDate>Mon, 27 Apr 2020 08:56:45 +0000</pubDate><guid>https://blog.web-apps.tech/yobybo-card20/</guid><description>2020-05-19追記: 外出時にPixel 4との組み合わせで使用したら、音の途切れが激しく、正直使い物にならなかったので、「不良品では？」と問い合わせをしたら返品・返金対応となりました。見た目、サイズ感、装着感などは良かっただけに残念です。 先だってMakuakeで応援購入したCARD20 が届いたので、開封レビューします。
+CARD20は非常に薄い左右完全独立型のワイヤレスイヤホンで、クラウドファンディングプラットフォームMakuakeで出資を募っていました。私も1月末頃に支援をし、紆余曲折あり(コロナのせいであれこれあったらしい)本日手元に届きました。
+なお、多くの「提供」記事がウェブで展開されていますが、本記事は提供を受けたわけでもなく、自分で買っての感想です。
+特筆すべきはその薄さで、この手のTWSイヤホンでも比較的標準と思われるサイズ感のAVIOT TE-BD21f のケースの厚さが3cm弱程度なのに対し、CARD20はなんと1.3cmと、TE-BD21fの約半分の厚さです。Pixel 4 (ファブリックケース付き)より若干厚いかな、という程度です。
+CARD20の13.4mm世界最薄クラスのボディは、お財布やジーンズのコインポケットにしまうことができ、コードや収納の煩わしさから解放されます。
+との説明がプロジェクトページに書かれていたものの、さすがに1.3cmのものを財布に入れたら邪魔そうではあります。とはいえコインポケットに入るのはなかなか良さそうです。
+また、近年は店頭で販売されるイヤホンの大半がカナル型ですがCARD20はインナーイヤー型です。これは個人によってプラス評価になるかマイナス評価になるかというのはかなり分かれるところですが、左右完全独立型のワイヤレスイヤホンの選択肢はほとんど存在しない(AirPodsとその類似品+αくらい)現状で、カナル型があまり得意ではない私としてはかなり心が惹かれる製品となっています。ウェブ上でさっと調べても、「カナル型ではない点が惜しい」との記述を見ますが、個人的にはカナル型じゃないからこそ、「買い」でした。
+外箱は至ってシンプルで、製品を上面から見た写真が白い箱に印刷されています。蓋と内箱がぴったり吸い付くようなサイズ感で構成された箱、しろい外観、余計な物が書かれていないデザイン、最近流行のデザインともいえますが、Appleっぽさがありますね。
+箱底面にはケースからだしたイヤホンの写真と、モデル番号をはじめとした一通りのスペックが記載されています。Bluetoothのバージョンは5.0、MakuakeのプロジェクトページによるとQualcomm QCC3020を使用しているようです。TWS Plus対応ということなのですが、ざんねんながらPixel 4はTWS Plusに対応しておらず、あまり恩恵を受けることはなさそうです。
+連続再生時間は約4時間、ケースのバッテリーが約16時間分充電できるようなので、合計で約20時間使用可能とのこと。AVIOT TE-BD21fが約7時間+約18時間の合計約25時間、SONY Xperia Ear Duoが約4時間+約16時間の合計約20時間なので、サイズの割には標準的な使用時間となっているように思えます。
+箱には記載がありませんが、防水性能はIPX4ということなので、少なくとも雨が降る、汗をかく、くらいでは問題がないようです。
+開封すると直ぐに本体が入っています。注文時にロゴなしバージョンを選択したため、イヤホン本体にはロゴが入っていません。プロジェクトページや箱に描かれていたものよりは深い黒で、光沢感もあまりきつくなく、高級感もありなかなか良い色だとおもいます。
+表面は天窓設計によりイヤホン本体の一部が見えています。これにより、気づかないうちになくなっていた、ということがなくなるとのことですが、実際はどうなんでしょうか。タッチコントロール対応と言うことで、おそらく銀色の部分をタッチして操作することができるのでしょう。AVIOT TE-BD21fはボタン式で、うまく押さえて操作しないと耳にさらに押し込む形になってしまうという感じだったので、タッチで操作できるのはプラスポイントです。(感度が悪いor良すぎる、ということがなければ)
+裏面には技適をはじめとした各種法令関係のマークとバッテリー容量、電源関連情報、生産国、モデル名などが書かれています。平面に対して垂直に充電ケーブルを挿すのはどうなのか、とおもわなくもないのですが、この薄さなら仕方が無かったのでしょう。充電ケーブルはUSB Type-Cです。
+付属品として説明書と充電ケーブル。ケーブルはUSB Type A to Type Cのそれほど長くない物です。説明書は英語と日本語で記載がありますが、日本語の一部が中国語？になったりしていて微妙に怪しさがあります。
+本体ケースを空けるとこんな感じ。空けるときに若干イヤホンに干渉するようで、すこしイヤホンがぐらっとします。取り落としてしまうほどではないのでとくに問題はありませんが、繰り返し開け閉めしていたらすこしイヤホンが傷つくかもしれません。
+YOBYBOロゴとL/Rの文字はエンボス加工というか、すこし周りから浮き出たような処理になっていて、高級感があります。
+閉じると真ん中が光ります。充電残量の表示でしょうね。多分。
+イヤホンの内側はこんな感じ。ケースから取り出す際、少し取り出しにくいかも、という印象をうけましたが慣れれば多分大きな問題ではないでしょう。
+充電端子部分に絶縁フィルムがついているので、これを剥がして充電を開始します。
+まだ音楽を再生していないので音や接続の安定度などについてはなにもコメントできないのですが、開封してみての見た目だけでいうならかなり満足度が高い商品となっていると思います。AVIOT TE-BD21fやXperia Ear Duoのケースや本体がプラプラしいのに対して、CARD20はそういった安っぽさはあまり感じられません。</description></item><item><title>ギョーザ×ラザニア</title><link>https://blog.web-apps.tech/gyolasagna/</link><pubDate>Sun, 19 Apr 2020 06:20:25 +0000</pubDate><guid>https://blog.web-apps.tech/gyolasagna/</guid><description>ラザニア（単数形: lasagna）あるいはラザニエ（複数形: lasagne）は、イタリアのカンパニア州ナポリの名物である、平たい板状のパスタの一種、またはそれを用いたパスタ料理。 イタリア語の発音ではラザーニャやラザーニェに近い。
+料理の場合は、イタリア語で「オーブンで焼き上げたラザニア」を意味するラザーニャ・アル・フォルノ (lasagna al forno) と呼ぶこともある。深さのある耐熱容器に、ベシャメルソース、ミートソース、ラザニア、チーズを何層か重ね、最上段のベシャメルソースに焼き色がつくようにバターを乗せて、オーブンで焼いたもの。
+餃子、すなわち薄いパスタ(小麦粉なので大体一緒です)と挽肉の集合体にトマトソースとチーズを載せて焼いたら大体ラザニアになりそう、ということで作りました。ベシャメルは面倒なので省略します。適当にホワイトソースを買ってくるとか、フレークタイプのホワイトソースとかを買ってくれば良い感じになる可能性がありますが、家になかったので諦めます。
+我が家には三割うまい!! の冷凍餃子が常備されておりますので、これをゆでていきます。お好みによっては焼いても良いかもしれませんが。
+玉ねぎが余って(？)いたのでいれようと思い立ち適当に炒めていきます。このあと適当に刻みニンニクを加えて香りを足してみたりしました。
+トマトソースはこちらを使います。カルディで買えるもので、結構便利です。
+だばぁ。軽く水分を飛ばしましょう。お好みでなんかハーブとか入れても良いかもしれない。
+耐熱皿にゆでた餃子を並べます。
+ソースをかけます。
+チーズ。
+オーブン/オーブントースターで良い感じになるまで焼きます。餃子もソースも予め火を通してるので、チーズが良い感じになればOK。
+お好みでバーナリングしましょう。香りが立ってより旨そう感が増します。
+いざ実食。これはまぁラザニア的な物体として十分戦えます。ベシャメルを入れたらもっとラザニアになりそうではありますが、そこまでやるともうそれは普通にラザニアを作った方が良いかもしれません。</description></item><item><title>アーロンチェア リマスタード</title><link>https://blog.web-apps.tech/aeron-remastered/</link><pubDate>Wed, 15 Apr 2020 09:24:39 +0000</pubDate><guid>https://blog.web-apps.tech/aeron-remastered/</guid><description>諸般あり、オフィスでも使用している、最高の椅子と名高いアーロンチェア をかなりお安く購入できるという機会を頂戴したので、COVID-19の影響を受けて完全にリモートワークをしていることもあって購入を決意しました。
+おそらくオフィスで使用している物は旧型のアーロンチェアなのですけれども、今回購入したのは(新品なので当然ですが)現行の「アーロン リマスタード」、型番で言うとAER1B23DW ALP G1 G1 G1 BB BK 23103というものです。
+注文をして支払いをしてからちょうど一週間で届きました。販売元はGregory Lyon社 で、アーロンチェアをはじめとするハーマンミラーのオフィシャルディーラーです。
+箱には取り扱いや持ち上げる際は二人でやりなさい、との注意書き。重いからとのことではありますが、重さよりも大きさがやばくて、我が家の階段(我が家は一階に玄関があり、内階段を上って二階が居住スペースという構成)は幅がぴったりで、手すりの上を通さないとだめでした。購入を検討している方は要注意。
+箱を空けると中から箱が。これは多分スペーサーですね。
+外箱は下部が空いていて、上からスポッと取り外すことができます。
+ご対面！！！そうそう、これですこれ。うひょー。
+説明書が座席下のノブにかかってました。特に結ばれているとかいう訳ではなく、棒状の物に引っかかっているだけなので、はさみとかも必要無く取り外すことができます。むしろ配送途中に取れなかったのがすごい。
+デスクに合わせるとこんな感じに。机の上があまりきれいではないのはご愛敬と言うことで・・・
+ちなみにこれまで使っていた椅子はニトリのリカルドPUブレスレザーBK でした。これはこれでなかなか良い椅子だったので、ちょっと手放すのが惜しい、という気持ちがしています。スペースはあるし、とりあえず置いておいても良いかな・・・ ゲームするときとか、本読むときはふかふかしてる方が嬉しいですね。
+アーロンチェアは基本的に保証が12年なので、長いお付き合いになる見込みです。よろしく。</description></item><item><title>2020年3月時点での自宅機材・消耗品類まとめ</title><link>https://blog.web-apps.tech/2020-april-goods/</link><pubDate>Sun, 12 Apr 2020 10:05:44 +0000</pubDate><guid>https://blog.web-apps.tech/2020-april-goods/</guid><description>自分用のメモみたいなものですが、現時点(2020-04-12)で自宅で使用している家電や道具、消耗品類などをまとめてみます。
+家電類 冷蔵庫: SHARP SJ-GW35C 。2016年製、幅60cm、定格内容積350L。 食器洗い乾燥機: Panasonic NP-TH1 。2018年製、幅550mm×奥行344mm×高さ598mm、庫内容量が約50L。後継機がNP-TH2, NP-TH3と出ているためすでに生産終了ではあるが、それほど大きな変更はない模様(小物ホルダーがついたり、庫内の棚の仕様が変わったり、というマイナーチェンジくらい？)。 洗濯乾燥機: TOSHIBA TW-127X7R 。2019年製。洗濯脱水容量が12kg、洗濯乾燥容量が7kgで、2019年8月時点では業界トップクラスの洗濯容量、業界最大の乾燥容量だったらしい(今はどうか、については調べていないので知らない)。操作がタッチパネルなのはちょっと特徴的かも。残念ながら洗剤等の自動投入機能はついていないが、後述の様にプッシュ式の(はかる必要の無い)洗剤を使用しているため不便はない。 炊飯器: TIGER JPH-A100 。2017年製を型落ちで買ったので大分安く買えた記憶がある。最近釜を欠けさせてしまったので買い換えたいが、釜だけでも2万以上するのでためらっている。 オーブンレンジ: SHARP RE-SS8D。2016年製で、すでに公式ページなし。所謂過熱水蒸気オーブンレンジ、というジャンルに当たる物っぽい。庫内容量23L。 ミキサー: T-fal ミックス＆ドリンク 。定格消費電量300W、最高容量600ml。特に不満なし。 スロークッカー: TWINBIRD EP-D819W 。たまに作る煮物に便利。 エスプレッソメーカー: NESPRESSO U。すでに公式ページがなくなっている模様。製造年は不明・・・。水のタンクを右側に置いたり左側に置いたり奥に置いたりできる変わったマシン。現行の低価格帯マシンだとリストレット(25ml)が選択できないけど、本機は対応。牛乳で割ることがほとんどなので、あまり薄くならないので嬉しい。 コーヒーメーカー: TIGER ACX-S060 。大学生の、それも割と早い時期に買ったやつなので、もう結構な年数使っている気がする。定価は6000円だけど、購入時はセールかなんかで2000円くらいで買った記憶がある。サーバーがステンレスなので割る心配がないというのが嬉しいところ。 低温調理器: ANOVA 。Wi-Fiなしの2014モデル(多分2018年製とかそれくらいの奴)。 加湿空気洗浄機: SHARP KC-G50 。所謂気化式のもの。 掃除機: Dyson Cyclone V10 fFluffy 。言わずもがな。 キッチンウェア 鍋類: T-fal インジニオ・ネオ グランブルー・プレミア(セット10) を基本に、ニトリの鍋やIKEAのフライパン、就職祝いでもらった圧力鍋などを適当に使っている。最近なぜかパエリアパンが仲間に加わった 。IKEAの激安(300円くらい)フライパンはクソ便利だったのに、ラインナップからなくなってしまって悲しい。 計量カップ: OXO アングルドメジャーカップ(中) 。まぁそんなに真面目にはからないので、500mlの水が入るカップ、位の使われ方をしている。不憫。 ゴムべら: OXO シリコンスパチュラ M まな板: アサヒ クッキンカット 包丁: 三徳(火造り 三徳) とペティ(槌目MV鋼強化木 ペティ) を使っている。いずれも合羽橋 つば屋さんのもの。 消耗品類 食器洗い用洗剤: JOY GELTAB 。洗浄力の高い粉末洗剤と油汚れにききやすいジェルが一つにまとめられたタイプのすごいやつ。コスパより性能重視。Amazonでセールのときはだいたいこれの超特大サイズというやつが割引されてお得なので、セールの度に追加購入するとだいたい良いペース。 衣類用洗剤: アタック ZERO ドラム式専用 。プッシュタイプの容器で、軽量がすごく簡単。 衣類用柔軟剤(1): フレアフレグランス ドレッシーベリーの香り 。特に深い理由はないけど、安かったときに一度買ってから、これもamazonのセールで安くなりがちなので継続して使っている。匂いは結構強め。 衣類用柔軟剤(2): ハミング LINNE 無香性 。前述のフレアフレグランスは結構香りが強くて、バスタオルに使うとちょっと微妙な感じだったのでバスタオルを洗うときはこっちを使う。 手洗い石けん: ミューズノータッチ泡ハンドソープ 香りが残らないキッチン用。amazonの2月のセールで安かったので、前々から使いたいと思っていたノータッチタイプの物にした。料理中に手を洗っても香りが残らないタイプで、料理を結構する人間には結構お勧め。 PC/周辺機器類 PC: MacBook Pro 13inch 。2018年のモデルで、Core i7 4コア 2.</description></item><item><title>Bauhutteのデスクごとチェアマットを購入した</title><link>https://blog.web-apps.tech/bauhutte-chairmat/</link><pubDate>Fri, 10 Apr 2020 15:44:39 +0000</pubDate><guid>https://blog.web-apps.tech/bauhutte-chairmat/</guid><description>昨今の情勢を受け、私もかれこれ一ヶ月以上自宅でリモートワークをしています。自宅でリモートワークをするということは、机に向かう、すなわち椅子に座る時間が圧倒的に増える(一日あたり8時間くらい増えていますね)ことになるわけです。弊宅は賃貸かつ床が(多分)木製のフローリングで、長時間椅子に座るとなると椅子のキャスターによる床の傷つきがきになります。
+なにかチェアマットを敷いた方がよかろう、結構椅子を動かすタイプの人間であるからして大きめの物を選ぶべきであろう、という判断の下、大きく、見目もよろしそうであったBauhutteのデスクごとチェアマット(160cmx130cm) を購入しました。
+なおamazonのリンクをはってはいる物の、たまたま楽天のポイントが貯まっていたので楽天で購入しました。
+届いてみて、確かにこれは大きい。なかなか良いサイズだ、と思ったのですが、さて敷いてみよう、とすると幅がなんとも惜しい感じでありました(これは我が家のデスクとの相性、という話で商品自体が悪いわけではないので注意)。 机はニトリの組み合わせデスク 、幅140cmの天板 に特に何の変哲も無い脚 を付けて使っていますが、左脚の外側から右脚の外側までが約135cm、左足の内側から右脚の内側までが約125cmなので、完全に両脚で踏ませることも、内側に収めることもできない、かといって長辺を横向きにすると長すぎるという程度の幅です。 前述の様になかなか大きいサイズ、長辺が160ありますから、きれいにカットするのもなかなか困難です。
+厚さが1.5mmですから、まぁそれ自体はたいした問題ではないのですが、裏面の滑り止めがくせ者です。確かに滑らないのですが、表面もなかなかグリップ力があるせいか、座った状態で椅子を動かすとマットが波打ち、机の脚のところで引っかかって、机がギシギシ言うのです。
+これはちょっとなんとかしたい、と思いチェアマット用の滑り止めを別途amazonで物色中です。 また、来週新しい椅子が届く予定なので、椅子が変わったらまた違うのかもしれない、とは思っています。
+総じて、現状としては「惜しい」という評価をするしかないのですが、机の幅などの条件が折り合えば、商品の見た目やさわり心地などはなかなか悪くないと思いますので、チェアマットを探している方は検討してみてはいかがでしょうか。
+2020-04-11 追記
+ニトリのすべり止めテープ を貼ったところ、改善しました。三辺(長辺x1、短辺x2)に貼ると長さ4メートルのテープをちょうど良い具合に使い切る感じです。 現状は机の脚の一本だけチェアマットにのっている状態で、のっている側の長辺と前後の短辺にすべり止めテープを貼っています。全くギシギシ言わなくなったので、大変良いですね。
+2020-05-01追記
+裏面の滑り止め加工が裏目に出たのか、ニトリの滑り止めテープが剥がれてきました。つらい。</description></item><item><title>誕生日パエリア</title><link>https://blog.web-apps.tech/birthday-paella/</link><pubDate>Wed, 08 Apr 2020 15:38:24 +0000</pubDate><guid>https://blog.web-apps.tech/birthday-paella/</guid><description>先日、無事誕生日なるものを今年も迎えることができたのですが、twitterやらfacebookやらに欲しいものリスト を貼った結果、皆様いろいろと贈ってくださり、本当にありがとうございます。
+ところで、欲しいものリストにパエリアパンなど入れていなかったのですが、なぜか届きました。
+家広そうだし入って無くても送ってみっかと思ってポチってみた?
+&amp;mdash; TᗩKᑌᗰI KOᗷᗩYᗩᔕᕼI (@chamaharun) April 8, 2020 全く以て意味がわからないですね。しかし贈ってくれたのに使わない、というのもなんなので、パエリアを作ることにしました。
+なお誕生日パエリアというタイトルですが、今日誕生日、というわけではありません。
+材料はこちら。アサリ小パック、パプリカ一つ、鶏肉一枚、エビ、イカ、トマト、米、サフラン、玉ねぎ、ニンニク。 鶏肉は一口大に切って軽く塩こしょうしてあります。 玉ねぎとニンニクはみじん切りしておきましょう。 また、アサリは砂抜きをしました(が、食べたらガリッといった。なんでや。) トマト、パプリカは適当に切りましょう。 イカはカット済みのものを買いました。
+ちなみにこの中で一番高かったのは(多分)サフランです。サフラン高い。
+こちらが件のパエリアパンです。四人前作れるらしい。大きくて端の方に火が入りにくいのではないかと心配です。
+さび止めの油が塗ってあるらしいのでそれを飛ばした後、オリーブオイルを適当に熱して、肉やら魚介やらを炒めます。
+火が通ったものから一旦どけておきます。特にアサリは火を通しすぎると縮んでしまうので、開いた時点でどけておいた方がいいでしょう。多分。 なんかすでにパエリアの匂いがする気がしてきます。
+追いオリーブオイルをして、玉ねぎとニンニクを炒めます。ちょっと焦げ付いている？ようなところはこそいでおいた方が良いでしょう。多分これがうま味ってやつです。多分。
+玉ねぎがしなっとしてきたら、生米を突っ込んで炒めます。大きいのでフライパンの様に振ることはできません。
+どんな状態になったら米に火が通ってきた、といえるのかはよくわかんないんですけど、それっぽい感じになったら水とコンソメ、サフランを加えて一煮立ちさせます。 コンソメは多分予めお湯か何かで溶いておくか、顆粒のものを使った方が良かった気がする。
+煮立ったらパプリカを入れます。インゲンを入れたい人はここで入れましょう。
+トマトさんを入れるタイミングがわからなかったので、「パプリカと同じ赤だしいけるっしょー」とここで投入。まぁ大丈夫。赤いし。
+少しぐつぐつさせた後、よけておいた肉やら魚介やらを再投入します。これもタイミングが不明だったので気分で入れました。だいたいなんとかなる。
+この状態で十分ほど強火で煮込みます。
+十分経ったら弱火にして、水がなくなるというか、どろっとした感じになるまで煮ます。これもなんとなく雰囲気で。多分やり過ぎると焦げる。
+良い感じになったら火を止めて、適当なアルミホイルとかで蓋をして(できてない)五分ほど蒸らします。結構これで雰囲気変わるんで大事。
+五分経つとこんな感じで汁っ気が飛びます。マジで。
+最後によしなにパセリングして完成。うまいです。あと簡単。 魚介とかサフランとかそこそこするので、結構自炊ものとしてはお高めだけど、まぁ一回くらいやってみても良いんじゃないでしょうか。 なお二人で四人前は多いです。注意。</description></item><item><title>context.WithTimeoutに0を与えるとどうなるのか</title><link>https://blog.web-apps.tech/context-withtimeout-with-zero/</link><pubDate>Wed, 08 Apr 2020 04:17:35 +0000</pubDate><guid>https://blog.web-apps.tech/context-withtimeout-with-zero/</guid><description>当然と言えば当然なんですけど、特に panic とかそういうことはなく、一瞬でタイムアウトします。まぁ、どうと言うことは無いですが、設定ファイルとかで未定義時に0が来るような実装になっている場合はなんか処理する(0の時は処理をしない、というのは多分あんまりなさそうですし)必要がありますね。
+ctx, cancel := context.WithTimeout(context.Background(), time.Duration(0)) defer cancel() &amp;lt;-ctx.Done() log.Print(&amp;#34;timeout&amp;#34;) https://play.golang.org/p/63DkfIEImjv もうちょっと細かい話 さすがに短すぎるので、もう少し細かい実装の話。
+context.WithTimeoutは内部的には特別な実装は無くて、context.WithDeadlineをtime.Now.Add(timeout)に対して呼んでいます。
+で、context.WithDeadlineは返値を返す前にtime.Untilを使って現在時刻とデッドラインまでの差分をチェックしていて、これが0以下ならその場でキャンセル関数を呼んで います。
+まぁそんなわけで、余分な待ち時間が発生することもなく、time.WithTimeoutを呼んだ時点でちゃんとタイムアウトされる、ということでした。ちゃんちゃん。</description></item><item><title>Goで(メールサーバを用意せずに)メールを送る</title><link>https://blog.web-apps.tech/go-smtp-sendmail-without-mailserver/</link><pubDate>Mon, 06 Apr 2020 10:13:42 +0000</pubDate><guid>https://blog.web-apps.tech/go-smtp-sendmail-without-mailserver/</guid><description>単純な興味というか、特にこれで何かを作るというわけではないのだけれど、ふと思い立って調べてみたら意外と情報が無かったのでメモを残しておきます。
+Goでメールを送りたい、と思ったとき、Googleで検索してみると、net/smtp パッケージを使ってgmailのSMTPサーバを使用する、とかSendGridを使用する、とかそういった例ばかりが目につきました。これらはもちろん便利であることは疑いようもない(自前でメールサーバの管理とかやってられないし)んですけど、こういったSMTPサーバやらsendmail/postfixやらを使わなくても、本来SMTPではメールを簡単に送れるはず(なんと言っても「Simple Mail Transfer Protocol」ですから)、と思いました。 とはいえじゃぁどうしたら良いのか、と思ったとき、Goを用いた例というのはぱっと見当たらないのです。仕方ないのでtelnetを使用した例を見ながら、telnetでどうやれば自分のgmail宛てにメールが送れるのか、というのを試しました。
+具体的な手順というのは、次の様なものです。なお、以下の手順では(macにtelnetが入っておらずインストールして環境がごちゃごちゃするのも面倒だったので)centos:7のDockerコンテナを使用しています。
+# nslookup -type=mx gmail.com Server: 192.168.65.1 Address: 192.168.65.1#53 Non-authoritative answer: gmail.com mail exchanger = 20 alt2.gmail-smtp-in.l.google.com. gmail.com mail exchanger = 10 alt1.gmail-smtp-in.l.google.com. gmail.com mail exchanger = 40 alt4.gmail-smtp-in.l.google.com. gmail.com mail exchanger = 5 gmail-smtp-in.l.google.com. gmail.com mail exchanger = 30 alt3.gmail-smtp-in.l.google.com. Authoritative answers can be found from: # telnet gmail-smtp-in.l.google.com 25 Trying 74.125.204.26... Connected to gmail-smtp-in.l.google.com. Escape character is &amp;#39;^]&amp;#39;. 220 mx.google.com ESMTP 6si12301456pjb.</description></item><item><title>Anker SoundCore Motion B</title><link>https://blog.web-apps.tech/anker-soundcore-motionb/</link><pubDate>Wed, 01 Apr 2020 17:05:46 +0000</pubDate><guid>https://blog.web-apps.tech/anker-soundcore-motionb/</guid><description>自宅では(も)職場と同じくMacBook Pro 13inchを使っていて、デスクに向かうときはLGの4Kモニタをクラムシェルモード、USB type-C接続で使っているんですが、まぁ普通モニタのスピーカーというのはあまりいい音はしません。まぁ、おまけみたいなものなので仕方ないんですけど。そんなわけでモニタからは音を出さず、音はPCのスピーカーから出してました。
+私は基本的にあまりPCで音楽を聴く、ということはしない人間なので、特にそれでも不満はないままここまで来たんですけど、先月から新型コロナウイルス感染症(COVID-19)流行のあおりを受けてヘイシャでもリモートワークで仕事をする、という形になりました。 そうすると、これまでは帰宅後食事やら風呂やら、の後くらいから寝るまでしか自宅ではPCに向かっていなかったのが一気に一日中へと伸びました。ミーティングの類いもzoomで行うことになり、これを機にスピーカーでも買おうかな、なんて思っていたところ、Ankerがリモートワーク特集 でいくつかの商品(元々は4種類か5種類くらい対象商品があったんですけど、売り切れたのか現在は3種類になってますね)が半額、その中にBluetoothスピーカーもある、という話を聞きまして、購入に踏み切りました。
+今回購入したのはSoundCore Motion B という商品です。一年半位前に発売された商品で、Bluetooth接続、IPX7規格の防水性能、最大12時間連続再生可能なバッテリーというのが売りの商品です。 また、こちらの商品は二台を一台のPCにつなぐことで二台で一つのステレオとして使用できる(わかりにくい)という機能もあります。 せっかく半額なのだし、二台買っても一台分、二台でつなぐとどんな感じなのかもちょっとやってみたい、ということで二台購入しました。
+届いた商品がこちら。Ankerらしく、小柄なパッケージです。発送はAmazonが代行しているようで、Amazon Japanからの荷物として届きました(が、箱はAmazonの箱ではありませんでした)。輸送用の段ボール箱も小さめだったため、一瞬「二個頼んだよな・・・？」と不安になりましたが、ちゃんと二個入ってました。
+箱の上面には商品の売りと内容物が書いてあります。内容物が少なすぎて、左側のWhat&amp;rsquo;s In The Boxと右側の内容物の間が開きすぎていて戸惑います。
+側面。完全防水と12時間再生、との記載があります。完全防水とのことですけど、仕様としてはIPX7なので、防水特性としては1mの水深に30分浸かってもOK、という感じですね。
+箱下部のテープ(?)を剥がして開封。飾り気のない白い箱が姿を現します。 右側にプルタブ(?)があるので、付属品がはいっている箱で蓋されている、という状態ですね。
+白い箱を取り出すと、本体が姿を現します。充電器とかと同じく、薄い袋に入っています。
+内容品を取り出した様子。おなじみHappy? Not Happy?の紙とUser Manual、充電ケーブルが入っていました。充電ケーブルはMicro USB Micro-Bです。User Manualはちゃんと各国語で書かれています。
+二台積んだ様子。わかりにくいですけど、上部にボタンがついています。これに充電ケーブルを挿して、左右で使用します。
+ステレオで接続する場合はまず両方のスピーカーを起動し、ステレオモードにします。スピーカー同士がつながった後(状態変化がわかりにくい・・・)、PCに接続します。 PC側の表示は一台分として表示されます。二台バラバラに管理する必要はない、ということですね。
+で、肝心の音ですが、もちろんモニタやPC本体の音より圧倒的に良いと思います。スピーカーとしての音質がすごく良いかというと、まぁBluetoothの時点でそこそこ、という感じだと思いますが、私としては特に問題ない音質です。 きちんと右、左から別々に音が出ていて、センターの音はセンターあたりから聞こえている様な気がします。 パッケージにもBig Soundと記載がありましたが、音量は大きめだと思います。 音量設定を下記スクリーンショットくらいに設定していますが、MBPのスピーカーで音量をバーの真ん中位に設定したときと同じくらいの音量がでています。
+まぁみんながみんな二台買うのがいいかというと、それはよくわかんないですけど、すごく高いものという訳でもないので、そこそこのPC用スピーカーを探している、というかたはこれを機に二台えいっと買ってみても良いのではないでしょうか。</description></item><item><title>サーモンをAnovaでやる</title><link>https://blog.web-apps.tech/salmon-sous-vide-miso/</link><pubDate>Tue, 03 Mar 2020 05:30:29 +0000</pubDate><guid>https://blog.web-apps.tech/salmon-sous-vide-miso/</guid><description>昨晩の晩ご飯として、サーモンを低温調理でやりましたので、記録に残しておきます。 なお、使用したサーモンは刺身用のサーモンを使用しています。多分刺身用じゃなくても良いとは思うんですが、ちょっと怖かったので。
+使用するサーモンはこちら。近所の西友で割引になっていたもので、300g前後で600円弱だった気がします。二人分です。
+水気を適当に拭いた後、半分にざっくりと切ってステンレスのトレー？バット？に置きます。実家にはバットというものは存在しなかったんですが、使ってみると非常に便利です。100均でも売っているので、適当に数枚そろえておくとなんだかんだ重宝します。
+塩と水と砂糖を何やら混ぜ合わせたものに浸します。細かい分量はオライリーさんの「家庭の低温調理 」を参照してください。なお、私は紙の本を買いましたが、電子書籍で買ってiPadかなんかに表示しながら調理するのがおすすめです。結構厚い本なので、とにかく取り回しがしにくいので。
+我が家のバットでは若干サーモンが液体から出てしまうので、キッチンペーパー的なものに液体をしみこませて上からかぶせておきました。この状態で20分ほど放置します。
+その間に水槽(というかバケツですけど)を暖めておきます。今回は52度でやります。水道から普通にお湯(できれば少し温度設定をあげたもの)をためるとあたため時間が短縮できます。多分。
+20分経過したものがこちら。あんまり見た目は変わってない気がします。
+流水でさっと洗って余分な塩気を落とし、ペーパーで水分をとります。なんか筋がピロピロしててキモい。
+キャノーラ油をまんべんなくまぶし、ジッパーつきの袋に投入します。写真のものはIKEAの袋です。まだ袋の口は閉じていません。
+いわゆる水圧法で空気を抜き、袋の口を閉じて52度で20分やります。あたためている間にソースを作ったりするのですが、昨日はパスタを作ったりもしたので、結局40分くらい放置してしまいました。「家庭の低温調理」には30分までと書いてあったのですが、まぁ40分でも大丈夫です。
+ソース単体の写真は取り忘れてしまったんですけど、味噌とディジョンマスタード、蜂蜜、レモン汁、すりおろした生姜、ごま油とキャノーラ油をよしなに混ぜたモノです。適当にスプーンで混ぜても案外ちゃんと乳化するもんですね。
+ソースをかけた後七味をかけていますが、買ってから大分たった七味なので、辛みも香りも何もない物体になってしまっていました。
+おいしかったです。まる。</description></item><item><title>emacs/lsp-mode + goplsでGo用のLSP環境を設定する</title><link>https://blog.web-apps.tech/lsp-mode-with-gopls/</link><pubDate>Fri, 07 Feb 2020 08:19:29 +0000</pubDate><guid>https://blog.web-apps.tech/lsp-mode-with-gopls/</guid><description>Language Server Protocol (以下LSP)はこれまでエディタ/IDEが独自に実装する必要があった、補完や定義参照、静的解析によるエラー分析などをサービスとして実現するためのプロトコルです。 LSPを実装したクライアントは、Language Serverを提供している言語であれば何でも補完や定義参照、静的解析といった便利機能を使用することができます。
+Microsoftが2016年にその仕様を公開してから、多くのエディタ用のLSPのクライアント実装が作られ、また各種言語用のLanguage Serverも公開されています。
+Go言語も例に漏れずLanguage Serverの実装がいくつか存在します。今回は準公式提供のgopls を使用して設定してみます。 もちろんemacsにも複数のLSP Client実装がありますが、今回はlsp-mode を使用します。
+まずはemacs用のパッケージをインストールします。次のモノをpackage-installかpackage-list-packagesか、そのあたりでよしなにインストールします。
+lsp-mode lsp-ui company-lsp インストールできたら、(私はuse-packageを使っているので)設定ファイルにuse-packageの設定を入れておきます。ついでにgo用の設定も入れておきましょう。
+;; Golang (defun lsp-go-install-save-hooks() (add-hook &amp;#39;before-save-hook #&amp;#39;lsp-format-buffer t t) (add-hook &amp;#39;before-save-hook #&amp;#39;lsp-organize-imports t t)) (use-package go-mode :ensure t :mode ((&amp;#34;\\.go\\&amp;#39;&amp;#34; . go-mode)) :init (add-hook &amp;#39;go-mode-hook #&amp;#39;lsp-go-install-save-hooks)) ;; Language Server (use-package lsp-mode :ensure t :hook (go-mode . lsp-deferred) :commands (lsp lsp-deferred)) (use-package lsp-ui :ensure t :commands lsp-ui-mode) (use-package company-lsp :ensure t :commands company-lsp) goplsのインストールもしましょう。</description></item><item><title>Flutter環境構築 with emacs</title><link>https://blog.web-apps.tech/flutter_setup_with_emacs/</link><pubDate>Sat, 18 Jan 2020 15:18:55 +0000</pubDate><guid>https://blog.web-apps.tech/flutter_setup_with_emacs/</guid><description>ここ数日、FlutterでAndroidアプリを書く、ということに入門してみています。 Androidアプリの開発自体は大分前(無印Galaxy Sを使っていた頃なので、EclairとかFroyoとかの頃)にすこしだけやったことがあるんですが、そのころと比べるとかなり簡単に、きれいなアプリがシュッと動いて、ちょっとばかし感動しています。
+扨、Flutter/Android開発の環境構築ですが、ほとんどのドキュメントがAndroid Studioを前提としており、私のようなemacsユーザがどうしたらいいのか、ちょっとばかし躓きそうなので、メモがてら残しておきます。
+なお、基本的な手順は公式サイト に準じます。また、環境はmacOS Catalina バージョン 10.15.1、emacsはbrewで入れるemacs-mac 26.3です。 Flutterのバージョンは執筆時点でv1.12.13+hotfix.5でした。
+Flutter SDKのインストール 公式サイト のダウンロードリンクからFlutter SDKをダウンロードしてきて解凍、任意の場所に配置します。私はなんとなくで$HOME/.local/flutter以下に配置しています。
+$ wget https://storage.googleapis.com/flutter_infra/releases/stable/macos/flutter_macos_v1.12.13+hotfix.5-stable.zip $ unzip flutter_macos_v1.12.13+hotfix.5-stable.zip $ mv flutter $HOME/.local/ 配置できたらPATHを通します。 私はzshを使っているので、$HOME/.zshrcに以下の行を追加しました。
+# Flutter SDK export PATH=&amp;#34;$PATH:$HOME/.local/flutter/bin&amp;#34; PATHを通したら、flutter --versionでちゃんとPATHが通っているかを確認します。
+Android SDKのインストール 公式サイト の手順ではAndroid Studioを入れろとのことですが、emacsを使う予定なので、Android Studioはインストールせず、Android SDKのみをインストールします。 Android Studioのサイト へアクセスし、DOWNLOAD OPTIONS をクリックしてCommand line tools onlyのところからmacOS用のCommand line toolsをダウンロード、Flutter SDKと同様に適宜配置してPATHを通すか、簡単にbrew cask install android-sdkとします。 私は今回はbrewで入れました。(Flutter SDKもbrewで配布されていますが、Flutter SDKは少し古かったので、公式からダウンロードしてきた方が良さそうです)
+brew cask install android-sdkをしたときにもメッセージが出ますが、android-sdkを使用するにはJDK 8が必要なので、brew cask install adoptopenjdk8としてJDKもインストールしておきます。
+インストールできたら、ANDROID_HOME環境変数をandroid-sdkのパス(brewで入れた場合は/usr/local/share/android-sdk)に設定し、android-sdkにもPATHを通しておきます。
+# Android SDK export ANDROID_HOME=&amp;#34;/usr/local/share/android-sdk&amp;#34; export PATH=&amp;#34;$PATH:/usr/local/share/android-sdk-tools&amp;#34; export PATH=&amp;#34;$PATH:/usr/local/share/android-sdk/tools/bin&amp;#34; export PATH=&amp;#34;$PATH:/usr/local/share/android-sdk/platform-tools&amp;#34; PATHが正しく通っていれば、sdkmanagerが使えるようになっているはずなので、次のコマンドでSDKをインストールします。</description></item><item><title>2019年の振り返り</title><link>https://blog.web-apps.tech/2019-review/</link><pubDate>Wed, 08 Jan 2020 04:58:54 +0000</pubDate><guid>https://blog.web-apps.tech/2019-review/</guid><description>‌
+2020年に入って早1週間が経過しましたが、皆様いかがお過ごしでしょうか。 一年の振り返り！みたいのはあんまりやるつもりがなかったのですが、あまりにもみんなやっていて目につくので、これはやった方が良い物なのか・・・と思い直し、遅ればせながら振り返ってみようかと思います。
+1月 そういえば2018年振り返りみたいなブログ書いてないんですが、2019年は心おだやかに生きたいと思っております
+&amp;mdash; nasa9084@某某某某(0x1a) (@nasa9084) January 3, 2019 twitterによると、2019年は心おだやかに生きたいというのが目標だった様子。あまり心穏やかには生きられませんでした。合掌。
+そういえば昨年は年明け早々インフルエンザにかかったんでした。
+一月はLOCALのイベントに行ったり、YAPC::Tokyoに行ったりしていた様子。ここ半年はカンファレンス/勉強会参加数も減ってきてしまっているので、ここらでちょっと頑張りたいところです。
+2月 ONIconをやったり、自作ケーブルを作り始めたり。
+gomaconfやcookpadtechconfもこのあたりだったようです。
+3月 ペティナイフが欲しい
+&amp;mdash; nasa9084@某某某某(0x1a) (@nasa9084) March 1, 2019 ペティナイフ、ネット上でもいろんな人が「便利！」って言ってて、しかしまぁ三徳で不自由してなかったんですけど、買ってみたら実際メチャクチャ便利で、正直三徳よりペティを使うことの方が圧倒的に多い。
+LINE.goというイベントを開催したのも3月でした。
+朝ご飯 pic.twitter.com/PLRDDJEOCY
+&amp;mdash; nasa9084@某某某某(0x1a) (@nasa9084) March 4, 2019 ご神体は今も職場の机にまつられています。なんと今は鳥居もついています 4月 皆さん技術書典の進捗どうですか
+&amp;mdash; nasa9084@某某某某(0x1a) (@nasa9084) April 2, 2019 今もまた、技術書典の進捗に追われています。
+たいした意味もなく近所のコインランドリーで枕を洗濯した結果、ドラム式洗濯乾燥機がほしくなってる
+&amp;mdash; nasa9084@某某某某(0x1a) (@nasa9084) April 12, 2019 この後勢いよくドラム式洗濯機を買いました。最高。
+5月 PyCon mini sapporoが5月だったらしいです。GoConでしゃべったのもこのあたりだったらしい。
+改めて。でかい。 pic.twitter.com/zO9TLfdhy8
+&amp;mdash; nasa9084@某某某某(0x1a) (@nasa9084) May 29, 2019 OSC19doも5末〜6始でしたね</description></item><item><title>趣味サーバーのインフラを再構成した件</title><link>https://blog.web-apps.tech/my-private-cloud-2019/</link><pubDate>Mon, 06 Jan 2020 09:06:45 +0000</pubDate><guid>https://blog.web-apps.tech/my-private-cloud-2019/</guid><description>明けましておめでとうございます。 本年もどうぞよろしくお願いいたします。
+扨、もう一昨年になりますが、趣味サーバーのインフラをKubernetesで整えた件 という記事を投稿しました。 その後紆余曲折ございまして、これらを再構成しましたので、改めて記録に残しておこうと思います。
+紆余曲折 まずは紆余曲折とは？という話から始めましょう。
+当時、Kubernetes用のPersistent VolumeはGlusterFSを使用していました。最初はこれで問題なかったのですが、一部のアプリケーション(具体的にはRedmine)を動かしていく上で、非常に速度が遅い、ということが問題となりました。 調査の上、どうやら遅い原因がGlusterFSであり、Cephに置き換えることである程度速度を改善することができそうだ、という見込みが立ったため、前述の記事を投稿してから約二ヶ月後にGlusterFSをCeph RBDへと置き換えました 。
+その後、NTT-X Store でSSDが安かったため、12台ほどSSDを購入、すべての物理ボリュームをHDDからSSDに置き換え、RAID1+0で再構成しました。 同時に、以前はローカルボリュームを直接使用していたOpenNebulaのストレージ部も分散構成にするべく、物理マシン上に直接Cephを構成、これをOpenNebulaとKubernetesでシェアする形にしました。
+これでうまくいったか？と思ったのですが、どっこい、どうやらDL360G6のRAIDカードとSSDの相性(しかもファームウェア単位)が悪いらしく、一週間〜一ヶ月程度で、故障もないのにRAIDから抜けてしまう、という問題が発生しました。
+on Kubernetes on OpenNebulaで稼働していた本ブログの運用にも影響が出たため、一旦本ブログを(今は亡き)CloudGarage へと退避、SSDの交換をNTT-X Storeへと申請しました。
+その後無事SSDは新品交換され、その間に某社 から廃棄するということでいただいてきたDL360G7が三台ほど導入されたため、これを基盤として再度プライベートクラウド基盤を構築することと相成りました。
+現在の構成 再構成した、とはいえ、構成は大きくは変わっていません。 IaaS基盤としてOpenNebula/KVMを使用しているのも変わりませんし、コンテナ基盤としてKubernetesを使用しているのも変わりません。
+強いて言えば、本ブログのストレージは最近までSQLiteを使用していましたが、外部MySQLへと移行したくらいでしょうか。
+物理層 物理サーバとしては前述の通り、DL360G7を使用しています。適当にメモリを増設しており、それぞれ次の様になっています。
+8コア16スレッド、36GB 8コア16スレッド、47GB 8コア16スレッド、49GB メモリの量はできるだけそろえたかったんですが、計算が面倒うまくそろえることができませんでした。
+OSはCentOS 7を使用しています。最初はCentOS 8でやろうとしたんですが、もろもろパッケージがうまくインストールできず、7に落ち着きました。なんとかなってくれ。
+これらに、OpenNebulaおよびCeph MIMICをインストールしてあります。Ceph Nautilusにアップデートしたいんですが、安定しているのだろうか・・・
+VM層 OpenNebula/KVMを使用したIaaSの上にVMをポチポチと立てられるようになっています。OpenNebulaのストレージはCephを使用しています。VMも基本的にはCentOS 7を使用しています。
+また、DBやPrometheusなど一部のアプリケーションをVMとして構築してあります。 以前はK8s上でPrometheusなども管理していたのですが、(主にストレージの)管理が面倒だったので、今回はVMにDockerをインストールして個別に起動しています。
+コンテナ層 コンテナ基盤はKubernetesで、相も変わらずKubespray を使用して構築しています。便利便利。現在はKubernetes 1.16.3です。
+PersistentVolume用のStorageClassはPM上のCephをOpenNebulaと共用で使用しています。手前味噌ですが、Ceph RBDをKubernetesのStorageClassとして登録する を見ながら設定しました。
+Service type LoadBalancerの実装としてMetalLB を、Ingress実装としてNGINX Ingress Controller を導入してあります。また、HTTPSの証明書を自動設定するため、cert-manager を導入しています。以前はうまくインストールできないことがあり困ったりもしたのですが、今回は特にトラブルもなくスムーズに導入できました。だいぶCRDの構造が変わっていたので、以前導入していて、再度構成する必要がある人は注意が必要かもしれません。
+証明書を取得する方法はDNS01で、CloudFlareを使用しているのも変わりません。</description></item><item><title>go-openapi を書き直しています</title><link>https://blog.web-apps.tech/nasa9084-go-openapi-rewriting/</link><pubDate>Fri, 20 Dec 2019 08:15:39 +0000</pubDate><guid>https://blog.web-apps.tech/nasa9084-go-openapi-rewriting/</guid><description>本記事はGo2 Advent Calendar の20日目の記事です。昨日はyaegashiさんによる、jsonx.go でした。
+皆さんはOpenAPI Specification というモノをご存じでしょうか。OpenAPI SpecificationはJSONまたはYAMLでREST APIを表現するための仕様で、現在バージョン3.0.2 が最新です。いわゆるSwagger の後継で、バージョン1系、2系がSwagger、3系以降がOpenAPI、ということになっています(Swaggerなら聞いたことがある/使っているという人も多いのではないでしょうか)。
+OpenAPI Specificationは人間にも機械にも(比較的)読みやすい仕様書として、コード生成や、ドキュメントページの生成に使用することが可能です。
+個人的には専らコード生成に使用しており、Go言語向けの実装としてgithub.com/nasa9084/go-openapi (以下go-openapi)を実装・公開しています。 go-openapiは2017年ごろから細々と実装を続けており、(多分)二番目か三番目には古いと思われるOpenAPIのGo実装です。
+基本的にはただひたすらOpenAPIのオブジェクトをGoの構造体として定義、値のバリデーション関数を用意しているといったもので、特別な機能はほとんどありません。 YAMLのパーサも、go-yaml/yaml を使用しており、自前では実装していません。
+そんな中、@goccy さんが、encoding/jsonとコンパチなインターフェースを持ったYAMLパーサを開発した、という話を耳にし、これを機に、とgo-openapiの実装を一から書き直し始めました。 もともと、パースは完全にgo-yaml/yamlに依存しており、Unmarshal系のメソッドも実装していなかった(途中から全部書くのはつらかったので・・・)ため、一部バリデーションに必要な関数を埋め込んだりもできなかったので、書き直したいとは思っていたのです。
+現時点ではまだマージしておらず 、書いている途中なのですが、大きな変更点として次の様なものがあります。
+もともとパブリックだったフィールドをすべてプライベートに変更し、ゲッターをはやした 各構造体に対応するUnmarshalYAML()メソッドをすべてコード生成するようにした YAMLパーサはgithub.com/goccy/go-yaml に乗り換えた rootオブジェクトを各構造体に埋め込むことで、バリデーションをとりやすくした 今後はよりコード生成に便利なメソッドを追加していきたいと思っています。
+時間の都合で今日はここまで。技術的な話が全然無い記事になってしまった・・・</description></item><item><title>builderscon tokyo 2020やるぞ！という話</title><link>https://blog.web-apps.tech/builderscon-tokyo-2020/</link><pubDate>Tue, 03 Dec 2019 09:00:00 +0000</pubDate><guid>https://blog.web-apps.tech/builderscon-tokyo-2020/</guid><description>buildersconは「知らなかった、を聞く」あるいは英語で &amp;ldquo;Discover Something New&amp;quot;をスローガンとした、IT技術者向けの技術カンファレンスです。2016年、2017年、2018年、2019年と@lestrrat さんが主催として開催してきて、私もコアスタッフとして関わってきました。
+そんなbuildersconですが、2020年は子育てで多忙な@lestrratさんに代わり、私(@nasa9084 )が主催として開催に向けて準備を進めていくことになりました！
+まぁ、今のところはやるぞ！という話だけで細かい話はこれからですが、皆さんどうぞよろしくお願いいたします。</description></item><item><title>net/http.ClientにHookをかける</title><link>https://blog.web-apps.tech/hook-on-http-client/</link><pubDate>Fri, 01 Nov 2019 05:48:19 +0000</pubDate><guid>https://blog.web-apps.tech/hook-on-http-client/</guid><description>昨日のこと。jszwedko/go-circleci というパッケージを使用してCircleCI EnterprizeのAPIを叩くという処理を実装していたのですが、どうにもうまくいかない。正直に言ってこのパッケージはドキュメントがしっかりしている、という訳ではないし、エラーメッセージを見ても何がだめなのか(そもそも現在使用しているCircleCI Enterpriseで使用できるかもよくわかっていなかった)わからない。
+しかしまぁ、自分でHTTP requestを作ったりしてあれやこれややるのもまぁ面倒であるので、なんとかデバッグしたいと思ったのですが、外部のパッケージをフォークして変更を加えてデバッグする・・・という様なことはもちろんやりたくないわけです。
+このパッケージは&amp;lt;code&amp;gt;*http.Client&amp;lt;/code&amp;gt; を指定できます。*http.Clientはインターフェースではなく構造体なので、別の実装に置き換えるということはできません。が、その実装はほぼほぼ後述するhttp.RoundTripperなため、http.RoundTripperをラップして、HTTP requestとHTTP responseをログに吐けばまぁ、何が問題かわかるだろう、と考えました。 そんなモノは誰かがすでに書いているだろう、というのはさておき、http.RoundTripperを実際にいじってみるということはやったことがなかったので、勉強がてらnasa9084/go-logtransport なるものを書きました。 書いていく途中で、考えたことなど、記録に残しておくのも良さそうと思ったため、本記事とします。
+http.Clientとhttp.RoundTripper Go言語でHTTPのリクエストを発行するには基本として&amp;lt;code&amp;gt;*http.Client&amp;lt;/code&amp;gt; というものを使用します。簡便のため、GET 、POST 、Head についてはパッケージグローバルの関数も用意されてはいるのですが、これらも内部的にはパッケージグローバルで宣言された&amp;lt;code&amp;gt;DefaultClient&amp;lt;/code&amp;gt; という&amp;lt;code&amp;gt;*http.Client&amp;lt;/code&amp;gt; が使用されています。
+*http.Clientはゼロ値で使用できるようにまとめられた構造体で、DefaultClient は*http.Client{}と宣言されています。
+普段はこの*http.Clientを使用してHTTPの通信を行うわけですが、実は*http.Clientはそれほど多くの機能は持っていません。実際、持っているフィールドはたったの4つ(Go1.13時点)しかないのです。*http.Clientはリダイレクトやクッキーなどの一部の処理だけを受け持っていて、実際のHTTP通信のほとんどはフィールドとして保持しているhttp.RoudTripperが行います。
+http.RoundTripperはインターフェースとして定義されていて、自由に差し替えをすることができます。特に指定していない場合は*http.Transportがデフォルトの実装として使用されます。 Goの他の標準パッケージの例に漏れず、http.RoundTripperは非常にシンプルなインターフェースで、次の様に定義されています。
+type RoundTripper interface { RoundTrip(*Request) (*Response, error) } RoundTrip()がHTTP requestを受け取り、HTTP responseを返します。つまり、requestのログをとり、子RoundTripperのRoundTrip()を実行し、Responseのログをとってそのまま返す、という様なラッパーを書けば良さそうです。
+func (t *Transport) RoundTrip(r *http.Request) (*http.Response, error) { // Requestのログをとる resp, _ := t.Transport.RoundTrip(r) // responseのログをとる return resp, nil } 実際にrequestとresponseのログをとるには、net/http/httputilパッケージのDump系関数が使用できます。今回はクライアント側の実装なので、httputil.DumpRequestOutとhttputil.DumpResponseを使用します。
+テスト 実装の詳細はそれほど難しい内容ではないのでさておき、テストをどう書くか、という話をしましょう。 HTTPに関連したテストを書くとき、Go言語ではnet/http/httptestを使用すると便利です。 テストを書くにあたり、最初は子RoundTripperをモックして、適当にResponseを返すモノをつくればよいか、と思ったのですが、いい感じにテスト用のResponseを作成するのは面倒そうでした。</description></item><item><title>空文字列確認は長さをとるべきか？</title><link>https://blog.web-apps.tech/how-to-check-empty-string/</link><pubDate>Wed, 09 Oct 2019 07:02:52 +0000</pubDate><guid>https://blog.web-apps.tech/how-to-check-empty-string/</guid><description>TL;DR s == &amp;quot;&amp;quot;とlen(s) == 0は等価 文字列比較か、長さ比較か Go言語で文字列が空かどうかを調べるには次の二つの方法があります。
+// 1: 文字列を空文字列と比較する if s == &amp;#34;&amp;#34; { // do something } // 2: 文字列の長さが0かどうか調べる if len(s) == &amp;#34;&amp;#34; { // do something } 標準パッケージ・サードパーティパッケージともに、どちらの書き方も散見されます。 どちらを使うのが良いのでしょうか？
+答えはどちらでも良いだそうです。
+package benchmark_test import &amp;#34;testing&amp;#34; var somethingString = &amp;#34;hogehogefugafuga&amp;#34; func BenchmarkCompareString(b *testing.B) { for i := 0; i &amp;lt; b.N; i++ { if somethingString == &amp;#34;&amp;#34; { } } } func BenchmarkCompareStringByLength(b *testing.</description></item><item><title>Unuboでアプリケーションをサクッとデプロイする</title><link>https://blog.web-apps.tech/first-impression-unubo/</link><pubDate>Thu, 26 Sep 2019 15:10:40 +0000</pubDate><guid>https://blog.web-apps.tech/first-impression-unubo/</guid><description>Unubo というPaaSっぽいものが出てきたようなので触ってみました。 まだリリースされたばかりのようで、クレジットカードの登録もせずに無料で使用できます。
+とりあえず適当にリポジトリを作って動かしてみました。 登録・ログインを済ませたら、使用したい機能を選択します。今回はGoのアプリケーションなので、AppsセクションにあるGoのアイコンを選択しました。
+次の画面でアプリケーション名を入れ、デプロイ先のリージョンを選択します。 DBと接続する場合はDBと同一リージョンじゃなきゃ接続できないそうです。
+最後に、細かい設定をできる画面になりますので、必要な情報を入力します。 ここでは、とりあえずGitHubとの連携をして、リポジトリを選択するだけであとは放置します。
+最後にDeployボタンをポチッとしてデプロイされるのを待ちます。 どうやら、Deploy成功からアクセスできるようになるまで若干タイムラグがあるようなので、気長に待ちましょう。
+有料プランが出てから価格設定や無料枠がどうなるかわかりませんが、まぁぼちぼち便利に使えそうですね。</description></item><item><title>技術書典7でGo言語の本を頒布します</title><link>https://blog.web-apps.tech/techbookfest7/</link><pubDate>Thu, 19 Sep 2019 01:00:00 +0000</pubDate><guid>https://blog.web-apps.tech/techbookfest7/</guid><description>今週末はいよいよ技術書典7ですね！
+今回はGo言語の標準パッケージの解説本を頒布予定です。
+web-apps.tech: サークル詳細ページ 当初の予定では全パッケージを詳解！みたいな予定だったんですが、ページ数が増えまくった結果、残念ながら26個しか詳解できませんでした。
+108ページで一冊1,000円、電子版もあるよ、の予定です(電子版と両方での割引をどうしようか今考えてます)。 サークルスペースは「か11C」です。</description></item><item><title>社用Gitサーバでは社用のメールをつかう.gitconfig 〜社内ドメインを外に漏らさない編〜</title><link>https://blog.web-apps.tech/gitconfig-secret/</link><pubDate>Sat, 24 Aug 2019 04:36:12 +0000</pubDate><guid>https://blog.web-apps.tech/gitconfig-secret/</guid><description>GitHubのコミットログ、コミットした人のアイコンが出ていてとてもわかりやすいですよね。 コミットとアカウントの紐付けにはどうやら、コミットに紐付けられたメールアドレスが使用されているようです。そうなると、コミットに紐付ける(git config user.email=...とかやるアレです)メールアドレスはアカウントに登録してあるメールアドレスにしたいものです。
+しかし、会社ではGitHub Enterprise(GHE)、私用ではgithub.com を使用している、と言った場合はどうでしょうか。コミットに紐付けたいメールアドレスがリポジトリによって変わる、ということになってしまいます。
+調べてみると、そういった場合、次の様に.gitconfigにIncludeIfのブロックを設定することでうまく回避ができそうということがわかり、しばらく設定していました
+[IncludeIf &amp;#34;gitdir:~/src/GHE_DOMAIN&amp;#34;] path = &amp;#34;~/.gitconfig.ghe&amp;#34; ~.gitconfig.gheには次の様に書かれています。
+[user] email = 社用メールアドレス 私はGo言語をよく書くのと、ghq を使っている都合上、gitのリポジトリを配置するパスが$(GOPATH)/src/GIT_DOMAIN/USERNAME/REPOSITORYという形式になっているため、リモートリポジトリのドメインを指定することでうまいこと社用GHEの時だけ設定を上書きすることができていたのでした。
+そしてこれは、どのPCでも使用できるように、dotfilesリポジトリ としてgithub.com にpushしていました。
+その結果、会社の人から、「社内のサービスのURL(この場合はGHEのURL)はセキュリティ的な理由から外に出さないようにしてほしい」と連絡を受けました。すぐさま該当のブロックは消したのですが、そうするとメールの設定が自動でされなくなってしまい不便です。リポジトリのパスを変更するというのも、せっかくの統一的な操作に違いが出てしまい、不便です。
+そこで思いついたのが、こういったセンシティブな情報を別のプライベートリポジトリに分け、Makefile でインストールを自動化するという方法です。
+パブリックなdotfilesリポジトリ にある&amp;lt;code&amp;gt;.gitconfig&amp;lt;/code&amp;gt; には次の様に書いてあります。
+[include] path = ~/.gitconfig.secret .gitconfig.secretはその名の通り、秘匿情報を含んだ.gitconfigで、プライベート化されたdotfiles-secretリポジトリにおいてあります。dotfiles-secretリポジトリはmake installとしたときにgit cloneされ、さらにそのディレクトリ内のMakefileにより配置されます。dotfiles-secret/.gitconfig.secretには先ほどのIncludeIfブロックが書かれており、同リポジトリ内の.gitconfig.secret.ghe(名前を少し変えました)を読み込みます。
+これで、全体の使い勝手をほとんど損なうことなくどのマシンでも(dotfilesが配備済みなら)同様に設定することができました。
+Makefileは特にdotfilesのリストを持たないよう記述しているため、新しいdotfileが増えても、特にMakefileの変更をする必要も無く安心です。</description></item><item><title>hubコマンドにGitHub Enterprise環境を追加する</title><link>https://blog.web-apps.tech/hub-with-github-enterprise/</link><pubDate>Thu, 22 Aug 2019 10:30:00 +0000</pubDate><guid>https://blog.web-apps.tech/hub-with-github-enterprise/</guid><description>&amp;lt;code&amp;gt;hub&amp;lt;/code&amp;gt; コマンドをご存じでしょうか。インストールしてalias git=hubと設定するだけで、gitコマンドからGitHubの操作ができるようになる優れものです。特に個人的にはgit createとするだけでGitHub上にリポジトリが作成される、というのが非常に便利だと思っています。
+さて、皆さんの会社ではgitサーバはどのように構築されているでしょうか。いろいろな選択肢がありますが、それなりの規模だとGitHub Enterprise(以下GHE)を利用している、という会社も多いと思います。 実際、現職ではGHEを使っています。
+そのような場合、趣味/個人の開発ではgithub.com、会社ではGHEと使い分けることとなりますが、GHEでhubが使えないとすると非常に不便です。そう考えて調べてみると、Web上では、hubをGHE環境で使うには環境変数を使うとする設定例が散見されます。
+しかし実は、hubは複数環境での使用をサポートしているんです。 設定方法は至って簡単で、$HOME/.config/hubに設定を書き足すだけです。実際に見てみましょう。
+すでにhubを使っている場合、cat $HOME/.config/hubで設定を見ることができます。私の場合、次のようになっていました(oauth_tokenは潰してありますが、実際にはトークンが入っています)。
+github.com: - user: nasa9084 oauth_token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx protocol: https どんな項目かは明らかですね。ここに会社のGHEの環境に関する情報を追記します。 まず、自社のGHEのアドレス以下/settings/tokensを開きます。Generate new tokenボタンをクリックし、新規でPersonal access tokenを発行します。名称はわかりやすい物を任意で付けてください。hubはリポジトリを操作するコマンドですから、scopeはrepoを与えれば十分でしょう。画面下部のGenerate tokenボタンをクリックすると、トークンが発行されますので、これをコピーしておきます。
+手元のエディタ(お好みの物を使用してください)で$HOME/.config/hubを開き、設定を追加します。
+YOUR_GHE_DOMAIN: - user: YOUR_USERNAME oauth_token: YOUR_TOKEN protocol: https オブジェクトのキーとしてGHEのドメインを、userはGHEでログインに使用するユーザ名を使用します。oauth_tokenに先ほど生成したPersonal access tokenを設定し、保存します。保存できたら、hubでGHEにアクセスができるようになっているはずです。
+実際に使うと、次の様にどのホストを使用するか聞かれ、好きな方を選べるようになっています。
+$ git create Select host: 1. github.com 2. YOUR_GHE_DOMAIN &amp;gt; 1 Updating origin https://github.com/nasa9084/REPOSITORY_NAME</description></item><item><title>Raspberry Pi zero W + IR</title><link>https://blog.web-apps.tech/raspberry-pi-zero-w-ir/</link><pubDate>Tue, 30 Jul 2019 15:11:28 +0000</pubDate><guid>https://blog.web-apps.tech/raspberry-pi-zero-w-ir/</guid><description>家で転がっていた使われないでいたRaspberry Pi zero Wを使って、家庭内のリモコン機器を自動化しようと思い立ち、秋葉原くんだりまで行って諸々部品を買ってきました。
+ゴミを二つほど生成したのち、最終的に動くモノができましたので備忘録的に残しておきます。
+pic.twitter.com/e55qxX5GL6
+&amp;mdash; nasa9084@某某某某(0x1a) (@nasa9084) July 29, 2019 主に「格安スマートリモコンの作り方 」を参考にしました。部品を購入した店は秋月電子で、商品ページの下の方にある「店舗情報」のリンクをクリックすると店内のどの棚に商品があるのかわかり便利です。どの部品も特に珍しい部品ではないため、商品自体がなくなっているようなことは(Pi zero用ユニバーサル基板をのぞき)まず無いように思えます。また、手持ちで0Ω抵抗が(なぜか)在庫してあったため、ジャンパ線代わりに使用しています。 一番見つけづらかったのがPi zero用ユニバーサル基板ですが、これは店の中ではなく、外のRaspberry Pi関連部品が置いてあるところにありました。
+上記のQiita記事はさほど古いモノではないため、価格も変わってなかったように思えますが、動くモノができるまでにゴミを二つほど生成した都合上、三倍程度のコストがかかりました。回路周りや半田付けがあまり得意ではない人は覚悟(というほどの額ではないですが)しておいた方が(材料を余分に買っておいた方が)良いでしょう。
+余談ですが部品を購入した際、近くのあきばおーでTranscendのmicro SDが安くなっていたため、大して使い道も考えずに32GBのモノを5枚ほど購入しました。
+ほとんどの情報は参考にしたQiita記事にまとまっているため詳細は端折りますが、変更点として赤LEDを足してあります。ピカッと可視光が光るので、実行されたということを確認するのに便利です。
+参考記事には実際の配線図だけはなかったので、紹介します。
+上図が部品面、下図が半田面です。MOSFET 2N7000は平らな面が図の上側、MOSFET IRFU9024NPBFは放熱板(?)が図の下側、赤外線LEDは欠けている側(カソード？)が図の右側、赤LEDは欠けている側が図の左側、赤外線受光モジュールOSRB38C9AAは受光部が図の上側を向くように配置します。私は受光モジュールは図の下方向に向けて折り、受光部が天を向くような形にしました。 ブレッドボード上で配線してそのまま基板に移植したような形になっているため、複雑な配線もなく比較的簡単かと思います。 IRFU9024NPBFの左下はジャンパなので、半田面で配線してもかまいません(私は0Ω抵抗を使用した関係で部品面を通しています)。
+実際に配線したもの。右側に温度センサを追加しています 赤外線コードの学習・実行も参考記事通りpigpioを使用しましたが、毎度SSHしてコマンドを実行するのは面倒なため、GoでAPIサーバを実装しました。Goで赤外線をGPIOでいい感じにアレするようなパッケージが見当たらなかったので、GoからPythonのスクリプトを叩くという残念なコードになっております。いいパッケージがあれば誰か教えてください。
+systemdかなんかでデーモン化したりなんかして起動しておくと、例えば、
+$ curl http://raspberrypi.local/playback?key=light:off とかすると部屋の電気が消せます。素晴らしい。
+今のところ外部に公開してはいないのですが、外部に公開すると他のサービスとの連携(例えばIFTTT)ができないので、公開したい気持ちがあります。とはいえ、外からむやみに部屋の電気をあれこれされても困るし(だれもやらないとは思いますが)、そのまま公開するのも難しいな、と思っているところです。
+とりあえずは扇風機とか、そのあたりをなんかいい感じにアレしたいですね。</description></item><item><title>NATSを触ってみた</title><link>https://blog.web-apps.tech/messaging-system-nats/</link><pubDate>Wed, 06 Feb 2019 07:52:05 +0000</pubDate><guid>https://blog.web-apps.tech/messaging-system-nats/</guid><description>NATS はCNCF (Cloud Native Computing Foundation)によってホスティングされているメッセージングシステムです。軽量で高パフォーマンスかつスケーラブルなのが特徴だそうです。オランダのSynadia社が中心となって開発を行っていますが、オープンソースソフトウェアなのでGitHub 上で今トリビュートすることもできます。 Go、NodeJS、Ruby、Java、C、C#、Nginx用のクライアントライブラリはSynadiaによってサポートされており、そのほかにもPythonやElixir用のクライアントなどが存在します。 NATSのサーバ自体(gnatsd)はGoで書かれている ため、バイナリ一つで起動できるほか、、公式Dockerコンテナイメージ やKubernetes用のOperator も用意されているため、簡単に構築・運用することができます。 本記事でも、Dockerで起動したサーバを使用しています。
+NATSでは3種類のメッセージングモデルを利用することができます。
+Publish/Subscribe Request/Reply Queueing 今回はPub/SubとRequest/Replyを試してみます。
+サーバを立ち上げる 実験に先駆けて、まずはサーバを立ち上げます。今回はmacOS High Sierra環境のため、docker for macで起動してみます。
+$ docker run --rm -d --name nats -p 4222:4222 -p 6222:6222 -p 8222:8222 nats:1.4.0-linux nats:1.4.0-linuxは執筆時点(2019-02-06)でnats:latestです。 ここで三つのポートを空けていますが、それぞれ用途は次の通りです。
+:4222: client port :6222: route port :8222: http port それぞれの詳細な説明は割愛しますが、本記事ではクライアントからの接続だけを試してみますので、4222番ポートだけの開放でも問題ありません。
+Publish/Subscribe まずは標準的なPub/Subモデルから試してみます。NATSのPub/SubはRedisなどと同様、Wikipedia でいうところの「トピックベース」なPub/Subです。NATSではトピックのことをSubjectとよびます。 NATSのSubjectは階層構造をとることができ、.(ドット)で区切って表現します。Subscriberはこの階層構造の一部にワイルドカードとして*(アスタリスク)を使用することができます。また、&amp;gt;を使用して下の階層すべて、を表現することもできます。 例えば、Subscriberがfoo.bar.*を購読している場合、foo.bar.bazやfoo.bar.quxなどのメッセージを受け取ることができますが、foo.bar.baz.quxは受け取ることができません。一方、foo.bar.&amp;gt;を購読している場合、foo.bar.baz.quxも受け取ることができます。
+サンプルコードとして、次のようなものを書いてみました。
+Publisher package main import ( &amp;#34;log&amp;#34; nats &amp;#34;github.</description></item><item><title>初めての自作ケーブル</title><link>https://blog.web-apps.tech/hand-made-trrs-cable/</link><pubDate>Mon, 04 Feb 2019 17:00:46 +0000</pubDate><guid>https://blog.web-apps.tech/hand-made-trrs-cable/</guid><description>こんばんは。以前記事にした ように、現在、職場でErgodox EZ というキーボードを使用しています。これは元々は自作キーボードの一種で、左右分割型のキーボードです。
+Ergodox EZでは、右のキーボードと左のキーボードはTRRSケーブル という、4極のイヤホンケーブルみたいなケーブルで接続されています。今まではとりあえず購入時に付属していたケーブルを使用していたのですが、だんだん肩が開いてきて、長さが足りないなーというお気持ちになってきました。どうせならおしゃれなケーブルがいいなぁと思いながら通販サイトで探したのですが、このTRRSケーブル、あまり需要がないのか、種類が多くありません。
+じゃぁ自作キーボード勢はどうしてるのだろうか、と思って調査したところ、諦めて売っているものから選ぶか、自作するか、という選択肢のようでした。自作すれば自分好みの色や長さで作れるし、ケーブルくらいなら作れそう！ということで自作ケーブル沼に入門してみました。
+今回作ったのはこちら。遊舎工房 さんで販売されている、自作ケーブルキットです。はじめは部材を個別にそろえて作ろうと思っていたのですが、自作キーボード界隈のDiscordサーバ で聞いたところ、最初はこちらのケーブルキットが個別にパーツをそろえるよりも安くておすすめ、と言うことなので早速遊舎工房さんに向かい購入してきました。
+セットの内容を確認していきましょう。まずはプラグ。4極の3.5mmフォーンプラグです。Ergodox EZは向かって奥の方にジャックがあるため、L字型なのはうれしいですね。
+次は熱収縮チューブ。こちらは購入時に色を選ぶことができます。今回は無難に白を選択しました。
+こちらはパラコード。元々はパラシュートなどのひもに使われるらしいのですが、今回はケーブルカバー的なものとして使用します。こちらも色を選ぶことができ、黒を選択しました。
+これはスリーブです。パラコードの上からかぶせておしゃれ感を演出します。これ、なんて調べたら売ってるのを見つけることができるんでしょうか。
+最後にケーブル本体。50cmです。上からパラコードをかぶせるため、なんかよくわからない色です。
+実際に作業していきます。まずはパラコードの中にケーブルを通していきます。パラコードの中には白いひもが入っていますが、これを抜いてあいたスペースにケーブルを通します。ちょっとずつ、パラコードを縮めてひっぱってを繰り返して、ケーブルが全部入りきるまで差し込みます。
+こちらが挿入し終わったもの。パラコードはケーブルより長めに用意されているのですっぽり隠れました。
+さらに上からスリーブをかぶせます。スリーブの端は非常にほどけやすく、最初入れるのが難しかったです。要注意。
+片方の恥をテープで留め、ケーブルを露出させました。露出させた長さはプラグに合わせてあります。
+被覆を剥いた状態。四軸のケーブルです。非常に細いため、被覆を剥く時に切ってしまわないかドキドキでした。予算に余裕があればケーブルストリッパーを用意してもいいかもしれません。
+ケーブルを端子に半田付けしていきます。冒頭にも書いたように、「ケーブルくらいなら作れそう！」とか思ってましたが、これめっちゃ難しいです。3.5mmフォーンプラグなんで、端子もめっちゃ小さいです。上の方(写真中黄色の線)から付け始めてしまったので、余計難易度が増しました。
+反対側の半田付け。これを始める前に端子のカバーと熱収縮チューブをケーブルに通しておきます。そして二度目はさすがに学び、きちんとケーブルの長さを端子にそろえる、下から半田付けを始める、などにより少しきれいにつけれるようになりました。
+残念なことにテスターを用意していなかったのでテストしていませんが(大丈夫か？)、この時点で導通とショートしてないかをテストしておくべきでしょう。
+半田付けが終わったら熱収縮チューブをネジの直前まで持ってきて温めます。最初はヒートガンを買おうと思ってたのですが、秋葉原で売っていたものはamazonで売ってる安いやつより高かったのと、思ったよりサイズがあってびびったので購入には至りませんでした。Discordで聞いたところによるとドライヤーでもいける、ということだったのでドライヤーで挑戦しましたが、十分収縮しました。
+最後にケーブルの端子カバーをはめて(ぴったりのサイズなので、熱収縮チューブをつけた後は非常に通しにくい)完成です。会社に行かないとErgodoxがないので動作確認ができていませんが、無事使えることを祈っています。
+このほかにも部材をいくつか購入してきてあるので、もう少しケーブル作りをやって行ってみようと思います。
+追記: 使えませんでした</description></item><item><title>zero memory allocation slice filtering</title><link>https://blog.web-apps.tech/zero-memory-allocation-slice-filtering/</link><pubDate>Mon, 04 Feb 2019 07:30:29 +0000</pubDate><guid>https://blog.web-apps.tech/zero-memory-allocation-slice-filtering/</guid><description>次のように、あるスライスをフィルタリングする関数を書くことがあると思います。
+func FilterFoo(arr []string) []string { b := []string{} for _, e := range arr { if IsFoo(e) { b = append(b, e) } } return b } 簡単なベンチマークを書くとわかるように、この関数は返値となるスライスの長さ+1回のメモリアロケーションを行います。一般に、メモリアロケーションの回数は少ない方がパフォーマンスがよく、可能ならばアロケーション回数0を目指したいものです。
+今回の場合、次のように書くとメモリアロケーション回数0回の関数を書くことができます。
+追記 b := arr[:0]とすると、基底配列に影響が出るので一概に比較できない、とご指摘を受けました。実際に使用する際は副作用に注意しましょう。
+このやりかたって引数に副作用あるので、わかってないで使うと危ないような…https://t.co/iKXrXHUD3N https://t.co/CMrAYGJrdA
+&amp;mdash; Yoichiro Shimizu (@budougumi0617) February 4, 2019 append は引数を弄ってしまうので動作が異なりますね。 / “zero memory allocation slice filtering” https://t.co/JFFDJlfIQA
+&amp;mdash; mattn (@mattn_jp) February 5, 2019 追記終わり
+func FilterFoo(arr []string) []string { b := arr[:0] for _, e := range arr { if IsFoo(e) { b = append(b, e) } } return b } 違うのは一行目だけですが、ベンチマークを取ってみると、速度面では大きな違いがあります。次のようなベンチマークを実行してみます。</description></item><item><title>Majextand</title><link>https://blog.web-apps.tech/majextand/</link><pubDate>Mon, 28 Jan 2019 08:55:49 +0000</pubDate><guid>https://blog.web-apps.tech/majextand/</guid><description>ラップトップスタンド、というものをご存知でしょうか。いわゆるノートPCを傾けたり、高さを変えるために使用するアイテムです。折りたたみができるものや、PCに貼り付ける小型のものなんかもあります。 貼り付け型のものとしては、Kickflip が人気です。 今回紹介するのも貼り付け型で、その名もMajextand といいます。 特徴としてはとにかく薄い。そしてその薄さにも関わらず、6段階の高さ調整ができる、という点です。
+まずはパッケージ。すっきりとしたパッケージです。商品名をggって出てくるブログに掲載された写真では何やら筆文字で書かれているようなパッケージが見られますが、現行品ではなくなったようです。
+裏面はこんな感じ。スタンドを使用して画面を高くすることで猫背を防ぎ、頚椎の姿勢を正します。また、18インチ以下のラップトップであれば基本的には使用できます。非常に薄いため、インナーケースなどに入れる場合にも引っかかりません。
+パッケージ自体にテープなどは使用されておらず、Majextand本体と同じように引き出す形となっています。パッケージ自体が本体と同じような構造になっているのは素敵な感じがしますね。
+本体を取り出しました。非常に薄く、切れ目が入ったただの鉄板と言われても信じてしまいそうです。測ってはいないのですが、他のレビュー記事によるとだいたい10円玉と同じ厚さとのこと。薄い。 しかし、薄さに対して、若干重い気はします。スタンドという用途ですから、強度を確保するには仕方ないのかもしれませんが。
+このように引き出して使います。(本当は手前をまず引き出して、奥側は高さ調整のために使う)
+MacBook Pro (13-inch, 2018)のスペースグレーの底面に貼り付けるとこんな感じ。両面テープは非常に強く、意図的に剥がさなければ剥がれてしまうということはなさそうです。 今回購入したMajextandはグレーで、MacBookのスペースグレーとは若干色味が違いますが、すごく目立つということはなく、安心しました。
+購入したばかりでまだ活用できていないのですが、これから使っていきます。</description></item><item><title>年越し鴨南蛮</title><link>https://blog.web-apps.tech/toshikoshi-kamo-nanban/</link><pubDate>Sat, 19 Jan 2019 05:27:16 +0000</pubDate><guid>https://blog.web-apps.tech/toshikoshi-kamo-nanban/</guid><description>もう1月も半ばを過ぎ、まもなく2月が来る、というところで今更感を拭うことができない話題なのですが、2018年末(実は時間的には年が明けていたが)に年越しそばとして鴨南蛮を作りました。
+さて、鴨南蛮なので鴨肉が必要です。今回はbuilderscon の肉会などでお世話になっているミートガイ さんから鴨の胸肉 を購入しました。
+こちらが回答した鴨肉をAnovaでやったやつです。温度は忘れたんですが、大体1~2時間くらいやったやつです。
+軽く塩をした後、熱したフライパンで焼き目をつけていきます。皮を下にして、高めの温度でさっとやります。
+焼き目をつけた鴨肉です。いい色ですね。
+油がたくさん出ます。
+鴨から出た油でネギを焼きましょう
+ネギを焼いている間に鴨を切ります。幸せのため少し厚切りにしましたが、鴨はすこし薄めでもいいかもしれないです。
+最後にそばの上に盛り付けて完成。うまい。</description></item><item><title>jessevdk/go-assetsでファイルを埋め込む</title><link>https://blog.web-apps.tech/jessevdk-go-assets/</link><pubDate>Thu, 17 Jan 2019 07:47:13 +0000</pubDate><guid>https://blog.web-apps.tech/jessevdk-go-assets/</guid><description>Go言語の素敵なところの一つとして、最終的な成果物を1バイナリに収めることができる、という点にあると思う。結果として、非常に簡単にコマンドラインツールなどを配布することができる。 しかし、例えばコード生成を行うようなツールでテンプレートファイルを別途持っているような場合や、アプリケーション中で使う画像などを含む場合など、Goのソースコード以外のファイルを必要とする場合、全てを1ファイルで、とはいかない。
+そのような場合に便利なのがjessevdk/go-assets である。以前は多くの人がgo-bindataを使用していたと思われるが、作者がやめてしまったため、使えなくなってしまった。代替としてこれが便利。 jessevdk/go-assetsを使用するには、まずjessevdk/go-assets-builder を使用する。これは、指定したファイルをGoのソースコードに埋め込んで、それらを扱うためのAssetsというオブジェクトを作成してくれるツールである。
+インストールは簡単で、go getするだけ。
+$ go get github.com/jessevdk/go-assets-builder インストールできたら、次のように使う。
+$ ls assets/ foo.html.tmpl bar.png $ go-assets-builder assets -o assets.go すると、assetsディレクトリの内容が埋め込まれたassets.goが生成される。今回は特にパッケージ名を指定していないのて、package mainとして作成された。必要なら-pオプションでパッケージ名を指定することもできる。 生成されたあとは、実際に使いたいソースコード内で次のように使う。
+f, _ := Assets.Open(&amp;#34;/assets/foo.html.tmpl&amp;#34;) // in production, need to handle error defer f.Close() // Do something with f ここで作成されたfはos.Fileと同じインターフェースを備えている。要するに、os.Openを使用したときと同じように操作することができる。
+また、Assetsという変数を別に使いたいときは、go-assets-builderでパッキングするときに-vオプションで変数名を指定することもできる。ディレクトリ全体ではなく、個別のファイルを指定することもできる。</description></item><item><title>きちんとやるnet/http</title><link>https://blog.web-apps.tech/net-http-for-valid/</link><pubDate>Tue, 08 Jan 2019 07:31:50 +0000</pubDate><guid>https://blog.web-apps.tech/net-http-for-valid/</guid><description>皆さん、net/httpパッケージは使っていますか？ Go言語の標準パッケージであるnet/httpはPythonなどの標準HTTPパッケージに比べ、人間にとっても取り扱いがしやすいため、そのまま使用している方が多いかと思います。 しかし、このnet/httpパッケージ、簡単に使えるように見えて結構落とし穴が多いのです。
+1. Response Bodyはクローズする必要がある 次のコードを見てみましょう。
+resp, err := http.Get(&amp;#34;https://example.com/api&amp;#34;) if err != nil { return nil, err } var t T if err := json.NewDecoder(resp.Body).Decode(&amp;amp;t); err != nil { return nil, err } return &amp;amp;t, nil クライアントライブラリなどでよく書きそうな処理ですね。何も問題ないと思いましたか？ 公式ドキュメント を見てみましょう。
+It is the caller&amp;rsquo;s responsibility to close Body.
+Bodyをクローズするのは関数を呼んだ人の責任、とあります。そうです。Response.Bodyは Close()しなければならないのです。ちゃんとクローズされていない場合、次のリクエストでkeepaliveコネクションの再利用がされず、パフォーマンスの悪化やコネクションリークを起こす可能性があります。
+2. Response Bodyを最後まで読む Response Bodyをきちんとクローズするように修正したコードが次のようなコードです。
+resp, err := http.Get(&amp;#34;https://example.com/api&amp;#34;) if err != nil { return nil, err } defer resp.</description></item><item><title>gitにもaliasの指定ができる件</title><link>https://blog.web-apps.tech/git-aliases/</link><pubDate>Wed, 12 Dec 2018 06:16:37 +0000</pubDate><guid>https://blog.web-apps.tech/git-aliases/</guid><description>tl;dr .gitconfigにもaliasの登録ができる [alias]ブロックにaliasを登録する tagsで単数・複数の悩みを解消する discardで変更を取り消す unstageでaddを取り消す uncommitでcommitを取り消す ignoreで.gitignoreを生成する git aliases この記事は今すぐalias登録すべきワンライナー by ゆめみ① Advent Calendar 2018 の6日目の穴埋め記事です。 こちらのアドベントカレンダーは今すぐalias登録べきワンライナーということで、みなさん.bashrcや.zshrcのaliasについて記事を書いてらっしゃいますが、実は.gitconfigという、gitコマンドの設定を書いておくファイルにもaliasの指定ができます。 誰もshellのaliasとは言ってない！(・・・はず)ので、いくつか.gitconfig用に便利なaliasを紹介していきましょう
+aliasの登録方法 .gitconfigは基本的にiniファイルです。そのため、次のように登録します。
+[alias] aliasname1 = some command 1st aliasname2 = some command 2nd 簡単ですね？ [alias]というブロックを作成し、alias名=コマンドの形で記述します。 このときコマンドはgit xxxの形で実行される、xxxの部分のみを指定します。
+例えば、
+[alias] stat = git status と指定すると実際の実行時にはgit git statusという形で実行されてしまいエラーになるので注意しましょう。 gitのつかないコマンドを実行したい場合は頭に!をつけます。
+[alias] ls = !ls このように記載すると、git lsでlsが実行されます。
+git tags git tagというコマンドがありまして。まぁみなさんご存知でしょうが、tagの一覧を出したり、新しいtagを作ったりするコマンドです。これ単体では特に問題がないのですが、リモートリポジトリと合わせて使うと、ちょっと悩みが発生します。 git tagコマンドでタグをつけた後、リモートリポジトリにpushするときのコマンドはgit push --tagsです。これはtagをまとめてpushするので、複数形なんでしょう。しかしです。tagの一覧を出すときに使うのもgit tagと単数形なんですね。 ついついgit tagsと打ってしまいませんか？
+そんなあなたはこんなaliasを登録しておきましょう
+[alias] tags = tag 地味ですが、これで単数形か複数形か悩まずに済みます。</description></item><item><title>git repositoryの初期化ルーチン</title><link>https://blog.web-apps.tech/routine-make-git-repo/</link><pubDate>Fri, 07 Dec 2018 03:19:52 +0000</pubDate><guid>https://blog.web-apps.tech/routine-make-git-repo/</guid><description>おそらくみなさんもgit repositoryを作る時、毎回だいたい同じような手順で初期化をするのではないでしょうか。 メモがてら、自分の初期化ルーチンをまとめておきます
+tools 使用しているツールは以下の通り:
+&amp;lt;code&amp;gt;hub&amp;lt;/code&amp;gt; : &amp;lt;code&amp;gt;.zshrc&amp;lt;/code&amp;gt; でgitコマンドにエイリアスを張ってます gitignore.io : 先日記事を書いたように 、git ignoreコマンドとして使ってます git-license : 自作のサブコマンドです routine # 新しいリポジトリ用のディレクトリを作成 $ mkdir new-repository $ cd new-repository $ git init # GitHub上にnasa9084/new-repositoryリポジトリを作成 # hubコマンドの機能 $ git create # まずは空の状態で初回コミット $ git commit -m &amp;#39;initial commit&amp;#39; --allow-empty # .gitignoreを作成(今回はgo言語プロジェクト向け) $ git ignore emacs,macos,go &amp;gt; .gitignore $ git add .gitignore $ git commit -m &amp;#39;add .gitignore for emacs,macos,go&amp;#39; # LICENSEを作成 $ git license -u nasa9084 mit &amp;gt; LICENSE $ git add LICENSE $ git commit -m &amp;#39;add MIT License&amp;#39; $ git push -u origin master ここまでがルーチンで、ここからMakefileを作ったり開発したりします。</description></item><item><title>x/crypto/openpgpでデータを暗号化する</title><link>https://blog.web-apps.tech/x-crypto-openpgp/</link><pubDate>Mon, 26 Nov 2018 10:15:09 +0000</pubDate><guid>https://blog.web-apps.tech/x-crypto-openpgp/</guid><description>OpenPGPはPGP(Pretty Good Privacy)をベースとした暗号化フォーマットです。 Go言語でも&amp;lt;code&amp;gt;golang.org/x/crypto/openpgp&amp;lt;/code&amp;gt; という準標準パッケージで提供されています。
+PGPは公開鍵暗号としてメールの暗号化等でよく使用されますが、パスフレーズを用いた対称暗号として使用することもできますので、今回はこちらを紹介します。
+TL;DR 暗号化にはSymmetricallyEncrypt()を使用する 復号にはReadMessage()を使用する prompt次第で無限ループする恐れがあるので注意 暗号化 x/crypto/openpgpパッケージでパスフレーズを用いてファイルを暗号化するには、SymmetricallyEncrypt関数を使用します。 シグネチャは次のようになっています。
+func SymmetricallyEncrypt(ciphertext io.Writer, passphrase []byte, hints *FileHints, config *packet.Config) (plaintext io.WriteCloser, err error) 順番に見て行きます。まずは引数から。
+第一引数であるciphertextには、暗号化されたテキストを出力するio.Writerを与えます。*os.Fileなどを与えてもいいですが、*bytes.Bufferなどを与えてその後*os.Fileにコピーする方が良いでしょう。可読なテキストではなく、バイト列が出力されます。
+第二引数のpassphraseはその名の通り、パスフレーズを与えます。
+第三引数のhintsには暗号化するファイルのメタデータなどを含むことができますが、単純にnilを与えても良いです。
+第四引数のconfigで暗号化方式や乱数エントロピーソース、圧縮アルゴリズムなどを設定することができます。設定しなければ乱数としてcrypto/rand.Readerが、ハッシュ関数としてSHA-256が、暗号化関数としてAES-128が、現在時刻としてtime.Nowが、RSAのビット数として2048がそれぞれ使用されます。圧縮はされません。
+返り値は二値で、io.WriteCloserとerrorです。返り値のio.WriteCloserに暗号化したい内容を書き込むことで暗号化が行われます。必ずCloseする必要があるので忘れないように注意しましょう。
+使用例 func encrypt(in io.Reader, out io.Writer, passphrase []byte) error { // omit error handling w, _ := openpgp.SymmetricallyEncrypt(out, passphrase, nil, nil) defer w.Close() io.Copy(w, in) return nil } 復号 暗号化したファイルを復号するには、ReadMessage関数を使用します。Decrypt〜のような関数ではないので注意が必要でしょう。関数のシグネチャは次のようになっています。</description></item><item><title>Generator Pattern</title><link>https://blog.web-apps.tech/generator-pattern/</link><pubDate>Wed, 21 Nov 2018 08:09:23 +0000</pubDate><guid>https://blog.web-apps.tech/generator-pattern/</guid><description>Generator PatternはGo言語における並列処理パターンの一つで、goroutine-safeな値列の生成などに使用することができます。
+コードを見た方が早いと思いますので、コードを掲載しましょう。 次の例は複数のgoroutineから共通の連番を採番したいときに利用することができます。
+func GenInt(ctx context.Context, max int) &amp;lt;-chan int { ch := make(chan int) go func() { defer close(ch) for i := 0; i &amp;lt; max; i++ { select { case &amp;lt;-ctx.Done(): return case ch &amp;lt;- i: } } return ch } 返された&amp;lt;-chan intからintの値を取得するようにすることで、重複のない連番を取得することができます。 Go言語において、chanは複数箇所から値の取り出しを行うことができますが、chanに入力された一つの値はどこか一箇所からしか取り出すことができません。そのため、lock等を使用しなくとも、必ず重複無く連番を取得することができます。 lockを使用した場合、若干動作が遅いため、可能であればlockを使用しないで、chanを使用して実装できるとより高速な、Goらしいコードとすることができます。</description></item><item><title>LINE DEVELOPER DAY 2018に参加した</title><link>https://blog.web-apps.tech/line-developer-day-2018/</link><pubDate>Wed, 21 Nov 2018 02:51:41 +0000</pubDate><guid>https://blog.web-apps.tech/line-developer-day-2018/</guid><description>LINE DEVELOPER DAY 2018 はLINEの技術に関して紹介するイベントで、2018年11月21日に開催されたので、参加してみました。
+開催地は白金台の八芳園です。初めて来たのですが、厳かな日本庭園なんですね。ちょっと気後れしてしまいます。
+八芳園の入り口にはDEVELOPER DAYのロゴ入り暖簾が下がっていました。
+会場の建物に向かうには庭園を抜ける必要があり、八芳園を少しですが楽しめるのはなかなか良かったように思います。
+受付は外にあり、非常に良い雰囲気でした。雨だったとしても建物の中でやれる様なプランはあったのでしょうが、雰囲気が大きく変わっていたと思いますので、雨じゃ無くて良かったですね。
+GitHubのイベントに行ったときなんかも思ったのですが、会場の壁でこういうことをできるのは企業主体のカンファレンスのすごいところだなーと思います。 これだけで雰囲気が結構違うとは思うんですが、コミュニティ主体だとここにお金をかける意味はあんまり無いので、やろうという話にもならないことが多い気がします。
+写真を撮った時点ではまだオープニングセッションの最中だったので稼働はしていなかったのですが、会場では通常の発表の他、ポスターセッションも行われるようでした。
+カメラを向けても止まってはくれなかったのでちょっとぶれちゃってますが、歴戦のカンファレンススタッフであるとりいさんもスタッフ参加とのこと。
+LINE DEVELOPER DAY 2018は参加費無料で、約1300人の動員(予定)だそうです。</description></item><item><title>git ignoreコマンドで.gitignoreを取得する</title><link>https://blog.web-apps.tech/gitignore-from-cli/</link><pubDate>Tue, 13 Nov 2018 02:07:39 +0000</pubDate><guid>https://blog.web-apps.tech/gitignore-from-cli/</guid><description>割とみんな知ってるのかもしれないですが。
+git-xxxという名称で実行可能ファイルをパスの通ったところに配置すると、git xxxというgitのサブコマンドの形で実行することができるようになります。これを利用したのが拙作git-license で、git license [option] license_name &amp;gt; LICENSEの形で実行するとLICENSEファイルを簡単に作成することができます。 その他、git configでエイリアスを指定して、サブコマンドとして登録することも可能です。
+同様にして、git ignoreで`.gitignoreファイルを簡単に取得できるようにしてみましょう。
+おそらく現代では多くの人が.gitignoreの生成やテンプレート化をして、あるいはテンプレート化されたものを利用しているのではないでしょうか。GitHubのWUI上でリポジトリを作成するときにも生成することができますし、そのさい使用される.gitignoreファイルとしてgithub/gitignore が提供されています。
+今回紹介するのはgitignore.io というサービスです。
+gitignore.ioはその名の通り、.gitignoreファイルを生成するサービスです。 基本的な使い方は非常に簡単で、ブラウザでアクセスして、テキストボックスに必要な言語、OS、エディタやIDEなどを指定していくだけです。指定が終わったらCreateボタンを押すことで、選択した対象用の.gitignoreテンプレートを全て含んだ.gitignoreファイルが作成されます。これを保存すれば良いですね。
+しかし、その他の作業をコマンドラインから行なっていると、いちいちブラウザでアクセスして、マウスで操作して・・・というのが非常に面倒に感じます。
+大丈夫です！gitignore.ioではもちろんAPIを提供しています(というか、WUIで生成された.gitignoreのURLがそのままAPIのURL)。 次のように実行してみます。
+$ curl https://www.gitignore.io/api/go,emacs,macos https://www.gitignore.io/api/の後ろに、カンマ区切りで必要なものを列挙して行くだけで、簡単にコマンドラインから.gitignoreファイルを取得できます。
+ここまでやったらもう少し簡単にしたいですね？いちいちURLを打つのは面倒ですし、忘れてしまうかもしれません。せっかくなのでgitのサブコマンドとしてgit ignoreとできるようにしてみましょう。次のコマンドを実行してみます。
+$ git config --global alias.ignore &amp;#39;!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi&amp;#39; もしくは、~/.gitconfigファイルの[alias]のセクションに次のように設定しても良いでしょう。
+[alias] ignore = !curl -L -s https://www.gitignore.io/api/$@ $@は引数をそのまま渡すという変数です。このように設定をすることで、git ignoreとしてgitignore.ioのAPIを利用することができるようになります。実際に使用する時は次のように使用します。
+$ git ignore go,emacs,macos 言語や環境のリストは全てまとめて一つの引数のため、カンマの後にスペースを入れないことに注意です。指定できる環境の一覧はgit ignore listとすることで表示できます。
+標準出力をそのままリダイレクトして、.gitignoreファイルに書き込めばプロジェクトの初期設定として使用できるでしょう。</description></item><item><title>jessevdk/go-flagsでサブコマンドを実装する</title><link>https://blog.web-apps.tech/subcommand-using-jessevdk-go-flags/</link><pubDate>Tue, 06 Nov 2018 05:01:49 +0000</pubDate><guid>https://blog.web-apps.tech/subcommand-using-jessevdk-go-flags/</guid><description>Go言語を用いてコマンドラインツールを開発する際、皆さんはフラグのパースやサブコマンドの実装にどんなパッケージを使用していますか？標準のflagパッケージのほか、、&amp;lt;code&amp;gt;spf13/cobra&amp;lt;/code&amp;gt; 、&amp;lt;code&amp;gt;alecthomas/kingpin&amp;lt;/code&amp;gt; などもよく使われているようです。 私は専ら、&amp;lt;code&amp;gt;jessevdk/go-flags&amp;lt;/code&amp;gt; (以下go-flags)を使用しています。 go-flagsはその名の通り、基本的にはオプション/フラグの解析用パッケージで、ドキュメント もフラグ解析に関するものがほとんどです。 しかし、go-flagsでは、サブコマンドの実装も可能です。今回はこれに焦点を当ててご紹介していきます。
+go-flagsでは、親コマンドにサブコマンドを登録する、という形でサブコマンドを実装していきます。サブコマンドは構造体として実装し、それぞれがオプションを格納する構造体を兼ねる形となります。 終端の、実際に何かの動作をするコマンドは Commander interfaceを実装している必要がありますが、中間のサブコマンド(docker containerのような、グルーピングのためのサブコマンド)はこれを実装していなくても構いません。 Commander interfaceの定義は次のようになっています。
+type Commander interface { Execute(args []string) error } 非常に単純ですね。argsにはコマンドでパースされなかったあまりの引数が渡されます。 実際の実装例を見てみましょう。
+type subcommand struct { verbose bool `short:&amp;#34;v&amp;#34; long:&amp;#34;verbose&amp;#34;` } func (cmd *subcommand) Execute(args []string) error { // some exec return nil } サブコマンドを実装したら、親のコマンドにサブコマンドとして登録します。 ドキュメントを見ると、Command構造体に登録する関数があること、Parser構造体はCommand構造体が埋め込まれていること、がわかります。 通常、go-flagsパッケージを使用する場合はパッケージグローバルのParse関数を使用することが多いと思うのですが、サブコマンドを実装する場合はトップレベルのパーサーを自分で作る必要があります。
+type options struct { // ... } var opts options // global option var parser = flags.</description></item><item><title>Ergodox EZを購入した</title><link>https://blog.web-apps.tech/my-first-ergodox-ez/</link><pubDate>Wed, 31 Oct 2018 05:57:26 +0000</pubDate><guid>https://blog.web-apps.tech/my-first-ergodox-ez/</guid><description>割と今更感もなくはないのですが、Ergodox EZという分割キーボードを購入しました。 Ergodoxは基本的には自分でパーツを揃えて組み立てる、いわゆる自作キーボードの一つですが、オープンソースで設計などが公開されており、その設計を使って完成品を販売しているのがErgodox EZです。 今回は公式サイト から購入しました。
+構成は次のようなものです。
+Color: BLACK Tilt kit/Wing Rest: YES Keycap: Blank Switches: Cherry MX Blue 以上で$325、日本円で37,125円でした。送料がかかるという情報も多かったのですが、送料は無料で、関税が2000円ちょいくらいかかりました。
+wing restの箱は凹んでいました。。。 まぁ、ペラッペラのビニールだけの状態で渡航して来たので、こんなものでしょう。 箱自体はしっかりしており、多少凹んでも中の本体には影響ありませんでした。
+いつ使うのかよくわからないワッシャーと、キートップ・スイッチの交換に使う道具、謎のステッカーがついていました。 web上には日本語の情報がなく、ごく最近のことだと思うのですが、現在販売されているErgodox EZにはCIY という機構が組み入れられています。キースイッチが半田付けされておらず、いわゆるソケットのようなものに刺さっているため、自分でキースイッチを交換できる、というものです。 このため、自作のErgodoxか、キーボードの故障を覚悟の上での改造のみで可能だった、一部のキースイッチのみ交換する、などが簡単に行えるようになっています。
+現在は会社で使っています。 やはりエンターキー周りがなれず、slackでちょいちょい誤爆しますね。 できるだけJIS配列に近づけた構成にしており、現在のファームウェアはnasa9084/qmk_firmware のdevelopブランチで管理しています。 今の所レイヤーはうまく使いこなせていないため、いいかんじの知見があれば教えてほしいところです。
+ファームウェアのコンパイル時、arch linuxの場合、sudo pacman -S avr-libcする必要があったほか、macosの場合、brew install avr-gccする必要があったのですこしハマりました</description></item><item><title>Ceph RBDをKubernetesのStorageClassとして登録する</title><link>https://blog.web-apps.tech/ceph-rbd-storageclass/</link><pubDate>Tue, 23 Oct 2018 07:08:35 +0000</pubDate><guid>https://blog.web-apps.tech/ceph-rbd-storageclass/</guid><description>Kubernetesで何らかの永続データを保存する場合、通常PersistentVolumeと呼ばれる永続ストレージを使用します。Persistent VolumeはNFSなどのネットワークストレージを直接指定することもできますが、ボリュームを手動で用意する必要があり、非常に面倒です。 そのため、ブロックストレージサービスをバックエンドとしてdynamic provisioningと呼ばれる、自動でボリュームを作成する機能も用意されています。
+dynamic provisioningを使用する場合、バックエンドのprovisionerをStorageClassと呼ばれるリソースに登録しておきます。クラウドでKubernetesを使用している場合はAWS EBSなどを使用するでしょう。
+オンプレミスや自宅でKubernetesを使用している場合、GlusterFSやCeph RBDを使用することができます。今回はCephを使用してPersistentVolumeを作成するまでの流れを説明しましょう。
+下準備 今回はOpenNebula上にCentOS 7のVM(2GB RAM/1Core CPU)を3台用意し、構築を行いました。バージョンはmimicです。/dev/vdbにCeph用のディスクがあるとします。 それぞれ、Chronyで時刻同期の設定、firewalld無効化、SELinux無効化状態で構成しました(本番ではちゃんと設定してくださいね！)。 また、ceph-1 ceph-2 ceph-3という名称でアクセスできるよう、hostsファイルを書いて、SSHの鍵もコピーしました。
+インストール まずは公式サイト を参考に各サーバへリポジトリの追加をします。
+/root@ceph-N# rpm --import &amp;#39;https://download.ceph.com/keys/release.asc&amp;#39; /root@ceph-N# cat &amp;lt; EOF &amp;gt; /etc/repos.d/ceph.repo [ceph] name=Ceph packages for $basearch baseurl=https://download.ceph.com/rpm-mimic/el7/$basearch enabled=1 priority=2 gpgcheck=1 gpgkey=https://download.ceph.com/keys/release.asc [ceph-noarch] name=Ceph noarch packages baseurl=https://download.ceph.com/rpm-mimic/el7/noarch enabled=1 priority=2 gpgcheck=1 gpgkey=https://download.ceph.com/keys/release.asc [ceph-source] name=Ceph source packages baseurl=https://download.ceph.com/rpm-mimic/el7/SRPMS enabled=0 priority=2 gpgcheck=1 gpgkey=https://download.ceph.com/keys/release.asc EOF リポジトリの追加ができたら、各サーバへceph-deployをインストールします。
+/root@ceph-N# mkdir ceph /root@ceph-N# cd ceph /root/ceph@ceph-N# yum install -y ceph-deploy ここまではすべてのサーバに対し実行します。ansibleなどを使っても良いでしょう。 そして、ここからはceph-1のみで実施します。</description></item><item><title>調布技研でKubernetesの薄い本を出します</title><link>https://blog.web-apps.tech/chofu-tech-k8s-book/</link><pubDate>Tue, 25 Sep 2018 11:04:55 +0000</pubDate><guid>https://blog.web-apps.tech/chofu-tech-k8s-book/</guid><description>調布技研、という怪しい団体がありまして、私はそこに所属しています。調布技研は主にSlack上で与太話をしている集団で、インフラとかの検証なんかを共同でやっていたりします。
+来る10月08日に、技術書典 という、技術系同人誌のイベントが開催されますので、そこで「色んなところでKubernetesを動かす本 」という同人誌を出す予定です。
+先ほど、無事入稿が完了しました。
+私は「おうちKubernetesの作り方」と題して、自宅を含むオンプレでKubernetes環境を作るためのあれやこれやを執筆しました。ベースとなっているのは「趣味サーバーのインフラをKubernetesで整えた件 」でもご紹介した私の自宅Kubernetes環境で、小規模ならばプロダクションにも使える環境です。
+物理本1冊500円(電子版つき)、電子版のみは400円での頒布となる予定ですので、ぜひお買い求めください。場所はか16です。
+なお、冒頭の画像はタイトルをミスった表紙です。</description></item><item><title>日本仮想化技術(株)を退職します</title><link>https://blog.web-apps.tech/change-job-2018/</link><pubDate>Tue, 18 Sep 2018 09:19:26 +0000</pubDate><guid>https://blog.web-apps.tech/change-job-2018/</guid><description>レギュレーション タイトルで煽らない、かしこまった見出しもつけない、ウィッシュリストのせない、東亜飯店張らない、fromとtoを両方書く。職場崩壊を暴露しない。キラキラしない。これが私の求める退職エントリです。
+&amp;mdash; laiso?? (@laiso) August 1, 2017 本題 私事ですが、2018-09-20を以て日本仮想化技術株式会社を退職し、2018-10-01付けでLINE株式会社へ就職します。
+以上。</description></item><item><title>ingress-nginxで諸々設定する</title><link>https://blog.web-apps.tech/configure-ingress-nginx/</link><pubDate>Sun, 16 Sep 2018 17:06:14 +0000</pubDate><guid>https://blog.web-apps.tech/configure-ingress-nginx/</guid><description>ingress-nginx を使用している際に、nginxに何か設定をしたいと思ったとき。 例えば、nginxは初期状態では、アップロードできるファイルの上限は1MBなのですが、これをもっと大きくしたいとき、nginxでは次のように設定します。
+client-max-body-size 5m; これをingress-nginxでも設定したいと思ったとき、どうしたら良いか。
+まぁ、簡単な話で、annotation で設定値を与えてあげれば良いです。 この場合だと、次のようにします。
+metadata: annotations: nginx.ingress.kubernetes.io/proxy-body-size: 5m 設定できる値はingress-nginxのドキュメント に記載されています。 client-max-body-sizeを指定するのにproxy-body-sizeと設定することに注意です。</description></item><item><title>builderscon tokyo 2018</title><link>https://blog.web-apps.tech/builderscon-tokyo-2018/</link><pubDate>Mon, 10 Sep 2018 06:10:44 +0000</pubDate><guid>https://blog.web-apps.tech/builderscon-tokyo-2018/</guid><description>過日、かねてより準備してきたbuilderscon tokyo 2018 が開催され、そして終了しました。
+Opening 例年、buildersconでは主催の@lestrrat さんがオープニングでお話をしているのですが、今年はなんと動画を作りました。
+それがこちら。
+オープニングムービーなので7分程度ですが、かなり気合いの入った動画となっております。詳しい情報は「builderscon tokyo 2018 オープニング作成の裏側」 で紹介されています。
+記事中でも解説されていますが、この動画、「The Stanley Parable」というゲームのオマージュとなっています。残念ながら開催時点で私はプレイしたことがなかったのですが、昨日プレイしました。面白い。ナレーションがナレーションのくせにこう、感情的なんですよね。怒ったり、悲しんだり。是非皆さんもプレイして(もしくはYoutubeとかでプレイ動画をみて)みてください。
+Talk 2016年の初開催からコアスタッフとしてやってきた私ですが、今年はスピーカーとしても参加することが出来ました (スライドはこちら )。残念ながら一度は落選しており、キャンセルされた枠に滑り込む形でしたが、2016年はCfP落選、2017年は業務都合で当日参加出来ず、そして2018年は穴埋め登壇と、着実に進歩しています。来年は是非、きちんと「通った」スピーカーとして参加したい・・・！
+twitterで私が話している時間帯のツイートを見ると、「Kubernetesがゲシュタルト崩壊」と複数の方に書かれていて、メダパニを書けてしまった気分です。しかし話題が話題なだけに仕方なかったんや！
+スタッフとして 上でも書きましたが、今年は三年目のコアスタッフ参加でした。初年は北海道からのリモート参加、去年は当日に絡む仕事は出来ず、だったので、実質まともに参加したのは初めてです。 いくつかoctav(buildersconウェブサイトのバックエンドAPIサーバ)の修正を書き(マージされたとは言っていない)、当日スタッフのまとめ役をしたりしました。
+当日スタッフのまとめは正直上手く出来たとは言えず、他のスタッフ(Discordの設定とか当日スタッフの担当割りの細かい調整をしてくれたtoriiさん、諸々印刷などしてくれたuessyさんに多大なる感謝を・・・)の助けを得てなんとか大きな問題無く終えることが出来ました。
+タスクはまだ残っているので、これから一週間くらいかけてがしがしやっていきます。
+来年は今年よりももっとコミットしていきたい所存です。
+来年に向けて buildersconのコアスタッフSlackでは、すでに来年の企画に向けて侃々諤々といった様相です。buildersconは他のカンファレンスに比べ、自由度が高い(と思っています)ので、何か面白いことをやりたい、と思ったかたは是非スタッフに参加してみてください。(そのうちスタッフ募集が始まる・・・はず)</description></item><item><title>fitbit versa三日目レビュー</title><link>https://blog.web-apps.tech/fitbit-versa-3days/</link><pubDate>Tue, 04 Sep 2018 14:46:50 +0000</pubDate><guid>https://blog.web-apps.tech/fitbit-versa-3days/</guid><description>fitbit versa を使い始めて 3日ほど経ったので、現時点での感想をば。
+電池の持ちは前情報通り1日で20%〜25%減る程度 常時接続・Keep-AliveウィジェットはともにON 夜にお風呂/シャワー上がってから、翌日お風呂/シャワーに入るまで、で1日。 お風呂/シャワーの間に充電100% 画面つける動作の反応が悪い、という情報があったが、そんなに気にならない 歩数計は少し過敏な様で、実際歩いた歩数より多い気がする PCでの作業でも反応してる気がする 本体が防水でも、バンドが水を吸うと水に過敏になる 明日からはCLASSIC BANDに取り替えてみる 結構変な方向を向いてしまう ベルトをもう一つ締めれば回らなくなるけど、今度は少しきつい 安い画面保護ガラスフィルム を買った 一部のレビュー通り、縁が若干浮いている様だけど、気にならないレベル 腕時計をつける習慣が無かったことは、お風呂の時以外常時つけていると案外気にならない Androidアプリは若干バグってる 後述。 versa上で動くアプリはあんまり無い もっと増えたら楽しいのに・・・・(しかしどんなアプリが欲しいかというと思いつかない) versaの時計盤の種類も(よさげなのは)そんなに多くない まぁ、頑張ろう 階数カウントは何を基準にカウントしてるのか謎。 天気予報、スマホ側で設定できる画面があるけど結局現在地しか表示できてない。 よくわからん。 アラーム、もう少し長く鳴って欲しい Androidアプリのバグ Android用のfitbitアプリが若干バグってました。すでに報告済みですが、まぁパッとは治らない様子。仕方ない。 具体的には、睡眠のページを開き(このときは問題ない)、睡眠の日別詳細を開いて戻ると、なんとデータの一覧が増殖する。 尚動作環境はZenfone 5Z、Android 8.0.0。
+睡眠のページ。問題はなさそうに見える。
+睡眠の日別詳細ページを開いて戻ってきた画面。同じデータだが、画面表示が増えている。</description></item><item><title>EC2インスタンスからEKS上のアプリケーションにアクセスしたい</title><link>https://blog.web-apps.tech/eks-internal-lb/</link><pubDate>Sun, 02 Sep 2018 03:04:50 +0000</pubDate><guid>https://blog.web-apps.tech/eks-internal-lb/</guid><description>TR;DR KubernetesのServiceで、Internal LoadBalancerってのがあるので、それを使うと良い Internal LoadBalancer 皆さんはEKS、もう使ってますか？私は使っています。業務システムをリプレースで新規開発する的な案件で、新システムの基盤がEKSという感じです。EKSはネットワークが素敵に気持ち悪い感じになっており、普通はKubernetesのクラスタ内部っていうのは、外側と別のサブネットを作る訳なんですが、なんとEKSが所属するVPCと同じサブネットで接続できるようになっています。
+そんなわけで、同一VPCに存在したり、VPC PeeringしたりなんかしちゃってるEC2インスタンスとEKS上のPodはIPアドレスベースでは普通に接続がとれちゃったりするんです。 EKS上のアプリケーションから、EC2インスタンスへアクセスしたいときは、普通にEC2インスタンスのIPアドレスやら内部エンドポイントへアクセスすれば良いですね。EC2インスタンスが動きっぱなしならまぁさほどIPも変わらんでしょう(雑)。
+しかし逆は問題です。PodのIPは勿論割り振られてはいますけれど、これはPodが再生成されると勿論変わってしまいます。アプリケーションは動きっぱなしだから変わらない、なんて言うこともできないです。EC2インスタンスはインスタンス上でアプリケーションの更新なんかもしちゃうかもしれないですけど、EKS上のPodに乗ったアプリケーションの更新は普通、Podの再作成が伴います。Podの再作成が起きると、勿論IPが変わります。
+そうすると、やはり考えるのはServiceをつくることですね。外部からアクセスするためにはそうしますから、同じように考えるのが普通です。 しかし、ここで問題が発生します。普通に外部向けに公開するのと同じようにServiceを作成すると、グローバルIPが当たってしまい、プライベートIPベースで接続できる状況では接続ができないのです。困った。
+まぁドキュメントちゃんと読めよって話なんですが、Kubernetesのドキュメント を読むと、Internal LoadBalancerってのがちゃんと書いてあります。AWSの方のドキュメントには無かったのでちょっと盲点でした。annotationで次の様に指定します。
+# ... metadata: name: my-service annotations: service.beta.kubernetes.io/aws-load-balancer-internal: 0.0.0.0/0 # ... これだけで、type: LoadBalancerで作成されるELBが内部向けのものになります。internal-なんちゃらみたいなエンドポイントです。IPアドレスもしっかりプライベートIPです。最高。後ろの0.0.0.0/0のところで、アクセスできるIPレンジ制限できるのかなーなんて希望的観測を持ちましたが、全然関係ありませんでした。 ちょっと気持ち悪いのは、普通にパブリックDNSで名前引きができてしまうことですかね。全然関係ない外部のネットワークとかでも(パブリックDNSに名前があるので)名前解決ができてしまって、かつプライベートのアドレスが帰って来るという不思議な体験をすることができます。
+$ nslookup internal-xxxxx.us-west-2.elb.amazonaws.com 1.1.1.1 Server: 1.1.1.1 Address: 1.1.1.1#53 Non-authoritative answer: Name: internal-xxxxx.us-west-2.elb.amazonaws.com Address: 192.168.187.214 Name: internal-xxxxx.us-west-2.elb.amazonaws.com Address: 192.168.222.128 Name: internal-xxxxx.us-west-2.elb.amazonaws.com Address: 192.168.109.84 うーん、まぁ実害は無いんでしょうけど。</description></item><item><title>fitbit versaを購入したので開封の儀</title><link>https://blog.web-apps.tech/fitbit-versa/</link><pubDate>Sat, 01 Sep 2018 14:48:35 +0000</pubDate><guid>https://blog.web-apps.tech/fitbit-versa/</guid><description>スマートウォッチ的なものが欲しいなーと思ったので、fitbit versa を購入しました。 fitbit versaはその名の通り、fitbit が今年(2018)の6月に発売したスマートウォッチです。トップの写真からもわかるように、若干Apple Watch に似ています。 元々、Huawei Watch が欲しいなーと数年前に思っていたんですが、(当然ながら)新しいモデル が出ており、これがまた初代のHuawei Watchとは全く方向性の違うスポーツタイプ。これはちょっと・・・と言うことでPebble もいいな、と探してみると、いつの間にやらサポートが終わってしまっていました。よくよく調べると、Pebbleはfitbitに買収された とのことでした。かといってApple Watchを買うかというと、私はAndroid ユーザですから、そういう選択肢はありませんでした。
+そうこう考えながらいろいろ検索したりなんかしていたんですが、fitbit versaが実質的にPebbleの後継であるという情報を見たり聞いたり しました。お値段もお手頃で、これならまぁいざ微妙でも、買い換えもできるかな、という気持ちもあり、購入に踏み切りました。(fossilの新しいやつもよさげなんですが、ドルで見た金額と円で見た金額が大幅に違って萎えました)
+外箱はこんな感じです。fitbit versaは、通常モデル(シリコン？ゴム？のバンド)が3種類と、SPECIAL EDITION(布バンド)が2種類の計5種類で展開されています。元々海外モデルではSPECIAL EDITIONにのみNFCが搭載されているという違いがあったようなのですが、日本版では機能的違いは無いようです。 通常モデルの黒と、SPECIAL EDITIONのグレーですごく悩みました。本体の色はグラファイトの方が良さそうだし、バンドも布の方がよさげに見えたんですが、布バンドは濡れたら乾くまで時間かかりそうなので、ゴムバンドのほうが良いのかな・・・と・・・(店頭で悩み続けたので若干怪しかったかも？)。でもまぁ、本体の色はブラックよりグラファイトの方がよさげでしたし、ゴムバンドは純正の交換バンドとして売ってるから、後で買うこともできるか、ということでSPECIAL EDITIONのグレーにしました。今回ビックカメラで買ったんですが、ビックカメラではカードの様なものをレジに持って行くんです。で、商品を受け取ってみたら箱の右下に「PLUS EXTRA CLASSIC BAND」の文字・・・。
+帰ってから開封してみたら、案の定通常モデルと同じクラシックバンドが付属してました。ついてるなら早めに言ってほしかった・・・あれだけ店頭で悩んだ私の時間とは・・・。!
+本体の画面を保護していたフィルムを取ってみて気づいたんですが、小さなクッションのようなものがついてました。ボタンが押ささらない様にとの配慮なんでしょうけど、こういう細かい気遣いは初めて見たので少しだけ感動しました。
+非常に軽く、そしてエッジが削られているので薄く見えるため、非常にスマートです。写真で見る限りではベゼルが結構幅広なのが気にかかった(最近はZenfone 5Zを使っていることもあり、ベゼルは小さい方がいいなーと思っていた)のですが、実際画面をつけてみると、意外と気になりませんでした。
+元々腕時計など、腕に何かをつけるという習慣がないので、どうなるかわかりませんが、しばらく使ってみようと思います。</description></item><item><title>趣味サーバーのインフラをKubernetesで整えた件</title><link>https://blog.web-apps.tech/my-infra-with-k8s/</link><pubDate>Thu, 23 Aug 2018 04:53:46 +0000</pubDate><guid>https://blog.web-apps.tech/my-infra-with-k8s/</guid><description>趣味でサーバー運用をしています。札幌在住の大学生時代から運用を開始し、引っ越しに伴い朝霞へ移設、現在はコミュニティで使用している自宅外のラックへ移設されましたが、変わらず動いています。 この「趣味サーバー」は購入当初からKVMをベースとした(OpenNebula を使用しています)プライベートクラウド基盤として使用してきました。今も変わらずベースはOpenNebula/KVMなのですが、この度晴れてKubernetes を中心とした構成に組み替えたのでご紹介します。 尚、サーバ台・電気代・インターネット代を除くソフトウェア料金は基本的に無料で済んでいます。
+物理層 このプライベートクラウド基盤は3層で構成されています。
+その最も下の層が物理層です。その名の通り物理サーバそのものですね。物理サーバとしてDELLのR410(ヤフオクで1万弱で購入・4コア8スレッド×2、メモリ16GB)とDL360Gen6一号機(会社の処分品をもらってきた・4コア4スレッド×2、メモリ24GB)、DL360Gen6二号機(会社の処分品をもらってきた・4コア8スレッド×2、メモリ24GB)の三台で、それぞれubuntu 16.04LTSがインストールされています。落ち着いたら18.04LTSにアップデートしたい。 基本的に電源やLANは冗長化されておらず、電源やNICに問題があると即死亡となります。
+VM層 物理層の上に構成されているのがVM層です。OpenNebula/KVMを使用しており、Web UIからポチポチッとVMを作成できます。今回Kubernetesで整える前は、VMとしてnginx インスタンスを作成し、外からの80/443ポートへのアクセスを捌くリバースプロキシとして使用していました。本ブログも長らく単体VM上のDocker コンテナとして稼働していました。基本的にVMにはCentOS 7をインストールしています。 今回の構成変更で、VMは基本的にKubernetesのノードとして使うように変更、直接VM上で動作しているのはオブジェクトストレージを提供するminio とブロックストレージを提供するGlusterFS のみとなりました。 尚、GlusterFSクラスタの構成にはheketi を使用しました。
+コンテナ層 最も上の層がコンテナ層です。ここまでの話からわかるように、Kubernetesクラスタを構成しています。四台のCentOS 7をクラスタノードとして使用、Kubernetes自体の構成管理はkubespray を使用しています。現在はKubernetes 1.11.1です。本ブログもKubernetes上のコンテナとして動いています。 Persistent VolumeとしてVM上に構成したGlusterFSを使用、本ブログ等のバックアップ先としてminioを使用しています。 当初はVM上に構成したnginxインスタンスをそのままリバースプロキシとして使用していましたが、本ブログを含めたアプリケーションを順次Kubernetesクラスタ上のコンテナとして移設していった結果、nginxのVMだけ別になっていることに不便を感じるようになりました(リバースプロキシの設定は手作業で設定しなければなりませんし・・・)。しかし、VM上のnginxリバースプロキシを廃するためには、二つの問題点がありました。
+素Kubernetesでは&amp;lt;code&amp;gt;Ingress&amp;lt;/code&amp;gt; が使用できないため、ホスト名ベースの振り分けが出来ない Let&amp;amp;rsquo;s Encrypt の証明書を管理するVMがいなくなる これらを解決しないことにはnginx VMを削除できません。 解決のためにまず、kind: Ingressを使用するための実装としてingress-nginx を使用することにしました 。Ingressが使用できるようになることで、クラスタ外のリバースプロキシを挟まずともホスト名ベースの振り分けが出来るようになります。 ingress-nginxはService type: NodePortでも使用できるのですが、折角なのでService type: LoadBalancerを使用したいですよね？type: LoadBalancerを使用するための実装としてMetalLB を使用することにしました 。これにより、ingress-nginxに対してクラスタ外のIPアドレスを割り当てることが出来るようになります。
+次に、Let&amp;rsquo;s Encryptの証明書を管理するため、cert-manager を導入しました。cert-managerはkubesprayの導入時にアドオンとしても導入することが出来、今回はkubesprayのアドオンとして導入しました。これはその名の通り、証明書をKubernetesのリソースとして管理することが出来るツールです。最初はLet&amp;rsquo;s Encryptのacme api v02に上手くアクセスできない、ワイルドカードでの証明書取得が出来ないなど躓きましたが、Let&amp;rsquo;s Encryptに上手くアクセスできない問題は最近のkubesprayで比較的新しいバージョンのcert-managerを導入することで解決できました。ワイルドカードでの証明書が取得できない問題は、元々webroot(HTTP01)で証明書を取得していたのが原因のため、DNS01へ切り替えました。Gehirn DNS を使用していましたが、上手くいかなかったためCloudflare DNS に切り替え、事なきを得ました。
+これらにより、nginx VMを廃し、ルーターでの80/443のNAPT設定をすべてKubernetesクラスタへと向けることが出来るようになりました(OpenNebulaやminio等へのアクセスはtype: ExternalNameを使用)。 VMがぐっと減り、ストレージ用途以外のVMを直接触らなければいけないことも減りました。めでたしめでたし。
+使っているものまとめ Ubuntu CentOS Kubernetes (GitHub )</description></item><item><title>confd + initContainerでAlertmanagerの設定をSecretに逃がす</title><link>https://blog.web-apps.tech/alertmanager-config-to-secret-with-confd/</link><pubDate>Mon, 20 Aug 2018 08:06:47 +0000</pubDate><guid>https://blog.web-apps.tech/alertmanager-config-to-secret-with-confd/</guid><description>TL;DR Alertmanagerの設定には一部Secretが含まれる バージョン管理システムに入れたくない initContainerでconfdを使って設定ファイルを生成する Alertmanagerの設定の一部をSecretに格納できる confd kelseyhightower/confd は非常に軽量な設定ファイル管理ツールです。基本的にはテンプレートエンジンですが、多くのバックエンドデータストアからデータを持ってきて、設定ファイルに書き出すことが出来ます。 また、事前処理や事後処理を行うことが出来るので、例えば設定ファイルを書き換えたあと、リロードする、というところまでconfdで行うことが出来ます。
+Install Go言語で書かれているため、インストールは非常に簡単で、バイナリをダウンロードしてきて実行権限を与え、パスの通ったところに置くだけです。バイナリはリリースページ からダウンロードすることが出来ます。
+使用方法 confdを使用するためには、三つのものを用意する必要があります。
+テンプレートリソース テンプレート データストア テンプレートリソース テンプレートリソースには、どのテンプレートを使用して、どんなキーでデータストアからデータを取り出し、完成した設定ファイルをどこに置くのか、事前処理・事後処理はどんなものかを記述します。書式はTOMLで、慣れ親しんだ(慣れ親しんでない？)iniファイルの様に気軽に書くことが出来ます。/etc/confd/conf.d以下に配置します。
+テンプレート テンプレートはその名の通り、設定ファイルのテンプレートです。ここに、データストアから取り出したデータを合わせて設定ファイルを作成します。書式はGo言語の&amp;lt;code&amp;gt;text/template&amp;lt;/code&amp;gt; に準じます。/etc/confd/templates以下に配置します。
+データストア そして、データストアにデータを入れる必要があります。
+confdは、データストアとして、次のものをサポートしています(2018/08/20現在)
+etcd (GitHub: coreos/etcd ) consul (GitHub: hashicorp/consul ) dynamodb redis (GitHub: antirez/redis ) vault (GitHub: hashicorp/vault ) zookeeper (GitHub: apache/zookeeper ) rancher metadata-service (GitHub: rancher/rancher , rancher/metadata ) AWS Systems Manager パラメータストア 環境変数 ファイル Alertmanager Alertmanager はPrometheus からのアラートを受け取り、適切にハンドルするためのアプリケーションです。Alertmanagerの設定はYAMLで記述するのですが、SMTPのパスワードやSlack のIncoming Webhook URL 等、平文でバージョン管理システムに入れるのは躊躇われるデータを含みます。しかし、環境変数などから設定をすることも出来ないため、平文で記述するか、何らかの方法で設定ファイルを編集してから使う必要があります。 特に、Prometheus/AlertmanagerはKubernetes と併せて使用されることが多いため、出来ればKubernetesのSecret機能を使用したいところです。 そこでconfdをinitContainerで使用して、設定ファイルを生成します。</description></item><item><title>ファイナルカツカレーをつくった</title><link>https://blog.web-apps.tech/final-katsu-curry/</link><pubDate>Wed, 15 Aug 2018 14:04:46 +0000</pubDate><guid>https://blog.web-apps.tech/final-katsu-curry/</guid><description>連休も終わりで、明日から出社するのがつらいのでファイナルカツカレーを作りました。 ファイナルカツカレーは要するに、ファイナルカレーにカツを乗せたものです。 ファイナルカレーはいちばんおいしい家カレーをつくる に書かれているカレーで、我らがバイブルであるめしにしましょう(4) で紹介されています。 素晴らしいカレーであるとのことなので、やはりカツは素晴らしいカツを乗せたいものと思いますので、超級カツ丼 の時にもやった、低温調理カツでやっていきます。
+まずはタマネギを炒めていきます。これは一個分です。結構大きめのタマネギを買ってきました。 割とざっくりした粗みじん切りです。昨日包丁を研いだので目が痛くない。 強火で炒めて、焦げ付きそうになったら少し水を足す、という作業を繰り返します。
+良い感じになったら香味野菜類を追加します。にんじん・セロリ・ニンニク・ショウガ・ホールトマトですね。めしにしましょうではミキサーでやっていく風に書かれていましたが、我が家にはミキサーが無く、このために買うのも何かと思ったので、にんじんはみじん切り、セロリとニンニク・ショウガはすりおろしてみました。ニンニクをすりおろす小さいおろし金でセロリみたいな大きいものをすりおろすのはつらいです。ホールトマトは缶でしか売ってなかったので余りました。どうしよう。 ここでバターをちょいと加えます。切れてるバターが便利でした。
+水分が飛んできたらスパイスを足します。ターメリック・レッドチリ・クミン・コリアンダーです。これらは基本のカレー を作るのにも使える、基本的なスパイスなので、まぁ買っておいても良いでしょう。我が家は以前基本のカレーを作るのに買ったので、冷蔵庫に入ってました。
+もうペーストです。ドライカレーとかの方が近い見た目。鍋を振るとひっくり返せます
+肉です。豚肩ロースを適当な大きさに切り、梅酒と少々の醤油につけたものです。1時間くらい前につけて冷蔵庫にぶち込みました。梅酒は自家製です。今年つけたのを使いました。カツを乗せるので肉はいらないかとも思ったのですが、一応。
+ペーストに肉をぶち込みます。つけ汁もそのまま。ちょっと緩くなります。 このまま少し炒めます。
+良い感じになったのでコンソメ汁を投入。300mlのお湯にコンソメキューブを溶かしたものです。300ml入る良い感じのマグカップが無くて難儀。ローリエとはちみつ、醤油を加えて煮込みます。45分ほど煮込んだら、カレールゥを適当に突っ込みます。
+煮込んでいる間にカツをやっていきます。カレーにカツをのせることで人間は幸せになるのです。これは昨晩仕込んだ豚肩ロースで、Anova を使用して、62度で24時間やったものです。めしにしましょうではカツをやるのに63度12時間でしたが、24時間やるつもりだったので1度下げました。それにしてもまずそうである。
+切ったもの。断面は素晴らしいですね。カツにしましょう。
+カツです。
+断面。スマホです。むしろこのまま食べたくなってきます。
+実は以前にも一度、五島軒 のカレー缶を使ってカツカレーを作ったのですが、超級カツを乗せるとカレーが見えなくなるのが欠点です。左上のお茶はジャスミン茶です。沖縄でさんぴん茶を飲んでから飲めるようになりました。というかむしろハマってます。
+ファイナルカツカレーは、罪の味がします。人間が幸せになるためにはやはりカレーにカツをのせねばならないと、そう感じるものです。ファイナルカレー自体は少し薄い味というか、もういっこカレールゥを足してもよかったかもしれないです。</description></item><item><title>外部サービスをIngress backendとして使用する</title><link>https://blog.web-apps.tech/use-external-service-for-ingress-backend/</link><pubDate>Tue, 07 Aug 2018 02:20:57 +0000</pubDate><guid>https://blog.web-apps.tech/use-external-service-for-ingress-backend/</guid><description>TL;DR Service type: ExternalNameを使用する External Service Kubernetes では、&amp;lt;code&amp;gt;Ingress&amp;lt;/code&amp;gt; を使用することで、ホスト名ベースのロードバランシング/リバースプロキシを行うことが出来ます。その際、プロキシ先としてKubernetes上の&amp;lt;code&amp;gt;Service&amp;lt;/code&amp;gt; を指定するのですが、場合によってはKubernetesクラスタ外のサービスをプロキシ先としたい場合があります。例えば、弊宅の環境では、次の様にプロキシしています。
+基盤であるOpenNebulaのダッシュボード以外は*.web-apps.techとして、Kubernetesへとルーティングしています。
+ところで、本ブログは現在Kubernetes上へ移行作業中です。今のところはまだ、Kubernetes上へ載せていません。しかし、折角プロキシの設定が減っているので、blog.web-apps.techもIngressリソースとして管理したいです。
+そこで使用できるのがService type: ExternalNameです。ExternalNameとして外部サービスを登録することで、Ingressのバックエンドとして使用できるようになります。
+設定 設定はごく簡単で、次の様にします。
+--- apiVersion: v1 kind: Namespace metadata: name: external-services --- apiVersion: v1 kind: Service metadata: name: ghost namespace: external-services spec: type: ExternalName externalName: 192.168.1.41 # 本ブログのローカルIP 今後も何かの拍子でKubernetesに載せたくないサービスが増える可能性もあるため、external-servicesとして名前空間を分離しました。このように設定すると、kubectlからは次の様に見えます。
+$ kubectl get svc --name external-services NAME TYPE CLUSTER-IP EXTERNAL-IP PORT(S) AGE ghost ExternalName &amp;lt;none&amp;gt; 192.168.1.41 &amp;lt;none&amp;gt; 54m 後は、普通にIngressの設定をするだけです。
+--- apiVersion: extensions/v1beta1 kind: Ingress metadata: name: ghost namespace: external-services spec: rules: - host: blog.</description></item><item><title>ingress-nginxを使用してオンプレでもIngressを使用する</title><link>https://blog.web-apps.tech/ingress-nginx-on-prem/</link><pubDate>Mon, 06 Aug 2018 05:37:02 +0000</pubDate><guid>https://blog.web-apps.tech/ingress-nginx-on-prem/</guid><description>TL;DR ingress-nginxを使用するとオンプレでもIngressを使用出来る MetalLBと組み合わせる Ingress IngressはKubernetes の機能の一つで、L7 LoadBalancerの機能を持ちます。先日紹介した type LoadBalancerは、L4 LoadBalancerで、クラスタ内のDNSで名前解決をし、IP制限などをすることが出来ます。それに対し、Ingressでは、HTTPSの終端となることが出来、ホスト名ベース・パスベースのルーティングを行うことが出来ます。
+通常、オンプレでKubernetesを構築した場合、Ingress Controllerと呼ばれる、Ingressを作成する機能が無いためにIngressを使用することが出来ません。 しかし、折角Kubernetesを使用しているのに、ホスト名ベースのルーティングをクラスタ外のロードバランサーに設定するのは面倒です。 どうせならIngress、使いたいですね？
+そこで使用できるのがingress-nginx (GitHub: kubernetes/ingress-nginx )です。ingress-nginxはその名のとおり、nginxを使用したIngress Controllerです。Ingressリソースの作成時に、nginxの設定をConfigMapとして保存することでIngressの作成を実現します。
+Install MetalLBをインストール している場合、次の二つのコマンドを実行することでインストールできます。
+$ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/mandatory.yaml $ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/provider/cloud-generic.yaml 二行目のコマンドはドキュメント上では docker for macのコマンドとして記載されていますが、type: LoadBalancerが使用できるクラスタ一般で使用できます。
+インストールが完了したら、ingress-nginxのサービスにIPアドレスが割当たります。
+$ kubectl get svc -n ingress-nginx NAME TYPE CLUSTER-IP EXTERNAL-IP PORT(S) AGE default-http-backend ClusterIP 10.233.50.56 &amp;lt;none&amp;gt; 80/TCP 2d ingress-nginx LoadBalancer 10.233.47.246 192.168.1.100 80:30431/TCP,443:30017/TCP 2d 実際にブラウザでingress-nginxのIPアドレスにアクセスしてみて、default backend - 404と表示されれば正常に動作しています。
+ルーターからKubernetes上のサービスに直通で問題ない(IngressでHTTPS終端なども行う)場合、ルーターのNAT/NAPT設定で、80/443番ポートの行き先をこのIPアドレスとします。
+クラスタ外のLAN内に別のサービスも存在し、別途ロードバランサーなどで振り分けを行っている場合、ワイルドカードを使用してこのIPアドレスへ振り分けるのがお勧めです(nginxでは、ワイルドカードより、正確にマッチした方のルールを優先するため、設定されていない場合にKubernetesへトラフィックが流れることとなります)。</description></item><item><title>MetalLBを使用してオンプレでもtype: LoadBalancerを使用する</title><link>https://blog.web-apps.tech/type-loadbalancer_by_metallb/</link><pubDate>Sun, 05 Aug 2018 15:02:11 +0000</pubDate><guid>https://blog.web-apps.tech/type-loadbalancer_by_metallb/</guid><description>TL;DR MetalLBを使用することでオンプレ(not on OpenStack)に構築したk8sでもtype: LoadBalancerを使用できる
+type: LoadBalancer kubespray 等を使用して、Kubernetes をオンプレ(on OpenStackを除く)で構築した場合、通常、type: LoadBalancer を使用することができません。これは、type: LoadBalancerは通常CloudProviderにより管理されており、オンプレ(on OpenStackを除く)でk8sを構築した場合にはCloudProvider連携が無いためです。
+しかし、k8sを使用するからにはtype: LoadBalancerも使用したいですよね？NodePortなどで代用するにも、ポートがバラバラになってしまって面倒です。 そこで使用できるのがMetalLB (GitHub: google/metallb )です。 MetalLBを使用すると、type LoadBalancerの作成をフックしてアドレス割り当てとアドレスの広報を行ってくれます。
+Layer 2 mode MetalLBにはLayer 2 mode(以下L2 mode)とBGP modeがあります。これらのモードはアドレス広報の仕方が違い、L2 modeではARP/NDPで、BGP modeではその名の通りBGPでアドレスの広報を行います。通常、自宅を含むオンプレ環境ではBGPを使用していないと思いますので、L2 modeについて解説します。
+L2 modeでは、特定のノードへアクセスを集中させ、kube-proxyによって各サービスへトラフィックを分配します。そのため、実態としてはロードバランサーが実装されている訳ではないことに注意が必要です。単体ノードにアクセスが集中するため、これがボトルネックとなり得ますし、アクセスが集中することになるノードが何らかの理由でアクセスできなくなった場合、フェイルオーバーに10秒程度かかる可能性があります。
+requirements &amp;amp; installation 導入は非常に簡単ですが、以下の要件を満たしている必要があります。
+他にネットワークロードバランシングの機能が無いKubernetes 1.9.0以降 MetalLB対応表 に記載のあるネットワークで設定されていること これに加え、MetalLBで使用することのできるIPv4アドレスを用意しておく必要があります。 私の環境ではk8sのノードが192.168.1.0/24にあるため、192.168.1.100から192.168.1.159までの60個のアドレスをMetalLB用としました。
+要件を満たしていることが確認できたら、MetalLBのインストールを行います。 MetalLBをインストールするには、次のコマンドを実行します。
+$ kubectl apply -f https://raw.githubusercontent.com/google/metallb/v0.7.2/manifests/metallb.yaml Helm を使用してインストールすることもできますが、Chartが最新版ではないので注意しましょう。
+次に、次のようなConfigMapを作成します。
+apiVersion: v1 kind: ConfigMap metadata: namespace: metallb-system name: config data: config: |address-pools: - name: default protocol: layer2 addresses: - 192.</description></item><item><title>Liveness/Readiness Probe</title><link>https://blog.web-apps.tech/liveness-readiness-probe/</link><pubDate>Thu, 26 Jul 2018 05:09:35 +0000</pubDate><guid>https://blog.web-apps.tech/liveness-readiness-probe/</guid><description>Kubernetes によるヘルスチェックには、Liveness ProbeとReadiness Probeと呼ばれる二つのものがあります。これらは混乱しがちな一方、日本語による情報が多くない(2018/07/26現在で、Google検索の1ページ目にヒットするのが4件ほど)ため、ここで一つ情報をまとめておきます。
+共通 Liveness ProbeとReadiness Probeの設定は共通で、DeploymentやPodのマニフェスト内で、containersの中にlivenessProbeとreadinessProbeとしてそれぞれ&amp;lt;code&amp;gt;Probe&amp;lt;/code&amp;gt; spec を記述します。
+次の項目を設定することが出来ます。
+failureThreshold Success状態の時、何回失敗したらFailureになるか。最小で1回。 Default: 3 initialDelaySeconds コンテナが起動してからヘルスチェックを始めるまでの秒数。 Default: 0 periodSeconds ヘルスチェックの間隔。最小で1秒 Default: 10 successThreshold Failure状態の時、何回成功したらSuccessになるか。最小で1回。 Default: 1 timeoutSeconds ヘルスチェックのタイムアウト秒数。最小で1秒。 Default: 1 httpGet ヘルスチェックでアクセスするhttpエンドポイントの情報を書く。 httpGetの項目は次の様な項目を持ったobjectを書きます。
+host 対象のホスト名。 Default: PodのIP httpHeaders リクエストのカスタムヘッダ指定。{name: HEADER_NAME, value: HEADER_VALUE}の形のオブジェクトの配列で書く。 port アクセスするポート番号または名称 path アクセスするパス。 scheme アクセスする際のスキーム。 Default: HTTP Liveness Probe 一つ目はLiveness Probeです。公式ドキュメント には次の様に書いてあります。</description></item><item><title>Future Pattern</title><link>https://blog.web-apps.tech/future-pattern/</link><pubDate>Wed, 04 Jul 2018 15:33:02 +0000</pubDate><guid>https://blog.web-apps.tech/future-pattern/</guid><description>Future Patternは非同期処理パターンの一つで、ある処理を別のスレッドなどで実行し、結果を後で(=未来で)受け取るような処理に用いられるデザインパターンです。 特徴としては、外側に見えている関数などの処理を実行するオブジェクトは、処理を別スレッドに委譲し、後で結果を得ることの出来るFutureと呼ばれるオブジェクトを即座にメインロジックへと返却することです。
+言葉で書いても、何だかよくわからないので、コードを見てみましょう。
+/* package, import part */ func main() { in := make(chan int) out := Double(in) // この時点では結果は得られない go func() { for i := 0; i &amp;lt; 10; i++ { in &amp;lt;- i } close(in) }() for d := range out { fmt.Println(d) // ここで結果を得る } } func Double(in &amp;lt;-chan int) &amp;lt;-chan int { out := make(chan int) go func() { for i := range in { out &amp;lt;- 2 * i } close(out) } return out // Futureオブジェクト } main関数から呼び出されたDouble関数は、与えられた数を二倍する関数ですが、二倍する処理は呼び出された時点では実行せず、即座にchannelを返します。この、変数名outのchannelがFutureオブジェクトです。 そのため、数を二倍した結果は、Double関数を呼び出した時点では得られず、後でoutchannelから得ることとなります。</description></item><item><title>array/sliceに対する存在確認関数のベンチマーク</title><link>https://blog.web-apps.tech/benchmark_in_func/</link><pubDate>Tue, 26 Jun 2018 08:30:22 +0000</pubDate><guid>https://blog.web-apps.tech/benchmark_in_func/</guid><description>Pythonでいうところの、次の様な条件式を実現する関数を書きたかった。
+ls = [&amp;#34;foo&amp;#34;, &amp;#34;bar&amp;#34;, &amp;#34;baz&amp;#34;] s = &amp;#34;baz&amp;#34; if s in ls: print(&amp;#34;FOOBAR!&amp;#34;) 対象がリストの時、普段なら普通にfor文を回すのですが、今回やりたかったのは定数値の一覧にあるかどうか、だったのと、定数の数も少なかったので、とりあえずで以下の様に実装していました。
+func something(s string) error { if s != &amp;#34;foo&amp;#34; &amp;amp;&amp;amp; s != &amp;#34;bar&amp;#34; &amp;amp;&amp;amp; s != &amp;#34;baz&amp;#34; { return errors.New(&amp;#34;value invalid&amp;#34;) } } 流石に雑すぎるので、リファクタリングしよう、と思ったのですが、「はて、for文挟んだら遅くなったりしないだろうか」などと考えてしまったのでベンチマークを取りました。
+TL; DR 素直にfor文を回しても大して問題はなさそう
+result 今回取ったベンチマークは6種類です。
+for-range文を回す for文を回す map[string]struct{}を集合として取り扱ってみる &amp;amp;&amp;amp;, ||でつなぐ switch文を使う sort.SearchStrings()を使う 6番目のsort.SearchStrings()を使う方法はstackoverflow に書いてあった方法で、二分探索をしてくれるというのでやってみました。
+結果は次の通り。
+BenchmarkInByForRange-4 200000000 9.34 ns/op 0 B/op 0 allocs/op BenchmarkInByFor-4 100000000 10.</description></item><item><title>Amazon EKSがGAだと言うので触ってみた</title><link>https://blog.web-apps.tech/amazon-eks-is-now-ga/</link><pubDate>Wed, 06 Jun 2018 02:52:04 +0000</pubDate><guid>https://blog.web-apps.tech/amazon-eks-is-now-ga/</guid><description>AWSのmanaged Kubernetesで、これまでプライベートベータだったElastic Container Service for Kubernetes がGAになった ということなので、さくっとクラスタを作成してみました。1
+参考にしたのはAWS公式、EKSのGetting Started Guide です。
+まずはEKSのページを見てみようとしたところ・・・ ぶっ壊れてますね！これはなんかアレですね。 gettext的なのが上手くいっていないように見えるので、画面下から英語にしてみます。
+無事、正しいと思われるページが表示されました。 なんか、How it worksの説明の図がちょっとぼやけて見えるのは環境のせいでしょうか。
+扨、ここからGetting Startedしていきます。
+まずはEKS用のIAMロールを作っていきます。 IAMロール作成画面のサービスリストにEKSが追加されていますので、これを選択します。
+ユースケースは一つしかなく、選択済みになっています。
+フムー。
+IAMロールが出来ました。
+CloudFormationでクラスタを組んでいきます。 今のところ、EKSが使えるリージョンはUS West(Oregon) (us-west-2)とUS East(N.Virginia) (us-east-1)の二カ所です。今回はUS Eastでやっていきます。
+CloudFormationでCreate Stackをやっていきましょう。 S3 template URLが用意されていますので、これを入力します。 template URLはhttps://amazon-eks.s3-us-west-2.amazonaws.com/1.10.3/2018-06-05/amazon-eks-vpc-sample.yamlです。
+Viewしてみるとこんな感じです。なるほど。
+細かい設定的なところは全くいじらず、さくさく進めていきます。Stack nameはGettingStartedにしました。
+できた。
+Outputのタグを選択して、SecurityGroupsとVpcIdとSubnetIdsを(一応)メモっておきます。2
+次にkubectlの設定をしておきます。 最新のkubectl(1.10以降)をインストールしておいてください。まだインストールしていない場合はEKS側でも配信しているようなのでそれを使ってもOKです。
+EKSでは認証にheptio-authenticator-awsを使用するようなので、こちらもドキュメントに従い導入します。 私はいろいろ考えるのが面倒だったため、go getしました。
+$ go get -u -v github.com/heptio/authenticator/cmd/heptio-authenticator-aws ヘルプを表示して、正常に導入出来たかざっくり確認します。
+$ heptio-authenticator-aws help ここで注意なのですが、ガイドではDownload and Install the Latest AWS CLIのところにOptionalってついてるんですが、これはほぼ必須です。 AWS CLIがないとクラスタに接続出来ないので、AWS CLIをインストールしておきます。</description></item><item><title>超級カツ丼をAnovaでやった</title><link>https://blog.web-apps.tech/super-katsudoon/</link><pubDate>Mon, 04 Jun 2018 10:00:00 +0000</pubDate><guid>https://blog.web-apps.tech/super-katsudoon/</guid><description>めしにしましょう に出ていた、超級カツ丼をAnovaを使ってやってみました。
+まずはお湯を予熱しておきます。58度です。 給湯器で温度を上げたお湯を使うと調理開始が早くなる、ということを学びました。
+今回のお肉はこちら。近所の西友で97円/100gのアメリカ産豚肩ロース522gです。
+適当にIKEAのジップロックっぽいやつに入れて空気を抜いておきます。 前回 に比べて重いせいか大きいせいか、あまり上手く空気を抜けませんでした。 ちょっと不安だったものの、まぁイケるでしょとそのままやっていきです。
+投入。今回は24時間(!)やっていきます。
+24時間たったお肉がこちら。おいしくなさそう。
+タマネギをスライス(スライサーなどないので包丁で薄切り)していきます。指を少しそぎました。痛い。
+肉は四分割しました。 ブロックの向きによっては二枚でも良かったんですが、油の方向的にこうなりました。
+衣をつけた様子。塩こしょうを振って、小麦粉→卵→パン粉→卵→パン粉です。
+揚げました。200度の油で20秒です。
+卵でとじて御飯の上にドーンしたのがこちら。卵でとじる作業は戦争なので写真を撮っていませんでした。
+アツい。
+大変柔らかく、おいしかったです。 一部筋っぽいのが残ってたところもあったので、下処理とかした方が良かったのかもしれないですね。 あと、二人分にしては多かったので次はもう少し人数を確保した方がよいと思いました。</description></item><item><title>Anovaが届いたのでHello Worldした</title><link>https://blog.web-apps.tech/anova-hello-world/</link><pubDate>Wed, 30 May 2018 13:24:37 +0000</pubDate><guid>https://blog.web-apps.tech/anova-hello-world/</guid><description>去る5月12日、肉の祭典であるところのbuilderscon 低温調理肉会 2018 Spring が開催されました。 その名の通り、Anovaで低温調理された肉をひたすら食うというイベントで、大変に楽しみにしていました。 が、家を出るぞ！という段になってKubeCon の時にやらかしたぎっくり腰を再発し、行くことかなわず、気づいたらAnova をポチってしまっていました。
+[^amzn] そのAnovaが我が家に届いたので、真空低温調理のHello Worldとも言えるローストビーフをつくりました。
+ネット上でブログ記事とか見てると、筒状の箱に入っている写真も多いのですが、最近は普通の箱に入ってくるようです。
+中に入ってた紙には基本的な加熱時間なんかも書いてあります
+Anovaさんとご対面。かれこれ一年近く買うか悩んでたので、ようやく、といったお気持ちです。
+我が家にあった鍋だと、使えなくはないのですがもう少し余裕がほしいと感じたのでAnovaさんの異名を持つ@lestrratさん のブログ記事を参考 にして、バケツを購入してきました。 近所(と言っても徒歩10分からのバスで10分程度かかる)ホームセンターで、トンボ ニューセレクトバケツ15L を購入(余談ですが、このバケツは食品衛生法適合商品なので調理に使うことに何の問題もありません)。
+お湯を張ってanovaをセット。温度表示も摂氏に変更しました。 58度にセットして余熱しておきます。
+今回調理したのはこちらの牛肉モモブロック862円。近所の西友で購入しました。
+適当に筋を取ってからスパイスをまぶしていきます。 今回はローストビーフ用スパイスなるものが牛肉に付属していたので、それを使ってみました。
+IKEAのジップロック的な袋 に入れて、空気を適当に抜きました。1
+肉を投入。クリップなんかで袋を止めると良い、みたいな記事が多かったのですが、ぱっと使えそうなクリップが無かったのでどこのご家庭にもあるであろう緑の養生テープでとめておきました。 この状態で2時間やっていきます。
+できあがったものがこちら。見た目は良くないです。
+フライパンで焼き目をつけていきます。 ガスバーナーがほしい。
+切ってみました。素晴らしいピンク色。
+スライスしたものがこちら。ローストビーフを良い感じに薄くスライスするの、難しいですね。 誰かこつを教えてください。
+最終的に御飯の上でドーンな感じになりました。 温玉もanovaでやったやつ。ちょっと堅かった気がします。
+おいしかった。
+袋を水につけて(水が入らないように)、空気を抜くとそこそこ真空っぽい感じになります。&amp;#160;&amp;#x21a9;&amp;#xfe0e;</description></item><item><title>slimduetを使って海外でインターネット接続を確保する</title><link>https://blog.web-apps.tech/using-slimduet/</link><pubDate>Mon, 07 May 2018 08:50:39 +0000</pubDate><guid>https://blog.web-apps.tech/using-slimduet/</guid><description>先日、初めて海外に行ってきた んですが、その際、slimduet というeSIM(ソフトウェア的な設定で通信事業者を変更出来るSIM)を使用してネットワーク通信をしたので、設定方法などをまとめておきます。
+前提 端末はFREETELのKiwami 2 (Androidのバージョンは6)、行き先はデンマーク/コペンハーゲンです。
+設定 SIMを購入する slimduetを使用するには専用のeSIMが必要ですので、公式サイト やAmazon(記事執筆時点では在庫なし)から購入しておきます。
+SIMカードの価格はは2000円を切る程度です。
+slimduetのアプリをインストールする slimduetを使用するには、専用のアプリをインストールする必要があります。 Google Playでslimduet と検索し、インストールします。
+勿論、この段階では別途データ通信が出来る必要があります。
+プランを購入する slimduet SIMを端末に挿入してから、行き先に併せたプランを購入します。 この段階では、Wi-Fiなどのデータ通信が出来る必要がありますので、空港やホテルのWi-Fi等を使用するか、日本国内にいる内に購入しておきます。
+slimduetアプリを起動すると、行き先の検索画面が表示されますので、行き先を入力し検索します。 今回はデンマークですので、「デンマーク」と入力し、検索バー横のルーペボタンを押します(キーボードのGoやDone、エンターなどでは検索されないので注意)。 おすすめプラン、ということでデンマークで使えるプランが表示されますので、選択します。 国別プランを選択すると画面が変わり、1日間、3日間などのプランが表示されますので、日程にあわせた期間のプランを選択します。 クレジットカードなどで購入手続きをした後、画面下部の「私の電話番号」を押し、購入したプランが表示されていることを確認します。
+また、この段階でSMSで購入したプランについてメッセージが来るはずです。
+電話番号を切り替える 自動電話番号切り替えに対応した端末では、プランの「詳細」から、「携帯電話番号の切り替え」を押すことで切り替えることが出来ます。
+Kiwami 2は対応していないため、SIM Toolkitを使用して番号の切り替えを行います。 AndroidのアプリドロワーからSIM Toolkitを起動します。 SIM Toolkitを起動すると、SIMの一覧が表示されるので、slimduetかな？と思われるものを選択します。 SIMを選択したら、「携帯電話番号を切り替え」、「ご利用する携帯電話番号を選択してください」の順で選択します。 「携帯電話番号を切り替え」のあと、「設定」を選択したくなりますが、こちらではないため注意します(図の赤枠で示した部分を選択します)。 購入したプランが表示されますので、選択します。 APNの設定をする 電話番号の切り替えが出来たら、APNの設定をします。 Androidの設定から、「SIMカードとモバイル通信」の設定画面を開きます。 「モバイルネットワーク設定」を開き、データ通信を有効にする、データローミング、にそれぞれチェックを入れます。 「アクセスポイント名」の設定画面を開き、右上の + からAPNの設定を追加します。 名前は適当なもの(slimduetなど)を入力し、APNを uinternetとして保存します。 保存したら、作成したAPN設定を選択します。 この時点でデータ通信が出来るようになっているハズです。
+この時点でデータ通信が出来ない場合、通信事業者を適切なものに設定する必要がある可能性があります。</description></item><item><title>KubeCon + CloudNativeCon Europe 2018にいってきた</title><link>https://blog.web-apps.tech/i-went-to-kubecon-cloudnativecon-eu-2018/</link><pubDate>Mon, 07 May 2018 07:08:58 +0000</pubDate><guid>https://blog.web-apps.tech/i-went-to-kubecon-cloudnativecon-eu-2018/</guid><description>過ぎし5月1日〜5月6日、出張でKubeCon &amp;#43; CloudNativeCon Europe 2018 に行ってきました！
+KubeConはKubernetes(k8s) のイベントで、Cloud Native Computing Foundation(CNCF) が主催するCloudNativeConと併せた開催でした。 今回の開催地はデンマークはコペンハーゲンのBella Centerで、実に4000人以上が参加したとのことです。 twitterハッシュタグは#kubecon で、一部#cloudnativecon も使われていたようです。
+私個人としては初海外で、初日の移動で腰をぎっくりするなど、トラブルに見舞われながらも、なんとかこんとか行ってきました。
+finnair 今回、飛行機はFinnair を使用しました。 成田空港からヘルシンキ、ヘルシンキからコペンハーゲンの一回乗り継ぎです。 成田空港からヘルシンキは約10時間、ヘルシンキからコペンハーゲンは約1.5時間のフライトです。
+成田空港からヘルシンキのフライトでは、機内に備え付けのヘッドホンがノイズキャンセラー付きで、意外と音もよく、また、機内食もそこそこおいしかったため、比較的お勧め出来る航空会社かと思います。 成田空港からヘルシンキのフライトはJALも含めたコードシェア便だったため、機内の放送では日本語でも放送される点が安心感があって良いなと感じました。
+The Square 今回とったホテルはコペンハーゲンの繁華街にほど近いThe Square というホテルです。 繁華街に近いため、観光にも困らず、飲み会をした後にも戻りやすい立地でした。
+近所にはNETTO という24時間営業の比較的安いスーパーや、お土産の購入等にも便利なIrma という高級スーパーもあり、買い物には困ることがありませんでした。
+繁華街まで脚を伸ばせば、Hard Rock Cafe や、国内でも一時期話題となったSuperdry1などもあります。
+また、今回のKubeConのパーティーがTivoli garden での開催だったため、パーティー会場がホテルの隣のブロック、という点でも非常に良い立地でした。
+ホテルそのものも、おしゃれで、清潔な感じのホテルでした。 シャワーが出ないということもありませんでしたし、最低限のアメニティも揃っていました。
+冷蔵庫が壊れていたのか、中の飲み物等を冷やしてくれないのだけが少々残念でした。
+KubeCon + CloudNativeCon Europe 2018 KubeCon + CloudNativeCon Europe 2018は非常に多くのトラックがあり、その多くのスライドがPDFで公開されています。
+スライドはスケジュール からダウンロードすることができます。 また、@superbrothers さんが一気にダウンロードするスクリプトを書いてくださっているので、こちらを使用することも出来ます。
+I created a script that downloads all KubeCon + CloudNativeCon Europe 2018 slides from Sched!</description></item><item><title>Kubernetesのセキュリティのベストプラクティス by Ian Lewis</title><link>https://blog.web-apps.tech/k8s-security-best-practices-by-ianlewis/</link><pubDate>Thu, 19 Apr 2018 05:18:30 +0000</pubDate><guid>https://blog.web-apps.tech/k8s-security-best-practices-by-ianlewis/</guid><description>Japan Container Days v18.04 で表題のセッションを聞いたので、まとめました。
+スライド資料 Kubernetesのセキュリティのベストプラクティス(SpeakerDeck) APIサーバへの攻撃を防ぐ RBACでPodに付与される権限を絞る Podにはシークレットが自動でマウントされるため、不正アクセスにより読み込まれてしまうと危ない
+FirewallでAPIサーバへのアクセスについてIP制限を付与する いざ、シークレットが漏れた場合でも、APIサーバにアクセスされてしまわないように、ファイアウォールでIP制限をかけておくと良い
+NetworkPolicyでDBへの接続が許可されるPodを制限する 大体の場合、重要なデータはDBに有るため、DBへのアクセスを絞ることで安全性を上げる
+example: kind: NetworkPolicy apiVersion: networking.k8s.io/v1 metadata: name: redis spec: podSelector: matchLabels: name: redis ingress: - from: - podSelector: matchLabels: name: guestBook ホストへの攻撃を防ぐ 次の三つを併用すると良い
+non-rootユーザでPodを実行する example: kind: Pod apiVersion: v1 metadata: name: security-context-demo spec: securityContext: runAsUser: 1000 読み込み専用ファイルシステムを使用する example: kind: Pod apiVersion: v1 metadata: name: security-context-demo spec: securityContext: readOnlyRootFilesystem: true no_new_privs forkしたプロセスが強い権限を持てないようにする</description></item><item><title>Raspberry PiのヘッドレスインストールでWi-Fiを設定する</title><link>https://blog.web-apps.tech/raspberry-pi-headless-wifi-setup/</link><pubDate>Wed, 18 Apr 2018 09:17:54 +0000</pubDate><guid>https://blog.web-apps.tech/raspberry-pi-headless-wifi-setup/</guid><description>uzullaさんがブログでこんなことを書いてた。
+しかし…/boot/のどこかに起動後実行されるスクリプトがあれば楽なのにな…（そこで無理やりwifi情報を書き込めば良いわけで） ヘッドレスRaspberry Pi Zero w(h)のコンソールやネットワークなど初期設定についてメモ - uzullaがブログ 私も過去何度かRaspberry Pi Zeroのヘッドレスインストールをしてまして、実はヘッドレスインストールの時にWi-Fi情報を書き込めるファイルがあるのです。
+/boot/wpa_supplicant.confというファイルで、ここにWi-Fiの設定を書き込んで起動すると、raspbianが/etc/wpa_supplicant/wpa_supplicant.confに良い感じにコピーしてくれます。
+上記uzullaさんのブログでいうと、「microSDのファイルを編集」の時に一緒に書き込んでおくと、起動時にその情報を使ってWi-Fiをつかんでくれます。 あとはnmapするなり、ルータやらDHCPサーバやらのリース状況を確認するなりでラズパイに割当たったIPをゲットしてssh pi@xxx.xxx.xxx.xxx的にSSHするか、avahi/bonjourをつかってssh pi@raspberrypi.local的にSSHするかでログインできます。
+wpa_supplicant.confの書き方は、上記uzullaさんのブログ記事の、「Raspberry Pi Zero wにWifiを設定する」ってところを見るか、ここ とかここ にジェネレータを作ってくれてる人がいるので、利用して生成すると良いと思います。 パスワードは平文でOKなので、適当な文字列を突っ込んで手元で書き換えると安心かもしれないです。
+なお、NOOBSでやるときは、wpa_supplicant.confとsshは/bootではなく、ルートディレクトリにおけばOKです。 さらに、recovery.cmdlineと言うファイルのquietという部分をvncinstallに書き換えることで起動したNOOBSにVNC接続できるようになります。</description></item><item><title>TOTPを実装する</title><link>https://blog.web-apps.tech/implementing_totp/</link><pubDate>Fri, 30 Mar 2018 17:03:45 +0000</pubDate><guid>https://blog.web-apps.tech/implementing_totp/</guid><description>ここ数年で多くのサービスで採用されてきている二要素認証ですが、皆さん使っているでしょうか。 私は実は最近までは面倒であまり使っていなかったのですが、ようやく重い腰を上げてあちこち設定しました。 そのうち、近年特によく使われているのがTOTP(Time-Based One-Time Password)と呼ばれるアルゴリズムです。 TOTPアルゴリズムはRFC6238 で定義されたアルゴリズムで、サーバとクライアントが共有する秘密鍵および現在時刻から確認用のコードを生成するものです。 RFCやWikipedia を見てわかるよう、かなり簡素なアルゴリズムで、一つ一つ理解していけば比較的簡単に実装することができます。 Go言語のコードを実例に、サンプルコードを実装してみます。
+HOTPとTOTP TOTPアルゴリズムとよく似たものに、HOTP(HMAC-Based One-Time Password)と呼ばれるアルゴリズムがあります。 これは、サーバとクライアントが共有する秘密鍵と、「何回目の認証か」から確認用のコードを生成するアルゴリズムです。 HOTPアルゴリズムは(勿論)アルゴリズムですから、ある計算手順であり、秘密鍵と認証回数を引数にとって認証用コードを返す関数として表すことができます。 この、認証回数という引数に対して、現在時刻を入力したものがTOTPです。 認証「回数」というくらいですから、値は正の整数値です。時刻を整数として入力するため、UnixTimeを使用します。
+実際にはUnixTimeそのままで入力すると1秒ごとに認証用コードが変わってしまい実用できではありませんから、ある秒数を一周期として、現在が何周期目なのか、という値を入力します。
+TOTPを実装する 扨、前置きはこれくらいにしてTOTPアルゴリズムを実装します。 次の式で表されます。
+\begin{eqnarray*} TOTP(K, T_0, X) &amp;amp;=&amp;amp; HOTP(K, T(T_0, X)) \\ T(T_0, X) &amp;amp;=&amp;amp; \frac{(CurrentUnixTime - T_0)}{X} \end{eqnarray*}
+$K$は共有秘密鍵です。 $T_0$は数えはじめの時間で、通常はUnix epoch、すなわち0を使用します。 $X$は一周期の秒数で、規定値は30秒です。(実際、多くのサービスが30秒ベースです) プログラム実装は以下の様に書いてみます。
+func TOTP(k string, t0, x int) int { return HOTP(k, T(t0, x)) } func T(t0, x int) int { return (time.Now().Unix - t0)/x } 簡単ですね。上記の内、定義されていないのはHOTP(K, T)だけとなりました。</description></item><item><title>Golang: 配列からスライスに変換する</title><link>https://blog.web-apps.tech/golang-array-to-slice/</link><pubDate>Fri, 16 Mar 2018 02:19:13 +0000</pubDate><guid>https://blog.web-apps.tech/golang-array-to-slice/</guid><description>TL;DR: slice := array[:]で変換できる Go言語にはリストの様なものが二つあります。配列(固定長)とスライス(可変長)です。 一般に、Go言語で配列を扱うことは多くないでしょう。 実際、多くのパッケージ(標準パッケージを含む)が要求するのはスライスです。
+とは言っても一部のパッケージでは配列を取り扱っているものがあります。 例えば、&amp;lt;code&amp;gt;crypto/sha512&amp;lt;/code&amp;gt;を見てみる と、以下の様な関数が存在します。
+func Sum512(data []byte) [Size]byte ここで、Sizeは同パッケージ内で宣言されている定数で、値は64です。 つまり、この関数は64バイトの長さを持った配列を返します。
+この関数は与えられたデータからSHA512チェックサムを計算するものです。 勿論、返ってきた値をそのまま使用することもあるとは思いますが、そのままの値は人間可読な値では無いため、hexdigestを得たいと思うでしょう。
+Go言語にはもちろんのことながら、encoding/hexパッケージが存在し、簡単に16進文字列を得ることができます。 16進表記の文字列を得るためには、次の関数を使用します。
+func EncodeToString(src []byte) string 引数に注目します。 要求されているのはbyteのスライスです。
+Goでは、配列とスライスは基本的に別物ですから、以下の様に書くことはできません。
+h := sha512.Sum512(&amp;#34;foobar&amp;#34;) // 型エラーが発生する EncodeToString(h) そうは言っても、配列とスライスは非常に似ています。 次のように書きたくなりますね。
+h := sha512.Sum512(&amp;#34;foobar&amp;#34;) EncodeToString([]byte(h)) // 配列をスライスに変換したい しかし、次のようなエラーを生じます。
+cannot convert sha512.Sum512(&amp;#34;foobar&amp;#34;) (type [64]byte) to type []byte 型変換はできないようです。 どうしたら良いのでしょうか。
+Go言語では、配列の範囲インデックスを使った場合、返される値はスライスとなります。
+a := [3]string{&amp;#34;foo&amp;#34;, &amp;#34;bar&amp;#34;, &amp;#34;baz&amp;#34;} s := a[0:2] // sはスライス また、インデックスを省略することもできます。 開始値を省略すれば、0を与えたものと見なされますし、終了値を省略すれば、配列の最後までを切り取ります。
+a := [3]string{&amp;#34;foo&amp;#34;, &amp;#34;bar&amp;#34;, &amp;#34;baz&amp;#34;} s1 := a[:2] // a[0:2]と等しい s2 := a[0:] // a[0:3]と等しい では、両方省略するとどうなるでしょうか。 両方省略すると、もとの配列と同じ内容のスライスが返されます。</description></item><item><title>Let's Encryptでワイルドカード証明書を取得する</title><link>https://blog.web-apps.tech/lets-encrypt-wildcard/</link><pubDate>Tue, 13 Mar 2018 23:00:00 +0000</pubDate><guid>https://blog.web-apps.tech/lets-encrypt-wildcard/</guid><description>先日twitterでサポートされたと発表されたLet&amp;rsquo;s Encryptのワイルドカード証明書ですが、本日未明、正式にcertbotがワイルドカード証明書に対応したと発表されました !1
+早速ですが、実際にワイルドカード証明書を取得してみます。
+尚、今回対象とした環境は以下のとおりです。
+CentOS 7 リバースプロキシとしてnginx DNSはGehirn DNS では、作業していきます。
+CentOS 7でcertbotを使用する場合、大抵はyumでcertbotをインストールしていると思いますので、まずはアップデートします。
+$ sudo yum update 出力は省略しますが、certbotが0.22.0にアップデートされます。 0.22.0はワイルドカード対応バージョンですので、問題ないですね！
+公式のマニュアルでは、dns-pluginを使うよう書いてあり ますが、Gehirn DNSのプラグインは無いため、今回は手動で行きます。 以下のコマンドを実行します。
+# certbot certonly --manual --preferred-challenges dns -d *.web-apps.tech --server https://acme-v02.api.letsencrypt.org/directory Saving debug log to /var/log/letsencrypt/letsencrypt.log Plugins selected: Authenticator manual, Installer None Enter email address (used for urgent renewal and security notices) (Enter &amp;#39;c&amp;#39; to cancel): nasa.9084.bassclarinet@gmail.com Starting new HTTPS connection (1): acme-v02.api.letsencrypt.org ------------------------------------------------------------------------------- Please read the Terms of Service at https://letsencrypt.</description></item><item><title>sygを使用したgraceful shutdown serverパターン</title><link>https://blog.web-apps.tech/graceful-shutdown-with-syg/</link><pubDate>Sat, 10 Mar 2018 15:42:54 +0000</pubDate><guid>https://blog.web-apps.tech/graceful-shutdown-with-syg/</guid><description>&amp;lt;code&amp;gt;github.com/nasa9084/syg&amp;lt;/code&amp;gt; を使用すると、手軽にシグナルとコールバック関数のマッピングを行うことができます1
+これを使用し、SIGINTを受けてgraceful shutdownできるHTTPサーバを実装してみます。
+package app import ( &amp;#34;context&amp;#34; &amp;#34;net/http&amp;#34; &amp;#34;os&amp;#34; &amp;#34;time&amp;#34; &amp;#34;github.com/nasa9084/syg&amp;#34; ) type Server struct { server *http.Server closed chan struct{} } func NewServer() *Server { http.HandleFunc(&amp;#34;/&amp;#34;, longlongHandler) return &amp;amp;Server{ server: &amp;amp;http.Server{ Addr: &amp;#34;:8080&amp;#34;, }, closed: make(chan struct{}), } } func (s *Server) Run() error { // os.Interrupt　= syscall.</description></item><item><title>Golang: 手軽にシグナルをListenしてcallback関数を呼ぶ</title><link>https://blog.web-apps.tech/go-signal-more-simply/</link><pubDate>Tue, 06 Mar 2018 14:32:00 +0000</pubDate><guid>https://blog.web-apps.tech/go-signal-more-simply/</guid><description>Go言語でシグナルを取り扱いたい場合、osパッケージおよびos/signalパッケージ、syscallパッケージを使用します。
+具体的には、以下のようにします。
+func main() { sigCh := make(chan os.Signal, 1) doneCh := make(chan struct{}) signal.Notify(sigCh, syscall.SIGINT) go func() { sig := &amp;lt;-sigCh fmt.Println(sig) // (1) close(doneCh) }() &amp;lt;-done } 実際には、(1)の様に受け取ったシグナルを出力するだけではなく、何らかの処理を行うことになるでしょうし、goroutineのリークを避けるためにシグナルの待受をキャンセルする必要が有りますから、contextを使用してfor-selectループを書くことにもなるでしょう。
+例として、HTTPサーバをシャットダウンするような処理を考えます。
+func main() { sigCh := make(chan os.Signal, 1) doneCh := make(chan struct{}) ctx, cancel := context.WithCancel(context.Background()) signal.Notify(sigCh, syscall.SIGINT) s := &amp;amp;http.Server{ Addr: &amp;#34;:8080&amp;#34;, Handler: http.</description></item><item><title>strings.Builderとbytes.BufferのWrite系関数のベンチマーク</title><link>https://blog.web-apps.tech/strings-builder-vs-bytes-buffer/</link><pubDate>Mon, 05 Mar 2018 15:00:00 +0000</pubDate><guid>https://blog.web-apps.tech/strings-builder-vs-bytes-buffer/</guid><description>TL; DR 平均して見るとstrings.Builder#WriteXXXの方が速そう
+strings.Builder Go 1.10からstrings.Builder構造体が追加されました。 公式ドキュメントには、
+A Builder is used to efficiently build a string using Write methods. It minimizes memory copying. The zero value is ready to use. Do not copy a non-zero Builder.
+と説明が書かれています。 おそらく、これまで文字列の組み立てをする際にはbytes.Bufferを使っている場合が多かったと思われますが、そういった目的の選択肢として作られたようです。 が、説明を読んでもいまいち違いがわかりません。
+とりあえず、bytes.Bufferとstrings.Builderでは速度面で違いがあるのか調べるべく、ベンチマークを実施しました。
+条件 実行した環境 MacBook Air MacOS Sierra 10.12.6 CPU: Core i7 1.7GHz メモリ: 8GB 実行する関数 Write WriteByte WriteRune WriteString exec $ for i in {1.</description></item><item><title>Go言語で文字列を処理する</title><link>https://blog.web-apps.tech/string-processing-in-go/</link><pubDate>Mon, 05 Mar 2018 14:00:00 +0000</pubDate><guid>https://blog.web-apps.tech/string-processing-in-go/</guid><description>Go言語のregexpパッケージを使用した正規表現の処理は、一般的なスクリプト言語の処理速度と同程度で、正規表現を使用しない処理に比べてパフォーマンスがよくありません1。 そのため、可能であるならregexpパッケージを使用しないようにすべきです。 しかし、すべての処理を自分で書くのは大変です。 標準パッケージにも文字列を処理する関数が数多く用意されています。
+strings パッケージ stringsパッケージはその名の通り、文字列を取り扱うパッケージです。 UTF-8でエンコードされた文字列(普通の文字列)をそのまま取り扱います。
+判別系 Contains func Contains(s, substr string) bool Contains関数は、sの中にsubstrが存在するかどうかを返します。 Pythonで言うところのsubstr in sに相当します。 正規表現ならば、substrとのmatchで真偽値をとることに相当します。
+example fmt.Println(strings.Contains(&amp;#34;hogefugapiyo&amp;#34;, &amp;#34;fuga&amp;#34;)) // Output: true fmt.Println(strings.Contains(&amp;#34;hogefugapiyo&amp;#34;, &amp;#34;foo&amp;#34;)) // Output: false ContainsAny func ContainsAny(s, chars string) bool ContainsAny関数はsの中に、charsに含まれる文字のいずれかが存在するかどうかを返します。 つまり、charsは文字列ですが、扱いとしては文字の配列であると考えた方が良いでしょう。
+正規表現で表すなら、/[${chars}]/の様な表現と考えられます(${chars}は置き換える)。
+example fmt.Println(strings.ContainsAny(&amp;#34;hogefugapiyo&amp;#34;, &amp;#34;abcd&amp;#34;)) // Output: true fmt.Println(strings.ContainsAny(&amp;#34;hogefugapiyo&amp;#34;, &amp;#34;1234&amp;#34;)) // Output: false HasPrefix func HasPrefix(s, prefix string) bool HasPrefix関数は、sの頭がprefixと等しいかどうかを判別します。 正規表現で^を使った文字列マッチに相当します。
+Prefixなのでマッチさせたい文字列をつい第一引数に与えたくなりますが、第二引数がPrefixです。
+example fmt.Println(strings.HasPrefix(&amp;#34;hogefugapiyo&amp;#34;, &amp;#34;hoge&amp;#34;)) // Output: true fmt.Println(strings.HasPrefix(&amp;#34;hogefugapiyo&amp;#34;, &amp;#34;piyo&amp;#34;)) // Output: false HasSuffix func HasSuffix(s, suffix string) bool HasSuffix関数は、HasPrefix関数と対になる関数で、sの末尾がsuffixと等しいかどうかを判別します。 正規表現で$を使った文字列マッチに相当します。</description></item><item><title>YAPC::Okinawa 2018 ONNASONに行ってきました</title><link>https://blog.web-apps.tech/yapc_okinawa_2018/</link><pubDate>Sun, 04 Mar 2018 13:44:24 +0000</pubDate><guid>https://blog.web-apps.tech/yapc_okinawa_2018/</guid><description>YAPC::Fukuoka 2017 HAKATA (行ってきたときの記事はこちら )に引き続き、YAPC::Okinawa 2018 ONNASON に行ってきました。 YAPCはPerlのイベントで、&amp;ldquo;Yet Another Perl Conference&amp;quot;の略です。twitterハッシュタグは前回に引き続き#yapcjapan でした(#yapcokinawa もよく使われていたようです)。
+沖縄は昨年6月にOSC 2017 Okinawa で行って以来二度目です。 YAPC当日はすごい雨で、YAPC::Hokkaidoで大雪だったことを思い出し、「端っこでYAPCをやると何かが起きるのでは」などと言われる具合でした。
+今回は直前までホテルが取れなかったものの、過去のYAPCでホテルを取らずに行って適当になんとかなったので、なんとかなるだろうと思っていましたが、直前に東横インを確保できたので、宿無し旅行ではありませんでした。
+YAPC::Okinawa 2018 ONNASON 今回は会場がOIST だったため(OISTは那覇市内から車で約一時間)、多くの人がスタッフが手配した往復バスでの参加となりました。 そのため、寝坊する人は少なく(いなくはなかったようです)、私もオープニングから参加できました。
+オープニングはCodeHex 氏。
+オープニングを行ったA会場は非常に広く、なんと全席にコンセントがついているという素晴らしいホールでした。
+ノベルティはこんな感じ。特筆すべきはDeNAさんのQi充電器でしょうか。しかし私はQi対応端末を持っていないので使えないのが残念・・・・ 毎度恒例、ネコトーストラボさんのサイリュームもあります。
+YAPC::Hokkaidoから行われてきたチェックインスタンプラリーもココで一区切り。 コンプリート特典として、JPAのラクダさんのシャチハタスタンプをいただきました。
+トークでは、「レイヤー0(電波)からレイヤー8(交渉事)までできる人を募集しています」や、「無曖昧でない」など、会場がどっと沸く名言(迷言？)がいくつか飛び出ました。
+個人的には、@moznionさん のInlineモジュールの話や、新屋さん の正規表現の話が非常に面白かったと思います。 特に、正規表現の話ではバックトラックと曖昧な正規表現の相性が悪い、といった技術的な話にとどまらず、文脈自由文法など、計算理論にまで踏み込んだトークとなっており、OISTという会場でのトークに相応しい素晴らしい内容だったと思います。
+次回のお話 次回YAPCは東京 だそうです！現在はまだテザーサイトがある程度で、日程、会場は調整中とのことでした。</description></item><item><title>cut vs. parameter expansion</title><link>https://blog.web-apps.tech/cut-vs-parameter-expansion/</link><pubDate>Mon, 26 Feb 2018 08:07:11 +0000</pubDate><guid>https://blog.web-apps.tech/cut-vs-parameter-expansion/</guid><description>TL;DR:: bash/zsh parameter expansion is faster than cut.
+which is faster? Consider you want to take out hostname from URL or IP with port like some.mysql.server:3306 or 192.168.1.10:3306 using bash/zsh. There are some way to do this.
+The first way is using cut command:
+$ TARGET=&amp;#34;192.168.1.10:3306&amp;#34; $ echo ${TARGET} | cut -d &amp;#34;:&amp;#34; -f 1 Now printed 192.168.1.10 on your screen.
+The second way is using &amp;ldquo;shell parameter expansion&amp;rdquo;, which is functions of bash/zsh built-in.</description></item><item><title>Goでコマンドラインオプションを処理する</title><link>https://blog.web-apps.tech/go-cmdline-option-jessevdk-go-flags/</link><pubDate>Sat, 24 Feb 2018 03:22:28 +0000</pubDate><guid>https://blog.web-apps.tech/go-cmdline-option-jessevdk-go-flags/</guid><description>TL;DR github.com/jessevdk/go-flagsが便利 flagパッケージ コマンドライン・ツールを作ろうと考えたとき、避けては通れないのがコマンドラインオプションを如何に処理するか、ということです。
+Go言語では、標準パッケージにflagというパッケージが存在し、これを用いることでコマンドラインオプションをパースすることが出来ます。 しかし、flagパッケージでは、ロングオプションとショートオプションを一度に定義することが出来ず、また、ロングオプションであろうとショートオプションであろうと-XXXという、ハイフンが一つつく形式のオプションとなります。 これはあまり一般的ではなく1、便利とも言いにくいでしょう。
+そこで便利なのが、&amp;lt;code&amp;gt;jessevdk/go-flags&amp;lt;/code&amp;gt; パッケージです。
+go-flagsパッケージ &amp;lt;code&amp;gt;jessevdk/go-flags&amp;lt;/code&amp;gt; パッケージは、その名の通り、コマンドラインオプションを取り扱うパッケージです。 ショートオプション、ロングオプションはもちろんのこと、ショートオプションをまとめて指定する、同じオプションを違う引数で複数回指定する、環境変数からの読み込み、デフォルト値の指定などに対応していて、一般的なオプションの処理に幅広く対応出来ます。 オプションは構造体として定義出来るため、パースした後の処理で取り回すのも簡単です。
+簡単な例を見てみましょう。
+type options struct { Name string `short:&amp;#34;n&amp;#34; long:&amp;#34;name&amp;#34; description:&amp;#34;listen address&amp;#34;` } func main() { var opts options if _, err := flags.Parse(&amp;amp;opts); err != nil { // some error handling return } fmt.Printf(&amp;#34;Hello, %s\n&amp;#34;, opts.name) } パッケージ宣言やインポートの節は省略していますが、上記をmain.goとして実行すると、以下の様に出力されます。
+$ go run main.go -h Usage: main [OPTIONS] Application Options: -n, --name= listen address Help Options: -h, --help Show this help message $ go run main.</description></item><item><title>kubesprayを使用してkubernetes clusterを構築する(2)</title><link>https://blog.web-apps.tech/deploy-k8s-with-kubespray-2/</link><pubDate>Fri, 23 Feb 2018 14:45:49 +0000</pubDate><guid>https://blog.web-apps.tech/deploy-k8s-with-kubespray-2/</guid><description>3ヶ月ほど前に、kubesprayを使用してkubernetes clusterを構築する という、kubespray とkubespray-cliを使用してKubernetesクラスタを構築する記事を書きました。 しかし、kubespray-cliはすでにdeprecatedだということなので 、kubespray-cliを使用せずにkubesprayでクラスタを構築する手順をまとめておきます。
+要件 kubesprayを使用してkubernetesクラスタを構築するための要件は以下のようになっています。
+ansible 2.4以降とpython-netaddr (python-netaddrを忘れがちなので注意) pip install ansible netaddr Jinja 2.9以降(ansibleの依存でインストールされると思います) 構築先サーバがインターネットに接続できること 構築先サーバでswapが無効化されていること 構築先サーバでIPv4 forwardingが有効になっていること sysctl -w net.ipv4.ip_forward=1する(再起動するまで) /etc/sysctl.confにnet.ipv4.ip_forward = 1と記入する(再起動後) Ansibleを実行するマシンから構築先サーバにSSH鍵が渡されていること ファイアウォールが無効化されていること ファイアウォールの設定をしっかりできる人は有効でも また、kubesprayには(kubespray-cliのような)inventory生成ツールが付属されており、これを利用する場合はpython3系である必要が有ります。
+構成 前回の記事同様、以下のIPを持った三台のサーバを対象として構築してみます。
+192.168.1.11 192.168.1.12 192.168.1.13 それぞれ、IPv4 forwardingが有効化され、firewalldを無効化し、Python 3をインストール済みのCentOS 7のサーバとします。また、kubesprayを実行するローカルマシンから、各サーバのrootユーザにSSH鍵を配置1済みとします。
+手順 準備 まず、kubesprayをダウンロードします。
+$ git clone https://github.com/kubernetes-incubator/kubespray $ cd kubespray リポジトリのクローンが完了したら、ansibleなどの依存モジュールを導入します2。
+kubespray$ pip install -r requirements.txt 次に、ansible用のインベントリを作成します。</description></item><item><title>Generates LICENSE file: git-license</title><link>https://blog.web-apps.tech/generate_license_with_gitlicense/</link><pubDate>Wed, 21 Feb 2018 04:56:49 +0000</pubDate><guid>https://blog.web-apps.tech/generate_license_with_gitlicense/</guid><description>When we create a new repository on GitHub , we can choose an open source license.
+We choose an OSS license, then, LICENSE file is put into the new repository.
+Now, I&amp;rsquo;m usually using &amp;lt;code&amp;gt;hub&amp;lt;/code&amp;gt; command to create a new repository. I&amp;rsquo;ll do below to create:
+$ mkdir my_new_repository $ cd my_new_repository $ git init # # ... some code writing and commit ... # $ git create # git command is aliased to hub $ git push -u origin master In this flow, I can write description for repository1, set homepage2, make the repository private3, but I CANNOT choose LICENSE.</description></item><item><title>テキストを列ごとにそろえて出力する</title><link>https://blog.web-apps.tech/output-columned-text/</link><pubDate>Mon, 29 Jan 2018 07:13:10 +0000</pubDate><guid>https://blog.web-apps.tech/output-columned-text/</guid><description>TL;DR: 標準パッケージ&amp;lt;code&amp;gt;text/tabwriter&amp;lt;/code&amp;gt; を使用する
+コマンドラインツールで標準出力を良い感じにそろえて出力したい場合があります。 例えば、docker では、以下の様に出力されます。
+$ docker container ls CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES 8caad461b4a4 redis &amp;#34;docker-entrypoint.s…&amp;#34; 5 days ago Up 5 days 0.0.0.0:6379-&amp;gt;6379/tcp redis-svr 329c9f9be035 mysql &amp;#34;docker-entrypoint.s…&amp;#34; 5 days ago Up 5 days 0.0.0.0:3306-&amp;gt;3306/tcp mysql-svr このような map、あるいは構造体の配列 の様なものを、きれいに表形式の様に列をそろえて出力したい場合に便利なのが標準パッケージの&amp;lt;code&amp;gt;text/tabwriter&amp;lt;/code&amp;gt; です。 その名の通り、タブ区切りの文字列を良い感じに出力してくれるパッケージです。
+text/tabwriterで定義されているのはいくつかの設定用定数 と、&amp;lt;code&amp;gt;Writer&amp;lt;/code&amp;gt;構造体 のみです。 Writerは(勿論)&amp;lt;code&amp;gt;io.Writer&amp;lt;/code&amp;gt;インターフェース を実装しています。
+使用方法は通常のio.Writerとはすこし変わっていて、最初に&amp;lt;code&amp;gt;Writer.Init()&amp;lt;/code&amp;gt; で初期化し、任意回数&amp;lt;code&amp;gt;Writer.Write()&amp;lt;/code&amp;gt; で書き込みをした後、&amp;lt;code&amp;gt;Writer.Flush()&amp;lt;/code&amp;gt; で整形した文字列を出力します。 &amp;lt;code&amp;gt;NewWriter()&amp;lt;/code&amp;gt; 関数はWriter構造体をnew()した後Init()するのと同等です。
+Writer.Init()関数及びNewWriter()関数に与える引数は以下の様になっています。
+名前 型 内容 output io.Writer Flush()したときの出力先 minwidth int 1セルあたりの最小幅(パディングを含む) tabwidth int タブ文字の幅(スペースの個数と等しい) padding int パディング1 padchar byte パディング文字2 flags int 調整用フラグ 最後の引数である、調整用フラグには0(標準状態)を与えるか、パッケージ定数 の論理和を用いて設定を与えます。</description></item><item><title>Vagrant/vmware-fusionでハードウェア仮想化を有効にしたVMを作成する</title><link>https://blog.web-apps.tech/vagrant-vmware-fusion-nested-vm/</link><pubDate>Thu, 28 Dec 2017 04:29:59 +0000</pubDate><guid>https://blog.web-apps.tech/vagrant-vmware-fusion-nested-vm/</guid><description>vmware fusionを使用している場合、仮想マシンのCPU設定でこの仮想マシンでハイパーバイザアプリケーションを有効にするにチェックを入れることで仮想マシン内でKVMを動作させることができるようになります。 ドキュメントには載っていませんが1、Vagrant + vmware-fusion pluginの構成でも設定することが可能です。 Vagrantfileに以下の記述を追加します。
+config.vm.provider &amp;#34;vmware_fusion&amp;#34; do |v| v.vmx[&amp;#34;vhv.enable&amp;#34;] = &amp;#34;TRUE&amp;#34; end vmxの設定をする方法自体は公式ドキュメント にも記載がありますが、詳細がありません&amp;#160;&amp;#x21a9;&amp;#xfe0e;</description></item><item><title>container-upというツールを書いた</title><link>https://blog.web-apps.tech/container-up/</link><pubDate>Fri, 22 Dec 2017 04:23:39 +0000</pubDate><guid>https://blog.web-apps.tech/container-up/</guid><description>container-up というツールを書いたのでご紹介。
+背景 このブログはghost というブログエンジンで動いています。動作環境としてDocker を使用していて、Ghostの公式イメージ を使用しています。 過去の経緯から、単体のDockerコンテナで動作させており、永続データはDockerボリュームとしてマウントしている形です。
+扨、Docker ComposeやKubernetesなどのオーケストレーションツールを使っている場合、コンテナのバージョンアップは比較的簡単に行うことができます。 たとえば、Docker Composeを使用している場合、docker-compose upで、新しいイメージで作成したコンテナに差し替えることができます。
+しかし、Dockerを単体で使っている場合、基本的には手作業で差し替えを行う必要があります。 Ghostコンテナの更新時は手作業でBlue-Greenアップグレードを行ってきたのですが、Ghostはかなりアップデートのペースが速く、毎度コンテナを差し替えるのが面倒になってきました。 それを楽にするため、container-upを作りました。
+インストール Go環境がある人 Go言語の環境がすでにある人は、以下のコマンドで使用できるようになります。
+$ go get github.com/nasa9084/container-up それ以外の人 Go言語の環境がない人は、Releases ページから自分のOSに併せてバイナリをダウンロード、パスを通してください。 windows, linux, macos向け、それぞれamd64版のバイナリを用意してあります。 動作確認はmacos、linux(CentOS 7)のみ行っています。
+これら以外の環境の人は、予めdep をインストールした上で以下のコマンドでコンパイルしてください。
+$ git clonse https://github.com/nasa9084/container-up.git $ cd container-up $ dep ensure $ go build -o container-up main.go コンパイルしたら、任意の場所にバイナリを移動し、パスを通してください。
+使い方 基本的な使い方は、引数にコンテナ名またはコンテナIDを渡すだけです。
+$ container-up CONTAINER_NAME 与えられたコンテナと同じ名称のイメージを使用して、ボリュームやネットワークなどの設定はそのままに新しいコンテナを作成し、差し替えます。 :latestなイメージを使用している場合、docker pullした後にこのコマンドを実行することで、最新のイメージから作られたコンテナに差し替わるということです。
+もとのコンテナは--rmオプションをつけて起動していた場合を除いて、_oldContainerというサフィックスが付いた状態でstopします。 なにか問題があった場合は、このコンテナに戻すと良いでしょう。
+もし、元のコンテナが必要ない場合は、--rmオプションをつけると、差し替え時に削除します。
+$ container-up --rm CONTAINER_NAME :latestではないような、バージョンタグが付いたイメージを使用していて、新しいバージョンのイメージを使いたい場合などのため、新しいイメージ名を指定して実行することもできます。
+$ container-up -i IMAGE_NAME CONTAINER_NAME この場合、差し替えるコンテナは指定されたイメージで作成されます。</description></item><item><title>Kubernetes-powered Docker for mac is released!</title><link>https://blog.web-apps.tech/kubernetes-powerd_docker_for_mac/</link><pubDate>Thu, 14 Dec 2017 05:03:01 +0000</pubDate><guid>https://blog.web-apps.tech/kubernetes-powerd_docker_for_mac/</guid><description>DockerCon EU 2017で、DockerがKubernetesを統合・サポートすると発表されました が、本日ついにKubernetesサポート版Docker for macが(Edgeリリースですが)リリースされました！
+これにより、macを使用している場合は(おそらく過去最も簡単に)開発用Kubernetesクラスタを起動することができるようになりました！
+この記事では、Docker for macでKubernetesを立ちあげる手順をまとめておきます。
+Kubernetesの起動手順 Docker for macのStable版を利用している場合、Edge版をインストールする必要があります。 Install Docker for mac のページから、Edge Channelのインストーラをダウンロードし、インストールします。 Dockerを終了させておけば、Stable版を自分でアンインストールする必要はありません1。 Edge版をインストールし、Dockerの設定画面を開くと、以下の様にKubernetesタブが追加されています！！
+Kubernetesタブで、Kubernetesの有効化・無効化を簡単に切り替えることができます。
+Enable Kubernetesにチェックを入れ(Show system containersはお好みで)、Apply &amp;amp; Restartボタンを押すと、「Kubernetesの初回インストールは少し時間かかるけど、インストールする？」という確認画面が出るので、Installを押します。
+一応プログレスバーが出るのですが、余り意味はありませんでした・・・ 数分でインストールが終わります。
+無事インストールが終了したら、Closeを押したあと、設定画面を閉じます。
+この時点で、DockerメニューにもKubernetesのステータスが表示されています。
+今回私はShow system containersをオンにしたので、docker ps2するとKubernetesの動作に必要なコンテナが起動しています。 DNS、API Server、Etcd、Scheduler、Proxyと最小限の構成ですね。
+kubectlが自動でインストールされるのかどうかは・・・・わかりませんでした。(すでにインストール済みだったため) kubectlがインストール済みの場合、自動でコンフィグが追加され、以下のコマンドでcontextを選択することで操作できるようになります。
+$ kubectl config use-context docker-for-desktop kubectl get nodesすると、確かに1ノード構成でクラスタが立ち上がっているのがわかります。
+Edge版の初回起動時にアンインストールされます&amp;#160;&amp;#x21a9;&amp;#xfe0e;
+docker container lsと打つのは面倒ですね&amp;#160;&amp;#x21a9;&amp;#xfe0e;</description></item><item><title>go-sqlrow</title><link>https://blog.web-apps.tech/go-sqlrow/</link><pubDate>Wed, 13 Dec 2017 02:44:32 +0000</pubDate><guid>https://blog.web-apps.tech/go-sqlrow/</guid><description>この記事はGo2 Advent Calendar 2017 13日目の記事です。 昨日は@kami_zh さんの Goで標準出力をキャプチャするパッケージを書いた でした。
+go-sqlrow Go言語で標準パッケージを使用してRDBMSからデータを取ってくるには、以下の様に書きます1。
+type Person struct { ID string Name string } db, _ := sql.Open(&amp;#34;dn&amp;#34;, &amp;#34;dsn&amp;#34;) row, _ := db.Query(`SELECT id, name FROM person where id=&amp;#39;foo&amp;#39;`) var p Person row.Scan(&amp;amp;p.ID, &amp;amp;p.Name) SQL文を発行するまではいいのですが、最後の行、sql.Row#Scanがくせ者です。 上記の例のように、sql.row#Scanは可変長個のポインタを引数にとり、それらにそれぞれ値をセットします。この例では値の数が2つのため大きな問題ではありませんが、値の数が増えた場合などは非常に面倒です。また、テーブルの構造が変わった場合なども非常に面倒です。
+この問題を解決するため、go-sqlrow という小さなパッケージを作りました2。 これは上記のrow.Scanを代わりにやってくれるパッケージです。
+機能・使い方は簡単で、先ほどの例を次の様に書き換えます。
+type Person struct { ID string Name string } db, _ := sql.Open(&amp;#34;dn&amp;#34;, &amp;#34;dsn&amp;#34;) row, _ := db.Query(`SELECT id, name FROM person where id=&amp;#39;foo&amp;#39;`) var p Person sqlrow.</description></item><item><title>Parcel + Riot.js</title><link>https://blog.web-apps.tech/parcel-riot-js/</link><pubDate>Tue, 12 Dec 2017 15:00:00 +0000</pubDate><guid>https://blog.web-apps.tech/parcel-riot-js/</guid><description>この記事は Riot.js Advent Calendar 2017 13日目の記事です。 昨日は@supple さんによるRiot&amp;#43;ElectronでMarkdownエディタを作る でした。
+tl;dr Parcel というJavaScriptのモジュールバンドラを触ってみた webpackなどと比べて設定ファイルなどもいらずとても簡単 ホットリロードな開発サーバを簡単に実行できる Riotと組み合わせるのもそれほど難しくない Parcel + Riot.js Parcel というJavaScriptのモジュールバンドラが話題なのでさわってみました。 国内で話題になっている元の記事は「webpack時代の終わりとparcel時代のはじまり 」。 React との組み合わせで記事を書かれています。
+個人的にはRiot.js が好みなので、Riot.jsとの組み合わせで触ってみました。 尚、webpackは挫折したため比較できません。
+Parcel/Riot.jsのインストール npmを使ってインストールします。
+$ npm install -g parcel-bundler riot source code ディレクトリ構造 以下の様なディレクトリ構造だとします。 なお、練習用のため、動作確認に関係ない部分は適当に削っています。
+src/ |- index.html |- index.js |- package.json |- app/ | |- App.tag index.html &amp;lt;!doctype html&amp;gt; &amp;lt;html lang=&amp;#34;ja&amp;#34;&amp;gt; &amp;lt;head&amp;gt;&amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;App&amp;gt;&amp;lt;/App&amp;gt; &amp;lt;script src=&amp;#34;index.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; index.</description></item><item><title>kubesprayを使用してkubernetes clusterを構築する</title><link>https://blog.web-apps.tech/deploy-k8s-cluster-using-kubespray/</link><pubDate>Thu, 30 Nov 2017 09:04:06 +0000</pubDate><guid>https://blog.web-apps.tech/deploy-k8s-cluster-using-kubespray/</guid><description>注意: 情報が古くなっています。新しい情報にあわせて記事を書いた ので、そちらをご覧ください。
+kubespray はproduction readyなkubernetes(k8s)クラスタを構成できるツールです。 Ansible をベースに作られているため、任意のサーバでk8sクラスタを構成できます。
+今回は、3台のVMを用意してクラスタを構成してみます1。
+検証環境 今回用意したVMは以下の構成です。
+2Core 8GB RAM 80GB HDD CentOS 7 IPアドレスは以下の様になっているものとします。
+192.168.1.11 192.168.1.12 192.168.1.13 また、kubesprayを実行するローカルの環境はmacOS Sierraです。 各ホストのrootユーザに対してSSH鍵は配置済み、firewalldは無効化されているとします。
+requirements 実行する環境に、Ansible が必要なため、pipでインストールします。23
+$ pip install ansible install kubespray-cli kubespray自体もpipでインストールします。
+$ pip install kubespray prepare 設定ファイルを生成するため、kubespray prepareを使用します。
+$ kubespray prepare --nodes node1[ansible_ssh_host=192.168.1.11] node2[ansible_ssh_host=192.168.1.12] node3[ansible_ssh_host=192.168.1.13] deploy 以下のコマンドでk8sクラスタをデプロイします。
+$ kubespray deploy -u root -n flannel 今回は&amp;lt;code&amp;gt;flannel&amp;lt;/code&amp;gt; ネットワークプラグインで構成しました。 kubesprayは、次のネットワークプラグインを使用してクラスタを構成することができます。
+flannel 4 calico 5 canal contiv 6 weave 7 あとは構成が終了するのを待つだけです。</description></item><item><title>GitLab Docker: initial runners registration token</title><link>https://blog.web-apps.tech/gitlab-docker-init-runners-reg-token/</link><pubDate>Wed, 22 Nov 2017 01:17:14 +0000</pubDate><guid>https://blog.web-apps.tech/gitlab-docker-init-runners-reg-token/</guid><description>GitLab はRuby on Railsで書かれたオープンソースのGitサーバアプリケーションです。おそらく、オープンソースのGitサーバとしては最もよく使われているものではないでしょうか。 GitLabは他のOSS Gitサーバアプリケーションと比べて、非常に多くの機能を持っています。 GitLab-CIもその一つで、GitLab上で自動テストを回すことができます。
+この、GitLab-CIを使用するにはrunnerと呼ばれる、CI環境用のホストを追加する必要があります。 このとき、Registration Tokenという登録用トークンが必要なのですが、REST APIで取得することができません。そのため、Dockerを用いた自動構築時に少々困りました。
+解法 GitLab omnibusの設定項目でRegistration Tokenの初期値を設定することができます。 docker runする際のオプションに、以下を追加します。
+-e GITLAB_OMNIBUS_CONFIG=&amp;#34;gitlab_rails[&amp;#39;initial_shared_runners_registration_token&amp;#39;] = &amp;#39;HOGEHOGETOKEN&amp;#39;&amp;#34; もし、ほかの理由ですでにGITLAB_OMNIBUS_CONFIGの指定がある場合、セミコロン区切りで複数の値を指定することができます。たとえば、初期パスワードを与えている場合は、以下の様にできます。
+-e GITLAB_OMNIBUS_CONFIG=&amp;#34;gitlab_rails[&amp;#39;initial_root_password&amp;#39;] = &amp;#39;FUGAFUGAPASSWORD&amp;#39;; gitlab_rails[&amp;#39;initial_shared_runners_registration_token&amp;#39;] = &amp;#39;HOGEHOGETOKEN&amp;#39;&amp;#34; ここで指定した値をrunnerの登録時に与えれば、OKです。
+docker exec GITLAB_RUNNER_CONTAINER_NAME gitlab-runner register -n -r HOGEHOGETOKEN --run-untagged --executor docker --docker-image alpine:latest --url http://GITLAB_URL --docker-volumes /var/run/docker.sock:/var/run/docker.sock このとき、GITLAB_RUNNER_CONTAINER_NAMEとGITLAB_URLは適宜置き換えてください。</description></item><item><title>Application Specific Context</title><link>https://blog.web-apps.tech/package-specified-context/</link><pubDate>Tue, 21 Nov 2017 04:21:58 +0000</pubDate><guid>https://blog.web-apps.tech/package-specified-context/</guid><description>元ネタは@lestrrat さんの「Abusing type aliases to augment context.Context 」。
+golangを用いてHTTPサーバを作る場合、ルーティングを定義するのに以下の様な関数を用います。
+http.HandleFunc(path string, handler func(w http.ResponseWriter, r *http.Request) もちろん、http.Handleを用いる場合もありますし、gorilla/mux などのライブラリを用いることもあると思います。 ここで重要なのは、func(w http.ResponseWriter, r *http.Request)という引数の方です。
+多くの場合、アプリケーションのハンドラ内ではデータベースなどの外部アプリケーション・ミドルウェアを用いることになります。 しかし、golangのHTTPアプリケーションでは、ハンドラ関数の形式がfunc (w http.ResponseWriter, r *http.Request)と決まっています。引数の追加はできないため、引数以外の方法でDB接続情報などを渡す必要があります。
+これまで、golangでWebアプリケーション開発を行う場合によく用いられていたデータベースコネクションの保持方法は、dbパッケージを作成し、そこにパッケージ変数として持つ方法かと思います。が、グローバルな変数はできるだけ持ちたくない ですよね。
+そこで、Go 1.8から追加された&amp;lt;code&amp;gt;context&amp;lt;/code&amp;gt; を使うことができます。&amp;lt;code&amp;gt;http.Request&amp;lt;/code&amp;gt; にはcontext.Contextが入っていて、&amp;lt;code&amp;gt;Request.Context()&amp;lt;/code&amp;gt; でget、&amp;lt;code&amp;gt;Request.WithContext()&amp;lt;/code&amp;gt; でsetできます。
+context.Contextに値を持たせる方法で最初に思いつくのは&amp;lt;code&amp;gt;Context.WithValue()&amp;lt;/code&amp;gt; を用いる方法ですが、これは値を取得する度にtype assertionをする必要があり、あまりよくありません 。 これを解消するため、自分で型を定義するのがよいでしょう。
+package context // internal context subpackage import ( &amp;#34;context&amp;#34; &amp;#34;errors&amp;#34; ) type withSomethingContext struct { context.Context something *Something } func WithSomething(ctx context.Context, something *Something) context.</description></item><item><title>GNU MOファイルの構造</title><link>https://blog.web-apps.tech/gnu_mo_format/</link><pubDate>Mon, 06 Nov 2017 09:08:27 +0000</pubDate><guid>https://blog.web-apps.tech/gnu_mo_format/</guid><description>GNU MOファイルの内部構造について、最小限ですが解説します。</description></item><item><title>Travis CIでdockerのバージョンを最新にする</title><link>https://blog.web-apps.tech/travis-ci-update-docker/</link><pubDate>Wed, 18 Oct 2017 09:17:00 +0000</pubDate><guid>https://blog.web-apps.tech/travis-ci-update-docker/</guid><description>Travis CIでDockerfileをテストする等、dockerを使用したい場合、以下の様に.travis.ymlに記述することでdockerを有効にすることできます。
+sudo: required service: - docker が、その際のdockerのバージョンは17.03.11と、最新版ではありません。 特に問題なのが、multi-stage build は17.05からの機能であるということです。 Travis CIで使用できるdockerでは、multi-stage buildを使用したDockerfileはビルドすることができず、常にfailedとなってしまいます。
+解決方法 Travis-CIでDockerのバージョンを上げるには、以下の記述を.travis.ymlに追加します。
+sudo: required service: - docker before_install: - sudo apt-get update - sudo apt-get install -y -o Dpkg::Options::=&amp;#34;--force-confnew&amp;#34; docker-ce dockerの再起動などの処理は必要ありません。 以上の記述により、Dockerのバージョンが最新版にアップデートされ、multi-stage buildも使用できるようになります。
+2017年10月18日現在&amp;#160;&amp;#x21a9;&amp;#xfe0e;</description></item><item><title>Kolla-AnsibleでOpenStack Ocata環境を構築する</title><link>https://blog.web-apps.tech/kolla-ansible-ocata/</link><pubDate>Wed, 04 Oct 2017 06:12:37 +0000</pubDate><guid>https://blog.web-apps.tech/kolla-ansible-ocata/</guid><description>OpenStack Kollaを用いると、比較的簡単にOpenStack on Docker環境を構築することができます。
+今回はKolla-Ansibleを使用してall-in-one構成で4.0.0(Ocata)環境を構築してみます。</description></item><item><title>Kolla-ansible precheckで発生するエラーの対処</title><link>https://blog.web-apps.tech/kolla-ansible-precheck-error/</link><pubDate>Fri, 29 Sep 2017 14:20:16 +0000</pubDate><guid>https://blog.web-apps.tech/kolla-ansible-precheck-error/</guid><description>「OpenStack Kolla(Ocata)環境の構築」を参考にOpenStack Kollaのセットアップを行っていたら、エラーが出ました。</description></item><item><title>Functional Option Pattern</title><link>https://blog.web-apps.tech/go-functional-option-pattern/</link><pubDate>Tue, 26 Sep 2017 01:44:53 +0000</pubDate><guid>https://blog.web-apps.tech/go-functional-option-pattern/</guid><description>Fuctional Option PatternはGo言語において構造体の初期化時にオプション引数を与えるためのデザインパターンで、元ネタはRob Pike氏のSelf-referential functions and the design of options 、Dave Cheney氏のFunctional options for frendly APIS です。
+Go言語には他の言語でオプション引数やキーワード引数と呼ばれる、省略可能な引数が存在しません。 通常は大きな問題は無いのですが、しかし、構造体の初期化時には、省略可能引数がほしくなる場合もあります。
+Dave Cheney氏の記事にもある例を見てみましょう。
+例 type Server struct { listener net.Listener } func NewServer(addr string) (*Server, error) { l, err := net.Listen(&amp;#34;tcp&amp;#34;, addr) if err != nil { return nil, err } srv := Server{listener: l} go srv.run return &amp;amp;srv, nil } よくある構造体の初期化関数です。 初期化が上手くいけば、ポインタとnilを、上手くいかなければnilとエラーを返す形になっています。</description></item><item><title>go-redis, redigo, boltのベンチマークを取ってみた</title><link>https://blog.web-apps.tech/go-redis-redigo-bolt-benchmark/</link><pubDate>Thu, 07 Sep 2017 04:40:01 +0000</pubDate><guid>https://blog.web-apps.tech/go-redis-redigo-bolt-benchmark/</guid><description>tl;dr データベースに接続済みの状態からstringで値をセット・ゲットするベンチマーク BoltのGetがめちゃめちゃ速い go-redisよりはredigoの方が速い Boltのセットがメモリアロケーションすごく多い result $ go test -bench . BenchmarkRedisSet-4 10000 246527 ns/op 249 B/op 9 allocs/op BenchmarkRedisGet-4 5000 231569 ns/op 225 B/op 9 allocs/op BenchmarkRedigoSet-4 5000 204545 ns/op 70 B/op 4 allocs/op BenchmarkRedigoGet-4 5000 209392 ns/op 80 B/op 6 allocs/op BenchmarkBoltSet-4 10000 166142 ns/op 34287 B/op 57 allocs/op BenchmarkBoltGet-4 1000000 1140 ns/op 488 B/op 8 allocs/op PASS ok practices/redis-bolt-benchmark 8.705s source package rbbench_test import ( &amp;#34;testing&amp;#34; &amp;#34;github.</description></item><item><title>二重にプロキシされたRancher Serverのリバースプロキシ設定</title><link>https://blog.web-apps.tech/2proxied-rancher-server/</link><pubDate>Mon, 04 Sep 2017 10:25:25 +0000</pubDate><guid>https://blog.web-apps.tech/2proxied-rancher-server/</guid><description>常時SSLの環境で二重にリバースプロキシされた環境のRancherは、公式ドキュメント通りの設定を行っても正常に動作しません。
+X-Forwarded-ProtoがHTTPSの状態でRancher Serverまで届くように設定することで問題を解消できます。</description></item><item><title>Rancher-HAProxyでHSTSを設定する</title><link>https://blog.web-apps.tech/hsts-rancher-haproxy/</link><pubDate>Sat, 02 Sep 2017 16:49:12 +0000</pubDate><guid>https://blog.web-apps.tech/hsts-rancher-haproxy/</guid><description>HSTSはHTTP Strict Transport Securityの略で、HTTPでの接続を強制的にHTTPSへと変更するようウェブブラウザへ伝達するセキュリティ機構です。
+Rancher-HAProxyでロードバランシングしている場合にもHSTSを使えるように設定してみました。</description></item><item><title>io.Writer.Write()とfmt.Fprintf()のBenchmark</title><link>https://blog.web-apps.tech/benchmark-iowriter-and-fprintf/</link><pubDate>Sat, 02 Sep 2017 04:30:59 +0000</pubDate><guid>https://blog.web-apps.tech/benchmark-iowriter-and-fprintf/</guid><description>tl;dr 基本的にio.Writer.Write()を使用するのが高速なようです。
+result $ go test -bench . -benchmem BenchmarkWrite-4 30000000 48.7 ns/op 16 B/op 1 allocs/op BenchmarkWriteWithBytes-4 500000000 3.95 ns/op 0 B/op 0 allocs/op BenchmarkFprintf-4 20000000 91.5 ns/op 0 B/op 0 allocs/op BenchmarkWriteTo-4 100000000 10.0 ns/op 0 B/op 0 allocs/op BenchmarkWriteWithBufferBytes-4 300000000 4.31 ns/op 0 B/op 0 allocs/op source package main_test import ( &amp;#34;bytes&amp;#34; &amp;#34;fmt&amp;#34; &amp;#34;io&amp;#34; &amp;#34;net/http&amp;#34; &amp;#34;testing&amp;#34; ) var s = &amp;#34;Hello, my world&amp;#34; var bs = []byte(s) var buf = bytes.</description></item><item><title>sync.WaitGroup</title><link>https://blog.web-apps.tech/how-to-use-sync-waitgroup/</link><pubDate>Fri, 01 Sep 2017 07:03:07 +0000</pubDate><guid>https://blog.web-apps.tech/how-to-use-sync-waitgroup/</guid><description>Goroutineを使用して複数の処理を並列で実行、すべてが終わったら次の処理に進みたいという場合があると思います。 Goroutineでデータのリストを作るという処理を考えます。 データの順番は関係なく、すべてのGoroutineでのデータがそろったら次の処理をしたいという設定です。 この場合、単純に考えると以下のようなコードになりますが、以下のコードではデータがそろう前に次の処理が行われます。
+datalist := []string{} for i := 0; i &amp;lt; 10; i++ { go func() { // something w/datalist } } fmt.Println(&amp;#34;next step&amp;#34;) このような場合に、sync.WaitGroupを使用します。 sync.WaitGroupは基本的にはただのカウンタですが、カウンタがゼロになるまで処理を待つことができます。 言葉で説明してもわかりにくいと思いますので、ソースコードを見てみましょう。
+datalist := []string{} wg := sync.WaitGroup{} for i := 0; i &amp;lt; 10; i++ { wg.Add(1) // Goroutineの数だけカウンタを増やす go func() { // something w/datalist wg.Done() // カウンタを減らす } } wg.Wait() // カウンタが0になるまでブロックする fmt.</description></item><item><title>Go 1.9 is released</title><link>https://blog.web-apps.tech/go-1-9-is-released/</link><pubDate>Mon, 28 Aug 2017 01:41:47 +0000</pubDate><guid>https://blog.web-apps.tech/go-1-9-is-released/</guid><description>先日2017年8月24日にGo 1.9がリリースされました。 ダウンロードページ からダウンロード可能です。
+最大の変更点はGo1.9rc1 is released! でもお伝えしたように、&amp;lt;strong&amp;gt;Type Alias&amp;lt;/strong&amp;gt; でしょう。 型名に対して別名をつけることができる機能です。
+また、そのほかにも多くの変更が加えられています。 リリースノートはこちら です。
+以下では、いくつか変更点を見ていきます。
+Ports Go 1.9から新しく2つのOSと1つのプロセッサアーキテクチャがサポートされています。
+POWER8 IBMのPOWER8プロセッサがサポートされています。 GOARCH=ppc64またはGOARCH=ppc64leで使用することができます。
+FreeBSD FreeBSD 9.3で動作します。。。が、すでにFreeBSDはサポート切れです。(なんでや・・・・) Go 1.10からはFreeBSD 10.3+で動作する様になる予定です。
+OpenBSD 6.0 OpenBSD 6.0がサポートされました。 かわりに、Go 1.9ではOpenBSD5.9をサポートしていません。
+Parallel Compilation パッケージの関数を並列コンパイルできるようになりました。 並列コンパイルはデフォルトでONになっており、無効化するには環境変数でGO19CONCURRENTCOMPILATIONを0に設定します。
+Vendor matching with ./&amp;hellip; これまで、./...というディレクトリ表現はvendorディレクトリも含んでいました。しかし、go testの場合などvendorディレクトリは含まれない方がうれしい場合も多く、実際glide nvなどでvendorディレクトリを含まないディレクトリマッチングが実装されていました。 go1.9からは./...にはvendorディレクトリが含まれないようになり、vendorディレクトリにマッチさせたい場合は./vendor/...と書く必要があります。
+Moved GOROOT Go 1.9から、GOROOTが移動となりました。 起動されたパスから自動でGOROOTを探索します。 これにより、Goのインストールパスが違う場所に移動しても、Goのツール類は継続して使える用になりました。
+Compiler Toolchain 複素数の割り算がC99準拠となりました。 Doc 長い引数リストは省略されます。 これはgo docで生成されるコードの可読性向上のためです。 また、構造体フィールドのドキュメンテーションがサポートされました。go doc http.Client.Jarなどでどうなったのか確認することができます。
+env go env -jsonフラグによりJSON出力することができるようになりました。
+Test go testコマンドに-listフラグが追加されました。 これに正規表現で引数を与えることで、テスト名・ベンチマーク名・Exampleテスト名を調べることができます。</description></item><item><title>docker-machineでRancherOSを使う</title><link>https://blog.web-apps.tech/docker-machine-with-rancheros/</link><pubDate>Thu, 24 Aug 2017 02:14:41 +0000</pubDate><guid>https://blog.web-apps.tech/docker-machine-with-rancheros/</guid><description>docker-machineとそのメリット docker-machine は仮想マシン上にDocker Engine をインストールするツールです。 docker-machineコマンドを使用することで、Dockerホストを作成・管理することが可能です。 docker-machineを使用してDockerホストを作成すると、
+$ docker-machine env &amp;lt;MACHINE_NAME&amp;gt; でシェル評価可能なDocker接続情報を得ることができ、
+$ eval $(docker-machine env &amp;lt;MACHINE_NAME&amp;gt;) とすることにより、そのセッション内ではあたかもローカル環境のDockerの様にコンテナを操作することが可能となります。
+docker-machineで使用するOS 扨、通常docker-machineでDockerホストを作成すると、インストールされるOSはBoot2Docker ですが、docker-machineでは、ホスト作成時のコマンドラインオプションでisoイメージやシェルスクリプトを指定することでOSやDocker Engineのバージョンを変更することができます。
+RancherOS Boot2Dockerに類似したOSとして、RancherOS があり、rosコマンドを使用することでインストール後でもDockerのバージョンを簡単に切り替えることができます。
+RancherOSは以前、仮想マシン環境のサポートとして、Vagrant 用の環境を提供していましたが、現在(2017年8月)では、すでにサポートが終了しており、docker-machineを使用するようにというアナウンスが出ています。
+そこで、今回はdocker-machineを使用してRancherOSを立ちあげてみようと思います。
+docker-machineでRancherOSを立ちあげる 公式ドキュメント 上に示されたコマンドをそのまま使用しても、途中でエラーが出てしまい(エラーが出ること自体は記述されていますが)、docker-machineをの大きなメリットである、docker-machine envが使用できません。
+エラーを回避するためには、Rancherのリポジトリ上にあるインストールスクリプト を指定します。
+$ docker-machine create -d virtualbox --virtualbox-boot2docker-url https://releases.rancher.com/os/latest/rancheros.iso --engine-install-url https://raw.githubusercontent.com/rancher/install-docker/master/17.06.sh インストールが完了したら、docker-machine lsコマンドで実行中のDockerホストの一覧を表示することができます。
+$ docker-machine ls NAME ACTIVE DRIVER STATE URL SWARM DOCKER ERRORS ros - virtualbox Running tcp://192.168.99.100:2376 v17.06.0-ce Docker Engineのバージョンを切り替える せっかくRancherOSを使用しているので、Docker Engineのバージョンを切り替えてみましょう。 Docker Engineのバージョンを切り替えるにはRancherOS上でrosコマンドを使用するのでした。
+RancherOSはdocker-machineで作成されたVM上で動作していますので、以下のコマンドを用いてログインします。
+$ docker-machine ssh &amp;lt;RANCHEROS_VM_NAME&amp;gt; Vagrantを使用したことがある方はなじみやすいかもしれません。 SSHログインできたら、以下のコマンドで使用可能なDocker Engineのリストを表示します。</description></item><item><title>Docker multi-stage builds</title><link>https://blog.web-apps.tech/docker-multi-stage-builds/</link><pubDate>Thu, 17 Aug 2017 02:06:00 +0000</pubDate><guid>https://blog.web-apps.tech/docker-multi-stage-builds/</guid><description>Docker 17.05から、新機能として&amp;lt;strong&amp;gt;multi-stage builds&amp;lt;/strong&amp;gt; というものが導入されました。 これは、コンテナイメージをより最適化するために有用な機能で、Dockerfileからコンテナイメージをビルドする際にビルド依存のライブラリ/環境とランタイム依存のライブラリ/環境を切り分けることができる機能です。
+具体例を見てみましょう。 Go言語で書かれた何らかのアプリケーションをコンテナ上で動かすことを考えます。 以前までであれば、以下のような二つのDockerfileを用いて作成します。
+まずはビルド用Dockerfileです
+FROMgolang:1.7.3WORKDIR/go/src/github.com/someone/foo/COPY app.go .RUN GOOS=linux go build -a -o app .つぎに、実行用のDockerfileです。
+FROMbusybox:latestWORKDIR/root/COPY app .CMD [&amp;#34;./app&amp;#34;]このようにすることで、ビルド時にはGo言語のビルド環境が入ったコンテナを、実行時は(Go言語環境は不要なので)busyboxコンテナを使用することで、実行イメージを小さく抑えることができます。 しかし、このように二つのDockerfileを使用する場合、コンテナイメージのビルド手順が煩雑になる、複数ファイルのため管理しにくいなどの問題がありました。
+multi-stage buildsを実装されたことで、以下のようにDockerfileを一つにまとめることができます。
+FROMgolang:1.7.3 AS buildWORKDIR/go/src/github.com/someone/foo/COPY app.go .RUN GOOS=linux go build -a -o app .FROMbusybox:latestWORKDIR/root/COPY --from=build /go/src/github.com/someone/foo/app .CMD [&amp;#34;./app&amp;#34;]一行目のAS build、九行目の--from=buildがポイントです。
+AS hogeを使用することで、ビルドステージに名前をつけることができます。 加えて、COPYに--from=hogeの形で名称を指定することで、ビルドステージから直接ファイルをコピーしてくることができます。 これまでは一旦ホストにファイルを取り出してから再度コピーするという形だったので、かなり手間が省けると言えるでしょう。
+golangイメージの中でも小さい、golang:alpineとbusyboxイメージでは、イメージサイズが200倍以上違うため、これは重要なアップデートと考えられます。</description></item><item><title>Go1.9rc1 is released!</title><link>https://blog.web-apps.tech/go1-9rc1_is_released/</link><pubDate>Wed, 26 Jul 2017 01:24:00 +0000</pubDate><guid>https://blog.web-apps.tech/go1-9rc1_is_released/</guid><description>Go1.9rc1がリリースされました！ そこで、Go1.9のリリースノートをさらっと見てみようと思います。 (まだrc1なので、今後変更される場合があります。ご注意を)
+全部見ていくと、結構な量になりそうなので、すぐに影響のありそうな部分だけ、軽く見ていきましょう。
+type alias Go1.9ではType Aliasというものが導入されます。 これはその名の通り、型に別名をつけられるというもの。 言葉で説明するより、コードを見た方が早いと思いますので、コードを用意しました。
+package main import ( &amp;#34;fmt&amp;#34; &amp;#34;log&amp;#34; ) type T1 struct { ID string Name string } type T2 = T1 func main() { t := T1{ ID: &amp;#34;id&amp;#34;, Name: &amp;#34;Taro&amp;#34;, } log.Println(&amp;#34;call t1.Call()&amp;#34;) fmt.Println(t.Call()) log.Println(&amp;#34;call t2.Call2()&amp;#34;) fmt.Println(t.Call2()) return 0 } func (t *T1) Call() string { return &amp;#34;hello, &amp;#34; + t.</description></item><item><title>Riot.jsにSass(SCSS)を導入する</title><link>https://blog.web-apps.tech/sass_into_riotjs/</link><pubDate>Wed, 19 Jul 2017 01:15:00 +0000</pubDate><guid>https://blog.web-apps.tech/sass_into_riotjs/</guid><description>Riot.jsでは、標準でスタイルシートにLessを使用することができます。 その際の使用方法は簡単で、スタイルタグにtypeを指定するだけです。
+&amp;lt;style type=&amp;#34;less&amp;#34;&amp;gt; ... &amp;lt;/style&amp;gt; 扨、ここで、イマドキな皆さんはLessじゃなくてSass(SCSS)を使いたい！と思うかもしれません(思いますよね？) なので、Sassを使えるようにしてみましょう。
+基本方針 基本的には、riot.parser.css.sassにSassのコンパイラ関数を作成するだけです。 riot.parser.css.sassには、引数として、
+タグ名 stylesheet が渡されます。この、第二引数をコンパイルして返す関数を作成すれば良いのです。 ランタイムコンパイルでSass(SCSS)を使用する ランタイムコンパイル時はsass.jsを使用します。 &amp;lt;head&amp;gt;タグ内で、https://cdn.rawgit.com/medialize/sass.js/v0.6.3/dist/sass.jsを読み込むなどすれば良いでしょう。 その上で、タグのマウント前に以下の記述を追加します。
+riot.parsers.css.sass = function(tagName, stylesheet) { var result = Sass.compile(stylesheet); return result; }; gulp-riotプリコンパイルでSass(SCSS)を使用する glup-riotでプリコンパイルする際にSassを使用するには、node-sassを使用して、gulpfile.jsに以下のように記述します。
+var gulp = require(&amp;#39;gulp&amp;#39;); var riot = require(&amp;#39;gulp-riot&amp;#39;); var sass = require(&amp;#39;node-sass&amp;#39;); gulp.task(&amp;#39;riot&amp;#39;, function() { gulp .src(&amp;#39;app.tag&amp;#39;) .pipe(riot({ parsers: { css: { sass: function(tagName, stylesheet) { var result = sass.</description></item><item><title>Vagrantで起動したVMからBOXを作る</title><link>https://blog.web-apps.tech/create_vagrant_box_from_vagrant_vm/</link><pubDate>Tue, 11 Jul 2017 02:39:00 +0000</pubDate><guid>https://blog.web-apps.tech/create_vagrant_box_from_vagrant_vm/</guid><description>Vagrantで、centos/7等の標準的なBOXをベースにカスタムしたVMを保存しておいたり、配布したりするためにBOXを作る手順です。 自分用のメモとして。
+VM内での操作 VBoxGuestAdditionsを導入する。 以下のソースを適当なファイルに保存する。(ここでは$HOME/ins.shとします。) このとき、二行目はVirtualboxのバージョンに合わせて適宜書き換える。 リストはこちら yum install -y wget kernel kernel-devel perl gcc wget http://download.virtualbox.org/virtualbox/5.1.18/VBoxGuestAdditions_5.1.18.iso mkdir /media/VBoxGuestAdditions mount -o loop,ro VBoxGuestAdditions_5.1.18.iso /media/VBoxGuestAdditions sh /media/VBoxGuestAdditions/VBoxLinuxAdditions.run rm VBoxGuestAdditions_5.1.18.iso umount /media/VBoxGuestAdditions rmdir /media/VBoxGuestAdditions 保存したスクリプトを管理者権限で実行します。
+sudo bash ins.sh yumをきれいにする 軽量化のため、yumをきれいにします。
+sudo yum clean all ゼロ埋めして消す 圧縮効率向上のため、ゼロ埋めして消します。
+sudo dd if=/dev/zero of=/EMPTY bs=1M sudo rm /EMPTY ホストからの操作 BOXを作成する vagrant package ** box listに登録する
+vagrant box add package.box</description></item><item><title>YAPC::Fukuoka 2017 HAKATAに行ってきました</title><link>https://blog.web-apps.tech/yapc_fukuoka_2017/</link><pubDate>Mon, 03 Jul 2017 02:04:00 +0000</pubDate><guid>https://blog.web-apps.tech/yapc_fukuoka_2017/</guid><description>今回は言われました！「ブログを書くまでがYAPC!」 と言うことで、YAPC::Kansai 2017 OSAKA (行ってきたときの記事はこちら )に引き続き、YAPC::Fukuoka 2017 HAKATA に行ってきました。 YAPCはPerlのイベントで、&amp;ldquo;Yet Another Perl Conference&amp;quot;の略です。twitterハッシュタグは前回に引き続き#yapcjapan でした。
+福岡および九州は初めてでしたが、いや、暑いですね。 特にYAPCの翌日は非常に天気が良いものの、梅雨の湿気もあり、観光をしていて汗だくでした。
+今回も大阪同様ホテルはとらず、適当にやっていくことに。 意外となんとかなるものです。
+YAPC::Fukuoka 2017 HAKATA 今回も例に漏れず(?)寝坊でオープニングには間に合わず。 今回はPerl6の話は余り多くなかった印象です。
+セキュリティの話、コンテナの話、テストの話など、非常に多様なセッションがありました。
+今回のノベルティはなぜかモバイルバッテリーが二つも入っていたり、米が入っていたり、染み抜きペンが入っていたりととても面白い内容でした。 あ、いつものサイリュームも入ってましたよ。
+個人スポンサーノベルティはビーチサンダル。これからの季節に良いですね。
+LTをしてきました。 今回はLTもしてきました。 タイトルは「嗚呼素晴らしきemacs 」です。
+ベストトーク賞 YAPCでは恒例のベストトーク賞ですが、今回は徳丸さんのゲストセッションがベストトーク賞に選ばれました。 しかしご多忙な徳丸さん。クロージングの時点ですでに帰還してしまってました。 仕方ないので徳丸さんの会社にお勤めの方が代理で受け取ることに。 なんと賞品を渡す人は徳丸さんのセッションを聞いていなかったようで・・・ ベストトークを聞いていなかった人が代理の人に賞品を渡すという、なんとも面白い事態でした。
+ベストLT賞は@codehex さんで、YAPC::Okinawaの宣伝でした。
+懇親会 懇親会ではPixivさんから抽選でプレゼントをいただきました。 Pawooのロゴ入りのモバイルバッテリー(これで今回三つ目)です。
+次回のお話 次回YAPCは3月に沖縄で開催予定です。</description></item><item><title>Fujitsu FACOM128Bを見てきた</title><link>https://blog.web-apps.tech/fujitsu_facom128b/</link><pubDate>Tue, 06 Jun 2017 01:45:00 +0000</pubDate><guid>https://blog.web-apps.tech/fujitsu_facom128b/</guid><description>Open Source Summit Fujitsu Museum Tour )で、富士通 沼津工場まで行って、現在動作する世界最古のコンピュータであるリレーコンピュータ「FACOM128B」を見てきました。
+Fujitsu FACOM128B は1958年に作られたリレー式自動計算機で、富士通沼津工場に置かれているものは1959年製です。Fujitsu Webサイト から申し込みをすることで、中学生以上なら見学することができます。
+圧巻です。エンジニアなら一度は見ておくと、感動ものです。</description></item><item><title>emacs-macでtwittering-modeを使った際に毎回PINを聞かれる問題の解消</title><link>https://blog.web-apps.tech/emacs-mac-twittering-mode-every-asked-pin/</link><pubDate>Tue, 09 May 2017 00:49:00 +0000</pubDate><guid>https://blog.web-apps.tech/emacs-mac-twittering-mode-every-asked-pin/</guid><description>twitterのクライアントとして、日頃からemacs上で動くクライアントの&amp;quot;twittering-mode&amp;quot;を使用しています。 ところが最近、新しいmacにインストールしたemacs-macでtwittering-modeを起動すると、毎回twitterのPINを聞かれるようになってしまいました。 毎回、毎回、起動時の暗号化フェーズで
+Encrypt failed Exit と言われ・・・・ 以前使っていたmacではこのようなことが無かったため、困っていたのですが、以下の手順により解決できました。
+背景 結論から言うと、これはGnuPGのバージョンが新しくなったことによる問題でした。 GnuPG2.1.0から、gpg-agentとpinentryと呼ばれる二つのソフトウェアの利用が必須となりました。 twittering-mode事態はgpg-agentやpinentryが必須でも基本的に問題なく動作するようにはなっているハズ・・・でした。 しかし、これらのソフトウェアの必須化に伴って、これまで標準入力から入力できていたパスフレーズが標準入力から入力できなくなっており、そのために暗号化に失敗して毎回PINを聞く・・・という状態になっていたようです。
+解決策 みんな大好きarch wiki に解決策がありました。 まず、~/.gnupg/gpg-agent.confに以下のように記述します。
+allow-loopback-pinentry つぎに、~/.gnupg/gpg.confに以下のように記述します。
+pinentry-mode loopback 最後に、gpg-agentを再起動します。 コマンドラインから、
+$ gpgconf --kill gpg-agent でgpg-agentを再起動できます。
+以上で、twittering-modeが正常に使用できるようになるはずです。</description></item><item><title>MySQL on docker macな開発環境でローカルからMySQLに接続する</title><link>https://blog.web-apps.tech/mysql_on_docker_on_mac/</link><pubDate>Tue, 02 May 2017 06:57:00 +0000</pubDate><guid>https://blog.web-apps.tech/mysql_on_docker_on_mac/</guid><description>MySQLをdocker上に立てることで、ローカルの環境を汚さずにMySQLを使ったアプリケーションの開発を行うことができます。 特に、練習段階や、動作確認などの場合、 test_hogehoge な感じのデータベースやテーブルを作ってしまい、後片付けをしないために汚くなっていく、なんてこと、あるんじゃないでしょうか。
+さて、MySQL on dockerへの接続、今までローカルにMySQLを入れて開発していたのでちょっと躓きました。
+$ docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD password mysql:latest 上記のように起動した場合、次のようにコマンドを実行することで接続することができます。
+$ mysql -u hoge -p -h 127.0.0.1 --port 3306 特にポイントなのが、-h 127.0.0.1の部分。localhostにしてしまうと、socketで接続しようとして、エラーになっちゃうんですね。 ここでしばらく悩みました。。。
+以上、簡単ですがメモがてら。</description></item><item><title>golang: net/httpでBASIC認証</title><link>https://blog.web-apps.tech/golang_nethttp_basicauth/</link><pubDate>Tue, 02 May 2017 05:06:00 +0000</pubDate><guid>https://blog.web-apps.tech/golang_nethttp_basicauth/</guid><description>golangでベーシック認証するのはどうしたら良いのかなー。って思ってたら、net/httpでhandlerに渡されるhttp.RequestにBasicAuth()というメソッドが生えてました。 これはBASIC認証用のユーザ名、パスワード、ヘッダ解析のフラグという値を返してくれます。 なので、
+func handler(w http.ResponseWriter, r *http.Request) { username, password, ok := r.BasicAuth() if !ok { return } if username == &amp;#34;hogehogeuser&amp;#34; &amp;amp;&amp;amp; password == &amp;#34;fugafugapasswd&amp;#34; { // something } } とすることで認証することができます。簡単、簡単。 なお残念ながらダイジェスト認証はサポートされていない様子。</description></item><item><title>YAPC::Kansai 2017 OSAKAに行ってきました</title><link>https://blog.web-apps.tech/yapc_kansai_2017/</link><pubDate>Sun, 05 Mar 2017 04:12:00 +0000</pubDate><guid>https://blog.web-apps.tech/yapc_kansai_2017/</guid><description>12月のYAPC::Hokkaido 2016 SAPPORO (行ってきた時の記事はこちら )に引き続き、YAPC::Kansai 2017 OSAKA に行ってきました。
+今回もブログを書くまでがYAPCとは言われなかった気がします。 YAPCはPerlのイベントで、&amp;ldquo;Yet Another Perl Conference&amp;quot;の略です。twitterハッシュタグは前回に引き続き#yapcjapan でした。
+私にとって、大阪はもちろん、関西自体が初めてで、かなり余裕のあるスケジュールを組んだために、どう時間を過ごしていいか悩むといった自体に。 空港に降り立ち、まずどうしよう、という状態ですね。困った。
+仕方がないので大阪出身の友人に、「大阪観光ってどこいったらいいのかな」と聞いてみたのですが、「まぁたこ焼き食べたりしたら？」と今ひとつ役に立たない返事。まぁ食べますけど！ それでも心斎橋とか難波に向かうとよいと教えてもらえたので、Googleマップ先生に頼りつつ、難波へ向かいました。
+結果、何をしたかというと、札幌からの移動前に新しく購入したスマホ用のあれこれをビックカメラで購入するという、大阪まできて何をやっているのかというなんとも残念な行動となってしまいました。
+ホテル探し 今回、北海道から関西まで、勿論飛行機で移動したわけですが、実はホテルも取らずに(!)、YAPC以外は無計画での旅行でした。 とりあえずYAPC前日くらいはホテルに泊まらねば朝起きれない！ということで、ホテル探しをしました。 運良く会場(MOTEX ホール )の近くに割と安く宿を取ることができました。
+こちらがそのお部屋の写真。シングルの部屋を5,500円(500ポイント適用後)でとったのですが、入ってみてびっくり、ツインの部屋でした。 安かったものの、なんとなく豪勢な感じ。
+夜ご飯は近くのお店でたこ焼きを食べました。 十八番というお店で、後で調べたら結構有名っぽいですね。美味しかった。 たこ焼きを塩で食べるというのは初体験でしたが、これもなかなかです。 YAPC::Kansai 2017 OSAKA 開けて翌日。微妙に寝坊したおかげでオープニングには間に合いませんでした。
+一番印象に残ったトークは「Vue.jsで作るSPAから学ぶMVVM、非同期処理、その光と影」ですね。 タイトルにVue.jsと入っているにもかかわらず、Vue.jsという言葉が出て来たのは一度きり、SPAの話のはずなのに、「SPAはやめよう」と、なんだかタイトルに釣られた感が半端ない内容でした。 勿論内容も素晴らしく、「ブラウザはドキュメントビューアなんだからリッチなインターフェースを作るものではない」「ブラウザでリッチなインターフェースを作るのはなんでもVimでなんとかしようとするようなもの」「とはいっても作らなきゃいけない時もある」という、SPAはやるべきじゃないけど、現状やらなきゃいけないことはどうすれば良いのか、その時MV*はどのように構成したらいいのかといった、きちんと筋が通っていて、とても面白い話でした。
+次に印象に残っているのが、「Webアプリケーションのキャッシュ戦略とそのパターン」です。 こちらも「キャッシュは使わないほうがいい」という、タイトル詐欺みたいな話でしたが、非常に納得のいく内容でした。
+ベストトーク賞の投票で票を入れたのは「Webエンジニアに知ってほしいRDBアンチパターン」です。 内容もさることながら、やはり喋りが素晴らしいんです。とっても練習をしていると聞いています。
+ランチタイムはスポンサー企業の方と昼食をいただきました。 今回交通費支援をいただいたので、その対価のようなものです。 実際には、企業に関わるお話は結局あまりしなかったのですが、会場の近くはあまり飲食店がない印象で、昼食を取るのも大変そうでしたので、大変助かりました。
+YAPC::Kansai 2017 OSAKAのステッカーはこんな感じ。 札幌の時のものと並べてはるには、上下を揃えるのが難しい形状で、ちょっと難儀します。
+次回のお話 次回YAPCは福岡で開催だそうです。YAPC::Fukuoka 2017 HAKATA すでにチケットも発売されています。
+その後は沖縄、東京が企画されているそうです。 是非回りたい。</description></item><item><title>InfluxDBを触ってみた</title><link>https://blog.web-apps.tech/play_influxdb/</link><pubDate>Sat, 18 Feb 2017 09:45:00 +0000</pubDate><guid>https://blog.web-apps.tech/play_influxdb/</guid><description>NoSQLを使うことも一般的になってきた昨今ですが、NoSQLの一種に、時系列データベース (Time Series Database; TSDB)と呼ばれるものが有ります。 TSDBはその名のとおり、時系列データを取り扱うことに特化したDBです。 サーバ監視したログデータや、センサデータなんかを取り扱うことが得意なDBということですね。
+そのうち、DB-ENGINES のDB-Engines Ranking of Time Series DBMS で一位を取っているInfluxDBを触ってみました。
+InfluxDBの公式ドキュメントはInfluxData | Documentation | InfluxDB Version 1.2 Documentation にあります。
+参考にした資料・実行環境 今回はQiita/DockerのInfluxDBとGrafanaでdweet.ioのデータを可視化する の前半を参考に、Docker上でInfluxDBを実行してみました。 なお、上記の記事中では、~tutum/influxdb~というイメージを使用していますが、現在はInfluxDBオフィシャルのイメージが提供されていますので、そちらを利用します。 最新の安定版を利用しますので、InfluxDBのバージョンは1.2.0です。
+InfluxDBコンテナを起動する 早速InfluxDBコンテナを起動してみます。
+$ docker pull influxdb $ docker run --name influxdb_test -p 8083:8083 -p 8086:8086 influxdb これだけです。簡単ですね。Exposeしているポートの中身は以下のようになっています。
+8083: Admin Web インターフェース 8086: HTTP API Admin UIにアクセスする Admin UIにアクセスしてみます。 InfluxDBにはWebアクセスできるUIがついています。
+まずはコンテナのIPを調べてみましょう。
+$ docker inspect influxdb_test HostConfig &amp;gt; NetworkSettings &amp;gt; Networks &amp;gt; bridge &amp;gt; IPAddress にコンテナのIPが記載されています。 今回は172.</description></item><item><title>Python 3でbottle-websocketを使う</title><link>https://blog.web-apps.tech/bottle-websocket_with_python3/</link><pubDate>Tue, 10 Jan 2017 17:05:00 +0000</pubDate><guid>https://blog.web-apps.tech/bottle-websocket_with_python3/</guid><description>Python 3でbottle-websocket がそのままでは動かなかったので簡単にメモしておきます。
+解決方法 通常通りpip install bottle-websocketしてから、 pip install karellen-geventwsすると動作するようになります。 karellen-geventwsはGeventWebSocketのforkで、Python 3に対応しています。</description></item><item><title>学生が勉強会/コミュニティを運営するということ</title><link>https://blog.web-apps.tech/community_advent/</link><pubDate>Sat, 17 Dec 2016 06:37:00 +0000</pubDate><guid>https://blog.web-apps.tech/community_advent/</guid><description>この記事はIT勉強会/コミュニティ運営 Advent Calendar 2016 に寄せて書いた記事です。 執筆者は@nasa9084 です。 前日の記事は一般社団法人LOCALさんの一般社団法人LOCAL のご紹介 でした。
+まずはじめに あまりネット上、特にブログで自己紹介をする機会というのは多くなく、このブログ単体で言うならば、とある理由があって以前書いていたブログから移行してきたばかりなので、自己紹介というものをすこしはしているのですが、折角の機会でもあるので、ある程度きちんと自己紹介から始めさせていただくこととします。 どうもこんにちはnasa9084 といいます。 現在試される大地であるところの北海道は札幌市に住んでいる大学生(0x17歳)です。 来春4月から、東京で就職予定ですが、卒業論文の進捗が芳しくありません。 PyCon JP というカンファレンスのスタッフをしたりしています。
+「でじぽろ」という勉強会 昨年のから今年の10月まで、札幌で&amp;lt;strong&amp;gt;でじぽろ&amp;lt;/strong&amp;gt; という勉強会を主催していました。 でじぽろはIT技術初心者、もう少し具体的に言うと
+UNIX/Linuxに興味がある/使ったことがある プログラミングに興味がある/すこしやったことがある といったレベルの方を対象として月に一回開催していた勉強会です。
+私と、@chamaharun の二人で主催をしていて、内容としては
+HTTP入門 SQL入門 プログラミング言語大横断 Linuxディストリビューションの紹介 なんかをやったりしていました。
+勉強会を開催するということ 扨、少しばかり前置きが長くなってしまいましたが、そろそろ本題であるところの運営に関する部分の話をしなきゃいけないですね。 今回はIT勉強会/コミュニティ運営 Advent Calendar ですから、多くの大事なところは他の大人な方々が書いてくれてますので、今日は私が特に気をつけたほうがいいと思っていることだったり、おすすめの方法論だったりについて書きましょう。
+持ち出しはしない 勉強会を継続的に運営するにあたり、主催者やスタッフの財布からお金が出ていくことは避けたほうがよいと思います。 楽しいことがしたいと思って始める(であろう)勉強会ですが、事前準備や当日の運営、終わったあとの処理など、結構な時間や労力がかかります。これは大きな負担で、この上開催にお金がかかるとなると、金額が大したことない額だったとしても、継続するのは心理的に困難になるでしょう。 せっかく立ち上がった勉強会も、「主催のお金がないので継続開催できません」では悲しいものがあります。 初回開催など、立て替える必要がある場面はあると思いますが、開催後にでも精算を行って、主催者・スタッフのマイナスが無いようにしたほうがよいです。
+自分に強制する、という選択肢 多くのコミュニティ運営者は、「勉強会やコミュニティの運営は仕事ではないので、開催しなければならないという意識を持って開催するのはつらいからやめたほうがいい」と言っている様に思います。 わたしも多くの部分で賛成ですが、個人の性格だったり、勉強会の目的次第では、「強制的に開催する」という選択肢もある、と覚えておいてください。
+私が主催していたでじぽろの目的の一つに、「主催も勉強する」というものがあります。初心者向けなんて謳っているけれど、主催も学生だから、一緒に勉強していきましょう！ということです。 加えて、主催である私も、@chamaharun も、比較的怠惰な性格をしています。 そこで、でじぽろ運営にあたって、一つルールを決めました。 それが、「つらくても、話すネタがなくても、とにかく月に一回開催する」というルールです。
+不定期開催というのは、心理的負担も減りますが、それと同時に、気づいたら二回目の開催がないまま時間だけが過ぎていた、なんてことになりやすい開催方式でもあります。 定期的に開催することを自分に義務付けることで、勉強会を開催することが習慣になります。 継続開催を目標の一つとする場合、この選択は大きな助けともなってくれることと思います。 でじぽろは、このルールのおかげで、一年間毎月開催することができたと思っています。
+あまり深く考えない 勉強会を主催するということは、実はそれほどハードルの高いことではありません。「とりあえず気が向いたからはじめてみた」くらいの気持ちで十分です。 でじぽろも、はじめは友人との呑みの席で、「なんか勉強会とかやってみたいよね」で始まったのでした。 皆言ってることでは有りますが、仕事ではないのです。辛かったり、つまらなかったらやめていいんです。 そして、気が向いたらまた新しく始めてみたらいいと思いますよ。
+懇親会をする 個人的にこれはとても重要なことだと思っているのですが、懇親会はぜひやったほうがいいと思います。4日のエンジニアコミュニティのつくりかた でも書かれていましたが、懇親会が本編だと考えています。 多くの場合、勉強会で発表されることは、今の御時世ですから、検索したら出てきます。わざわざオフラインで集まってスクリーンの前で発表なんて聞かなくてもいいんです。 それでもやっぱり勉強会/コミュニティに集まるというのは、人と人との出会いが重要だからだと思います。 そして、発表のときというのは、座っているうち8割9割の人は質問もしないですし、発表後に発表者に挨拶に行ったりもしません。 これでは、休みの日に、わざわざ集まっている意味は無いと思います。</description></item><item><title>pyorgというパッケージを作りました</title><link>https://blog.web-apps.tech/create_pyorg/</link><pubDate>Mon, 12 Dec 2016 17:19:00 +0000</pubDate><guid>https://blog.web-apps.tech/create_pyorg/</guid><description>この記事はEmacs Advent Calendar 2016 の、13日目の記事で、執筆者は @nasa9084 です。 前日はfujimisakariさんのプログラミングに役立つelisp10選 でした。
+org記法でブログを書きたい 全国のEmacsユーザの皆さん、org-modeは使っていますか？私は使っています。 普段Pythonを書く私にとって、#はコメントアウトのイメージで、#を見出しに使うmarkdownは(ダメってほどじゃないですけど)なんとなく好きになれません。Emacsユーザということもあり、細かいメモを取るときや、スライドを作るときはorg-modeを使っています。
+そんなわけで、慣れ親しんだorg記法。ブログを書くときも使いたいと考えました。 しかし、マークダウンで書くことができるブログや、或いはorgで書いたものをwordpressにアップすることができるelispなんかも有りましたが、どうもしっくり来ません。 そんな折に運用していたWordPressが使えなくなり、このブログシステムを作りました。 Pythonで使えるorg記法パーサも探したのですが、どれもブログで使えるようなものではなく、自分で変換機構も作成することにしました。 最初はブログシステムの中にorgをHTMLに変換するフィルターを作ればいいかな、と思って書き出したのですが、コレがなかなかうまく行かず。最終的にパーサとしてパッケージ化したので、そのお話をさせていただこうと思います。
+正規表現の置換だけで実装してみた org記法を使いたいとは言っても、ブログ記事を書くのに使いたいだけなので、チェックボックスや時間に関する部分など、org-modeの大部分は必要ありません。文字の装飾部や見出し、リストが実装されれば十分です。 ですので、最初はわざわざ構文木などを作らずとも、単純に正規表現で置換すればいいのではと考えて実装を始めました。 しかしコレが大きな間違いだったのです。
+リスト 問題の１つめは、ネストしたリストを使えないことでした。 単純に正規表現で行ごとに置換していく都合上、ネストしたリストを解析することができません。この段階で、ネストしたリストは使わないことにしよう、と考えました。 しかし、実際に実装してみてわかったのですが(気づくのが遅い)、問題はそれだけではありませんでした。 リストが始まったことや終わったことを判断できないのです。いま置換している行はリストの始めなのか(つまり&amp;lt;ul&amp;gt;が必要なのか)、真ん中なのか、終わりなのか、判断することができないのです。これは困りました。
+スラッシュ 更に大きな問題が潜んでいました。斜体とリンクです。 ご存知のように、URLは区切り文字としてスラッシュを多用します。また、org-modeでは斜体をスラッシュで挟んだ形で表します。 このせいで、URLの一部が斜体としてマークアップされてしまう事態が発生しました。 これはちょっと困ったものです。とりあえず斜体を使わないこととしましたが、これには不満が残ります。
+結局パーサとしてパッケージ化 更に、テーブルの実装ができないなど、org記法が使える！というには不満点が多すぎました。 そんなわけで、改めて外部モジュールとして、org記法のパーサを書きました。org記法で書かれたテキストを読み込み、解析し、抽象構文木を生成します。そこからHTMLを出力することも可能です。GitHub上でソースも公開しています(nasa9084/py-org )。 コレをブログシステムに組み込むことでorgでブログを書くことができるという寸法です。 また、当初予定してはいなかったのですが、gitのsubmoduleで管理するのはバージョンアップの際などいろいろと面倒なので、パッケージ化してPyPIへとアップしました(pyorg )。 現在はバージョン0.1.3として、見出し、リスト、テーブル、リンク、画像、引用、文字の強調を実装済みです。今後、少しずつ拡張予定ですが、当面はリファクタリングを進めようと思っています。
+以上、pyorgのお話でした。</description></item><item><title>YAPC::Hokkaido 2016 SAPPOROに行ってきました</title><link>https://blog.web-apps.tech/yapc_hokkaido_2016/</link><pubDate>Fri, 09 Dec 2016 16:34:00 +0000</pubDate><guid>https://blog.web-apps.tech/yapc_hokkaido_2016/</guid><description>ブログを書くまでがYAPC!とは言われなかった気がしますが書きます。
+昨年で終了したYAPC::Asia Tokyoから一年、新生YAPCとして開催された&amp;lt;strong&amp;gt;YAPC::Hokkaido 2016 SAPPORO&amp;lt;/strong&amp;gt; に参加しました。 YAPCはPerlのイベントで、&amp;ldquo;Yet Another Perl Conference&amp;quot;の略です。twitterハッシュタグは#yapcjapan でした。
+当日の札幌はすごい雪で、東京発の飛行機が飛ばないという事態が発生、登壇者もなかなか札幌まで到達できず、スタッフさん達はなかなか大変な一日だったのではないかな、という印象です。
+スペシャルセッションである対談セッションは、Amazon Web Service、Google、Microsoft、さくらインターネットというクラウド大手4社が集って対談を行うという、非常に豪華な一時間でした。 基調講演はrebuild.fmのmiyagawaさんで、CDNのお話という、これまた普段はなかなか聞くことができない内容でした。 そのほか、emacs界隈で有名なsyohexさん、あちこちの界隈で有名な小飼弾さんなどなど、、、なかなかに濃い内容でした。
+今回は複数抽選が有り、Azure本(Azureテクノロジ入門 )とLINEビーコンが贈呈されました。私も運良くAzure本に当選し、頂くことができました。ありがたい・・・
+当日チケットは1,000円なのに、前夜祭、懇親会がそれぞれ3,500円という、不思議なチケット価格が少しおもしろかったように思います。 次回YAPCは2017年3月4日に大阪で、YAPC::Kansaiとして開催される予定です。</description></item><item><title>Pythonとわたし</title><link>https://blog.web-apps.tech/python_with_me/</link><pubDate>Mon, 05 Dec 2016 08:13:00 +0000</pubDate><guid>https://blog.web-apps.tech/python_with_me/</guid><description>この記事は、PyCon JP Advent Calendar 5日目へ寄せて書いた記事です。 執筆は@nasa9084 です。 昨日は寺田さんによる、PyCon JPの立ち上げ という記事でした。
+Pythonと私の想い出 PyCon JPアドベントカレンダーのテーマは「Pythonと私の想い出」だそうです。 私が初めてまぁそれなりと言える程度にかけるようになったプログラミング言語がPythonでした。 なんどもCに挑戦しては挫折し、を繰り返していたのですが、Pythonのおかげで簡単なプログラムはかけるようになったんでした。
+扨、すでに行き先がよくわからなくなってきているこの記事ですが、もう少し私とPythonとの関わりを書いていきましょうかね。
+Pythonを使う理由 もともと、私はHTMLから、ソースコードというものをエディタで書く、という世界に入ってきたんです。小学校高学年くらいの頃だったでしょうか。 最初はホームページビルダーでWebサイトを書いていたんですが、当時(今でもあるのかな？)、小学生でも使えるJavaScript集みたいなサイトがありまして、例えば、headタグの直後にコピペするとなんかカーソルにきらきらしたのがくっついてくるようになる、とかですね、今となってはとっても懐かしい感じのものがたくさんあったわけですよ。 そんなのをコピペするために、ホームページビルダーでソースコードビュー的なものを開きまして、コピペをしていたわけですね。 HTMLなんてまだまだ書けなかった私ですが、なんとなくルールがわかるんですね。そうすると、なんだか無駄っぽいのがあるわけですよ。 そういうのを、ちょこちょこと手作業で消していってみるわけです。 今思うと、リファクタリングのはしりみたいなもんです。これが私のソースコードを編集することの原点だったんです。
+ときは流れまして、Pythonという言語に出会います。 聞くところによると、この言語、インデントをきちんとしないと動作しないそうじゃないですか。だれが書いてもそれなりに読みやすいコードになると。 もともとソースコードを綺麗にするのが楽しくてソースコードを触り始めた私ですから、これはとても気に入りました。 そうして私はPythonの世界にずぶずぶと浸かっていくのでありました・・・
+GitHub Repository 現在、私のGitHubリポジトリ(https://github.com/nasa9084 )の数は、ちょうど20だそうです。自分が主となって開発しているものの、意味づけという理由があったりしてOrganizationを切り分けているものもありますから、20以上30未満、といったところでしょうか。 このうち、主にPythonで書いているリポジトリは10個程度で、半分には届かないものの、かなりの割合を占めています。
+PyCon JP 2016 2016年はPyCon JP 2016のスタッフをしました。PyCon JPは東京開催で、もちろんスタッフの多くは東京(または東京近郊)在住で、オフラインミーティングや作業日の開催地も東京です。 一応、都合のつく限りリモートでも参加をするんですが、これがなかなか難しいのです。 解決方法はまだわからないのですが、来年は東京で就職なので、遠方のスタッフがもっと溶け込みやすいようになにか頑張りたいと思っています。
+Eureka 実は、このブログのシステムもPythonで書かれています。構成としては、プログラム部がbottle + beaker + jinja2、アプリケーションサーバがuWSGI、HTTPサーバがnginxという構成です。 現状、JavaScriptは一切使っていないため、(特に管理画面において)残念な仕様の部分が多いです。 なんとかしたい。 ブログ移転で違うシステムになりました。
+まとめ的な そろそろ長くなってきましたし、もうなんの話かわからなくなってきましたので、この辺で終わりにしようと思います。 とりあえずですね。何が言いたいかというと、Pythonはいいぞということです。 ぜひPyCon JP 2017にもお越しください。</description></item><item><title>builderscon tokyo 2016 を開催しました！</title><link>https://blog.web-apps.tech/builderscon_tokyo_2016/</link><pubDate>Mon, 05 Dec 2016 04:34:00 +0000</pubDate><guid>https://blog.web-apps.tech/builderscon_tokyo_2016/</guid><description>過ぎし2016年12月3日、builderscon tokyo 2016を開催しました。 builderscon tokyo 2016には(一応)コアスタッフとして、初期のウェブサイト制作等を行いました。 blogを書くまでがbuilderscon!ということなのでブログを書きましょう。
+いやね、builderscon スタッフの皆さんすごい人が揃いすぎてて、私のような若造がリモート参加だと、ちょっとしたすきに話が進んじゃってて。なかなか大変です。 ただ、そんなすごい人たちが色々と決めたり準備を進めたりするのを見るのはすごく勉強になりました。
+当日のトークは、php.iniの話だったり、ビールサーバーの話だったり、キーボードをつくる話だったり、ほんとなんか、尖った話が沢山でした。
+トークもね、一応応募したんですが、当然の如く落選しました。 コレは仕方ないですよ。 私もトーク採用フローに参加しましたけど、他のトークのほうが聞きたかったですもん。
+次はbuilderscon tokyo 2017の開催が決まっています!今度は1000人規模ですよ！ builderscon tokyo 2017 興味のある人はとりあえずSlackに入ってみるといいですよ。 builderscon slack invite form</description></item></channel></rss>

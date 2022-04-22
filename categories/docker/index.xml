@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>docker on something tech.</title><link>https://blog.web-apps.tech/categories/docker/</link><description>Recent content in docker on something tech.</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><copyright>&amp;copy; @nasa9084</copyright><lastBuildDate>Mon, 06 Jan 2020 09:06:45 +0000</lastBuildDate><atom:link href="https://blog.web-apps.tech/categories/docker/index.xml" rel="self" type="application/rss+xml"/><item><title>趣味サーバーのインフラを再構成した件</title><link>https://blog.web-apps.tech/my-private-cloud-2019/</link><pubDate>Mon, 06 Jan 2020 09:06:45 +0000</pubDate><guid>https://blog.web-apps.tech/my-private-cloud-2019/</guid><description>明けましておめでとうございます。 本年もどうぞよろしくお願いいたします。
+扨、もう一昨年になりますが、趣味サーバーのインフラをKubernetesで整えた件 という記事を投稿しました。 その後紆余曲折ございまして、これらを再構成しましたので、改めて記録に残しておこうと思います。
+紆余曲折 まずは紆余曲折とは？という話から始めましょう。
+当時、Kubernetes用のPersistent VolumeはGlusterFSを使用していました。最初はこれで問題なかったのですが、一部のアプリケーション(具体的にはRedmine)を動かしていく上で、非常に速度が遅い、ということが問題となりました。 調査の上、どうやら遅い原因がGlusterFSであり、Cephに置き換えることである程度速度を改善することができそうだ、という見込みが立ったため、前述の記事を投稿してから約二ヶ月後にGlusterFSをCeph RBDへと置き換えました 。
+その後、NTT-X Store でSSDが安かったため、12台ほどSSDを購入、すべての物理ボリュームをHDDからSSDに置き換え、RAID1+0で再構成しました。 同時に、以前はローカルボリュームを直接使用していたOpenNebulaのストレージ部も分散構成にするべく、物理マシン上に直接Cephを構成、これをOpenNebulaとKubernetesでシェアする形にしました。
+これでうまくいったか？と思ったのですが、どっこい、どうやらDL360G6のRAIDカードとSSDの相性(しかもファームウェア単位)が悪いらしく、一週間〜一ヶ月程度で、故障もないのにRAIDから抜けてしまう、という問題が発生しました。
+on Kubernetes on OpenNebulaで稼働していた本ブログの運用にも影響が出たため、一旦本ブログを(今は亡き)CloudGarage へと退避、SSDの交換をNTT-X Storeへと申請しました。
+その後無事SSDは新品交換され、その間に某社 から廃棄するということでいただいてきたDL360G7が三台ほど導入されたため、これを基盤として再度プライベートクラウド基盤を構築することと相成りました。
+現在の構成 再構成した、とはいえ、構成は大きくは変わっていません。 IaaS基盤としてOpenNebula/KVMを使用しているのも変わりませんし、コンテナ基盤としてKubernetesを使用しているのも変わりません。
+強いて言えば、本ブログのストレージは最近までSQLiteを使用していましたが、外部MySQLへと移行したくらいでしょうか。
+物理層 物理サーバとしては前述の通り、DL360G7を使用しています。適当にメモリを増設しており、それぞれ次の様になっています。
+8コア16スレッド、36GB 8コア16スレッド、47GB 8コア16スレッド、49GB メモリの量はできるだけそろえたかったんですが、計算が面倒うまくそろえることができませんでした。
+OSはCentOS 7を使用しています。最初はCentOS 8でやろうとしたんですが、もろもろパッケージがうまくインストールできず、7に落ち着きました。なんとかなってくれ。
+これらに、OpenNebulaおよびCeph MIMICをインストールしてあります。Ceph Nautilusにアップデートしたいんですが、安定しているのだろうか・・・
+VM層 OpenNebula/KVMを使用したIaaSの上にVMをポチポチと立てられるようになっています。OpenNebulaのストレージはCephを使用しています。VMも基本的にはCentOS 7を使用しています。
+また、DBやPrometheusなど一部のアプリケーションをVMとして構築してあります。 以前はK8s上でPrometheusなども管理していたのですが、(主にストレージの)管理が面倒だったので、今回はVMにDockerをインストールして個別に起動しています。
+コンテナ層 コンテナ基盤はKubernetesで、相も変わらずKubespray を使用して構築しています。便利便利。現在はKubernetes 1.16.3です。
+PersistentVolume用のStorageClassはPM上のCephをOpenNebulaと共用で使用しています。手前味噌ですが、Ceph RBDをKubernetesのStorageClassとして登録する を見ながら設定しました。
+Service type LoadBalancerの実装としてMetalLB を、Ingress実装としてNGINX Ingress Controller を導入してあります。また、HTTPSの証明書を自動設定するため、cert-manager を導入しています。以前はうまくインストールできないことがあり困ったりもしたのですが、今回は特にトラブルもなくスムーズに導入できました。だいぶCRDの構造が変わっていたので、以前導入していて、再度構成する必要がある人は注意が必要かもしれません。
+証明書を取得する方法はDNS01で、CloudFlareを使用しているのも変わりません。</description></item><item><title>趣味サーバーのインフラをKubernetesで整えた件</title><link>https://blog.web-apps.tech/my-infra-with-k8s/</link><pubDate>Thu, 23 Aug 2018 04:53:46 +0000</pubDate><guid>https://blog.web-apps.tech/my-infra-with-k8s/</guid><description>趣味でサーバー運用をしています。札幌在住の大学生時代から運用を開始し、引っ越しに伴い朝霞へ移設、現在はコミュニティで使用している自宅外のラックへ移設されましたが、変わらず動いています。 この「趣味サーバー」は購入当初からKVMをベースとした(OpenNebula を使用しています)プライベートクラウド基盤として使用してきました。今も変わらずベースはOpenNebula/KVMなのですが、この度晴れてKubernetes を中心とした構成に組み替えたのでご紹介します。 尚、サーバ台・電気代・インターネット代を除くソフトウェア料金は基本的に無料で済んでいます。
+物理層 このプライベートクラウド基盤は3層で構成されています。
+その最も下の層が物理層です。その名の通り物理サーバそのものですね。物理サーバとしてDELLのR410(ヤフオクで1万弱で購入・4コア8スレッド×2、メモリ16GB)とDL360Gen6一号機(会社の処分品をもらってきた・4コア4スレッド×2、メモリ24GB)、DL360Gen6二号機(会社の処分品をもらってきた・4コア8スレッド×2、メモリ24GB)の三台で、それぞれubuntu 16.04LTSがインストールされています。落ち着いたら18.04LTSにアップデートしたい。 基本的に電源やLANは冗長化されておらず、電源やNICに問題があると即死亡となります。
+VM層 物理層の上に構成されているのがVM層です。OpenNebula/KVMを使用しており、Web UIからポチポチッとVMを作成できます。今回Kubernetesで整える前は、VMとしてnginx インスタンスを作成し、外からの80/443ポートへのアクセスを捌くリバースプロキシとして使用していました。本ブログも長らく単体VM上のDocker コンテナとして稼働していました。基本的にVMにはCentOS 7をインストールしています。 今回の構成変更で、VMは基本的にKubernetesのノードとして使うように変更、直接VM上で動作しているのはオブジェクトストレージを提供するminio とブロックストレージを提供するGlusterFS のみとなりました。 尚、GlusterFSクラスタの構成にはheketi を使用しました。
+コンテナ層 最も上の層がコンテナ層です。ここまでの話からわかるように、Kubernetesクラスタを構成しています。四台のCentOS 7をクラスタノードとして使用、Kubernetes自体の構成管理はkubespray を使用しています。現在はKubernetes 1.11.1です。本ブログもKubernetes上のコンテナとして動いています。 Persistent VolumeとしてVM上に構成したGlusterFSを使用、本ブログ等のバックアップ先としてminioを使用しています。 当初はVM上に構成したnginxインスタンスをそのままリバースプロキシとして使用していましたが、本ブログを含めたアプリケーションを順次Kubernetesクラスタ上のコンテナとして移設していった結果、nginxのVMだけ別になっていることに不便を感じるようになりました(リバースプロキシの設定は手作業で設定しなければなりませんし・・・)。しかし、VM上のnginxリバースプロキシを廃するためには、二つの問題点がありました。
+素Kubernetesでは&amp;lt;code&amp;gt;Ingress&amp;lt;/code&amp;gt; が使用できないため、ホスト名ベースの振り分けが出来ない Let&amp;amp;rsquo;s Encrypt の証明書を管理するVMがいなくなる これらを解決しないことにはnginx VMを削除できません。 解決のためにまず、kind: Ingressを使用するための実装としてingress-nginx を使用することにしました 。Ingressが使用できるようになることで、クラスタ外のリバースプロキシを挟まずともホスト名ベースの振り分けが出来るようになります。 ingress-nginxはService type: NodePortでも使用できるのですが、折角なのでService type: LoadBalancerを使用したいですよね？type: LoadBalancerを使用するための実装としてMetalLB を使用することにしました 。これにより、ingress-nginxに対してクラスタ外のIPアドレスを割り当てることが出来るようになります。
+次に、Let&amp;rsquo;s Encryptの証明書を管理するため、cert-manager を導入しました。cert-managerはkubesprayの導入時にアドオンとしても導入することが出来、今回はkubesprayのアドオンとして導入しました。これはその名の通り、証明書をKubernetesのリソースとして管理することが出来るツールです。最初はLet&amp;rsquo;s Encryptのacme api v02に上手くアクセスできない、ワイルドカードでの証明書取得が出来ないなど躓きましたが、Let&amp;rsquo;s Encryptに上手くアクセスできない問題は最近のkubesprayで比較的新しいバージョンのcert-managerを導入することで解決できました。ワイルドカードでの証明書が取得できない問題は、元々webroot(HTTP01)で証明書を取得していたのが原因のため、DNS01へ切り替えました。Gehirn DNS を使用していましたが、上手くいかなかったためCloudflare DNS に切り替え、事なきを得ました。
+これらにより、nginx VMを廃し、ルーターでの80/443のNAPT設定をすべてKubernetesクラスタへと向けることが出来るようになりました(OpenNebulaやminio等へのアクセスはtype: ExternalNameを使用)。 VMがぐっと減り、ストレージ用途以外のVMを直接触らなければいけないことも減りました。めでたしめでたし。
+使っているものまとめ Ubuntu CentOS Kubernetes (GitHub )</description></item><item><title>kubesprayを使用してkubernetes clusterを構築する(2)</title><link>https://blog.web-apps.tech/deploy-k8s-with-kubespray-2/</link><pubDate>Fri, 23 Feb 2018 14:45:49 +0000</pubDate><guid>https://blog.web-apps.tech/deploy-k8s-with-kubespray-2/</guid><description>3ヶ月ほど前に、kubesprayを使用してkubernetes clusterを構築する という、kubespray とkubespray-cliを使用してKubernetesクラスタを構築する記事を書きました。 しかし、kubespray-cliはすでにdeprecatedだということなので 、kubespray-cliを使用せずにkubesprayでクラスタを構築する手順をまとめておきます。
+要件 kubesprayを使用してkubernetesクラスタを構築するための要件は以下のようになっています。
+ansible 2.4以降とpython-netaddr (python-netaddrを忘れがちなので注意) pip install ansible netaddr Jinja 2.9以降(ansibleの依存でインストールされると思います) 構築先サーバがインターネットに接続できること 構築先サーバでswapが無効化されていること 構築先サーバでIPv4 forwardingが有効になっていること sysctl -w net.ipv4.ip_forward=1する(再起動するまで) /etc/sysctl.confにnet.ipv4.ip_forward = 1と記入する(再起動後) Ansibleを実行するマシンから構築先サーバにSSH鍵が渡されていること ファイアウォールが無効化されていること ファイアウォールの設定をしっかりできる人は有効でも また、kubesprayには(kubespray-cliのような)inventory生成ツールが付属されており、これを利用する場合はpython3系である必要が有ります。
+構成 前回の記事同様、以下のIPを持った三台のサーバを対象として構築してみます。
+192.168.1.11 192.168.1.12 192.168.1.13 それぞれ、IPv4 forwardingが有効化され、firewalldを無効化し、Python 3をインストール済みのCentOS 7のサーバとします。また、kubesprayを実行するローカルマシンから、各サーバのrootユーザにSSH鍵を配置1済みとします。
+手順 準備 まず、kubesprayをダウンロードします。
+$ git clone https://github.com/kubernetes-incubator/kubespray $ cd kubespray リポジトリのクローンが完了したら、ansibleなどの依存モジュールを導入します2。
+kubespray$ pip install -r requirements.txt 次に、ansible用のインベントリを作成します。</description></item><item><title>container-upというツールを書いた</title><link>https://blog.web-apps.tech/container-up/</link><pubDate>Fri, 22 Dec 2017 04:23:39 +0000</pubDate><guid>https://blog.web-apps.tech/container-up/</guid><description>container-up というツールを書いたのでご紹介。
+背景 このブログはghost というブログエンジンで動いています。動作環境としてDocker を使用していて、Ghostの公式イメージ を使用しています。 過去の経緯から、単体のDockerコンテナで動作させており、永続データはDockerボリュームとしてマウントしている形です。
+扨、Docker ComposeやKubernetesなどのオーケストレーションツールを使っている場合、コンテナのバージョンアップは比較的簡単に行うことができます。 たとえば、Docker Composeを使用している場合、docker-compose upで、新しいイメージで作成したコンテナに差し替えることができます。
+しかし、Dockerを単体で使っている場合、基本的には手作業で差し替えを行う必要があります。 Ghostコンテナの更新時は手作業でBlue-Greenアップグレードを行ってきたのですが、Ghostはかなりアップデートのペースが速く、毎度コンテナを差し替えるのが面倒になってきました。 それを楽にするため、container-upを作りました。
+インストール Go環境がある人 Go言語の環境がすでにある人は、以下のコマンドで使用できるようになります。
+$ go get github.com/nasa9084/container-up それ以外の人 Go言語の環境がない人は、Releases ページから自分のOSに併せてバイナリをダウンロード、パスを通してください。 windows, linux, macos向け、それぞれamd64版のバイナリを用意してあります。 動作確認はmacos、linux(CentOS 7)のみ行っています。
+これら以外の環境の人は、予めdep をインストールした上で以下のコマンドでコンパイルしてください。
+$ git clonse https://github.com/nasa9084/container-up.git $ cd container-up $ dep ensure $ go build -o container-up main.go コンパイルしたら、任意の場所にバイナリを移動し、パスを通してください。
+使い方 基本的な使い方は、引数にコンテナ名またはコンテナIDを渡すだけです。
+$ container-up CONTAINER_NAME 与えられたコンテナと同じ名称のイメージを使用して、ボリュームやネットワークなどの設定はそのままに新しいコンテナを作成し、差し替えます。 :latestなイメージを使用している場合、docker pullした後にこのコマンドを実行することで、最新のイメージから作られたコンテナに差し替わるということです。
+もとのコンテナは--rmオプションをつけて起動していた場合を除いて、_oldContainerというサフィックスが付いた状態でstopします。 なにか問題があった場合は、このコンテナに戻すと良いでしょう。
+もし、元のコンテナが必要ない場合は、--rmオプションをつけると、差し替え時に削除します。
+$ container-up --rm CONTAINER_NAME :latestではないような、バージョンタグが付いたイメージを使用していて、新しいバージョンのイメージを使いたい場合などのため、新しいイメージ名を指定して実行することもできます。
+$ container-up -i IMAGE_NAME CONTAINER_NAME この場合、差し替えるコンテナは指定されたイメージで作成されます。</description></item><item><title>Kubernetes-powered Docker for mac is released!</title><link>https://blog.web-apps.tech/kubernetes-powerd_docker_for_mac/</link><pubDate>Thu, 14 Dec 2017 05:03:01 +0000</pubDate><guid>https://blog.web-apps.tech/kubernetes-powerd_docker_for_mac/</guid><description>DockerCon EU 2017で、DockerがKubernetesを統合・サポートすると発表されました が、本日ついにKubernetesサポート版Docker for macが(Edgeリリースですが)リリースされました！
+これにより、macを使用している場合は(おそらく過去最も簡単に)開発用Kubernetesクラスタを起動することができるようになりました！
+この記事では、Docker for macでKubernetesを立ちあげる手順をまとめておきます。
+Kubernetesの起動手順 Docker for macのStable版を利用している場合、Edge版をインストールする必要があります。 Install Docker for mac のページから、Edge Channelのインストーラをダウンロードし、インストールします。 Dockerを終了させておけば、Stable版を自分でアンインストールする必要はありません1。 Edge版をインストールし、Dockerの設定画面を開くと、以下の様にKubernetesタブが追加されています！！
+Kubernetesタブで、Kubernetesの有効化・無効化を簡単に切り替えることができます。
+Enable Kubernetesにチェックを入れ(Show system containersはお好みで)、Apply &amp;amp; Restartボタンを押すと、「Kubernetesの初回インストールは少し時間かかるけど、インストールする？」という確認画面が出るので、Installを押します。
+一応プログレスバーが出るのですが、余り意味はありませんでした・・・ 数分でインストールが終わります。
+無事インストールが終了したら、Closeを押したあと、設定画面を閉じます。
+この時点で、DockerメニューにもKubernetesのステータスが表示されています。
+今回私はShow system containersをオンにしたので、docker ps2するとKubernetesの動作に必要なコンテナが起動しています。 DNS、API Server、Etcd、Scheduler、Proxyと最小限の構成ですね。
+kubectlが自動でインストールされるのかどうかは・・・・わかりませんでした。(すでにインストール済みだったため) kubectlがインストール済みの場合、自動でコンフィグが追加され、以下のコマンドでcontextを選択することで操作できるようになります。
+$ kubectl config use-context docker-for-desktop kubectl get nodesすると、確かに1ノード構成でクラスタが立ち上がっているのがわかります。
+Edge版の初回起動時にアンインストールされます&amp;#160;&amp;#x21a9;&amp;#xfe0e;
+docker container lsと打つのは面倒ですね&amp;#160;&amp;#x21a9;&amp;#xfe0e;</description></item><item><title>kubesprayを使用してkubernetes clusterを構築する</title><link>https://blog.web-apps.tech/deploy-k8s-cluster-using-kubespray/</link><pubDate>Thu, 30 Nov 2017 09:04:06 +0000</pubDate><guid>https://blog.web-apps.tech/deploy-k8s-cluster-using-kubespray/</guid><description>注意: 情報が古くなっています。新しい情報にあわせて記事を書いた ので、そちらをご覧ください。
+kubespray はproduction readyなkubernetes(k8s)クラスタを構成できるツールです。 Ansible をベースに作られているため、任意のサーバでk8sクラスタを構成できます。
+今回は、3台のVMを用意してクラスタを構成してみます1。
+検証環境 今回用意したVMは以下の構成です。
+2Core 8GB RAM 80GB HDD CentOS 7 IPアドレスは以下の様になっているものとします。
+192.168.1.11 192.168.1.12 192.168.1.13 また、kubesprayを実行するローカルの環境はmacOS Sierraです。 各ホストのrootユーザに対してSSH鍵は配置済み、firewalldは無効化されているとします。
+requirements 実行する環境に、Ansible が必要なため、pipでインストールします。23
+$ pip install ansible install kubespray-cli kubespray自体もpipでインストールします。
+$ pip install kubespray prepare 設定ファイルを生成するため、kubespray prepareを使用します。
+$ kubespray prepare --nodes node1[ansible_ssh_host=192.168.1.11] node2[ansible_ssh_host=192.168.1.12] node3[ansible_ssh_host=192.168.1.13] deploy 以下のコマンドでk8sクラスタをデプロイします。
+$ kubespray deploy -u root -n flannel 今回は&amp;lt;code&amp;gt;flannel&amp;lt;/code&amp;gt; ネットワークプラグインで構成しました。 kubesprayは、次のネットワークプラグインを使用してクラスタを構成することができます。
+flannel 4 calico 5 canal contiv 6 weave 7 あとは構成が終了するのを待つだけです。</description></item><item><title>GitLab Docker: initial runners registration token</title><link>https://blog.web-apps.tech/gitlab-docker-init-runners-reg-token/</link><pubDate>Wed, 22 Nov 2017 01:17:14 +0000</pubDate><guid>https://blog.web-apps.tech/gitlab-docker-init-runners-reg-token/</guid><description>GitLab はRuby on Railsで書かれたオープンソースのGitサーバアプリケーションです。おそらく、オープンソースのGitサーバとしては最もよく使われているものではないでしょうか。 GitLabは他のOSS Gitサーバアプリケーションと比べて、非常に多くの機能を持っています。 GitLab-CIもその一つで、GitLab上で自動テストを回すことができます。
+この、GitLab-CIを使用するにはrunnerと呼ばれる、CI環境用のホストを追加する必要があります。 このとき、Registration Tokenという登録用トークンが必要なのですが、REST APIで取得することができません。そのため、Dockerを用いた自動構築時に少々困りました。
+解法 GitLab omnibusの設定項目でRegistration Tokenの初期値を設定することができます。 docker runする際のオプションに、以下を追加します。
+-e GITLAB_OMNIBUS_CONFIG=&amp;#34;gitlab_rails[&amp;#39;initial_shared_runners_registration_token&amp;#39;] = &amp;#39;HOGEHOGETOKEN&amp;#39;&amp;#34; もし、ほかの理由ですでにGITLAB_OMNIBUS_CONFIGの指定がある場合、セミコロン区切りで複数の値を指定することができます。たとえば、初期パスワードを与えている場合は、以下の様にできます。
+-e GITLAB_OMNIBUS_CONFIG=&amp;#34;gitlab_rails[&amp;#39;initial_root_password&amp;#39;] = &amp;#39;FUGAFUGAPASSWORD&amp;#39;; gitlab_rails[&amp;#39;initial_shared_runners_registration_token&amp;#39;] = &amp;#39;HOGEHOGETOKEN&amp;#39;&amp;#34; ここで指定した値をrunnerの登録時に与えれば、OKです。
+docker exec GITLAB_RUNNER_CONTAINER_NAME gitlab-runner register -n -r HOGEHOGETOKEN --run-untagged --executor docker --docker-image alpine:latest --url http://GITLAB_URL --docker-volumes /var/run/docker.sock:/var/run/docker.sock このとき、GITLAB_RUNNER_CONTAINER_NAMEとGITLAB_URLは適宜置き換えてください。</description></item><item><title>Travis CIでdockerのバージョンを最新にする</title><link>https://blog.web-apps.tech/travis-ci-update-docker/</link><pubDate>Wed, 18 Oct 2017 09:17:00 +0000</pubDate><guid>https://blog.web-apps.tech/travis-ci-update-docker/</guid><description>Travis CIでDockerfileをテストする等、dockerを使用したい場合、以下の様に.travis.ymlに記述することでdockerを有効にすることできます。
+sudo: required service: - docker が、その際のdockerのバージョンは17.03.11と、最新版ではありません。 特に問題なのが、multi-stage build は17.05からの機能であるということです。 Travis CIで使用できるdockerでは、multi-stage buildを使用したDockerfileはビルドすることができず、常にfailedとなってしまいます。
+解決方法 Travis-CIでDockerのバージョンを上げるには、以下の記述を.travis.ymlに追加します。
+sudo: required service: - docker before_install: - sudo apt-get update - sudo apt-get install -y -o Dpkg::Options::=&amp;#34;--force-confnew&amp;#34; docker-ce dockerの再起動などの処理は必要ありません。 以上の記述により、Dockerのバージョンが最新版にアップデートされ、multi-stage buildも使用できるようになります。
+2017年10月18日現在&amp;#160;&amp;#x21a9;&amp;#xfe0e;</description></item><item><title>docker-machineでRancherOSを使う</title><link>https://blog.web-apps.tech/docker-machine-with-rancheros/</link><pubDate>Thu, 24 Aug 2017 02:14:41 +0000</pubDate><guid>https://blog.web-apps.tech/docker-machine-with-rancheros/</guid><description>docker-machineとそのメリット docker-machine は仮想マシン上にDocker Engine をインストールするツールです。 docker-machineコマンドを使用することで、Dockerホストを作成・管理することが可能です。 docker-machineを使用してDockerホストを作成すると、
+$ docker-machine env &amp;lt;MACHINE_NAME&amp;gt; でシェル評価可能なDocker接続情報を得ることができ、
+$ eval $(docker-machine env &amp;lt;MACHINE_NAME&amp;gt;) とすることにより、そのセッション内ではあたかもローカル環境のDockerの様にコンテナを操作することが可能となります。
+docker-machineで使用するOS 扨、通常docker-machineでDockerホストを作成すると、インストールされるOSはBoot2Docker ですが、docker-machineでは、ホスト作成時のコマンドラインオプションでisoイメージやシェルスクリプトを指定することでOSやDocker Engineのバージョンを変更することができます。
+RancherOS Boot2Dockerに類似したOSとして、RancherOS があり、rosコマンドを使用することでインストール後でもDockerのバージョンを簡単に切り替えることができます。
+RancherOSは以前、仮想マシン環境のサポートとして、Vagrant 用の環境を提供していましたが、現在(2017年8月)では、すでにサポートが終了しており、docker-machineを使用するようにというアナウンスが出ています。
+そこで、今回はdocker-machineを使用してRancherOSを立ちあげてみようと思います。
+docker-machineでRancherOSを立ちあげる 公式ドキュメント 上に示されたコマンドをそのまま使用しても、途中でエラーが出てしまい(エラーが出ること自体は記述されていますが)、docker-machineをの大きなメリットである、docker-machine envが使用できません。
+エラーを回避するためには、Rancherのリポジトリ上にあるインストールスクリプト を指定します。
+$ docker-machine create -d virtualbox --virtualbox-boot2docker-url https://releases.rancher.com/os/latest/rancheros.iso --engine-install-url https://raw.githubusercontent.com/rancher/install-docker/master/17.06.sh インストールが完了したら、docker-machine lsコマンドで実行中のDockerホストの一覧を表示することができます。
+$ docker-machine ls NAME ACTIVE DRIVER STATE URL SWARM DOCKER ERRORS ros - virtualbox Running tcp://192.168.99.100:2376 v17.06.0-ce Docker Engineのバージョンを切り替える せっかくRancherOSを使用しているので、Docker Engineのバージョンを切り替えてみましょう。 Docker Engineのバージョンを切り替えるにはRancherOS上でrosコマンドを使用するのでした。
+RancherOSはdocker-machineで作成されたVM上で動作していますので、以下のコマンドを用いてログインします。
+$ docker-machine ssh &amp;lt;RANCHEROS_VM_NAME&amp;gt; Vagrantを使用したことがある方はなじみやすいかもしれません。 SSHログインできたら、以下のコマンドで使用可能なDocker Engineのリストを表示します。</description></item><item><title>Docker multi-stage builds</title><link>https://blog.web-apps.tech/docker-multi-stage-builds/</link><pubDate>Thu, 17 Aug 2017 02:06:00 +0000</pubDate><guid>https://blog.web-apps.tech/docker-multi-stage-builds/</guid><description>Docker 17.05から、新機能として&amp;lt;strong&amp;gt;multi-stage builds&amp;lt;/strong&amp;gt; というものが導入されました。 これは、コンテナイメージをより最適化するために有用な機能で、Dockerfileからコンテナイメージをビルドする際にビルド依存のライブラリ/環境とランタイム依存のライブラリ/環境を切り分けることができる機能です。
+具体例を見てみましょう。 Go言語で書かれた何らかのアプリケーションをコンテナ上で動かすことを考えます。 以前までであれば、以下のような二つのDockerfileを用いて作成します。
+まずはビルド用Dockerfileです
+FROMgolang:1.7.3WORKDIR/go/src/github.com/someone/foo/COPY app.go .RUN GOOS=linux go build -a -o app .つぎに、実行用のDockerfileです。
+FROMbusybox:latestWORKDIR/root/COPY app .CMD [&amp;#34;./app&amp;#34;]このようにすることで、ビルド時にはGo言語のビルド環境が入ったコンテナを、実行時は(Go言語環境は不要なので)busyboxコンテナを使用することで、実行イメージを小さく抑えることができます。 しかし、このように二つのDockerfileを使用する場合、コンテナイメージのビルド手順が煩雑になる、複数ファイルのため管理しにくいなどの問題がありました。
+multi-stage buildsを実装されたことで、以下のようにDockerfileを一つにまとめることができます。
+FROMgolang:1.7.3 AS buildWORKDIR/go/src/github.com/someone/foo/COPY app.go .RUN GOOS=linux go build -a -o app .FROMbusybox:latestWORKDIR/root/COPY --from=build /go/src/github.com/someone/foo/app .CMD [&amp;#34;./app&amp;#34;]一行目のAS build、九行目の--from=buildがポイントです。
+AS hogeを使用することで、ビルドステージに名前をつけることができます。 加えて、COPYに--from=hogeの形で名称を指定することで、ビルドステージから直接ファイルをコピーしてくることができます。 これまでは一旦ホストにファイルを取り出してから再度コピーするという形だったので、かなり手間が省けると言えるでしょう。
+golangイメージの中でも小さい、golang:alpineとbusyboxイメージでは、イメージサイズが200倍以上違うため、これは重要なアップデートと考えられます。</description></item><item><title>MySQL on docker macな開発環境でローカルからMySQLに接続する</title><link>https://blog.web-apps.tech/mysql_on_docker_on_mac/</link><pubDate>Tue, 02 May 2017 06:57:00 +0000</pubDate><guid>https://blog.web-apps.tech/mysql_on_docker_on_mac/</guid><description>MySQLをdocker上に立てることで、ローカルの環境を汚さずにMySQLを使ったアプリケーションの開発を行うことができます。 特に、練習段階や、動作確認などの場合、 test_hogehoge な感じのデータベースやテーブルを作ってしまい、後片付けをしないために汚くなっていく、なんてこと、あるんじゃないでしょうか。
+さて、MySQL on dockerへの接続、今までローカルにMySQLを入れて開発していたのでちょっと躓きました。
+$ docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD password mysql:latest 上記のように起動した場合、次のようにコマンドを実行することで接続することができます。
+$ mysql -u hoge -p -h 127.0.0.1 --port 3306 特にポイントなのが、-h 127.0.0.1の部分。localhostにしてしまうと、socketで接続しようとして、エラーになっちゃうんですね。 ここでしばらく悩みました。。。
+以上、簡単ですがメモがてら。</description></item></channel></rss>

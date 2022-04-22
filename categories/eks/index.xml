@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>eks on something tech.</title><link>https://blog.web-apps.tech/categories/eks/</link><description>Recent content in eks on something tech.</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><copyright>&amp;copy; @nasa9084</copyright><lastBuildDate>Sun, 02 Sep 2018 03:04:50 +0000</lastBuildDate><atom:link href="https://blog.web-apps.tech/categories/eks/index.xml" rel="self" type="application/rss+xml"/><item><title>EC2インスタンスからEKS上のアプリケーションにアクセスしたい</title><link>https://blog.web-apps.tech/eks-internal-lb/</link><pubDate>Sun, 02 Sep 2018 03:04:50 +0000</pubDate><guid>https://blog.web-apps.tech/eks-internal-lb/</guid><description>TR;DR KubernetesのServiceで、Internal LoadBalancerってのがあるので、それを使うと良い Internal LoadBalancer 皆さんはEKS、もう使ってますか？私は使っています。業務システムをリプレースで新規開発する的な案件で、新システムの基盤がEKSという感じです。EKSはネットワークが素敵に気持ち悪い感じになっており、普通はKubernetesのクラスタ内部っていうのは、外側と別のサブネットを作る訳なんですが、なんとEKSが所属するVPCと同じサブネットで接続できるようになっています。
+そんなわけで、同一VPCに存在したり、VPC PeeringしたりなんかしちゃってるEC2インスタンスとEKS上のPodはIPアドレスベースでは普通に接続がとれちゃったりするんです。 EKS上のアプリケーションから、EC2インスタンスへアクセスしたいときは、普通にEC2インスタンスのIPアドレスやら内部エンドポイントへアクセスすれば良いですね。EC2インスタンスが動きっぱなしならまぁさほどIPも変わらんでしょう(雑)。
+しかし逆は問題です。PodのIPは勿論割り振られてはいますけれど、これはPodが再生成されると勿論変わってしまいます。アプリケーションは動きっぱなしだから変わらない、なんて言うこともできないです。EC2インスタンスはインスタンス上でアプリケーションの更新なんかもしちゃうかもしれないですけど、EKS上のPodに乗ったアプリケーションの更新は普通、Podの再作成が伴います。Podの再作成が起きると、勿論IPが変わります。
+そうすると、やはり考えるのはServiceをつくることですね。外部からアクセスするためにはそうしますから、同じように考えるのが普通です。 しかし、ここで問題が発生します。普通に外部向けに公開するのと同じようにServiceを作成すると、グローバルIPが当たってしまい、プライベートIPベースで接続できる状況では接続ができないのです。困った。
+まぁドキュメントちゃんと読めよって話なんですが、Kubernetesのドキュメント を読むと、Internal LoadBalancerってのがちゃんと書いてあります。AWSの方のドキュメントには無かったのでちょっと盲点でした。annotationで次の様に指定します。
+# ... metadata: name: my-service annotations: service.beta.kubernetes.io/aws-load-balancer-internal: 0.0.0.0/0 # ... これだけで、type: LoadBalancerで作成されるELBが内部向けのものになります。internal-なんちゃらみたいなエンドポイントです。IPアドレスもしっかりプライベートIPです。最高。後ろの0.0.0.0/0のところで、アクセスできるIPレンジ制限できるのかなーなんて希望的観測を持ちましたが、全然関係ありませんでした。 ちょっと気持ち悪いのは、普通にパブリックDNSで名前引きができてしまうことですかね。全然関係ない外部のネットワークとかでも(パブリックDNSに名前があるので)名前解決ができてしまって、かつプライベートのアドレスが帰って来るという不思議な体験をすることができます。
+$ nslookup internal-xxxxx.us-west-2.elb.amazonaws.com 1.1.1.1 Server: 1.1.1.1 Address: 1.1.1.1#53 Non-authoritative answer: Name: internal-xxxxx.us-west-2.elb.amazonaws.com Address: 192.168.187.214 Name: internal-xxxxx.us-west-2.elb.amazonaws.com Address: 192.168.222.128 Name: internal-xxxxx.us-west-2.elb.amazonaws.com Address: 192.168.109.84 うーん、まぁ実害は無いんでしょうけど。</description></item><item><title>Amazon EKSがGAだと言うので触ってみた</title><link>https://blog.web-apps.tech/amazon-eks-is-now-ga/</link><pubDate>Wed, 06 Jun 2018 02:52:04 +0000</pubDate><guid>https://blog.web-apps.tech/amazon-eks-is-now-ga/</guid><description>AWSのmanaged Kubernetesで、これまでプライベートベータだったElastic Container Service for Kubernetes がGAになった ということなので、さくっとクラスタを作成してみました。1
+参考にしたのはAWS公式、EKSのGetting Started Guide です。
+まずはEKSのページを見てみようとしたところ・・・ ぶっ壊れてますね！これはなんかアレですね。 gettext的なのが上手くいっていないように見えるので、画面下から英語にしてみます。
+無事、正しいと思われるページが表示されました。 なんか、How it worksの説明の図がちょっとぼやけて見えるのは環境のせいでしょうか。
+扨、ここからGetting Startedしていきます。
+まずはEKS用のIAMロールを作っていきます。 IAMロール作成画面のサービスリストにEKSが追加されていますので、これを選択します。
+ユースケースは一つしかなく、選択済みになっています。
+フムー。
+IAMロールが出来ました。
+CloudFormationでクラスタを組んでいきます。 今のところ、EKSが使えるリージョンはUS West(Oregon) (us-west-2)とUS East(N.Virginia) (us-east-1)の二カ所です。今回はUS Eastでやっていきます。
+CloudFormationでCreate Stackをやっていきましょう。 S3 template URLが用意されていますので、これを入力します。 template URLはhttps://amazon-eks.s3-us-west-2.amazonaws.com/1.10.3/2018-06-05/amazon-eks-vpc-sample.yamlです。
+Viewしてみるとこんな感じです。なるほど。
+細かい設定的なところは全くいじらず、さくさく進めていきます。Stack nameはGettingStartedにしました。
+できた。
+Outputのタグを選択して、SecurityGroupsとVpcIdとSubnetIdsを(一応)メモっておきます。2
+次にkubectlの設定をしておきます。 最新のkubectl(1.10以降)をインストールしておいてください。まだインストールしていない場合はEKS側でも配信しているようなのでそれを使ってもOKです。
+EKSでは認証にheptio-authenticator-awsを使用するようなので、こちらもドキュメントに従い導入します。 私はいろいろ考えるのが面倒だったため、go getしました。
+$ go get -u -v github.com/heptio/authenticator/cmd/heptio-authenticator-aws ヘルプを表示して、正常に導入出来たかざっくり確認します。
+$ heptio-authenticator-aws help ここで注意なのですが、ガイドではDownload and Install the Latest AWS CLIのところにOptionalってついてるんですが、これはほぼ必須です。 AWS CLIがないとクラスタに接続出来ないので、AWS CLIをインストールしておきます。</description></item></channel></rss>

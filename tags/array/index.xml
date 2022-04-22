@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>array on something tech.</title><link>https://blog.web-apps.tech/tags/array/</link><description>Recent content in array on something tech.</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><copyright>&amp;copy; @nasa9084</copyright><lastBuildDate>Tue, 26 Jun 2018 08:30:22 +0000</lastBuildDate><atom:link href="https://blog.web-apps.tech/tags/array/index.xml" rel="self" type="application/rss+xml"/><item><title>array/sliceに対する存在確認関数のベンチマーク</title><link>https://blog.web-apps.tech/benchmark_in_func/</link><pubDate>Tue, 26 Jun 2018 08:30:22 +0000</pubDate><guid>https://blog.web-apps.tech/benchmark_in_func/</guid><description>Pythonでいうところの、次の様な条件式を実現する関数を書きたかった。
+ls = [&amp;#34;foo&amp;#34;, &amp;#34;bar&amp;#34;, &amp;#34;baz&amp;#34;] s = &amp;#34;baz&amp;#34; if s in ls: print(&amp;#34;FOOBAR!&amp;#34;) 対象がリストの時、普段なら普通にfor文を回すのですが、今回やりたかったのは定数値の一覧にあるかどうか、だったのと、定数の数も少なかったので、とりあえずで以下の様に実装していました。
+func something(s string) error { if s != &amp;#34;foo&amp;#34; &amp;amp;&amp;amp; s != &amp;#34;bar&amp;#34; &amp;amp;&amp;amp; s != &amp;#34;baz&amp;#34; { return errors.New(&amp;#34;value invalid&amp;#34;) } } 流石に雑すぎるので、リファクタリングしよう、と思ったのですが、「はて、for文挟んだら遅くなったりしないだろうか」などと考えてしまったのでベンチマークを取りました。
+TL; DR 素直にfor文を回しても大して問題はなさそう
+result 今回取ったベンチマークは6種類です。
+for-range文を回す for文を回す map[string]struct{}を集合として取り扱ってみる &amp;amp;&amp;amp;, ||でつなぐ switch文を使う sort.SearchStrings()を使う 6番目のsort.SearchStrings()を使う方法はstackoverflow に書いてあった方法で、二分探索をしてくれるというのでやってみました。
+結果は次の通り。
+BenchmarkInByForRange-4 200000000 9.34 ns/op 0 B/op 0 allocs/op BenchmarkInByFor-4 100000000 10.</description></item><item><title>Golang: 配列からスライスに変換する</title><link>https://blog.web-apps.tech/golang-array-to-slice/</link><pubDate>Fri, 16 Mar 2018 02:19:13 +0000</pubDate><guid>https://blog.web-apps.tech/golang-array-to-slice/</guid><description>TL;DR: slice := array[:]で変換できる Go言語にはリストの様なものが二つあります。配列(固定長)とスライス(可変長)です。 一般に、Go言語で配列を扱うことは多くないでしょう。 実際、多くのパッケージ(標準パッケージを含む)が要求するのはスライスです。
+とは言っても一部のパッケージでは配列を取り扱っているものがあります。 例えば、&amp;lt;code&amp;gt;crypto/sha512&amp;lt;/code&amp;gt;を見てみる と、以下の様な関数が存在します。
+func Sum512(data []byte) [Size]byte ここで、Sizeは同パッケージ内で宣言されている定数で、値は64です。 つまり、この関数は64バイトの長さを持った配列を返します。
+この関数は与えられたデータからSHA512チェックサムを計算するものです。 勿論、返ってきた値をそのまま使用することもあるとは思いますが、そのままの値は人間可読な値では無いため、hexdigestを得たいと思うでしょう。
+Go言語にはもちろんのことながら、encoding/hexパッケージが存在し、簡単に16進文字列を得ることができます。 16進表記の文字列を得るためには、次の関数を使用します。
+func EncodeToString(src []byte) string 引数に注目します。 要求されているのはbyteのスライスです。
+Goでは、配列とスライスは基本的に別物ですから、以下の様に書くことはできません。
+h := sha512.Sum512(&amp;#34;foobar&amp;#34;) // 型エラーが発生する EncodeToString(h) そうは言っても、配列とスライスは非常に似ています。 次のように書きたくなりますね。
+h := sha512.Sum512(&amp;#34;foobar&amp;#34;) EncodeToString([]byte(h)) // 配列をスライスに変換したい しかし、次のようなエラーを生じます。
+cannot convert sha512.Sum512(&amp;#34;foobar&amp;#34;) (type [64]byte) to type []byte 型変換はできないようです。 どうしたら良いのでしょうか。
+Go言語では、配列の範囲インデックスを使った場合、返される値はスライスとなります。
+a := [3]string{&amp;#34;foo&amp;#34;, &amp;#34;bar&amp;#34;, &amp;#34;baz&amp;#34;} s := a[0:2] // sはスライス また、インデックスを省略することもできます。 開始値を省略すれば、0を与えたものと見なされますし、終了値を省略すれば、配列の最後までを切り取ります。
+a := [3]string{&amp;#34;foo&amp;#34;, &amp;#34;bar&amp;#34;, &amp;#34;baz&amp;#34;} s1 := a[:2] // a[0:2]と等しい s2 := a[0:] // a[0:3]と等しい では、両方省略するとどうなるでしょうか。 両方省略すると、もとの配列と同じ内容のスライスが返されます。</description></item></channel></rss>

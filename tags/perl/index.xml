@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>perl on something tech.</title><link>https://blog.web-apps.tech/tags/perl/</link><description>Recent content in perl on something tech.</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><copyright>&amp;copy; @nasa9084</copyright><lastBuildDate>Sun, 04 Mar 2018 13:44:24 +0000</lastBuildDate><atom:link href="https://blog.web-apps.tech/tags/perl/index.xml" rel="self" type="application/rss+xml"/><item><title>YAPC::Okinawa 2018 ONNASONに行ってきました</title><link>https://blog.web-apps.tech/yapc_okinawa_2018/</link><pubDate>Sun, 04 Mar 2018 13:44:24 +0000</pubDate><guid>https://blog.web-apps.tech/yapc_okinawa_2018/</guid><description>YAPC::Fukuoka 2017 HAKATA (行ってきたときの記事はこちら )に引き続き、YAPC::Okinawa 2018 ONNASON に行ってきました。 YAPCはPerlのイベントで、&amp;ldquo;Yet Another Perl Conference&amp;quot;の略です。twitterハッシュタグは前回に引き続き#yapcjapan でした(#yapcokinawa もよく使われていたようです)。
+沖縄は昨年6月にOSC 2017 Okinawa で行って以来二度目です。 YAPC当日はすごい雨で、YAPC::Hokkaidoで大雪だったことを思い出し、「端っこでYAPCをやると何かが起きるのでは」などと言われる具合でした。
+今回は直前までホテルが取れなかったものの、過去のYAPCでホテルを取らずに行って適当になんとかなったので、なんとかなるだろうと思っていましたが、直前に東横インを確保できたので、宿無し旅行ではありませんでした。
+YAPC::Okinawa 2018 ONNASON 今回は会場がOIST だったため(OISTは那覇市内から車で約一時間)、多くの人がスタッフが手配した往復バスでの参加となりました。 そのため、寝坊する人は少なく(いなくはなかったようです)、私もオープニングから参加できました。
+オープニングはCodeHex 氏。
+オープニングを行ったA会場は非常に広く、なんと全席にコンセントがついているという素晴らしいホールでした。
+ノベルティはこんな感じ。特筆すべきはDeNAさんのQi充電器でしょうか。しかし私はQi対応端末を持っていないので使えないのが残念・・・・ 毎度恒例、ネコトーストラボさんのサイリュームもあります。
+YAPC::Hokkaidoから行われてきたチェックインスタンプラリーもココで一区切り。 コンプリート特典として、JPAのラクダさんのシャチハタスタンプをいただきました。
+トークでは、「レイヤー0(電波)からレイヤー8(交渉事)までできる人を募集しています」や、「無曖昧でない」など、会場がどっと沸く名言(迷言？)がいくつか飛び出ました。
+個人的には、@moznionさん のInlineモジュールの話や、新屋さん の正規表現の話が非常に面白かったと思います。 特に、正規表現の話ではバックトラックと曖昧な正規表現の相性が悪い、といった技術的な話にとどまらず、文脈自由文法など、計算理論にまで踏み込んだトークとなっており、OISTという会場でのトークに相応しい素晴らしい内容だったと思います。
+次回のお話 次回YAPCは東京 だそうです！現在はまだテザーサイトがある程度で、日程、会場は調整中とのことでした。</description></item><item><title>YAPC::Fukuoka 2017 HAKATAに行ってきました</title><link>https://blog.web-apps.tech/yapc_fukuoka_2017/</link><pubDate>Mon, 03 Jul 2017 02:04:00 +0000</pubDate><guid>https://blog.web-apps.tech/yapc_fukuoka_2017/</guid><description>今回は言われました！「ブログを書くまでがYAPC!」 と言うことで、YAPC::Kansai 2017 OSAKA (行ってきたときの記事はこちら )に引き続き、YAPC::Fukuoka 2017 HAKATA に行ってきました。 YAPCはPerlのイベントで、&amp;ldquo;Yet Another Perl Conference&amp;quot;の略です。twitterハッシュタグは前回に引き続き#yapcjapan でした。
+福岡および九州は初めてでしたが、いや、暑いですね。 特にYAPCの翌日は非常に天気が良いものの、梅雨の湿気もあり、観光をしていて汗だくでした。
+今回も大阪同様ホテルはとらず、適当にやっていくことに。 意外となんとかなるものです。
+YAPC::Fukuoka 2017 HAKATA 今回も例に漏れず(?)寝坊でオープニングには間に合わず。 今回はPerl6の話は余り多くなかった印象です。
+セキュリティの話、コンテナの話、テストの話など、非常に多様なセッションがありました。
+今回のノベルティはなぜかモバイルバッテリーが二つも入っていたり、米が入っていたり、染み抜きペンが入っていたりととても面白い内容でした。 あ、いつものサイリュームも入ってましたよ。
+個人スポンサーノベルティはビーチサンダル。これからの季節に良いですね。
+LTをしてきました。 今回はLTもしてきました。 タイトルは「嗚呼素晴らしきemacs 」です。
+ベストトーク賞 YAPCでは恒例のベストトーク賞ですが、今回は徳丸さんのゲストセッションがベストトーク賞に選ばれました。 しかしご多忙な徳丸さん。クロージングの時点ですでに帰還してしまってました。 仕方ないので徳丸さんの会社にお勤めの方が代理で受け取ることに。 なんと賞品を渡す人は徳丸さんのセッションを聞いていなかったようで・・・ ベストトークを聞いていなかった人が代理の人に賞品を渡すという、なんとも面白い事態でした。
+ベストLT賞は@codehex さんで、YAPC::Okinawaの宣伝でした。
+懇親会 懇親会ではPixivさんから抽選でプレゼントをいただきました。 Pawooのロゴ入りのモバイルバッテリー(これで今回三つ目)です。
+次回のお話 次回YAPCは3月に沖縄で開催予定です。</description></item><item><title>YAPC::Kansai 2017 OSAKAに行ってきました</title><link>https://blog.web-apps.tech/yapc_kansai_2017/</link><pubDate>Sun, 05 Mar 2017 04:12:00 +0000</pubDate><guid>https://blog.web-apps.tech/yapc_kansai_2017/</guid><description>12月のYAPC::Hokkaido 2016 SAPPORO (行ってきた時の記事はこちら )に引き続き、YAPC::Kansai 2017 OSAKA に行ってきました。
+今回もブログを書くまでがYAPCとは言われなかった気がします。 YAPCはPerlのイベントで、&amp;ldquo;Yet Another Perl Conference&amp;quot;の略です。twitterハッシュタグは前回に引き続き#yapcjapan でした。
+私にとって、大阪はもちろん、関西自体が初めてで、かなり余裕のあるスケジュールを組んだために、どう時間を過ごしていいか悩むといった自体に。 空港に降り立ち、まずどうしよう、という状態ですね。困った。
+仕方がないので大阪出身の友人に、「大阪観光ってどこいったらいいのかな」と聞いてみたのですが、「まぁたこ焼き食べたりしたら？」と今ひとつ役に立たない返事。まぁ食べますけど！ それでも心斎橋とか難波に向かうとよいと教えてもらえたので、Googleマップ先生に頼りつつ、難波へ向かいました。
+結果、何をしたかというと、札幌からの移動前に新しく購入したスマホ用のあれこれをビックカメラで購入するという、大阪まできて何をやっているのかというなんとも残念な行動となってしまいました。
+ホテル探し 今回、北海道から関西まで、勿論飛行機で移動したわけですが、実はホテルも取らずに(!)、YAPC以外は無計画での旅行でした。 とりあえずYAPC前日くらいはホテルに泊まらねば朝起きれない！ということで、ホテル探しをしました。 運良く会場(MOTEX ホール )の近くに割と安く宿を取ることができました。
+こちらがそのお部屋の写真。シングルの部屋を5,500円(500ポイント適用後)でとったのですが、入ってみてびっくり、ツインの部屋でした。 安かったものの、なんとなく豪勢な感じ。
+夜ご飯は近くのお店でたこ焼きを食べました。 十八番というお店で、後で調べたら結構有名っぽいですね。美味しかった。 たこ焼きを塩で食べるというのは初体験でしたが、これもなかなかです。 YAPC::Kansai 2017 OSAKA 開けて翌日。微妙に寝坊したおかげでオープニングには間に合いませんでした。
+一番印象に残ったトークは「Vue.jsで作るSPAから学ぶMVVM、非同期処理、その光と影」ですね。 タイトルにVue.jsと入っているにもかかわらず、Vue.jsという言葉が出て来たのは一度きり、SPAの話のはずなのに、「SPAはやめよう」と、なんだかタイトルに釣られた感が半端ない内容でした。 勿論内容も素晴らしく、「ブラウザはドキュメントビューアなんだからリッチなインターフェースを作るものではない」「ブラウザでリッチなインターフェースを作るのはなんでもVimでなんとかしようとするようなもの」「とはいっても作らなきゃいけない時もある」という、SPAはやるべきじゃないけど、現状やらなきゃいけないことはどうすれば良いのか、その時MV*はどのように構成したらいいのかといった、きちんと筋が通っていて、とても面白い話でした。
+次に印象に残っているのが、「Webアプリケーションのキャッシュ戦略とそのパターン」です。 こちらも「キャッシュは使わないほうがいい」という、タイトル詐欺みたいな話でしたが、非常に納得のいく内容でした。
+ベストトーク賞の投票で票を入れたのは「Webエンジニアに知ってほしいRDBアンチパターン」です。 内容もさることながら、やはり喋りが素晴らしいんです。とっても練習をしていると聞いています。
+ランチタイムはスポンサー企業の方と昼食をいただきました。 今回交通費支援をいただいたので、その対価のようなものです。 実際には、企業に関わるお話は結局あまりしなかったのですが、会場の近くはあまり飲食店がない印象で、昼食を取るのも大変そうでしたので、大変助かりました。
+YAPC::Kansai 2017 OSAKAのステッカーはこんな感じ。 札幌の時のものと並べてはるには、上下を揃えるのが難しい形状で、ちょっと難儀します。
+次回のお話 次回YAPCは福岡で開催だそうです。YAPC::Fukuoka 2017 HAKATA すでにチケットも発売されています。
+その後は沖縄、東京が企画されているそうです。 是非回りたい。</description></item><item><title>YAPC::Hokkaido 2016 SAPPOROに行ってきました</title><link>https://blog.web-apps.tech/yapc_hokkaido_2016/</link><pubDate>Fri, 09 Dec 2016 16:34:00 +0000</pubDate><guid>https://blog.web-apps.tech/yapc_hokkaido_2016/</guid><description>ブログを書くまでがYAPC!とは言われなかった気がしますが書きます。
+昨年で終了したYAPC::Asia Tokyoから一年、新生YAPCとして開催された&amp;lt;strong&amp;gt;YAPC::Hokkaido 2016 SAPPORO&amp;lt;/strong&amp;gt; に参加しました。 YAPCはPerlのイベントで、&amp;ldquo;Yet Another Perl Conference&amp;quot;の略です。twitterハッシュタグは#yapcjapan でした。
+当日の札幌はすごい雪で、東京発の飛行機が飛ばないという事態が発生、登壇者もなかなか札幌まで到達できず、スタッフさん達はなかなか大変な一日だったのではないかな、という印象です。
+スペシャルセッションである対談セッションは、Amazon Web Service、Google、Microsoft、さくらインターネットというクラウド大手4社が集って対談を行うという、非常に豪華な一時間でした。 基調講演はrebuild.fmのmiyagawaさんで、CDNのお話という、これまた普段はなかなか聞くことができない内容でした。 そのほか、emacs界隈で有名なsyohexさん、あちこちの界隈で有名な小飼弾さんなどなど、、、なかなかに濃い内容でした。
+今回は複数抽選が有り、Azure本(Azureテクノロジ入門 )とLINEビーコンが贈呈されました。私も運良くAzure本に当選し、頂くことができました。ありがたい・・・
+当日チケットは1,000円なのに、前夜祭、懇親会がそれぞれ3,500円という、不思議なチケット価格が少しおもしろかったように思います。 次回YAPCは2017年3月4日に大阪で、YAPC::Kansaiとして開催される予定です。</description></item></channel></rss>

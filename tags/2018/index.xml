@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>2018 on something tech.</title><link>https://blog.web-apps.tech/tags/2018/</link><description>Recent content in 2018 on something tech.</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><copyright>&amp;copy; @nasa9084</copyright><lastBuildDate>Wed, 12 Dec 2018 06:16:37 +0000</lastBuildDate><atom:link href="https://blog.web-apps.tech/tags/2018/index.xml" rel="self" type="application/rss+xml"/><item><title>gitにもaliasの指定ができる件</title><link>https://blog.web-apps.tech/git-aliases/</link><pubDate>Wed, 12 Dec 2018 06:16:37 +0000</pubDate><guid>https://blog.web-apps.tech/git-aliases/</guid><description>tl;dr .gitconfigにもaliasの登録ができる [alias]ブロックにaliasを登録する tagsで単数・複数の悩みを解消する discardで変更を取り消す unstageでaddを取り消す uncommitでcommitを取り消す ignoreで.gitignoreを生成する git aliases この記事は今すぐalias登録すべきワンライナー by ゆめみ① Advent Calendar 2018 の6日目の穴埋め記事です。 こちらのアドベントカレンダーは今すぐalias登録べきワンライナーということで、みなさん.bashrcや.zshrcのaliasについて記事を書いてらっしゃいますが、実は.gitconfigという、gitコマンドの設定を書いておくファイルにもaliasの指定ができます。 誰もshellのaliasとは言ってない！(・・・はず)ので、いくつか.gitconfig用に便利なaliasを紹介していきましょう
+aliasの登録方法 .gitconfigは基本的にiniファイルです。そのため、次のように登録します。
+[alias] aliasname1 = some command 1st aliasname2 = some command 2nd 簡単ですね？ [alias]というブロックを作成し、alias名=コマンドの形で記述します。 このときコマンドはgit xxxの形で実行される、xxxの部分のみを指定します。
+例えば、
+[alias] stat = git status と指定すると実際の実行時にはgit git statusという形で実行されてしまいエラーになるので注意しましょう。 gitのつかないコマンドを実行したい場合は頭に!をつけます。
+[alias] ls = !ls このように記載すると、git lsでlsが実行されます。
+git tags git tagというコマンドがありまして。まぁみなさんご存知でしょうが、tagの一覧を出したり、新しいtagを作ったりするコマンドです。これ単体では特に問題がないのですが、リモートリポジトリと合わせて使うと、ちょっと悩みが発生します。 git tagコマンドでタグをつけた後、リモートリポジトリにpushするときのコマンドはgit push --tagsです。これはtagをまとめてpushするので、複数形なんでしょう。しかしです。tagの一覧を出すときに使うのもgit tagと単数形なんですね。 ついついgit tagsと打ってしまいませんか？
+そんなあなたはこんなaliasを登録しておきましょう
+[alias] tags = tag 地味ですが、これで単数形か複数形か悩まずに済みます。</description></item><item><title>LINE DEVELOPER DAY 2018に参加した</title><link>https://blog.web-apps.tech/line-developer-day-2018/</link><pubDate>Wed, 21 Nov 2018 02:51:41 +0000</pubDate><guid>https://blog.web-apps.tech/line-developer-day-2018/</guid><description>LINE DEVELOPER DAY 2018 はLINEの技術に関して紹介するイベントで、2018年11月21日に開催されたので、参加してみました。
+開催地は白金台の八芳園です。初めて来たのですが、厳かな日本庭園なんですね。ちょっと気後れしてしまいます。
+八芳園の入り口にはDEVELOPER DAYのロゴ入り暖簾が下がっていました。
+会場の建物に向かうには庭園を抜ける必要があり、八芳園を少しですが楽しめるのはなかなか良かったように思います。
+受付は外にあり、非常に良い雰囲気でした。雨だったとしても建物の中でやれる様なプランはあったのでしょうが、雰囲気が大きく変わっていたと思いますので、雨じゃ無くて良かったですね。
+GitHubのイベントに行ったときなんかも思ったのですが、会場の壁でこういうことをできるのは企業主体のカンファレンスのすごいところだなーと思います。 これだけで雰囲気が結構違うとは思うんですが、コミュニティ主体だとここにお金をかける意味はあんまり無いので、やろうという話にもならないことが多い気がします。
+写真を撮った時点ではまだオープニングセッションの最中だったので稼働はしていなかったのですが、会場では通常の発表の他、ポスターセッションも行われるようでした。
+カメラを向けても止まってはくれなかったのでちょっとぶれちゃってますが、歴戦のカンファレンススタッフであるとりいさんもスタッフ参加とのこと。
+LINE DEVELOPER DAY 2018は参加費無料で、約1300人の動員(予定)だそうです。</description></item><item><title>builderscon tokyo 2018</title><link>https://blog.web-apps.tech/builderscon-tokyo-2018/</link><pubDate>Mon, 10 Sep 2018 06:10:44 +0000</pubDate><guid>https://blog.web-apps.tech/builderscon-tokyo-2018/</guid><description>過日、かねてより準備してきたbuilderscon tokyo 2018 が開催され、そして終了しました。
+Opening 例年、buildersconでは主催の@lestrrat さんがオープニングでお話をしているのですが、今年はなんと動画を作りました。
+それがこちら。
+オープニングムービーなので7分程度ですが、かなり気合いの入った動画となっております。詳しい情報は「builderscon tokyo 2018 オープニング作成の裏側」 で紹介されています。
+記事中でも解説されていますが、この動画、「The Stanley Parable」というゲームのオマージュとなっています。残念ながら開催時点で私はプレイしたことがなかったのですが、昨日プレイしました。面白い。ナレーションがナレーションのくせにこう、感情的なんですよね。怒ったり、悲しんだり。是非皆さんもプレイして(もしくはYoutubeとかでプレイ動画をみて)みてください。
+Talk 2016年の初開催からコアスタッフとしてやってきた私ですが、今年はスピーカーとしても参加することが出来ました (スライドはこちら )。残念ながら一度は落選しており、キャンセルされた枠に滑り込む形でしたが、2016年はCfP落選、2017年は業務都合で当日参加出来ず、そして2018年は穴埋め登壇と、着実に進歩しています。来年は是非、きちんと「通った」スピーカーとして参加したい・・・！
+twitterで私が話している時間帯のツイートを見ると、「Kubernetesがゲシュタルト崩壊」と複数の方に書かれていて、メダパニを書けてしまった気分です。しかし話題が話題なだけに仕方なかったんや！
+スタッフとして 上でも書きましたが、今年は三年目のコアスタッフ参加でした。初年は北海道からのリモート参加、去年は当日に絡む仕事は出来ず、だったので、実質まともに参加したのは初めてです。 いくつかoctav(buildersconウェブサイトのバックエンドAPIサーバ)の修正を書き(マージされたとは言っていない)、当日スタッフのまとめ役をしたりしました。
+当日スタッフのまとめは正直上手く出来たとは言えず、他のスタッフ(Discordの設定とか当日スタッフの担当割りの細かい調整をしてくれたtoriiさん、諸々印刷などしてくれたuessyさんに多大なる感謝を・・・)の助けを得てなんとか大きな問題無く終えることが出来ました。
+タスクはまだ残っているので、これから一週間くらいかけてがしがしやっていきます。
+来年は今年よりももっとコミットしていきたい所存です。
+来年に向けて buildersconのコアスタッフSlackでは、すでに来年の企画に向けて侃々諤々といった様相です。buildersconは他のカンファレンスに比べ、自由度が高い(と思っています)ので、何か面白いことをやりたい、と思ったかたは是非スタッフに参加してみてください。(そのうちスタッフ募集が始まる・・・はず)</description></item><item><title>KubeCon + CloudNativeCon Europe 2018にいってきた</title><link>https://blog.web-apps.tech/i-went-to-kubecon-cloudnativecon-eu-2018/</link><pubDate>Mon, 07 May 2018 07:08:58 +0000</pubDate><guid>https://blog.web-apps.tech/i-went-to-kubecon-cloudnativecon-eu-2018/</guid><description>過ぎし5月1日〜5月6日、出張でKubeCon &amp;#43; CloudNativeCon Europe 2018 に行ってきました！
+KubeConはKubernetes(k8s) のイベントで、Cloud Native Computing Foundation(CNCF) が主催するCloudNativeConと併せた開催でした。 今回の開催地はデンマークはコペンハーゲンのBella Centerで、実に4000人以上が参加したとのことです。 twitterハッシュタグは#kubecon で、一部#cloudnativecon も使われていたようです。
+私個人としては初海外で、初日の移動で腰をぎっくりするなど、トラブルに見舞われながらも、なんとかこんとか行ってきました。
+finnair 今回、飛行機はFinnair を使用しました。 成田空港からヘルシンキ、ヘルシンキからコペンハーゲンの一回乗り継ぎです。 成田空港からヘルシンキは約10時間、ヘルシンキからコペンハーゲンは約1.5時間のフライトです。
+成田空港からヘルシンキのフライトでは、機内に備え付けのヘッドホンがノイズキャンセラー付きで、意外と音もよく、また、機内食もそこそこおいしかったため、比較的お勧め出来る航空会社かと思います。 成田空港からヘルシンキのフライトはJALも含めたコードシェア便だったため、機内の放送では日本語でも放送される点が安心感があって良いなと感じました。
+The Square 今回とったホテルはコペンハーゲンの繁華街にほど近いThe Square というホテルです。 繁華街に近いため、観光にも困らず、飲み会をした後にも戻りやすい立地でした。
+近所にはNETTO という24時間営業の比較的安いスーパーや、お土産の購入等にも便利なIrma という高級スーパーもあり、買い物には困ることがありませんでした。
+繁華街まで脚を伸ばせば、Hard Rock Cafe や、国内でも一時期話題となったSuperdry1などもあります。
+また、今回のKubeConのパーティーがTivoli garden での開催だったため、パーティー会場がホテルの隣のブロック、という点でも非常に良い立地でした。
+ホテルそのものも、おしゃれで、清潔な感じのホテルでした。 シャワーが出ないということもありませんでしたし、最低限のアメニティも揃っていました。
+冷蔵庫が壊れていたのか、中の飲み物等を冷やしてくれないのだけが少々残念でした。
+KubeCon + CloudNativeCon Europe 2018 KubeCon + CloudNativeCon Europe 2018は非常に多くのトラックがあり、その多くのスライドがPDFで公開されています。
+スライドはスケジュール からダウンロードすることができます。 また、@superbrothers さんが一気にダウンロードするスクリプトを書いてくださっているので、こちらを使用することも出来ます。
+I created a script that downloads all KubeCon + CloudNativeCon Europe 2018 slides from Sched!</description></item><item><title>YAPC::Okinawa 2018 ONNASONに行ってきました</title><link>https://blog.web-apps.tech/yapc_okinawa_2018/</link><pubDate>Sun, 04 Mar 2018 13:44:24 +0000</pubDate><guid>https://blog.web-apps.tech/yapc_okinawa_2018/</guid><description>YAPC::Fukuoka 2017 HAKATA (行ってきたときの記事はこちら )に引き続き、YAPC::Okinawa 2018 ONNASON に行ってきました。 YAPCはPerlのイベントで、&amp;ldquo;Yet Another Perl Conference&amp;quot;の略です。twitterハッシュタグは前回に引き続き#yapcjapan でした(#yapcokinawa もよく使われていたようです)。
+沖縄は昨年6月にOSC 2017 Okinawa で行って以来二度目です。 YAPC当日はすごい雨で、YAPC::Hokkaidoで大雪だったことを思い出し、「端っこでYAPCをやると何かが起きるのでは」などと言われる具合でした。
+今回は直前までホテルが取れなかったものの、過去のYAPCでホテルを取らずに行って適当になんとかなったので、なんとかなるだろうと思っていましたが、直前に東横インを確保できたので、宿無し旅行ではありませんでした。
+YAPC::Okinawa 2018 ONNASON 今回は会場がOIST だったため(OISTは那覇市内から車で約一時間)、多くの人がスタッフが手配した往復バスでの参加となりました。 そのため、寝坊する人は少なく(いなくはなかったようです)、私もオープニングから参加できました。
+オープニングはCodeHex 氏。
+オープニングを行ったA会場は非常に広く、なんと全席にコンセントがついているという素晴らしいホールでした。
+ノベルティはこんな感じ。特筆すべきはDeNAさんのQi充電器でしょうか。しかし私はQi対応端末を持っていないので使えないのが残念・・・・ 毎度恒例、ネコトーストラボさんのサイリュームもあります。
+YAPC::Hokkaidoから行われてきたチェックインスタンプラリーもココで一区切り。 コンプリート特典として、JPAのラクダさんのシャチハタスタンプをいただきました。
+トークでは、「レイヤー0(電波)からレイヤー8(交渉事)までできる人を募集しています」や、「無曖昧でない」など、会場がどっと沸く名言(迷言？)がいくつか飛び出ました。
+個人的には、@moznionさん のInlineモジュールの話や、新屋さん の正規表現の話が非常に面白かったと思います。 特に、正規表現の話ではバックトラックと曖昧な正規表現の相性が悪い、といった技術的な話にとどまらず、文脈自由文法など、計算理論にまで踏み込んだトークとなっており、OISTという会場でのトークに相応しい素晴らしい内容だったと思います。
+次回のお話 次回YAPCは東京 だそうです！現在はまだテザーサイトがある程度で、日程、会場は調整中とのことでした。</description></item></channel></rss>

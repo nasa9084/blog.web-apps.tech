@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>CloudNativeCon on something tech.</title><link>https://blog.web-apps.tech/tags/CloudNativeCon/</link><description>Recent content in CloudNativeCon on something tech.</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><copyright>&amp;copy; @nasa9084</copyright><lastBuildDate>Mon, 07 May 2018 07:08:58 +0000</lastBuildDate><atom:link href="https://blog.web-apps.tech/tags/CloudNativeCon/index.xml" rel="self" type="application/rss+xml"/><item><title>KubeCon + CloudNativeCon Europe 2018にいってきた</title><link>https://blog.web-apps.tech/i-went-to-kubecon-cloudnativecon-eu-2018/</link><pubDate>Mon, 07 May 2018 07:08:58 +0000</pubDate><guid>https://blog.web-apps.tech/i-went-to-kubecon-cloudnativecon-eu-2018/</guid><description>過ぎし5月1日〜5月6日、出張でKubeCon &amp;#43; CloudNativeCon Europe 2018 に行ってきました！
+KubeConはKubernetes(k8s) のイベントで、Cloud Native Computing Foundation(CNCF) が主催するCloudNativeConと併せた開催でした。 今回の開催地はデンマークはコペンハーゲンのBella Centerで、実に4000人以上が参加したとのことです。 twitterハッシュタグは#kubecon で、一部#cloudnativecon も使われていたようです。
+私個人としては初海外で、初日の移動で腰をぎっくりするなど、トラブルに見舞われながらも、なんとかこんとか行ってきました。
+finnair 今回、飛行機はFinnair を使用しました。 成田空港からヘルシンキ、ヘルシンキからコペンハーゲンの一回乗り継ぎです。 成田空港からヘルシンキは約10時間、ヘルシンキからコペンハーゲンは約1.5時間のフライトです。
+成田空港からヘルシンキのフライトでは、機内に備え付けのヘッドホンがノイズキャンセラー付きで、意外と音もよく、また、機内食もそこそこおいしかったため、比較的お勧め出来る航空会社かと思います。 成田空港からヘルシンキのフライトはJALも含めたコードシェア便だったため、機内の放送では日本語でも放送される点が安心感があって良いなと感じました。
+The Square 今回とったホテルはコペンハーゲンの繁華街にほど近いThe Square というホテルです。 繁華街に近いため、観光にも困らず、飲み会をした後にも戻りやすい立地でした。
+近所にはNETTO という24時間営業の比較的安いスーパーや、お土産の購入等にも便利なIrma という高級スーパーもあり、買い物には困ることがありませんでした。
+繁華街まで脚を伸ばせば、Hard Rock Cafe や、国内でも一時期話題となったSuperdry1などもあります。
+また、今回のKubeConのパーティーがTivoli garden での開催だったため、パーティー会場がホテルの隣のブロック、という点でも非常に良い立地でした。
+ホテルそのものも、おしゃれで、清潔な感じのホテルでした。 シャワーが出ないということもありませんでしたし、最低限のアメニティも揃っていました。
+冷蔵庫が壊れていたのか、中の飲み物等を冷やしてくれないのだけが少々残念でした。
+KubeCon + CloudNativeCon Europe 2018 KubeCon + CloudNativeCon Europe 2018は非常に多くのトラックがあり、その多くのスライドがPDFで公開されています。
+スライドはスケジュール からダウンロードすることができます。 また、@superbrothers さんが一気にダウンロードするスクリプトを書いてくださっているので、こちらを使用することも出来ます。
+I created a script that downloads all KubeCon + CloudNativeCon Europe 2018 slides from Sched!</description></item></channel></rss>

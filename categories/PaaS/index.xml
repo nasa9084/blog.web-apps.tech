@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>PaaS on something tech.</title><link>https://blog.web-apps.tech/categories/PaaS/</link><description>Recent content in PaaS on something tech.</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><copyright>&amp;copy; @nasa9084</copyright><lastBuildDate>Thu, 26 Sep 2019 15:10:40 +0000</lastBuildDate><atom:link href="https://blog.web-apps.tech/categories/PaaS/index.xml" rel="self" type="application/rss+xml"/><item><title>Unuboでアプリケーションをサクッとデプロイする</title><link>https://blog.web-apps.tech/first-impression-unubo/</link><pubDate>Thu, 26 Sep 2019 15:10:40 +0000</pubDate><guid>https://blog.web-apps.tech/first-impression-unubo/</guid><description>Unubo というPaaSっぽいものが出てきたようなので触ってみました。 まだリリースされたばかりのようで、クレジットカードの登録もせずに無料で使用できます。
+とりあえず適当にリポジトリを作って動かしてみました。 登録・ログインを済ませたら、使用したい機能を選択します。今回はGoのアプリケーションなので、AppsセクションにあるGoのアイコンを選択しました。
+次の画面でアプリケーション名を入れ、デプロイ先のリージョンを選択します。 DBと接続する場合はDBと同一リージョンじゃなきゃ接続できないそうです。
+最後に、細かい設定をできる画面になりますので、必要な情報を入力します。 ここでは、とりあえずGitHubとの連携をして、リポジトリを選択するだけであとは放置します。
+最後にDeployボタンをポチッとしてデプロイされるのを待ちます。 どうやら、Deploy成功からアクセスできるようになるまで若干タイムラグがあるようなので、気長に待ちましょう。
+有料プランが出てから価格設定や無料枠がどうなるかわかりませんが、まぁぼちぼち便利に使えそうですね。</description></item></channel></rss>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>encoding/hex on something tech.</title><link>https://blog.web-apps.tech/tags/encoding/hex/</link><description>Recent content in encoding/hex on something tech.</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><copyright>&amp;copy; @nasa9084</copyright><atom:link href="https://blog.web-apps.tech/tags/encoding/hex/index.xml" rel="self" type="application/rss+xml"/><item><title>Golang: 配列からスライスに変換する</title><link>https://blog.web-apps.tech/golang-array-to-slice/</link><pubDate>Fri, 16 Mar 2018 02:19:13 +0000</pubDate><guid>https://blog.web-apps.tech/golang-array-to-slice/</guid><description>TL;DR: slice := array[:]で変換できる Go言語にはリストの様なものが二つあります。配列(固定長)とスライス(可変長)です。 一般に、Go言語で配列を扱うことは多くないでしょう。 実際、多くのパッケージ(標準パッケージを含む)が要求するのはスライスです。
+とは言っても一部のパッケージでは配列を取り扱っているものがあります。 例えば、&amp;lt;code&amp;gt;crypto/sha512&amp;lt;/code&amp;gt;を見てみる と、以下の様な関数が存在します。
+func Sum512(data []byte) [Size]byte ここで、Sizeは同パッケージ内で宣言されている定数で、値は64です。 つまり、この関数は64バイトの長さを持った配列を返します。
+この関数は与えられたデータからSHA512チェックサムを計算するものです。 勿論、返ってきた値をそのまま使用することもあるとは思いますが、そのままの値は人間可読な値では無いため、hexdigestを得たいと思うでしょう。
+Go言語にはもちろんのことながら、encoding/hexパッケージが存在し、簡単に16進文字列を得ることができます。 16進表記の文字列を得るためには、次の関数を使用します。
+func EncodeToString(src []byte) string 引数に注目します。 要求されているのはbyteのスライスです。
+Goでは、配列とスライスは基本的に別物ですから、以下の様に書くことはできません。
+h := sha512.Sum512(&amp;#34;foobar&amp;#34;) // 型エラーが発生する EncodeToString(h) そうは言っても、配列とスライスは非常に似ています。 次のように書きたくなりますね。
+h := sha512.Sum512(&amp;#34;foobar&amp;#34;) EncodeToString([]byte(h)) // 配列をスライスに変換したい しかし、次のようなエラーを生じます。
+cannot convert sha512.Sum512(&amp;#34;foobar&amp;#34;) (type [64]byte) to type []byte 型変換はできないようです。 どうしたら良いのでしょうか。
+Go言語では、配列の範囲インデックスを使った場合、返される値はスライスとなります。
+a := [3]string{&amp;#34;foo&amp;#34;, &amp;#34;bar&amp;#34;, &amp;#34;baz&amp;#34;} s := a[0:2] // sはスライス また、インデックスを省略することもできます。 開始値を省略すれば、0を与えたものと見なされますし、終了値を省略すれば、配列の最後までを切り取ります。
+a := [3]string{&amp;#34;foo&amp;#34;, &amp;#34;bar&amp;#34;, &amp;#34;baz&amp;#34;} s1 := a[:2] // a[0:2]と等しい s2 := a[0:] // a[0:3]と等しい では、両方省略するとどうなるでしょうか。 両方省略すると、もとの配列と同じ内容のスライスが返されます。</description></item></channel></rss>
