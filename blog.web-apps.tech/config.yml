@@ -1,0 +1,79 @@
+baseURL: https://blog.web-apps.tech
+disablePathToLower: true
+languageCode: ja-jp
+title: something tech.
+description: no more.
+theme: PaperMod
+enableEmoji: true
+defaultContentLanguage: ja
+copyright: '&copy; @nasa9084'
+
+googleAnalytics: G-HSVYNY8B1T
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+permalinks:
+  post: /:slug
+
+menu:
+  main:
+    - name: Archives
+      url: /archives/
+      weight: 1
+    - name: Tags
+      url: /tags/
+      weight: 2
+    - name: Search
+      url: /search
+      weight: 3
+
+params:
+#  env: production
+  author: nasa9084
+  DateFormat: 2006-01-02
+  showToc: false
+  showShareButtons: false
+  disableAnchoredHeadings: true
+  showPostNavLinks: true
+  defaultTheme: light
+
+  assets:
+    favicon: favicon.png
+    favicon16x16: favicon.png
+    favicon32x32: favicon.png
+    apple_touch_icon: favicon.png
+
+  homeInfoParams:
+    Content: no more.
+
+  socialIcons:
+    - name: twitter
+      url: https://twitter.com/nasa9084
+    - name: facebook
+      url: https://facebook.com/nasa9084
+    - name: github
+      url: https://github.com/nasa9084
+    - name: youtube
+      url: https://www.youtube.com/channel/UClg0fu4211hQJUz1lFtuxNw
+    - name: linkedin
+      url: https://www.linkedin.com/in/nasa9084/
+    - name: rss
+      url: index.xml
+
+  cover:
+    responsiveImages: true
+
+  editPost:
+    url: https://github.com/nasa9084/blog.web-apps.tech/content
+    Text: '[Suggest Changes]'
+    appendFilePath: true
+
+# This configuration is needed for search
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
