@@ -6,11 +6,15 @@ on:
       - main  # Set a branch to deploy
     paths:
       - blog.web-apps.tech/**
-  pull_request:
 
 jobs:
   deploy:
     runs-on: ubuntu-20.04
+
+    services:
+      getogp:
+        image: ghcr.io/nasa9084/getogp:v0.0.1
+
     steps:
       - uses: actions/checkout@v2
         with:

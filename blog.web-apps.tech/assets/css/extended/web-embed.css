@@ -1,0 +1,78 @@
+.web-embed {
+    overflow: hidden;
+    margin: 40px;
+    margin-left: 0;
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 10px;
+    height: 10em;
+}
+
+.web-embed > a {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.web-embed-thumbnail {
+    position: relative;
+    width: 25%;
+    height: 100%;
+}
+
+.web-embed-thumbnail:before {
+    padding-top: 100%;
+    display: block;
+    content: "";
+}
+
+.web-embed-thumbnail > img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    object-fit: cover;
+}
+
+.web-embed-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.web-embed-title {
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 1.4;
+    padding: 17px 20px 10px;
+    color: black;
+}
+
+.web-embed-description {
+    font-size: .9em;
+    color: black;
+    opacity: .5;
+    padding: 0 17px 15px 20px;
+    flex-grow: 1;
+    height: 3em;
+    overflow: hidden;
+}
+
+.web-embed-site-name {
+    font-size: .75em;
+    text-align: right;
+    position: relative;
+    padding-right: 1em;
+}
+
+.web-embed-site-name > img.favicon {
+    display: inline;
+    width: 1em;
+    height: 1em;
+    vertical-align: middle
+}

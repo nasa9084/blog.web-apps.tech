@@ -1,0 +1,28 @@
+{{ $url := .Get "url" }}
+
+{{/* LINE Store specific config */}}
+{{ $localePathSuffix := "" }}
+{{ if (hasPrefix $url "https://store.line.me") }}{{ $localePathSuffix = "/ja" }}{{ end }}
+
+{{ $data := getJSON "http://localhost:8080/ogp?url=" $url $localePathSuffix }}
+{{ $title := $data.title }}
+{{ $image := (index $data.image 0).url}}
+{{ $description := $data.description }}
+{{ $favicon := $data.favicon.url }}
+{{ $siteName := $data.site_name }}
+
+<div class="web-embed">
+  <a href="{{ $url }}">
+    <div class="web-embed-thumbnail">
+      <img src="{{ $image }}" alt="{{ $title }}">
+    </div>
+    <div class="web-embed-content">
+      <div class="web-embed-title">{{ $title }}</div>
+      <div class="web-embed-description">{{ $description }}</div>
+      <div class="web-embed-site-name">
+        <img src="{{ $favicon }}" alt="{{ $siteName }}" class="favicon">
+        {{ $siteName }}
+      </div>
+    </div>
+  </a>
+</div>
