@@ -14,6 +14,8 @@ jobs:
     services:
       getogp:
         image: ghcr.io/nasa9084/getogp:v0.0.1
+        ports:
+          - 8080:8080
 
     steps:
       - uses: actions/checkout@v2
