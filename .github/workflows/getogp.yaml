@@ -1,0 +1,36 @@
+name: getogp
+
+on:
+  push:
+    tags:
+      - 'getogp/*'
+
+jobs:
+  build-and-push-image:
+    runs-on: ubuntu-20.04
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: docker/login-action@v1
+        with:
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+          registry: ghcr.io
+
+      - uses: docker/metadata-action@v3
+        id: meta
+        with:
+          images: ghcr.io/getogp
+          tags: |
+            type=match,pattern=ogp/(.*),group=1
+
+      - uses: docker/build-push-action@v2
+        with:
+          context: ./getogp
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
