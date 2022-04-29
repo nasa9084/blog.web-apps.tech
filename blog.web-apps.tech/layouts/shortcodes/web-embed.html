@@ -7,6 +7,9 @@
 {{ $title := $data.title }}
 {{ $image := (index $data.image 0).url}}
 {{ $description := $data.description }}
+{{/* Message Sticker specific */}}
+{{ if (hasPrefix $url "https://store.line.me") }}{{ $description = strings.TrimSuffix "現在この商品は一部のスマートフォン版LINE 10.3.0以上のトークルームでのみ使用できます。動作環境の最新情報はヘルプをご確認ください。" $description }}{{ end }}
+
 {{ $favicon := $data.favicon.url }}
 {{ $siteName := $data.site_name }}
 
