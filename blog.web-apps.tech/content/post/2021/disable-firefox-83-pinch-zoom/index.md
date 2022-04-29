@@ -8,6 +8,7 @@ description: ""
 draft: false
 cover:
   image: images/firefox.png
+  relative: true
 slug: disable-firefox-83-pinch-zoom
 tags:
 - firefox

@@ -8,6 +8,7 @@ description: ""
 draft: false
 cover:
   image: images/container-up.png
+  relative: true
 slug: container-up
 tags:
 - golang

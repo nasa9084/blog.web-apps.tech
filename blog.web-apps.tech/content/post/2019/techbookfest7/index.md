@@ -8,6 +8,7 @@ description: ""
 draft: false
 cover:
   image: images/----------2019-09-19-1.00.03.png
+  relative: true
 slug: techbookfest7
 tags:
 - 技術書典

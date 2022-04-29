@@ -8,6 +8,7 @@ description: ""
 draft: false
 cover:
   image: images/docker.png
+  relative: true
 slug: docker-multi-stage-builds
 tags:
 - docker

@@ -8,6 +8,7 @@ description: ""
 draft: false
 cover:
   image: images/gopher.png
+  relative: true
 slug: net-http-for-valid
 tags:
 - golang

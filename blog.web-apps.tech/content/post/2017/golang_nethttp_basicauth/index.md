@@ -9,6 +9,7 @@ description: ""
 draft: false
 cover:
   image: images/gopher.png
+  relative: true
 slug: golang_nethttp_basicauth
 tags:
 - golang

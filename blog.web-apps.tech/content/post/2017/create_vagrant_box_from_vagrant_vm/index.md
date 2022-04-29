@@ -9,6 +9,7 @@ description: ""
 draft: false
 cover:
   image: images/vagrant.png
+  relative: true
 slug: create_vagrant_box_from_vagrant_vm
 tags:
 - vagrant

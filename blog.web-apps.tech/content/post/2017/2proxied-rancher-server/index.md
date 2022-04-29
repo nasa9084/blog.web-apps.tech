@@ -11,6 +11,7 @@ description: ""
 draft: false
 cover:
   image: images/rancher-1.png
+  relative: true
 slug: 2proxied-rancher-server
 summary: |-
   常時SSLの環境で二重にリバースプロキシされた環境のRancherは、公式ドキュメント通りの設定を行っても正常に動作しません。

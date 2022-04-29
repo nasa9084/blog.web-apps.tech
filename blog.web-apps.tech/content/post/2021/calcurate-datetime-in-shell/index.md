@@ -7,6 +7,7 @@ description: ""
 draft: false
 cover:
   image: images/shell_prompt.png
+  relative: true
 slug: calcurate-datetime-in-shell
 tags:
 - shell

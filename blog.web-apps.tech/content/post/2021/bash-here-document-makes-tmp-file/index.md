@@ -8,6 +8,7 @@ description: ""
 draft: false
 cover:
   image: images/shell_prompt.png
+  relative: true
 slug: bash-here-document-makes-tmp-file
 tags:
 - bash

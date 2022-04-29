@@ -13,6 +13,7 @@ description: ""
 draft: false
 cover:
   image: images/yapc_hokkaido.png
+  relative: true
 slug: yapc_hokkaido_2016
 tags:
 - yapc

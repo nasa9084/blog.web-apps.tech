@@ -10,6 +10,7 @@ description: ""
 draft: false
 cover:
   image: images/rancheros.png
+  relative: true
 slug: docker-machine-with-rancheros
 tags:
 - docker

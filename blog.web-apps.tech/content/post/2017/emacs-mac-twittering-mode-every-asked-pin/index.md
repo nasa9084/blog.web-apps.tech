@@ -10,6 +10,7 @@ description: ""
 draft: false
 cover:
   image: images/emacs_logo-1.png
+  relative: true
 slug: emacs-mac-twittering-mode-every-asked-pin
 tags:
 - emacs

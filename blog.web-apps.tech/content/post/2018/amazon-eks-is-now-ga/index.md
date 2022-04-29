@@ -9,6 +9,7 @@ description: ""
 draft: false
 cover:
   image: images/eks_logo.png
+  relative: true
 slug: amazon-eks-is-now-ga
 tags:
 - aws

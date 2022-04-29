@@ -10,6 +10,7 @@ description: ""
 draft: false
 cover:
   image: images/gopher-2.png
+  relative: true
 slug: x-crypto-openpgp
 tags:
 - golang

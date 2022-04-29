@@ -9,6 +9,7 @@ tags:
 - hugo
 cover:
   image: images/ghost2hugo.png
+  relative: true
 slug: migrate-ghost-to-hugo
 ---
 

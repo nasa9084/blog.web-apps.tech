@@ -10,6 +10,7 @@ description: ""
 draft: false
 cover:
   image: images/gopher.png
+  relative: true
 slug: nasa9084-go-openapi-rewriting
 tags:
 - golang

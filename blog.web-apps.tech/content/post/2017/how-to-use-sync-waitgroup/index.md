@@ -10,6 +10,7 @@ description: ""
 draft: false
 cover:
   image: images/gopher.png
+  relative: true
 slug: how-to-use-sync-waitgroup
 tags:
 - golang

@@ -9,6 +9,7 @@ description: ""
 draft: false
 cover:
   image: images/----------2019-09-27-0.09.24.png
+  relative: true
 slug: first-impression-unubo
 tags:
 - golang

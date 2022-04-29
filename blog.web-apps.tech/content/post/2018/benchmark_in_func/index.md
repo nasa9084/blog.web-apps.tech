@@ -11,6 +11,7 @@ description: ""
 draft: false
 cover:
   image: images/gopher.png
+  relative: true
 slug: benchmark_in_func
 tags:
 - golang

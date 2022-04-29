@@ -12,6 +12,7 @@ description: ""
 draft: false
 cover:
   image: images/----------2018-05-07-16.10.49.png
+  relative: true
 slug: i-went-to-kubecon-cloudnativecon-eu-2018
 tags:
 - conference

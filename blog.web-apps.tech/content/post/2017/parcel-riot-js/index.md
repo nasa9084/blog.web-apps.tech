@@ -8,6 +8,7 @@ description: ""
 draft: false
 cover:
   image: images/parcel.png
+  relative: true
 slug: parcel-riot-js
 tags:
 - javascript

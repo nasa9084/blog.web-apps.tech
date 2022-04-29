@@ -11,6 +11,7 @@ description: ""
 draft: false
 cover:
   image: images/gitlab.png
+  relative: true
 slug: gitlab-docker-init-runners-reg-token
 tags:
 - gitlab

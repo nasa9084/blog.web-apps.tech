@@ -10,6 +10,7 @@ tags:
 - shortcode
 cover:
   image: images/hugo.png
+  relative: true
 slug: hugo-embed-web-shortcode
 ---
 

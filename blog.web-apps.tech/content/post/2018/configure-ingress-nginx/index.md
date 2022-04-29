@@ -10,6 +10,7 @@ description: ""
 draft: false
 cover:
   image: images/nginx.png
+  relative: true
 slug: configure-ingress-nginx
 tags:
 - ingress-nginx

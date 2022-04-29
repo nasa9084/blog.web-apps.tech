@@ -9,6 +9,7 @@ description: ""
 draft: false
 cover:
   image: images/gnu.png
+  relative: true
 slug: gnu_mo_format
 summary: GNU MOファイルの内部構造について、最小限ですが解説します。
 tags:

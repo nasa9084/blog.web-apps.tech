@@ -10,6 +10,7 @@ description: ""
 draft: false
 cover:
   image: images/gopher-1.png
+  relative: true
 slug: generator-pattern
 tags:
 - golang

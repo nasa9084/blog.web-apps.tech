@@ -12,6 +12,7 @@ description: ""
 draft: false
 cover:
   image: images/gopher.png
+  relative: true
 slug: string-processing-in-go
 tags:
 - golang

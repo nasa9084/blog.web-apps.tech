@@ -5,6 +5,7 @@ description: ""
 draft: false
 cover:
   image: images/flutter_logo.png
+  relative: true
 slug: flutter_setup_with_emacs
 title: Flutter環境構築 with emacs
 ---

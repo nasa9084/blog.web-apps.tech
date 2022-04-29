@@ -12,6 +12,7 @@ description: ""
 draft: false
 cover:
   image: images/yapc_okinawa_logo.png
+  relative: true
 slug: yapc_okinawa_2018
 tags:
 - yapc

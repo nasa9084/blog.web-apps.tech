@@ -16,6 +16,7 @@ description: ""
 draft: false
 cover:
   image: images/kubernetes_logo-1.png
+  relative: true
 slug: ingress-nginx-on-prem
 tags:
 - kubernetes

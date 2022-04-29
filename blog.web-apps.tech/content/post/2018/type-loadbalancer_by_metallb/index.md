@@ -11,6 +11,7 @@ description: ""
 draft: false
 cover:
   image: images/kubernetes.png
+  relative: true
 slug: type-loadbalancer_by_metallb
 tags:
 - kubernetes

@@ -10,6 +10,7 @@ description: ""
 draft: false
 cover:
   image: images/gopher-2.png
+  relative: true
 slug: go-redis-redigo-bolt-benchmark
 tags:
 - golang

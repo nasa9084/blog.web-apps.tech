@@ -9,6 +9,7 @@ description: ""
 draft: false
 cover:
   image: images/gopher.png
+  relative: true
 slug: lsp-mode-with-gopls
 tags:
 - emacs

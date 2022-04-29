@@ -10,6 +10,7 @@ description: ""
 draft: false
 cover:
   image: images/switchbot_logo.png
+  relative: true
 slug: go-switchbot
 tags:
 - golang

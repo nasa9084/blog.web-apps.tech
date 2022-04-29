@@ -11,6 +11,7 @@ description: ""
 draft: false
 cover:
   image: images/emacs_logo.png
+  relative: true
 slug: create_pyorg
 tags:
 - advent  calendar

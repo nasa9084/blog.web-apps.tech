@@ -13,6 +13,7 @@ description: ""
 draft: false
 cover:
   image: images/gopher-4.png
+  relative: true
 slug: golang-array-to-slice
 tags:
 - golang

@@ -16,6 +16,7 @@ description: ""
 draft: false
 cover:
   image: images/web-apps-tech-1--1.png
+  relative: true
 slug: my-infra-with-k8s
 tags:
 - kubernetes

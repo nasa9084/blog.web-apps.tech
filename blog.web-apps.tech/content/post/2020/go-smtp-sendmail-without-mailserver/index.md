@@ -8,6 +8,7 @@ description: ""
 draft: false
 cover:
   image: images/gopher.png
+  relative: true
 slug: go-smtp-sendmail-without-mailserver
 tags:
 - golang

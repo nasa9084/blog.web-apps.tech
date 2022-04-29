@@ -10,6 +10,7 @@ description: ""
 draft: false
 cover:
   image: images/riot_logo.png
+  relative: true
 slug: sass_into_riotjs
 tags:
 - riot.js

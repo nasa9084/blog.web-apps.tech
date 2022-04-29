@@ -12,6 +12,7 @@ description: ""
 draft: false
 cover:
   image: images/kubernetes_logo.png
+  relative: true
 slug: use-external-service-for-ingress-backend
 tags:
 - kubernetes

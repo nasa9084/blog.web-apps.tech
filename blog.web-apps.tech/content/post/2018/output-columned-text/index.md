@@ -10,6 +10,7 @@ description: ""
 draft: false
 cover:
   image: images/gopher.png
+  relative: true
 slug: output-columned-text
 tags:
 - golang

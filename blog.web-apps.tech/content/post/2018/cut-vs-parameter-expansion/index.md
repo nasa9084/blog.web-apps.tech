@@ -10,6 +10,7 @@ description: ""
 draft: false
 cover:
   image: images/shell_prompt.png
+  relative: true
 slug: cut-vs-parameter-expansion
 tags:
 - bash

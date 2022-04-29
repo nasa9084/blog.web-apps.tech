@@ -11,6 +11,7 @@ description: ""
 draft: false
 cover:
   image: images/TravisCI-Full-Color.png
+  relative: true
 slug: travis-ci-update-docker
 tags:
 - docker

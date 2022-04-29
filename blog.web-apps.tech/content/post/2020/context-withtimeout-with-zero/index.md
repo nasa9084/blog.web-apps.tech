@@ -9,6 +9,7 @@ description: ""
 draft: false
 cover:
   image: images/gopher-1.png
+  relative: true
 slug: context-withtimeout-with-zero
 tags:
 - golang

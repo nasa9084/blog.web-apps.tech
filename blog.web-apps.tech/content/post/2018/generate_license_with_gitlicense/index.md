@@ -11,6 +11,7 @@ description: ""
 draft: false
 cover:
   image: images/git-logo.png
+  relative: true
 slug: generate_license_with_gitlicense
 tags:
 - git

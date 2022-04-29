@@ -9,6 +9,7 @@ description: ""
 draft: false
 cover:
   image: images/gopher-3.png
+  relative: true
 slug: go-functional-option-pattern
 tags:
 - golang

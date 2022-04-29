@@ -9,6 +9,7 @@ description: ""
 draft: false
 cover:
   image: images/OpenStack_logo.png
+  relative: true
 slug: kolla-ansible-precheck-error
 summary: 「OpenStack Kolla(Ocata)環境の構築」を参考にOpenStack Kollaのセットアップを行っていたら、エラーが出ました。
 tags:

@@ -12,6 +12,7 @@ description: ""
 draft: false
 cover:
   image: images/eks_logo.png
+  relative: true
 slug: eks-internal-lb
 tags:
 - kubernetes

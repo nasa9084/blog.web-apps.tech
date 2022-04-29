@@ -10,6 +10,7 @@ description: ""
 draft: false
 cover:
   image: images/vagrant-1.png
+  relative: true
 slug: vagrant-vmware-fusion-nested-vm
 tags:
 - vagrant

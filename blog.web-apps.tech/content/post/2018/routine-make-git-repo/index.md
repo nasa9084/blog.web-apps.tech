@@ -8,6 +8,7 @@ description: ""
 draft: false
 cover:
   image: images/git.png
+  relative: true
 slug: routine-make-git-repo
 tags:
 - git

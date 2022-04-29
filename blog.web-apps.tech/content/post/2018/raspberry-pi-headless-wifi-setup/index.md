@@ -7,6 +7,7 @@ description: ""
 draft: false
 cover:
   image: images/raspberry_pi.png
+  relative: true
 slug: raspberry-pi-headless-wifi-setup
 tags:
 - raspberry pi

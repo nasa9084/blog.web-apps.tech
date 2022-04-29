@@ -9,6 +9,7 @@ description: ""
 draft: false
 cover:
   image: images/kubernetes_logo.png
+  relative: true
 slug: kubernetes-powerd_docker_for_mac
 tags:
 - docker

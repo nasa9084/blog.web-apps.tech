@@ -7,6 +7,7 @@ description: ""
 draft: false
 cover:
   image: images/ansible.png
+  relative: true
 slug: ansible-builtin-file-mode-leading-zero
 tags:
 - ansible

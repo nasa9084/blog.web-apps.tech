@@ -5,6 +5,7 @@ description: ""
 draft: false
 cover:
   image: images/---------1.png
+  relative: true
 slug: atagunopingshu-xing
 title: aタグのping属性
 ---

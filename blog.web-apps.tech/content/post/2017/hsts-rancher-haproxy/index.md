@@ -11,6 +11,7 @@ description: ""
 draft: false
 cover:
   image: images/rancher.png
+  relative: true
 slug: hsts-rancher-haproxy
 summary: |-
   HSTSはHTTP Strict Transport Securityの略で、HTTPでの接続を強制的にHTTPSへと変更するようウェブブラウザへ伝達するセキュリティ機構です。

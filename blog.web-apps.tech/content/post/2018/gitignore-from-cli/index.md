@@ -9,6 +9,7 @@ description: ""
 draft: false
 cover:
   image: images/git-logo.png
+  relative: true
 slug: gitignore-from-cli
 tags:
 - git

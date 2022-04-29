@@ -11,6 +11,7 @@ description: ""
 draft: false
 cover:
   image: images/bcon-top.png
+  relative: true
 slug: builderscon-tokyo-2018
 tags:
 - builderscon

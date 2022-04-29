@@ -10,6 +10,7 @@ description: ""
 draft: false
 cover:
   image: images/git-1.png
+  relative: true
 slug: git-aliases
 tags:
 - git

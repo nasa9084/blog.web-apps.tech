@@ -11,6 +11,7 @@ description: ""
 draft: false
 cover:
   image: images/gopher-1.png
+  relative: true
 slug: strings-builder-vs-bytes-buffer
 tags:
 - golang

@@ -8,6 +8,7 @@ description: ""
 draft: false
 cover:
   image: images/gmail.png
+  relative: true
 slug: gmail-filter-as-code
 tags:
 - automation

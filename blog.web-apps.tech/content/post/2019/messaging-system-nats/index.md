@@ -10,6 +10,7 @@ description: ""
 draft: false
 cover:
   image: images/nats-server.png
+  relative: true
 slug: messaging-system-nats
 tags:
 - cncf

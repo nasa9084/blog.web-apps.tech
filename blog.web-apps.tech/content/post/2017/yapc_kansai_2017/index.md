@@ -13,6 +13,7 @@ description: ""
 draft: false
 cover:
   image: images/yapc_kansai_2017.png
+  relative: true
 slug: yapc_kansai_2017
 tags:
 - yapc

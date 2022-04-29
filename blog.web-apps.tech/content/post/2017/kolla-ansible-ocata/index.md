@@ -10,6 +10,7 @@ description: ""
 draft: false
 cover:
   image: images/OpenStack_logo.png
+  relative: true
 slug: kolla-ansible-ocata
 summary: |-
   OpenStack Kollaを用いると、比較的簡単にOpenStack on Docker環境を構築することができます。

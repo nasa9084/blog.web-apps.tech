@@ -9,6 +9,7 @@ description: ""
 draft: false
 cover:
   image: images/influxdb.png
+  relative: true
 slug: play_influxdb
 tags:
 - influxdb

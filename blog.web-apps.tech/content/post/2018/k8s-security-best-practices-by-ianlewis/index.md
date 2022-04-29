@@ -9,6 +9,7 @@ description: ""
 draft: false
 cover:
   image: images/kubernetes.png
+  relative: true
 slug: k8s-security-best-practices-by-ianlewis
 tags:
 - kubernetes

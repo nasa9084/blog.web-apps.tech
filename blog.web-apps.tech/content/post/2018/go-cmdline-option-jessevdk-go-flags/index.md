@@ -8,6 +8,7 @@ description: ""
 draft: false
 cover:
   image: images/gopher.png
+  relative: true
 slug: go-cmdline-option-jessevdk-go-flags
 tags:
 - golang

@@ -9,6 +9,7 @@ description: ""
 draft: false
 cover:
   image: images/builderscon_logo.png
+  relative: true
 slug: builderscon-tokyo-2020
 tags:
 - builderscon

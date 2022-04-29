@@ -8,6 +8,7 @@ description: ""
 draft: false
 cover:
   image: images/kubernetes_logo-2.png
+  relative: true
 slug: liveness-readiness-probe
 tags:
 - kubernetes

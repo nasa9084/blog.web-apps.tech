@@ -10,6 +10,7 @@ description: ""
 draft: false
 cover:
   image: images/letsencrypt.png
+  relative: true
 slug: lets-encrypt-wildcard
 tags:
 - letsencrypt

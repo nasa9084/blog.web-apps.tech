@@ -10,6 +10,7 @@ description: ""
 draft: false
 cover:
   image: images/gopher-3.png
+  relative: true
 slug: graceful-shutdown-with-syg
 tags:
 - golang

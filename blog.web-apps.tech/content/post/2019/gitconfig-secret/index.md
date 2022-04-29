@@ -9,6 +9,7 @@ description: ""
 draft: false
 cover:
   image: images/git.png
+  relative: true
 slug: gitconfig-secret
 tags:
 - git

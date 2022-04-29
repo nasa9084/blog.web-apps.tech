@@ -15,6 +15,7 @@ description: ""
 draft: false
 cover:
   image: images/prometheus.png
+  relative: true
 slug: alertmanager-config-to-secret-with-confd
 tags:
 - Alertmanager

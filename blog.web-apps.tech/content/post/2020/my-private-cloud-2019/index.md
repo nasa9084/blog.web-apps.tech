@@ -17,6 +17,7 @@ description: ""
 draft: false
 cover:
   image: images/private-cloud-diagram-1.png
+  relative: true
 slug: my-private-cloud-2019
 tags:
 - kubernetes

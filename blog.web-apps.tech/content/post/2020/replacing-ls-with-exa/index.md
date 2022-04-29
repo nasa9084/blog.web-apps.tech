@@ -8,6 +8,7 @@ description: ""
 draft: false
 cover:
   image: images/----------2020-05-20-11.52.53.png
+  relative: true
 slug: replacing-ls-with-exa
 tags:
 - zsh

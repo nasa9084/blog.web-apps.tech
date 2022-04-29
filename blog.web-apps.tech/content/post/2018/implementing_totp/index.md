@@ -15,6 +15,7 @@ description: ""
 draft: false
 cover:
   image: images/gopher-5.png
+  relative: true
 slug: implementing_totp
 tags:
 - golang

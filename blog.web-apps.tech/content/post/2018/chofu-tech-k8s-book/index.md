@@ -9,6 +9,7 @@ description: ""
 draft: false
 cover:
   image: images/---------2.png
+  relative: true
 slug: chofu-tech-k8s-book
 tags:
 - kubernetes

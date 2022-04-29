@@ -11,6 +11,7 @@ description: ""
 draft: false
 cover:
   image: images/gopher-2.png
+  relative: true
 slug: go-signal-more-simply
 tags:
 - golang

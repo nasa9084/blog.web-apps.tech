@@ -11,6 +11,7 @@ description: ""
 draft: false
 cover:
   image: images/kubernetes.png
+  relative: true
 slug: deploy-k8s-cluster-using-kubespray
 tags:
 - kubernetes

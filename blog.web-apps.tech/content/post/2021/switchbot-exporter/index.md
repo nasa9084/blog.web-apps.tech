@@ -10,6 +10,7 @@ description: ""
 draft: false
 cover:
   image: images/switchbot-logo.png
+  relative: true
 slug: switchbot-exporter
 tags:
 - switchbot

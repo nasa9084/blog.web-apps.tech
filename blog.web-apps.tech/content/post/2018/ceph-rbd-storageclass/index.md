@@ -12,6 +12,7 @@ description: ""
 draft: false
 cover:
   image: images/ceph_logo.png
+  relative: true
 slug: ceph-rbd-storageclass
 tags:
 - kubernetes

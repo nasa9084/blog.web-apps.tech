@@ -8,6 +8,7 @@ description: ""
 draft: false
 cover:
   image: images/gopher-3.png
+  relative: true
 slug: go-1-9-is-released
 tags:
 - golang

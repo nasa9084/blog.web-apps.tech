@@ -13,6 +13,7 @@ description: ""
 draft: false
 cover:
   image: images/yapc_fukuoka_2017.png
+  relative: true
 slug: yapc_fukuoka_2017
 tags:
 - yapc

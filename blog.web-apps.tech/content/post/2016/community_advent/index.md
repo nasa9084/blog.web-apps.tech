@@ -9,6 +9,7 @@ description: ""
 draft: false
 cover:
   image: images/digiporo_logo.png
+  relative: true
 slug: community_advent
 tags:
 - conference

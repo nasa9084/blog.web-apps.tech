@@ -8,6 +8,7 @@ description: ""
 draft: false
 cover:
   image: images/git.png
+  relative: true
 slug: github-disabled-git-protocol
 tags:
 - github

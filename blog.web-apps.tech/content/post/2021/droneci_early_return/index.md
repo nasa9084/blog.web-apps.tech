@@ -7,6 +7,7 @@ description: ""
 draft: false
 cover:
   image: images/drone_logo.png
+  relative: true
 slug: droneci_early_return
 tags:
 - DroneCI
