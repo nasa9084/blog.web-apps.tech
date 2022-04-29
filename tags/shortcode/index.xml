@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>shortcode on something tech.</title><link>https://blog.web-apps.tech/tags/shortcode/</link><description>Recent content in shortcode on something tech.</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><copyright>&amp;copy; @nasa9084</copyright><lastBuildDate>Fri, 29 Apr 2022 15:26:59 +0900</lastBuildDate><atom:link href="https://blog.web-apps.tech/tags/shortcode/index.xml" rel="self" type="application/rss+xml"/><item><title>BlogカードShortcodeを実装した</title><link>https://blog.web-apps.tech/hugo-embed-web-shortcode/</link><pubDate>Fri, 29 Apr 2022 15:26:59 +0900</pubDate><guid>https://blog.web-apps.tech/hugo-embed-web-shortcode/</guid><description>例えば、はてなブログだとブログカードと呼ばれるこういうの:
+が有ったり、wordpressだとプラグインでこういうの:
+が有り、リンクをなんだか良い感じに表示してくれます。このブログでつい先日まで使っていたGhostでも、こういうの:
+が有りました。
+一方、現在使っているHugoには標準機能でこういったものを表示する機能はありません(twitterとかYoutubeはあるんですけど・・・)。しかし、無ければ作れば良いじゃない、ができるのがHugoの良いところです。
+Hugoにはshortcode という機能があり、例えば標準のtwitter shortcodeだと、
+{{&amp;lt; tweet user=&amp;#34;nasa9084&amp;#34; id=&amp;#34;1519598305554362370&amp;#34; &amp;gt;}} と書くと
+牛乳はさ、牛乳-like飲物よりうまいんだよな
+&amp;mdash; nasa9084@某某某某(0x1b) (@nasa9084) April 28, 2022 の様に展開されます。なので今回は
+{{&amp;lt; web-embed url=&amp;#34;https://example.com&amp;#34; &amp;gt;}} というshortcodeを作ってみようと思います。調べてみると同様の実装をしている人もいましたので、それを参考にしつつ実装していきます。
+まず、URLからデータを取得してくるにはHugoのgetJSON を使うと良さそうです。残念ながらOGP情報などを取得する方法は用意されていないようなので、指定したURLからOGP情報をとってきてJSONとして返す様なプロキシ的なサーバが必要そうです。cloud functions for firebase &amp;#43; javascript で実装している人もいれば、Netlify Functions &amp;#43; javascript でやっている人もいるという感じでしたが、やはり個人的にはGoがシュッと読み書きできて早いし、Cloud Functionsなどで常時稼働させておくには認証とかのことも考える必要がありありそう(まぁ無くてもいいっちゃいいけど、よくわからん踏み台にされても面白くない)で面倒だな、ということでちょっと困ったんですが、OGPプロキシサーバは特に状態を持っておらず、hugo buildする間だけ存在してくれればいいので、GitHub Actionsのサービスコンテナとしてプロキシを動かすことにしました。ローカルでテストビルドするときもdocker runすれば良いだけなので簡単です。
+ハンドラの実装は次の通りです:
+url := r.URL.Query().Get(&amp;#34;url&amp;#34;) if url == &amp;#34;&amp;#34; { http.Error(w, `{&amp;#34;message&amp;#34;: &amp;#34;url parameter is required&amp;#34;}`, http.StatusBadRequest) return } log.Printf(&amp;#34;request URL: %s&amp;#34;, url) ogp, err := opengraph.</description></item></channel></rss>
