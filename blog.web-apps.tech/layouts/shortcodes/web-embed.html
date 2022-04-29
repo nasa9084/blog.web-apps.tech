@@ -1,10 +1,9 @@
 {{ $url := .Get "url" }}
 
 {{/* LINE Store specific config */}}
-{{ $localePathSuffix := "" }}
-{{ if (hasPrefix $url "https://store.line.me") }}{{ $localePathSuffix = "/ja" }}{{ end }}
+{{ if and (hasPrefix $url "https://store.line.me") (not (strings.HasSuffix $url "/ja")) }}{{ $url = print $url "/ja" }}{{ end }}
 
-{{ $data := getJSON "http://localhost:8080/ogp?url=" $url $localePathSuffix }}
+{{ $data := getJSON "http://localhost:8080/ogp?url=" $url }}
 {{ $title := $data.title }}
 {{ $image := (index $data.image 0).url}}
 {{ $description := $data.description }}
