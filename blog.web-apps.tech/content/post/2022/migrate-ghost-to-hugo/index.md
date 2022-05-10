@@ -61,7 +61,7 @@ $ cd ../
 
 ``` shell
 # Go through each post.
-for post_path in dwmkerr.com/content/post/*.md; do
+for post_path in blog.web-apps.tech/content/post/*.md; do
     echo "Found $post_path"
     filename=$(basename -- "$post_path")
     filename="${filename%.*}"
@@ -74,7 +74,7 @@ for post_path in dwmkerr.com/content/post/*.md; do
     year=${dateline:7:4} # i.e. the four characters from index 7
 
     # Create the folder for the post.
-    new_folder="dwmkerr.com/content/post/$year/$filename"
+    new_folder="blog.web-apps.tech/content/post/$year/$filename"
     mkdir -p "$new_folder"
 
     # Move the post.
