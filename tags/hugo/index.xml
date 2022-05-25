@@ -6,13 +6,13 @@
 Hugoにはshortcode という機能があり、例えば標準のtwitter shortcodeだと、
 {{&amp;lt; tweet user=&amp;#34;nasa9084&amp;#34; id=&amp;#34;1519598305554362370&amp;#34; &amp;gt;}} と書くと
 牛乳はさ、牛乳-like飲物よりうまいんだよな
-&amp;mdash; nasa9084@某某某某(0x1b) (@nasa9084) April 28, 2022 の様に展開されます。なので今回は
+&amp;mdash; nasa9084@某某某某(0x1d) (@nasa9084) April 28, 2022 の様に展開されます。なので今回は
 {{&amp;lt; web-embed url=&amp;#34;https://example.com&amp;#34; &amp;gt;}} というshortcodeを作ってみようと思います。調べてみると同様の実装をしている人もいましたので、それを参考にしつつ実装していきます。
 まず、URLからデータを取得してくるにはHugoのgetJSON を使うと良さそうです。残念ながらOGP情報などを取得する方法は用意されていないようなので、指定したURLからOGP情報をとってきてJSONとして返す様なプロキシ的なサーバが必要そうです。cloud functions for firebase &amp;#43; javascript で実装している人もいれば、Netlify Functions &amp;#43; javascript でやっている人もいるという感じでしたが、やはり個人的にはGoがシュッと読み書きできて早いし、Cloud Functionsなどで常時稼働させておくには認証とかのことも考える必要がありありそう(まぁ無くてもいいっちゃいいけど、よくわからん踏み台にされても面白くない)で面倒だな、ということでちょっと困ったんですが、OGPプロキシサーバは特に状態を持っておらず、hugo buildする間だけ存在してくれればいいので、GitHub Actionsのサービスコンテナとしてプロキシを動かすことにしました。ローカルでテストビルドするときもdocker runすれば良いだけなので簡単です。
 ハンドラの実装は次の通りです:
 url := r.URL.Query().Get(&amp;#34;url&amp;#34;) if url == &amp;#34;&amp;#34; { http.Error(w, `{&amp;#34;message&amp;#34;: &amp;#34;url parameter is required&amp;#34;}`, http.StatusBadRequest) return } log.Printf(&amp;#34;request URL: %s&amp;#34;, url) ogp, err := opengraph.</description></item><item><title>Migrate Ghost to Hugo</title><link>https://blog.web-apps.tech/migrate-ghost-to-hugo/</link><pubDate>Sat, 23 Apr 2022 02:52:34 +0900</pubDate><guid>https://blog.web-apps.tech/migrate-ghost-to-hugo/</guid><description>いつの頃からだったか、もう記憶もあやふやではあるけれど、ブログプラットフォームとしてGhost を使っていた。twitter を見る限り、2017年の11月頃には既にGhostを使っていて、確かこの時はDockerでセットアップしていた様な記憶がある。
 Ghost、すごい勢いでアップデートされてってて結構アプデが手間
-&amp;mdash; nasa9084@某某某某(0x1b) (@nasa9084) November 9, 2017 Ghostは結構更新が頻繁で、特にdocker-composeとかも使わずに運用していたので(使っても良かったんだけど、当時はDBもsqliteを使っていてコンテナ一つと永続ボリューム一つ、という単純な構成だったので使わなくて良いか、と思っていた)微妙にイメージの更新が面倒で、container-up というツールを書いてみたりもした。
+&amp;mdash; nasa9084@某某某某(0x1d) (@nasa9084) November 9, 2017 Ghostは結構更新が頻繁で、特にdocker-composeとかも使わずに運用していたので(使っても良かったんだけど、当時はDBもsqliteを使っていてコンテナ一つと永続ボリューム一つ、という単純な構成だったので使わなくて良いか、と思っていた)微妙にイメージの更新が面倒で、container-up というツールを書いてみたりもした。
 その後自宅にKubernetesクラスタをセットアップしてKubernetes管理になり、データベースもMySQLに切り替え、最終的にはGCPのfree tierを使ってon VMで運用していた。 Ghostを使い始めた頃はバージョンもまだ1系だったけど、今となっては4系になって、相も変わらず活発に開発され、admin UIも大分変化した。
 時代の流れとしては当然といえば当然なのだけれど、Ghost 5.0ではMySQL 8が必須となるということで、最近MySQLの更新をしたところ、頻繁に外形監視がfailする様になった。どうやらリソース不足でレスポンスを返せなくなっていたようだった。free tierのVMなのでe2-microインスタンスを使っているため、さもありなんといった感じ。
 もちろん多少のお金を払ってもう少し良いVMにしても良いのだけれど、それほど頻繁に書いているわけでもないブログを運用するためだけに月数千円の出費はいかがなものか、大して書いてもいないのだから静的ページ生成でも良いのではないか、静的ページ生成ならデータベースもいらないしGitHub pagesで配信できて無料ではないか、などと思い、k8s.io でも使っているHugo に乗り換えることにした。
