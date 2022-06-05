@@ -2,4 +2,4 @@
 go-flagsでは、親コマンドにサブコマンドを登録する、という形でサブコマンドを実装していきます。サブコマンドは構造体として実装し、それぞれがオプションを格納する構造体を兼ねる形となります。 終端の、実際に何かの動作をするコマンドは Commander interfaceを実装している必要がありますが、中間のサブコマンド(docker containerのような、グルーピングのためのサブコマンド)はこれを実装していなくても構いません。 Commander interfaceの定義は次のようになっています。
 type Commander interface { Execute(args []string) error } 非常に単純ですね。argsにはコマンドでパースされなかったあまりの引数が渡されます。 実際の実装例を見てみましょう。
 type subcommand struct { verbose bool `short:&amp;#34;v&amp;#34; long:&amp;#34;verbose&amp;#34;` } func (cmd *subcommand) Execute(args []string) error { // some exec return nil } サブコマンドを実装したら、親のコマンドにサブコマンドとして登録します。 ドキュメントを見ると、Command構造体に登録する関数があること、Parser構造体はCommand構造体が埋め込まれていること、がわかります。 通常、go-flagsパッケージを使用する場合はパッケージグローバルのParse関数を使用することが多いと思うのですが、サブコマンドを実装する場合はトップレベルのパーサーを自分で作る必要があります。
-type options struct { // ... } var opts options // global option var parser = flags.</description></item></channel></rss>
+type options struct { // ... } var opts options // global option var parser = flags.NewParser(&amp;amp;opts, flags.Default) var subcmd subcommand func init() { parser.</description></item></channel></rss>

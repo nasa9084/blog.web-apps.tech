@@ -4,7 +4,8 @@ HOTPとTOTP TOTPアルゴリズムとよく似たものに、HOTP(HMAC-Based One
 TOTPを実装する 扨、前置きはこれくらいにしてTOTPアルゴリズムを実装します。 次の式で表されます。
 \begin{eqnarray*} TOTP(K, T_0, X) &amp;amp;=&amp;amp; HOTP(K, T(T_0, X)) \\ T(T_0, X) &amp;amp;=&amp;amp; \frac{(CurrentUnixTime - T_0)}{X} \end{eqnarray*}
 $K$は共有秘密鍵です。 $T_0$は数えはじめの時間で、通常はUnix epoch、すなわち0を使用します。 $X$は一周期の秒数で、規定値は30秒です。(実際、多くのサービスが30秒ベースです) プログラム実装は以下の様に書いてみます。
-func TOTP(k string, t0, x int) int { return HOTP(k, T(t0, x)) } func T(t0, x int) int { return (time.Now().Unix - t0)/x } 簡単ですね。上記の内、定義されていないのはHOTP(K, T)だけとなりました。</description></item><item><title>Golang: 配列からスライスに変換する</title><link>https://blog.web-apps.tech/golang-array-to-slice/</link><pubDate>Fri, 16 Mar 2018 02:19:13 +0000</pubDate><guid>https://blog.web-apps.tech/golang-array-to-slice/</guid><description>TL;DR: slice := array[:]で変換できる Go言語にはリストの様なものが二つあります。配列(固定長)とスライス(可変長)です。 一般に、Go言語で配列を扱うことは多くないでしょう。 実際、多くのパッケージ(標準パッケージを含む)が要求するのはスライスです。
+func TOTP(k string, t0, x int) int { return HOTP(k, T(t0, x)) } func T(t0, x int) int { return (time.Now().Unix - t0)/x } 簡単ですね。上記の内、定義されていないのはHOTP(K, T)だけとなりました。
+HOTPを実装する TOTPのコードではHOTPアルゴリズム部分が実装されていませんので、ここを実装すれば実際に使用できるはずです。 HOTPアルゴリズムはRFC4226 で定義されているので、これを読みながら実装します。</description></item><item><title>Golang: 配列からスライスに変換する</title><link>https://blog.web-apps.tech/golang-array-to-slice/</link><pubDate>Fri, 16 Mar 2018 02:19:13 +0000</pubDate><guid>https://blog.web-apps.tech/golang-array-to-slice/</guid><description>TL;DR: slice := array[:]で変換できる Go言語にはリストの様なものが二つあります。配列(固定長)とスライス(可変長)です。 一般に、Go言語で配列を扱うことは多くないでしょう。 実際、多くのパッケージ(標準パッケージを含む)が要求するのはスライスです。
 とは言っても一部のパッケージでは配列を取り扱っているものがあります。 例えば、&amp;lt;code&amp;gt;crypto/sha512&amp;lt;/code&amp;gt;を見てみる と、以下の様な関数が存在します。
 func Sum512(data []byte) [Size]byte ここで、Sizeは同パッケージ内で宣言されている定数で、値は64です。 つまり、この関数は64バイトの長さを持った配列を返します。
 この関数は与えられたデータからSHA512チェックサムを計算するものです。 勿論、返ってきた値をそのまま使用することもあるとは思いますが、そのままの値は人間可読な値では無いため、hexdigestを得たいと思うでしょう。
@@ -21,4 +22,4 @@ strings.Builder Go 1.10からstrings.Builder構造体が追加されました。
 A Builder is used to efficiently build a string using Write methods. It minimizes memory copying. The zero value is ready to use. Do not copy a non-zero Builder.
 と説明が書かれています。 おそらく、これまで文字列の組み立てをする際にはbytes.Bufferを使っている場合が多かったと思われますが、そういった目的の選択肢として作られたようです。 が、説明を読んでもいまいち違いがわかりません。
 とりあえず、bytes.Bufferとstrings.Builderでは速度面で違いがあるのか調べるべく、ベンチマークを実施しました。
-条件 実行した環境 MacBook Air MacOS Sierra 10.12.6 CPU: Core i7 1.7GHz メモリ: 8GB 実行する関数 Write WriteByte WriteRune WriteString exec $ for i in {1.</description></item></channel></rss>
+条件 実行した環境 MacBook Air MacOS Sierra 10.12.6 CPU: Core i7 1.7GHz メモリ: 8GB 実行する関数 Write WriteByte WriteRune WriteString exec $ for i in {1..10}; do go test -bench . | tail -n +4 | head -n 8 &amp;amp;&amp;amp; echo; done BenchmarkBuilderWrite-4 10000000 129 ns/op BenchmarkBuiderWriteByte-4 200000000 6.</description></item></channel></rss>

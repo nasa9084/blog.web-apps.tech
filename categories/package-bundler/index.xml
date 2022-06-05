@@ -9,4 +9,4 @@ tl;dr Parcel というJavaScriptのモジュールバンドラを触ってみた
 個人的にはRiot.js が好みなので、Riot.jsとの組み合わせで触ってみました。 尚、webpackは挫折したため比較できません。
 Parcel/Riot.jsのインストール npmを使ってインストールします。
 $ npm install -g parcel-bundler riot source code ディレクトリ構造 以下の様なディレクトリ構造だとします。 なお、練習用のため、動作確認に関係ない部分は適当に削っています。
-src/ |- index.html |- index.js |- package.json |- app/ | |- App.tag index.html &amp;lt;!doctype html&amp;gt; &amp;lt;html lang=&amp;#34;ja&amp;#34;&amp;gt; &amp;lt;head&amp;gt;&amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;App&amp;gt;&amp;lt;/App&amp;gt; &amp;lt;script src=&amp;#34;index.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; index.</description></item></channel></rss>
+src/ |- index.html |- index.js |- package.json |- app/ | |- App.tag index.html &amp;lt;!doctype html&amp;gt; &amp;lt;html lang=&amp;#34;ja&amp;#34;&amp;gt; &amp;lt;head&amp;gt;&amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;App&amp;gt;&amp;lt;/App&amp;gt; &amp;lt;script src=&amp;#34;index.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; index.js import riot from &amp;#39;riot&amp;#39; import &amp;#39;.</description></item></channel></rss>

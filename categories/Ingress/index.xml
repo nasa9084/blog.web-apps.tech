@@ -16,4 +16,6 @@ $ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/ma
 インストールが完了したら、ingress-nginxのサービスにIPアドレスが割当たります。
 $ kubectl get svc -n ingress-nginx NAME TYPE CLUSTER-IP EXTERNAL-IP PORT(S) AGE default-http-backend ClusterIP 10.233.50.56 &amp;lt;none&amp;gt; 80/TCP 2d ingress-nginx LoadBalancer 10.233.47.246 192.168.1.100 80:30431/TCP,443:30017/TCP 2d 実際にブラウザでingress-nginxのIPアドレスにアクセスしてみて、default backend - 404と表示されれば正常に動作しています。
 ルーターからKubernetes上のサービスに直通で問題ない(IngressでHTTPS終端なども行う)場合、ルーターのNAT/NAPT設定で、80/443番ポートの行き先をこのIPアドレスとします。
-クラスタ外のLAN内に別のサービスも存在し、別途ロードバランサーなどで振り分けを行っている場合、ワイルドカードを使用してこのIPアドレスへ振り分けるのがお勧めです(nginxでは、ワイルドカードより、正確にマッチした方のルールを優先するため、設定されていない場合にKubernetesへトラフィックが流れることとなります)。</description></item></channel></rss>
+クラスタ外のLAN内に別のサービスも存在し、別途ロードバランサーなどで振り分けを行っている場合、ワイルドカードを使用してこのIPアドレスへ振り分けるのがお勧めです(nginxでは、ワイルドカードより、正確にマッチした方のルールを優先するため、設定されていない場合にKubernetesへトラフィックが流れることとなります)。
+弊宅では、ルーターから80/443でアクセスされるnginxに次の様に設定しています。
+server { listen 80; server_name *.</description></item></channel></rss>

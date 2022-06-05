@@ -12,9 +12,8 @@ sudo: required service: - docker before_install: - sudo apt-get update - sudo ap
 2017年10月18日現在&amp;#160;&amp;#x21a9;&amp;#xfe0e;</description></item><item><title>Docker multi-stage builds</title><link>https://blog.web-apps.tech/docker-multi-stage-builds/</link><pubDate>Thu, 17 Aug 2017 02:06:00 +0000</pubDate><guid>https://blog.web-apps.tech/docker-multi-stage-builds/</guid><description>Docker 17.05から、新機能として&amp;lt;strong&amp;gt;multi-stage builds&amp;lt;/strong&amp;gt; というものが導入されました。 これは、コンテナイメージをより最適化するために有用な機能で、Dockerfileからコンテナイメージをビルドする際にビルド依存のライブラリ/環境とランタイム依存のライブラリ/環境を切り分けることができる機能です。
 具体例を見てみましょう。 Go言語で書かれた何らかのアプリケーションをコンテナ上で動かすことを考えます。 以前までであれば、以下のような二つのDockerfileを用いて作成します。
 まずはビルド用Dockerfileです
-FROMgolang:1.7.3WORKDIR/go/src/github.com/someone/foo/COPY app.go .RUN GOOS=linux go build -a -o app .つぎに、実行用のDockerfileです。
-FROMbusybox:latestWORKDIR/root/COPY app .CMD [&amp;#34;./app&amp;#34;]このようにすることで、ビルド時にはGo言語のビルド環境が入ったコンテナを、実行時は(Go言語環境は不要なので)busyboxコンテナを使用することで、実行イメージを小さく抑えることができます。 しかし、このように二つのDockerfileを使用する場合、コンテナイメージのビルド手順が煩雑になる、複数ファイルのため管理しにくいなどの問題がありました。
+FROM golang:1.7.3 WORKDIR /go/src/github.com/someone/foo/ COPY app.go . RUN GOOS=linux go build -a -o app . つぎに、実行用のDockerfileです。
+FROM busybox:latest WORKDIR /root/ COPY app . CMD [&amp;#34;./app&amp;#34;] このようにすることで、ビルド時にはGo言語のビルド環境が入ったコンテナを、実行時は(Go言語環境は不要なので)busyboxコンテナを使用することで、実行イメージを小さく抑えることができます。 しかし、このように二つのDockerfileを使用する場合、コンテナイメージのビルド手順が煩雑になる、複数ファイルのため管理しにくいなどの問題がありました。
 multi-stage buildsを実装されたことで、以下のようにDockerfileを一つにまとめることができます。
-FROMgolang:1.7.3 AS buildWORKDIR/go/src/github.com/someone/foo/COPY app.go .RUN GOOS=linux go build -a -o app .FROMbusybox:latestWORKDIR/root/COPY --from=build /go/src/github.com/someone/foo/app .CMD [&amp;#34;./app&amp;#34;]一行目のAS build、九行目の--from=buildがポイントです。
-AS hogeを使用することで、ビルドステージに名前をつけることができます。 加えて、COPYに--from=hogeの形で名称を指定することで、ビルドステージから直接ファイルをコピーしてくることができます。 これまでは一旦ホストにファイルを取り出してから再度コピーするという形だったので、かなり手間が省けると言えるでしょう。
-golangイメージの中でも小さい、golang:alpineとbusyboxイメージでは、イメージサイズが200倍以上違うため、これは重要なアップデートと考えられます。</description></item></channel></rss>
+FROM golang:1.7.3 AS build WORKDIR /go/src/github.com/someone/foo/ COPY app.go . RUN GOOS=linux go build -a -o app . FROM busybox:latest WORKDIR /root/ COPY --from=build /go/src/github.com/someone/foo/app . CMD [&amp;#34;./app&amp;#34;] 一行目のAS build、九行目の--from=buildがポイントです。
+AS hogeを使用することで、ビルドステージに名前をつけることができます。 加えて、COPYに--from=hogeの形で名称を指定することで、ビルドステージから直接ファイルをコピーしてくることができます。 これまでは一旦ホストにファイルを取り出してから再度コピーするという形だったので、かなり手間が省けると言えるでしょう。</description></item></channel></rss>

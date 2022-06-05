@@ -6,4 +6,4 @@ $ docker run --rm -d --name nats -p 4222:4222 -p 6222:6222 -p 8222:8222 nats:1.4
 :4222: client port :6222: route port :8222: http port それぞれの詳細な説明は割愛しますが、本記事ではクライアントからの接続だけを試してみますので、4222番ポートだけの開放でも問題ありません。
 Publish/Subscribe まずは標準的なPub/Subモデルから試してみます。NATSのPub/SubはRedisなどと同様、Wikipedia でいうところの「トピックベース」なPub/Subです。NATSではトピックのことをSubjectとよびます。 NATSのSubjectは階層構造をとることができ、.(ドット)で区切って表現します。Subscriberはこの階層構造の一部にワイルドカードとして*(アスタリスク)を使用することができます。また、&amp;gt;を使用して下の階層すべて、を表現することもできます。 例えば、Subscriberがfoo.bar.*を購読している場合、foo.bar.bazやfoo.bar.quxなどのメッセージを受け取ることができますが、foo.bar.baz.quxは受け取ることができません。一方、foo.bar.&amp;gt;を購読している場合、foo.bar.baz.quxも受け取ることができます。
 サンプルコードとして、次のようなものを書いてみました。
-Publisher package main import ( &amp;#34;log&amp;#34; nats &amp;#34;github.</description></item></channel></rss>
+Publisher package main import ( &amp;#34;log&amp;#34; nats &amp;#34;github.com/nats-io/go-nats&amp;#34; ) func main() { nc, err := nats.</description></item></channel></rss>

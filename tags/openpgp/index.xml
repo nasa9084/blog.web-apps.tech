@@ -7,4 +7,5 @@ func SymmetricallyEncrypt(ciphertext io.Writer, passphrase []byte, hints *FileHi
 第三引数のhintsには暗号化するファイルのメタデータなどを含むことができますが、単純にnilを与えても良いです。
 第四引数のconfigで暗号化方式や乱数エントロピーソース、圧縮アルゴリズムなどを設定することができます。設定しなければ乱数としてcrypto/rand.Readerが、ハッシュ関数としてSHA-256が、暗号化関数としてAES-128が、現在時刻としてtime.Nowが、RSAのビット数として2048がそれぞれ使用されます。圧縮はされません。
 返り値は二値で、io.WriteCloserとerrorです。返り値のio.WriteCloserに暗号化したい内容を書き込むことで暗号化が行われます。必ずCloseする必要があるので忘れないように注意しましょう。
-使用例 func encrypt(in io.Reader, out io.Writer, passphrase []byte) error { // omit error handling w, _ := openpgp.SymmetricallyEncrypt(out, passphrase, nil, nil) defer w.Close() io.Copy(w, in) return nil } 復号 暗号化したファイルを復号するには、ReadMessage関数を使用します。Decrypt〜のような関数ではないので注意が必要でしょう。関数のシグネチャは次のようになっています。</description></item></channel></rss>
+使用例 func encrypt(in io.Reader, out io.Writer, passphrase []byte) error { // omit error handling w, _ := openpgp.SymmetricallyEncrypt(out, passphrase, nil, nil) defer w.Close() io.Copy(w, in) return nil } 復号 暗号化したファイルを復号するには、ReadMessage関数を使用します。Decrypt〜のような関数ではないので注意が必要でしょう。関数のシグネチャは次のようになっています。
+func ReadMessage(r io.Reader, keyring KeyRing, prompt PromptFunction, config *packet.</description></item></channel></rss>

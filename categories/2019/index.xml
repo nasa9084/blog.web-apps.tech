@@ -16,7 +16,9 @@ LINE.goというイベントを開催したのも3月でした。
 &amp;mdash; nasa9084@某某某某(0x1a) (@nasa9084) April 12, 2019 この後勢いよくドラム式洗濯機を買いました。最高。
 5月 PyCon mini sapporoが5月だったらしいです。GoConでしゃべったのもこのあたりだったらしい。
 改めて。でかい。 pic.twitter.com/zO9TLfdhy8
-&amp;mdash; nasa9084@某某某某(0x1a) (@nasa9084) May 29, 2019 OSC19doも5末〜6始でしたね</description></item><item><title>go-openapi を書き直しています</title><link>https://blog.web-apps.tech/nasa9084-go-openapi-rewriting/</link><pubDate>Fri, 20 Dec 2019 08:15:39 +0000</pubDate><guid>https://blog.web-apps.tech/nasa9084-go-openapi-rewriting/</guid><description>本記事はGo2 Advent Calendar の20日目の記事です。昨日はyaegashiさんによる、jsonx.go でした。
+&amp;mdash; nasa9084@某某某某(0x1a) (@nasa9084) May 29, 2019 OSC19doも5末〜6始でしたね
+6月 鰹節食べ放題 pic.twitter.com/c6ouIwcHis
+&amp;mdash; nasa9084@某某某某(0x1a) (@nasa9084) June 11, 2019 ところで、まとめを書くのも疲れてきました。</description></item><item><title>go-openapi を書き直しています</title><link>https://blog.web-apps.tech/nasa9084-go-openapi-rewriting/</link><pubDate>Fri, 20 Dec 2019 08:15:39 +0000</pubDate><guid>https://blog.web-apps.tech/nasa9084-go-openapi-rewriting/</guid><description>本記事はGo2 Advent Calendar の20日目の記事です。昨日はyaegashiさんによる、jsonx.go でした。
 皆さんはOpenAPI Specification というモノをご存じでしょうか。OpenAPI SpecificationはJSONまたはYAMLでREST APIを表現するための仕様で、現在バージョン3.0.2 が最新です。いわゆるSwagger の後継で、バージョン1系、2系がSwagger、3系以降がOpenAPI、ということになっています(Swaggerなら聞いたことがある/使っているという人も多いのではないでしょうか)。
 OpenAPI Specificationは人間にも機械にも(比較的)読みやすい仕様書として、コード生成や、ドキュメントページの生成に使用することが可能です。
 個人的には専らコード生成に使用しており、Go言語向けの実装としてgithub.com/nasa9084/go-openapi (以下go-openapi)を実装・公開しています。 go-openapiは2017年ごろから細々と実装を続けており、(多分)二番目か三番目には古いと思われるOpenAPIのGo実装です。

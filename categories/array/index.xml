@@ -5,7 +5,7 @@ TL; DR 素直にfor文を回しても大して問題はなさそう
 result 今回取ったベンチマークは6種類です。
 for-range文を回す for文を回す map[string]struct{}を集合として取り扱ってみる &amp;amp;&amp;amp;, ||でつなぐ switch文を使う sort.SearchStrings()を使う 6番目のsort.SearchStrings()を使う方法はstackoverflow に書いてあった方法で、二分探索をしてくれるというのでやってみました。
 結果は次の通り。
-BenchmarkInByForRange-4 200000000 9.34 ns/op 0 B/op 0 allocs/op BenchmarkInByFor-4 100000000 10.</description></item><item><title>Golang: 配列からスライスに変換する</title><link>https://blog.web-apps.tech/golang-array-to-slice/</link><pubDate>Fri, 16 Mar 2018 02:19:13 +0000</pubDate><guid>https://blog.web-apps.tech/golang-array-to-slice/</guid><description>TL;DR: slice := array[:]で変換できる Go言語にはリストの様なものが二つあります。配列(固定長)とスライス(可変長)です。 一般に、Go言語で配列を扱うことは多くないでしょう。 実際、多くのパッケージ(標準パッケージを含む)が要求するのはスライスです。
+BenchmarkInByForRange-4 200000000 9.34 ns/op 0 B/op 0 allocs/op BenchmarkInByFor-4 100000000 10.1 ns/op 0 B/op 0 allocs/op BenchmarkInByMap-4 200000000 7.</description></item><item><title>Golang: 配列からスライスに変換する</title><link>https://blog.web-apps.tech/golang-array-to-slice/</link><pubDate>Fri, 16 Mar 2018 02:19:13 +0000</pubDate><guid>https://blog.web-apps.tech/golang-array-to-slice/</guid><description>TL;DR: slice := array[:]で変換できる Go言語にはリストの様なものが二つあります。配列(固定長)とスライス(可変長)です。 一般に、Go言語で配列を扱うことは多くないでしょう。 実際、多くのパッケージ(標準パッケージを含む)が要求するのはスライスです。
 とは言っても一部のパッケージでは配列を取り扱っているものがあります。 例えば、&amp;lt;code&amp;gt;crypto/sha512&amp;lt;/code&amp;gt;を見てみる と、以下の様な関数が存在します。
 func Sum512(data []byte) [Size]byte ここで、Sizeは同パッケージ内で宣言されている定数で、値は64です。 つまり、この関数は64バイトの長さを持った配列を返します。
 この関数は与えられたデータからSHA512チェックサムを計算するものです。 勿論、返ってきた値をそのまま使用することもあるとは思いますが、そのままの値は人間可読な値では無いため、hexdigestを得たいと思うでしょう。

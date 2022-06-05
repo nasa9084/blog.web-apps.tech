@@ -12,7 +12,8 @@ ansible 2.4以降とpython-netaddr (python-netaddrを忘れがちなので注意
 192.168.1.11 192.168.1.12 192.168.1.13 それぞれ、IPv4 forwardingが有効化され、firewalldを無効化し、Python 3をインストール済みのCentOS 7のサーバとします。また、kubesprayを実行するローカルマシンから、各サーバのrootユーザにSSH鍵を配置1済みとします。
 手順 準備 まず、kubesprayをダウンロードします。
 $ git clone https://github.com/kubernetes-incubator/kubespray $ cd kubespray リポジトリのクローンが完了したら、ansibleなどの依存モジュールを導入します2。
-kubespray$ pip install -r requirements.txt 次に、ansible用のインベントリを作成します。</description></item><item><title>kubesprayを使用してkubernetes clusterを構築する</title><link>https://blog.web-apps.tech/deploy-k8s-cluster-using-kubespray/</link><pubDate>Thu, 30 Nov 2017 09:04:06 +0000</pubDate><guid>https://blog.web-apps.tech/deploy-k8s-cluster-using-kubespray/</guid><description>注意: 情報が古くなっています。新しい情報にあわせて記事を書いた ので、そちらをご覧ください。
+kubespray$ pip install -r requirements.txt 次に、ansible用のインベントリを作成します。
+kubespray$ cp -rfp inventory/sample inventory/mycluster kubespray$ declare -a IPS=(192.168.1.11 192.168.1.12 192.168.1.13) CONFIG_FILE=inventory/mycluster/hosts.ini python3 contrib/inventory_builder/inventory.</description></item><item><title>kubesprayを使用してkubernetes clusterを構築する</title><link>https://blog.web-apps.tech/deploy-k8s-cluster-using-kubespray/</link><pubDate>Thu, 30 Nov 2017 09:04:06 +0000</pubDate><guid>https://blog.web-apps.tech/deploy-k8s-cluster-using-kubespray/</guid><description>注意: 情報が古くなっています。新しい情報にあわせて記事を書いた ので、そちらをご覧ください。
 kubespray はproduction readyなkubernetes(k8s)クラスタを構成できるツールです。 Ansible をベースに作られているため、任意のサーバでk8sクラスタを構成できます。
 今回は、3台のVMを用意してクラスタを構成してみます1。
 検証環境 今回用意したVMは以下の構成です。
