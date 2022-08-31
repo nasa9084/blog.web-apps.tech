@@ -9,6 +9,7 @@ tags:
 - car
 cover:
   image: images/n-one.png
+  relative: true
 slug: bought-n-one
 ---
 

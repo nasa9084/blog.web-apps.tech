@@ -9,5 +9,6 @@ tags:
 - untagged
 cover:
   image: images/
+  relative: true
 slug: {{ .Name }}
 ---

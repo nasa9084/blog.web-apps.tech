@@ -9,6 +9,7 @@ tags:
 - kubernetes
 cover:
   image: images/kubernetes-logo.png
+  relative: true
 slug: kustomize-images-for-crds
 ---
 

@@ -11,6 +11,7 @@ tags:
 - 梅仕事
 cover:
   image: images/IMG_1795.png
+  relative: true
 slug: ume-2022
 ---
 
