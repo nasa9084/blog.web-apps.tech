@@ -9,6 +9,7 @@ tags:
 - github
 cover:
   image: images/pages-from-github-actions.png
+  relative: true
 slug: use-pages-with-actions
 ---
 
