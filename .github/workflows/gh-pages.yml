@@ -32,7 +32,7 @@ jobs:
       HUGO_VERSION: 0.102.2
     services:
       getogp:
-        image: ghcr.io/nasa9084/getogp:v0.0.1
+        image: ghcr.io/nasa9084/getogp:v0.0.2
         ports:
           - 8080:8080
     steps:
