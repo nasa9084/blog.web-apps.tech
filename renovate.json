@@ -3,5 +3,19 @@
   "extends": [
     "config:base",
     ":prHourlyLimitNone"
+  ],
+  "regexManagers": [
+    {
+      "fileMatch": [
+         "^(workflow-templates|\.github\/workflows)\/[^/]+\.ya?ml$",
+         "(^|\/)action\.ya?ml$"
+      ],
+      "matchStrings": [
+        "HUGO_VERSION: (?<currentValue>.*)"
+      ],
+      "dataSourceTemplate": "github-releases",
+      "depNameTemplate": "gohugoio/hugo",
+      "currentValueTemplate": "v{{currentValue}}"
+    }
   ]
 }
