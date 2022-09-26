@@ -13,7 +13,7 @@
       "matchStrings": [
         "HUGO_VERSION: (?<currentValue>.*)"
       ],
-      "dataSourceTemplate": "github-releases",
+      "datasourceTemplate": "github-releases",
       "depNameTemplate": "gohugoio/hugo",
       "currentValueTemplate": "v{{currentValue}}"
     }
