@@ -26,7 +26,7 @@ jobs:
         with:
           images: ghcr.io/nasa9084/getogp
           tags: |
-            type=match,pattern=getogp-(.*),group=1
+            type=match,pattern=getogp/(.*),group=1
 
       - uses: docker/build-push-action@v3
         with:
