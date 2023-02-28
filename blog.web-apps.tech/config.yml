@@ -57,7 +57,7 @@ params:
     - name: github
       url: https://github.com/nasa9084
     - name: youtube
-      url: https://www.youtube.com/channel/UClg0fu4211hQJUz1lFtuxNw
+      url: https://www.youtube.com/@nasa9084
     - name: linkedin
       url: https://www.linkedin.com/in/nasa9084/
     - name: rss
