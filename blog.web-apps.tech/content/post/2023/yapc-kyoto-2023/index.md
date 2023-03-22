@@ -68,6 +68,8 @@ YAPCはPerlのイベントで、“Yet Another Perl Conference"の略です。tw
 
 残念ながらベストLT賞は取ることができませんでしたが、一番資料の枚数が多かったで賞または一番速くスライドをめくったで賞は取れたんじゃないでしょうか(?)
 
+<ins datetime="2023-03-23T00:47:00+09:00">LTの結果、[@kmuto sanから初contributeをしていただけました](https://github.com/kubernetes/website/pull/40199)。嬉しすぎる・・・ありがとうございます！！！</ins>
+
 終わった後は近くのホルモン屋？の様なところで飲みました。店の名前は覚えていません。美味しかったです。
 
 {{< tweet user="nasa9084" id="1637636515252822016" >}}
