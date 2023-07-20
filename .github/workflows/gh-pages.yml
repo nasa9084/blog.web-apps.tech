@@ -29,7 +29,7 @@ jobs:
   build:
     runs-on: ubuntu-20.04
     env:
-      HUGO_VERSION: v0.115.3
+      HUGO_VERSION: v0.115.4
     services:
       getogp:
         image: ghcr.io/nasa9084/getogp:v0.0.2
