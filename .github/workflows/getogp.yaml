@@ -21,7 +21,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
           registry: ghcr.io
 
-      - uses: docker/metadata-action@v4
+      - uses: docker/metadata-action@v5
         id: meta
         with:
           images: ghcr.io/nasa9084/getogp
