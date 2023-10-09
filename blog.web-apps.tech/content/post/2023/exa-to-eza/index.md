@@ -9,9 +9,6 @@ categories:
 tags:
 - zsh
 - bash
-cover:
-  image: images/
-  relative: true
 slug: exa-to-eza
 ---
 
