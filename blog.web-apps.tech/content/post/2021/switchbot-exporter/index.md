@@ -1,10 +1,5 @@
 ---
 author: nasa9084
-categories:
-- switchbot
-- gadget
-- golang
-- Prometheus
 date: "2021-03-23T09:00:00Z"
 description: ""
 draft: false
@@ -13,10 +8,10 @@ cover:
   relative: true
 slug: switchbot-exporter
 tags:
-- switchbot
-- gadget
-- golang
-- Prometheus
+  - switchbot
+  - gadget
+  - golang
+  - Prometheus
 title: switchbot-exporterを書いた
 ---
 

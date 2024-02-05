@@ -1,9 +1,5 @@
 ---
 author: nasa9084
-categories:
-- aws
-- kubernetes
-- eks
 date: "2018-06-06T02:52:04Z"
 description: ""
 draft: false
@@ -12,9 +8,9 @@ cover:
   relative: true
 slug: amazon-eks-is-now-ga
 tags:
-- aws
-- kubernetes
-- eks
+  - aws
+  - kubernetes
+  - eks
 title: Amazon EKSがGAだと言うので触ってみた
 ---
 

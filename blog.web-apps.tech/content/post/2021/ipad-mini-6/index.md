@@ -1,8 +1,5 @@
 ---
 author: nasa9084
-categories:
-- gadget
-- iPad
 date: "2021-10-19T23:29:54Z"
 description: ""
 draft: false
@@ -10,8 +7,8 @@ cover:
   image: images/IMG_1374.jpg
 slug: ipad-mini-6
 tags:
-- gadget
-- iPad
+  - gadget
+  - iPad
 title: iPad mini 6を買って1週間半経った
 ---
 

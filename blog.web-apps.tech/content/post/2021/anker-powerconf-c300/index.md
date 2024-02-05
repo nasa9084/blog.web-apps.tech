@@ -1,9 +1,5 @@
 ---
 author: nasa9084
-categories:
-- gadget
-- Anker
-- USB type-C
 date: "2021-05-16T15:08:14Z"
 description: ""
 draft: false
@@ -11,9 +7,9 @@ cover:
   image: images/PXL_20210516_135759784-1.jpg
 slug: anker-powerconf-c300
 tags:
-- gadget
-- Anker
-- USB type-C
+  - gadget
+  - Anker
+  - USB type-C
 title: 最近のWebカメラってすごい、の件
 ---
 

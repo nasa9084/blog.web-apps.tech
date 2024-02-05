@@ -1,9 +1,5 @@
 ---
 author: nasa9084
-categories:
-- emacs
-- golang
-- lsp
 date: "2020-02-07T08:19:29Z"
 description: ""
 draft: false
@@ -12,9 +8,9 @@ cover:
   relative: true
 slug: lsp-mode-with-gopls
 tags:
-- emacs
-- golang
-- lsp
+  - emacs
+  - golang
+  - lsp
 title: emacs/lsp-mode + goplsでGo用のLSP環境を設定する
 ---
 

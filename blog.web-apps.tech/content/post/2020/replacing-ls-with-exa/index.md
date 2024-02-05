@@ -1,8 +1,5 @@
 ---
 author: nasa9084
-categories:
-- zsh
-- bash
 date: "2020-05-20T02:54:27Z"
 description: ""
 draft: false
@@ -11,8 +8,8 @@ cover:
   relative: true
 slug: replacing-ls-with-exa
 tags:
-- zsh
-- bash
+  - zsh
+  - bash
 title: rustで書かれたlsの代替コマンドexaをインストールしてみた
 ---
 

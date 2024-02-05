@@ -1,9 +1,5 @@
 ---
 author: nasa9084
-categories:
-- gadget
-- smart phone
-- android
 date: "2020-06-13T11:27:54Z"
 description: ""
 draft: false
@@ -11,9 +7,9 @@ cover:
   image: images/MVIMG_20200612_175719-1.jpg
 slug: rakuten-mini-unpacking
 tags:
-- gadget
-- smart phone
-- android
+  - gadget
+  - smart phone
+  - android
 title: Rakuten Mini unpacking
 ---
 

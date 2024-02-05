@@ -1,7 +1,5 @@
 ---
 author: nasa9084
-categories:
-- raspberry pi
 date: "2018-04-18T09:17:54Z"
 description: ""
 draft: false
@@ -10,7 +8,7 @@ cover:
   relative: true
 slug: raspberry-pi-headless-wifi-setup
 tags:
-- raspberry pi
+  - raspberry pi
 title: Raspberry PiのヘッドレスインストールでWi-Fiを設定する
 ---
 

@@ -1,10 +1,5 @@
 ---
 author: nasa9084
-categories:
-- golang
-- stdlib
-- text/tabwriter
-- string
 date: "2018-01-29T07:13:10Z"
 description: ""
 draft: false
@@ -13,10 +8,10 @@ cover:
   relative: true
 slug: output-columned-text
 tags:
-- golang
-- stdlib
-- text/tabwriter
-- string
+  - golang
+  - stdlib
+  - text/tabwriter
+  - string
 title: テキストを列ごとにそろえて出力する
 ---
 

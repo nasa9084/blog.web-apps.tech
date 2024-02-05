@@ -1,10 +1,5 @@
 ---
 author: nasa9084
-categories:
-- golang
-- context
-- stdlib
-- net/http
 date: "2017-11-21T04:21:58Z"
 description: ""
 draft: false
@@ -13,10 +8,10 @@ cover:
   relative: true
 slug: package-specified-context
 tags:
-- golang
-- context
-- stdlib
-- net/http
+  - golang
+  - context
+  - stdlib
+  - net/http
 title: Application Specific Context
 ---
 

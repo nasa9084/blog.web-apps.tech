@@ -1,10 +1,5 @@
 ---
 author: nasa9084
-categories:
-- golang
-- encrypt
-- openpgp
-- x/crypto/openpgp
 date: "2018-11-26T10:15:09Z"
 description: ""
 draft: false
@@ -13,10 +8,10 @@ cover:
   relative: true
 slug: x-crypto-openpgp
 tags:
-- golang
-- encrypt
-- openpgp
-- x/crypto/openpgp
+  - golang
+  - encrypt
+  - openpgp
+  - x/crypto/openpgp
 title: x/crypto/openpgpでデータを暗号化する
 ---
 

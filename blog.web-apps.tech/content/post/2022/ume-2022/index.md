@@ -3,12 +3,9 @@ title: 梅仕事2022
 author: nasa9084
 date: 2022-06-05T19:45:00+09:00
 draft: false
-categories:
-- cooking
-- 梅仕事
 tags:
-- cooking
-- 梅仕事
+  - cooking
+  - 梅仕事
 cover:
   image: images/IMG_1795.png
   relative: true

@@ -1,16 +1,5 @@
 ---
 author: nasa9084
-categories:
-- kubernetes
-- kubespray
-- docker
-- ingress-nginx
-- nginx
-- minio
-- glusterfs
-- letsencrypt
-- cert-manager
-- opennebula
 date: "2018-08-23T04:53:46Z"
 description: ""
 draft: false
@@ -19,16 +8,16 @@ cover:
   relative: true
 slug: my-infra-with-k8s
 tags:
-- kubernetes
-- kubespray
-- docker
-- ingress-nginx
-- nginx
-- minio
-- glusterfs
-- letsencrypt
-- cert-manager
-- opennebula
+  - kubernetes
+  - kubespray
+  - docker
+  - ingress-nginx
+  - nginx
+  - minio
+  - glusterfs
+  - letsencrypt
+  - cert-manager
+  - opennebula
 title: 趣味サーバーのインフラをKubernetesで整えた件
 ---
 

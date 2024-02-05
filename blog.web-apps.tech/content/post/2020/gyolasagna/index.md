@@ -1,7 +1,5 @@
 ---
 author: nasa9084
-categories:
-- cooking
 date: "2020-04-19T06:20:25Z"
 description: ""
 draft: false
@@ -9,7 +7,7 @@ cover:
   image: images/IMG_20200419_140359-1.jpg
 slug: gyolasagna
 tags:
-- cooking
+  - cooking
 title: ギョーザ×ラザニア
 ---
 

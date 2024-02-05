@@ -1,8 +1,5 @@
 ---
 author: nasa9084
-categories:
-- gadget
-- bike
 date: "2021-04-27T03:26:23Z"
 description: ""
 draft: false
@@ -10,8 +7,8 @@ cover:
   image: images/IMG_20210424_134921928.jpg
 slug: ram-mounts-plus-qi
 tags:
-- gadget
-- bike
+  - gadget
+  - bike
 title: RAMマウントをQi対応にする
 ---
 

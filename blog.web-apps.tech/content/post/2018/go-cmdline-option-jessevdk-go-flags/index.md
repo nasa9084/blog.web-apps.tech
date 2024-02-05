@@ -1,8 +1,5 @@
 ---
 author: nasa9084
-categories:
-- golang
-- command-line
 date: "2018-02-24T03:22:28Z"
 description: ""
 draft: false
@@ -11,8 +8,8 @@ cover:
   relative: true
 slug: go-cmdline-option-jessevdk-go-flags
 tags:
-- golang
-- command-line
+  - golang
+  - command-line
 title: Goでコマンドラインオプションを処理する
 ---
 

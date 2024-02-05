@@ -1,13 +1,5 @@
 ---
 author: nasa9084
-categories:
-- automation
-- gadget
-- golang
-- python
-- raspberry pi
-- 自作
-- 赤外線
 date: "2019-07-30T15:11:28Z"
 description: ""
 draft: false
@@ -15,13 +7,13 @@ cover:
   image: images/P_20190730_233921-1.jpg
 slug: raspberry-pi-zero-w-ir
 tags:
-- automation
-- gadget
-- golang
-- python
-- raspberry pi
-- 自作
-- 赤外線
+  - automation
+  - gadget
+  - golang
+  - python
+  - raspberry pi
+  - 自作
+  - 赤外線
 title: Raspberry Pi zero W + IR
 ---
 

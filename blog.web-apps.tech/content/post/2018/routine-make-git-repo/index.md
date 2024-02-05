@@ -1,8 +1,5 @@
 ---
 author: nasa9084
-categories:
-- git
-- github
 date: "2018-12-07T03:19:52Z"
 description: ""
 draft: false
@@ -11,8 +8,8 @@ cover:
   relative: true
 slug: routine-make-git-repo
 tags:
-- git
-- github
+  - git
+  - github
 title: git repositoryの初期化ルーチン
 ---
 

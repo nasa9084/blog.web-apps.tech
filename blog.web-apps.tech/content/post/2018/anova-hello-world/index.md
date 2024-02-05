@@ -1,11 +1,5 @@
 ---
 author: nasa9084
-categories:
-- Anova
-- Hello World
-- Beef
-- cooking
-- sous vide
 date: "2018-05-30T13:24:37Z"
 description: ""
 draft: false
@@ -13,11 +7,11 @@ cover:
   image: images/IMG_20180527_220827-1.jpg
 slug: anova-hello-world
 tags:
-- Anova
-- Hello World
-- Beef
-- cooking
-- sous vide
+  - Anova
+  - Hello World
+  - Beef
+  - cooking
+  - sous vide
 title: Anovaが届いたのでHello Worldした
 ---
 

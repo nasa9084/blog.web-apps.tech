@@ -1,13 +1,5 @@
 ---
 author: nasa9084
-categories:
-- yapc
-- kansai
-- perl
-- osaka
-- "2017"
-- conference
-- event
 date: "2017-03-05T04:12:00Z"
 description: ""
 draft: false
@@ -16,13 +8,13 @@ cover:
   relative: true
 slug: yapc_kansai_2017
 tags:
-- yapc
-- kansai
-- perl
-- osaka
-- "2017"
-- conference
-- event
+  - yapc
+  - kansai
+  - perl
+  - osaka
+  - "2017"
+  - conference
+  - event
 title: YAPC::Kansai 2017 OSAKAに行ってきました
 ---
 

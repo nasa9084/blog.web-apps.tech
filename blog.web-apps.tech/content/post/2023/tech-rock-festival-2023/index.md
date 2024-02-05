@@ -2,12 +2,9 @@
 title: Tech Rock Festival 2023
 author: nasa9084
 date: 2023-12-25T23:32:00+09:00
-categories:
-- music
-- guitar
 tags:
-- music
-- guitar
+  - music
+  - guitar
 cover:
   image: images/tech_rock_festival_2023.png
   relative: true

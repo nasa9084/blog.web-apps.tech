@@ -2,12 +2,9 @@
 title: 2022年買って良かったモノ
 author: nasa9084
 date: 2022-12-17T00:15:00+09:00
-categories:
-- 2022
-- gadget
 tags:
-- 2022
-- gadget
+  - 2022
+  - gadget
 slug: 2022-must-buy
 ---
 

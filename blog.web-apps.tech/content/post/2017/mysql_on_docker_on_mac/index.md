@@ -1,9 +1,5 @@
 ---
 author: nasa9084
-categories:
-- docker
-- macos
-- mysql
 date: "2017-05-02T06:57:00Z"
 description: ""
 draft: false
@@ -11,9 +7,9 @@ cover:
   image: images/docker-mysql.jpg
 slug: mysql_on_docker_on_mac
 tags:
-- docker
-- macos
-- mysql
+  - docker
+  - macos
+  - mysql
 title: MySQL on docker macな開発環境でローカルからMySQLに接続する
 ---
 

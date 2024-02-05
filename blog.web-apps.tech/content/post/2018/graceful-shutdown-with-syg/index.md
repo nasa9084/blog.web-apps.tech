@@ -1,10 +1,5 @@
 ---
 author: nasa9084
-categories:
-- golang
-- signal
-- syscall
-- net/http
 date: "2018-03-10T15:42:54Z"
 description: ""
 draft: false
@@ -13,10 +8,10 @@ cover:
   relative: true
 slug: graceful-shutdown-with-syg
 tags:
-- golang
-- signal
-- syscall
-- net/http
+  - golang
+  - signal
+  - syscall
+  - net/http
 title: sygを使用したgraceful shutdown serverパターン
 ---
 

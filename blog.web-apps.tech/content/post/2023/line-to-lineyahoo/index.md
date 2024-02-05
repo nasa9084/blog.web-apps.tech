@@ -2,10 +2,8 @@
 title: 所属がLINEヤフー株式会社になりました
 author: nasa9084
 date: 2023-10-01T23:10:05+09:00
-categories:
-- 転職
 tags:
-- 転職
+  - 転職
 slug: line-to-lineyahoo
 ---
 

@@ -1,7 +1,5 @@
 ---
 author: nasa9084
-categories:
-- cooking
 date: "2019-01-19T05:27:16Z"
 description: ""
 draft: false
@@ -9,7 +7,7 @@ cover:
   image: images/A8BD9816-5A62-4776-B407-DF886C5677F8.jpg
 slug: toshikoshi-kamo-nanban
 tags:
-- cooking
+  - cooking
 title: 年越し鴨南蛮
 ---
 

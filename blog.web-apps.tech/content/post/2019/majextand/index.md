@@ -1,8 +1,5 @@
 ---
 author: nasa9084
-categories:
-- gadget
-- macbook
 date: "2019-01-28T08:55:49Z"
 description: ""
 draft: false
@@ -10,8 +7,8 @@ cover:
   image: images/P_20190127_165642-1.jpg
 slug: majextand
 tags:
-- gadget
-- macbook
+  - gadget
+  - macbook
 title: Majextand
 ---
 

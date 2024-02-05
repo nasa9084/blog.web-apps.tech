@@ -1,10 +1,5 @@
 ---
 author: nasa9084
-categories:
-- letsencrypt
-- tls
-- certificate
-- reverse proxy
 date: "2018-03-13T23:00:00Z"
 description: ""
 draft: false
@@ -13,10 +8,10 @@ cover:
   relative: true
 slug: lets-encrypt-wildcard
 tags:
-- letsencrypt
-- tls
-- certificate
-- reverse proxy
+  - letsencrypt
+  - tls
+  - certificate
+  - reverse proxy
 title: Let's Encryptでワイルドカード証明書を取得する
 ---
 

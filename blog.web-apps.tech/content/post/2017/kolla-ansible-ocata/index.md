@@ -1,10 +1,5 @@
 ---
 author: nasa9084
-categories:
-- openstack
-- kolla
-- ansible
-- ocata
 date: "2017-10-04T06:12:37Z"
 description: ""
 draft: false
@@ -16,10 +11,10 @@ summary: |-
   OpenStack Kollaを用いると、比較的簡単にOpenStack on Docker環境を構築することができます。
   今回はKolla-Ansibleを使用してall-in-one構成で4.0.0(Ocata)環境を構築してみます。
 tags:
-- openstack
-- kolla
-- ansible
-- ocata
+  - openstack
+  - kolla
+  - ansible
+  - ocata
 title: Kolla-AnsibleでOpenStack Ocata環境を構築する
 ---
 

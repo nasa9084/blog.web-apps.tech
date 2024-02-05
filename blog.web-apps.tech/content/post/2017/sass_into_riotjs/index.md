@@ -1,10 +1,5 @@
 ---
 author: nasa9084
-categories:
-- riot.js
-- sass
-- scss
-- javascript
 date: "2017-07-19T01:15:00Z"
 description: ""
 draft: false
@@ -13,10 +8,10 @@ cover:
   relative: true
 slug: sass_into_riotjs
 tags:
-- riot.js
-- sass
-- scss
-- javascript
+  - riot.js
+  - sass
+  - scss
+  - javascript
 title: Riot.jsにSass(SCSS)を導入する
 ---
 

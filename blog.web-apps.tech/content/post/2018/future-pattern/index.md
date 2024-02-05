@@ -1,10 +1,5 @@
 ---
 author: nasa9084
-categories:
-- golang
-- goroutine
-- design pattern
-- future pattern
 date: "2018-07-04T15:33:02Z"
 description: ""
 draft: false
@@ -13,10 +8,10 @@ cover:
   relative: true
 slug: future-pattern
 tags:
-- golang
-- goroutine
-- design pattern
-- future pattern
+  - golang
+  - goroutine
+  - design pattern
+  - future pattern
 title: Future Pattern
 ---
 

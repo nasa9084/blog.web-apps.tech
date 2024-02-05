@@ -1,12 +1,5 @@
 ---
 author: nasa9084
-categories:
-- conference
-- Kubecon
-- Europe
-- Copenhagen
-- CloudNativeCon
-- "2018"
 date: "2018-05-07T07:08:58Z"
 description: ""
 draft: false
@@ -15,12 +8,12 @@ cover:
   relative: true
 slug: i-went-to-kubecon-cloudnativecon-eu-2018
 tags:
-- conference
-- Kubecon
-- Europe
-- Copenhagen
-- CloudNativeCon
-- "2018"
+  - conference
+  - Kubecon
+  - Europe
+  - Copenhagen
+  - CloudNativeCon
+  - "2018"
 title: KubeCon + CloudNativeCon Europe 2018にいってきた
 ---
 

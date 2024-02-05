@@ -1,8 +1,5 @@
 ---
 author: nasa9084
-categories:
-- golang
-- net/http
 date: "2019-01-08T07:31:50Z"
 description: ""
 draft: false
@@ -11,8 +8,8 @@ cover:
   relative: true
 slug: net-http-for-valid
 tags:
-- golang
-- net/http
+  - golang
+  - net/http
 title: きちんとやるnet/http
 ---
 

@@ -1,7 +1,5 @@
 ---
 author: nasa9084
-categories:
-- shell
 date: "2021-07-13T03:52:44Z"
 description: ""
 draft: false
@@ -10,7 +8,7 @@ cover:
   relative: true
 slug: calcurate-datetime-in-shell
 tags:
-- shell
+  - shell
 title: dateコマンドで簡単な時間計算をする
 ---
 

@@ -1,8 +1,5 @@
 ---
 author: nasa9084
-categories:
-- gadget
-- remotework
 date: "2020-04-10T15:44:39Z"
 description: ""
 draft: false
@@ -10,8 +7,8 @@ cover:
   image: images/81b9X7AsE3L._AC_SL1500_.jpg
 slug: bauhutte-chairmat
 tags:
-- gadget
-- remotework
+  - gadget
+  - remotework
 title: Bauhutteのデスクごとチェアマットを購入した
 ---
 

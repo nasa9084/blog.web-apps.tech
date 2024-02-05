@@ -1,11 +1,5 @@
 ---
 author: nasa9084
-categories:
-- golang
-- string
-- strings
-- bytes
-- benchmark
 date: "2018-03-05T15:00:00Z"
 description: ""
 draft: false
@@ -14,11 +8,11 @@ cover:
   relative: true
 slug: strings-builder-vs-bytes-buffer
 tags:
-- golang
-- string
-- strings
-- bytes
-- benchmark
+  - golang
+  - string
+  - strings
+  - bytes
+  - benchmark
 title: strings.Builderとbytes.BufferのWrite系関数のベンチマーク
 ---
 

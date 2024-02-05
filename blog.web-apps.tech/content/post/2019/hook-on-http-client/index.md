@@ -1,8 +1,5 @@
 ---
 author: nasa9084
-categories:
-- golang
-- net/http
 date: "2019-11-01T05:48:19Z"
 description: ""
 draft: false
@@ -10,8 +7,8 @@ cover:
   image: images/gG9QcK.jpg
 slug: hook-on-http-client
 tags:
-- golang
-- net/http
+  - golang
+  - net/http
 title: net/http.ClientにHookをかける
 ---
 

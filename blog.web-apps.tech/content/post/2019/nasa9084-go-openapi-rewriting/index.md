@@ -1,10 +1,5 @@
 ---
 author: nasa9084
-categories:
-- golang
-- openapi
-- advent  calendar
-- "2019"
 date: "2019-12-20T08:15:39Z"
 description: ""
 draft: false
@@ -13,10 +8,10 @@ cover:
   relative: true
 slug: nasa9084-go-openapi-rewriting
 tags:
-- golang
-- openapi
-- advent  calendar
-- "2019"
+  - golang
+  - openapi
+  - advent  calendar
+  - "2019"
 title: go-openapi を書き直しています
 ---
 

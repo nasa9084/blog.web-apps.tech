@@ -1,13 +1,11 @@
 ---
 author: nasa9084
-categories:
-- "2022"
 date: "2021-12-30T02:00:00Z"
 description: ""
 draft: false
 slug: retrospective-2021
 tags:
-- "2022"
+  - "2022"
 title: 'Retrospective: 2021'
 ---
 

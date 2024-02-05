@@ -1,11 +1,5 @@
 ---
 author: nasa9084
-categories:
-- advent  calendar
-- emacs
-- org-mode
-- pyorg
-- python
 date: "2016-12-12T17:19:00Z"
 description: ""
 draft: false
@@ -14,11 +8,11 @@ cover:
   relative: true
 slug: create_pyorg
 tags:
-- advent  calendar
-- emacs
-- org-mode
-- pyorg
-- python
+  - advent calendar
+  - emacs
+  - org-mode
+  - pyorg
+  - python
 title: pyorgというパッケージを作りました
 ---
 

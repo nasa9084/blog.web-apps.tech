@@ -1,13 +1,5 @@
 ---
 author: nasa9084
-categories:
-- yapc
-- conference
-- event
-- fukuoka
-- hakata
-- "2017"
-- perl
 date: "2017-07-03T02:04:00Z"
 description: ""
 draft: false
@@ -16,13 +8,13 @@ cover:
   relative: true
 slug: yapc_fukuoka_2017
 tags:
-- yapc
-- conference
-- event
-- fukuoka
-- hakata
-- "2017"
-- perl
+  - yapc
+  - conference
+  - event
+  - fukuoka
+  - hakata
+  - "2017"
+  - perl
 title: YAPC::Fukuoka 2017 HAKATAに行ってきました
 ---
 

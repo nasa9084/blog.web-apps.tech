@@ -1,9 +1,5 @@
 ---
 author: nasa9084
-categories:
-- golang
-- command-line
-- flag
 date: "2018-11-06T05:01:49Z"
 description: ""
 draft: false
@@ -12,9 +8,9 @@ cover:
   relative: true
 slug: subcommand-using-jessevdk-go-flags
 tags:
-- golang
-- command-line
-- flag
+  - golang
+  - command-line
+  - flag
 title: jessevdk/go-flagsでサブコマンドを実装する
 ---
 

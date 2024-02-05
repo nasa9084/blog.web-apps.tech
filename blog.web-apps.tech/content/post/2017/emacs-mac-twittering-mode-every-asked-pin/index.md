@@ -1,10 +1,5 @@
 ---
 author: nasa9084
-categories:
-- emacs
-- macos
-- twitter
-- twittering-mode
 date: "2017-05-09T00:49:00Z"
 description: ""
 draft: false
@@ -13,10 +8,10 @@ cover:
   relative: true
 slug: emacs-mac-twittering-mode-every-asked-pin
 tags:
-- emacs
-- macos
-- twitter
-- twittering-mode
+  - emacs
+  - macos
+  - twitter
+  - twittering-mode
 title: emacs-macでtwittering-modeを使った際に毎回PINを聞かれる問題の解消
 ---
 

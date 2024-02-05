@@ -1,7 +1,5 @@
 ---
 author: nasa9084
-categories:
-- ansible
 date: "2021-12-13T10:45:28Z"
 description: ""
 draft: false
@@ -10,7 +8,7 @@ cover:
   relative: true
 slug: ansible-builtin-file-mode-leading-zero
 tags:
-- ansible
+  - ansible
 title: ansible.builtin.fileのmodeパラメータは頭に0が必要
 ---
 

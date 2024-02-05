@@ -3,10 +3,8 @@ title: Migrate Ghost to Hugo
 author: nasa9084
 date: 2022-04-23T02:52:34+09:00
 draft: false
-categories:
-- hugo
 tags:
-- hugo
+  - hugo
 cover:
   image: images/ghost2hugo.png
   relative: true

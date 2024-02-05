@@ -1,10 +1,5 @@
 ---
 author: nasa9084
-categories:
-- conference
-- event
-- "2018"
-- LINE DEVELOPER DAY
 date: "2018-11-21T02:51:41Z"
 description: ""
 draft: false
@@ -12,10 +7,10 @@ cover:
   image: images/4BC8BFCB-70EA-48DA-A544-E1EB520DE44A.jpg
 slug: line-developer-day-2018
 tags:
-- conference
-- event
-- "2018"
-- LINE DEVELOPER DAY
+  - conference
+  - event
+  - "2018"
+  - LINE DEVELOPER DAY
 title: LINE DEVELOPER DAY 2018に参加した
 ---
 

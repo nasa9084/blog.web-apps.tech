@@ -1,8 +1,5 @@
 ---
 author: nasa9084
-categories:
-- golang
-- net/smtp
 date: "2020-04-06T10:13:42Z"
 description: ""
 draft: false
@@ -11,8 +8,8 @@ cover:
   relative: true
 slug: go-smtp-sendmail-without-mailserver
 tags:
-- golang
-- net/smtp
+  - golang
+  - net/smtp
 title: Goで(メールサーバを用意せずに)メールを送る
 ---
 

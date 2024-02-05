@@ -1,7 +1,5 @@
 ---
 author: nasa9084
-categories:
-- cooking
 date: "2021-01-29T13:17:22Z"
 description: ""
 draft: false
@@ -9,7 +7,7 @@ cover:
   image: images/PXL_20210129_100801232-1.jpg
 slug: tika-no-nanbanduke
 tags:
-- cooking
+  - cooking
 title: チカの南蛮漬け
 ---
 

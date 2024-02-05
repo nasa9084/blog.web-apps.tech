@@ -3,10 +3,8 @@ title: GitHub PagesをActionsからデプロイする形式に変更した
 author: nasa9084
 date: 2022-09-01T01:58:19+09:00
 draft: false
-categories:
-- github
 tags:
-- github
+  - github
 cover:
   image: images/pages-from-github-actions.png
   relative: true

@@ -1,9 +1,5 @@
 ---
 author: nasa9084
-categories:
-- git
-- github
-- security
 date: "2019-08-24T04:36:12Z"
 description: ""
 draft: false
@@ -12,9 +8,9 @@ cover:
   relative: true
 slug: gitconfig-secret
 tags:
-- git
-- github
-- security
+  - git
+  - github
+  - security
 title: 社用Gitサーバでは社用のメールをつかう.gitconfig 〜社内ドメインを外に漏らさない編〜
 ---
 

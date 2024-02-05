@@ -1,12 +1,5 @@
 ---
 author: nasa9084
-categories:
-- kubernetes
-- aws
-- eks
-- load balancer
-- service
-- ec2
 date: "2018-09-02T03:04:50Z"
 description: ""
 draft: false
@@ -15,12 +8,12 @@ cover:
   relative: true
 slug: eks-internal-lb
 tags:
-- kubernetes
-- aws
-- eks
-- load balancer
-- service
-- ec2
+  - kubernetes
+  - aws
+  - eks
+  - load balancer
+  - service
+  - ec2
 title: EC2インスタンスからEKS上のアプリケーションにアクセスしたい
 ---
 

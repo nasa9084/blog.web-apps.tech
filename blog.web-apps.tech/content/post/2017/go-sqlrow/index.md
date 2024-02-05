@@ -1,8 +1,5 @@
 ---
 author: nasa9084
-categories:
-- golang
-- advent  calendar
 date: "2017-12-13T02:44:32Z"
 description: ""
 draft: false
@@ -11,8 +8,8 @@ cover:
   relative: true
 slug: go-sqlrow
 tags:
-- golang
-- advent  calendar
+  - golang
+  - advent calendar
 title: go-sqlrow
 ---
 

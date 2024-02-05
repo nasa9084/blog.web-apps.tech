@@ -1,9 +1,5 @@
 ---
 author: nasa9084
-categories:
-- golang
-- Hello World
-- PaaS
 date: "2019-09-26T15:10:40Z"
 description: ""
 draft: false
@@ -12,9 +8,9 @@ cover:
   relative: true
 slug: first-impression-unubo
 tags:
-- golang
-- Hello World
-- PaaS
+  - golang
+  - Hello World
+  - PaaS
 title: Unuboでアプリケーションをサクッとデプロイする
 ---
 

@@ -1,8 +1,5 @@
 ---
 author: nasa9084
-categories:
-- kubernetes
-- health check
 date: "2018-07-26T05:09:35Z"
 description: ""
 draft: false
@@ -11,8 +8,8 @@ cover:
   relative: true
 slug: liveness-readiness-probe
 tags:
-- kubernetes
-- health check
+  - kubernetes
+  - health check
 title: Liveness/Readiness Probe
 ---
 

@@ -1,10 +1,5 @@
 ---
 author: nasa9084
-categories:
-- golang
-- io
-- fmt
-- benchmark
 date: "2017-09-02T04:30:59Z"
 description: ""
 draft: false
@@ -13,10 +8,10 @@ cover:
   relative: true
 slug: benchmark-iowriter-and-fprintf
 tags:
-- golang
-- io
-- fmt
-- benchmark
+  - golang
+  - io
+  - fmt
+  - benchmark
 title: io.Writer.Write()とfmt.Fprintf()のBenchmark
 ---
 

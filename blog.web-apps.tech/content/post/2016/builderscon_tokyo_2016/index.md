@@ -1,11 +1,5 @@
 ---
 author: nasa9084
-categories:
-- builderscon
-- conference
-- event
-- tokyo
-- "2016"
 date: "2016-12-05T04:34:00Z"
 description: ""
 draft: false
@@ -14,11 +8,11 @@ cover:
   relative: true
 slug: builderscon_tokyo_2016
 tags:
-- builderscon
-- conference
-- event
-- tokyo
-- "2016"
+  - builderscon
+  - conference
+  - event
+  - tokyo
+  - "2016"
 title: builderscon tokyo 2016 を開催しました！
 ---
 

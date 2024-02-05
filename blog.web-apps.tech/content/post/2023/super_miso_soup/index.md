@@ -2,10 +2,8 @@
 title: すごい味噌汁
 author: nasa9084
 date: 2023-12-05T18:47:06+09:00
-categories:
-- cooking
 tags:
-- cooking
+  - cooking
 cover:
   image: images/super_miso_soup.jpg
   relative: true

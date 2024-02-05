@@ -1,9 +1,5 @@
 ---
 author: nasa9084
-categories:
-- golang
-- assets
-- package bundler
 date: "2019-01-17T07:47:13Z"
 description: ""
 draft: false
@@ -12,9 +8,9 @@ cover:
   relative: true
 slug: jessevdk-go-assets
 tags:
-- golang
-- assets
-- package bundler
+  - golang
+  - assets
+  - package bundler
 title: jessevdk/go-assetsでファイルを埋め込む
 ---
 

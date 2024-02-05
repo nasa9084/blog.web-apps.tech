@@ -1,10 +1,5 @@
 ---
 author: nasa9084
-categories:
-- golang
-- design pattern
-- goroutine
-- generator pattern
 date: "2018-11-21T08:09:23Z"
 description: ""
 draft: false
@@ -13,10 +8,10 @@ cover:
   relative: true
 slug: generator-pattern
 tags:
-- golang
-- design pattern
-- goroutine
-- generator pattern
+  - golang
+  - design pattern
+  - goroutine
+  - generator pattern
 title: Generator Pattern
 ---
 

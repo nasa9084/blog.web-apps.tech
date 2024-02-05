@@ -1,10 +1,5 @@
 ---
 author: nasa9084
-categories:
-- golang
-- gadget
-- switchbot
-- 赤外線
 date: "2021-02-25T03:17:53Z"
 description: ""
 draft: false
@@ -13,10 +8,10 @@ cover:
   relative: true
 slug: go-switchbot
 tags:
-- golang
-- gadget
-- switchbot
-- 赤外線
+  - golang
+  - gadget
+  - switchbot
+  - 赤外線
 title: SwitchBot APIのGoクライアント、go-switchbotを書いた
 ---
 

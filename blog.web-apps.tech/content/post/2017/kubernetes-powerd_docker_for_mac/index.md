@@ -1,9 +1,5 @@
 ---
 author: nasa9084
-categories:
-- docker
-- macos
-- kubernetes
 date: "2017-12-14T05:03:01Z"
 description: ""
 draft: false
@@ -12,9 +8,9 @@ cover:
   relative: true
 slug: kubernetes-powerd_docker_for_mac
 tags:
-- docker
-- macos
-- kubernetes
+  - docker
+  - macos
+  - kubernetes
 title: Kubernetes-powered Docker for mac is released!
 ---
 

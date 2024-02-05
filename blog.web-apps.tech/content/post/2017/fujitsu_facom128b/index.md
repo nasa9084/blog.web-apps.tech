@@ -1,9 +1,5 @@
 ---
 author: nasa9084
-categories:
-- fujitsu
-- tour
-- museum
 date: "2017-06-06T01:45:00Z"
 description: ""
 draft: false
@@ -11,9 +7,9 @@ cover:
   image: images/relay.jpg
 slug: fujitsu_facom128b
 tags:
-- fujitsu
-- tour
-- museum
+  - fujitsu
+  - tour
+  - museum
 title: Fujitsu FACOM128Bを見てきた
 ---
 

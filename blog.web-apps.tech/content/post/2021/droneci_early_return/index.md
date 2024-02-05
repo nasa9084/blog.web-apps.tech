@@ -1,7 +1,5 @@
 ---
 author: nasa9084
-categories:
-- DroneCI
 date: "2021-10-18T07:38:35Z"
 description: ""
 draft: false
@@ -10,7 +8,7 @@ cover:
   relative: true
 slug: droneci_early_return
 tags:
-- DroneCI
+  - DroneCI
 title: DroneCIでパイプライン全体をfailさせずに後続のジョブを停止する
 ---
 

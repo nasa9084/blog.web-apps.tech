@@ -2,10 +2,8 @@
 title: Migrate Helm to Vertico Stack
 author: nasa9084
 date: 2023-09-10T19:48:46+09:00
-categories:
-- emacs
 tags:
-- emacs
+  - emacs
 cover:
   image: images/find-file-with-marginalia-nerd-icons-completion.png
   relative: true

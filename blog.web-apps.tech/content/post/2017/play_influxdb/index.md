@@ -1,9 +1,5 @@
 ---
 author: nasa9084
-categories:
-- influxdb
-- tsdb
-- database
 date: "2017-02-18T09:45:00Z"
 description: ""
 draft: false
@@ -12,9 +8,9 @@ cover:
   relative: true
 slug: play_influxdb
 tags:
-- influxdb
-- tsdb
-- database
+  - influxdb
+  - tsdb
+  - database
 title: InfluxDBを触ってみた
 ---
 

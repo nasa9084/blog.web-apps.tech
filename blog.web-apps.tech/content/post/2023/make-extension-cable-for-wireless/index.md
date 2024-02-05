@@ -2,12 +2,9 @@
 title: ワイヤレス送信機用延長シールドを作る
 author: nasa9084
 date: 2023-12-28T01:47:40+09:00
-categories:
-- music
-- guitar
 tags:
-- music
-- guitar
+  - music
+  - guitar
 cover:
   image: images/wireless_extension_cable.jpg
   relative: true

@@ -1,11 +1,5 @@
 ---
 author: nasa9084
-categories:
-- golang
-- array
-- slice
-- string
-- benchmark
 date: "2018-06-26T08:30:22Z"
 description: ""
 draft: false
@@ -14,11 +8,11 @@ cover:
   relative: true
 slug: benchmark_in_func
 tags:
-- golang
-- array
-- slice
-- string
-- benchmark
+  - golang
+  - array
+  - slice
+  - string
+  - benchmark
 title: array/sliceに対する存在確認関数のベンチマーク
 ---
 

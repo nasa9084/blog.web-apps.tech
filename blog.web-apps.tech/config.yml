@@ -71,6 +71,10 @@ params:
     Text: '[Suggest Changes]'
     appendFilePath: true
 
+# enable only tags, I don't use categories
+taxonomies:
+  tag: tags
+
 # This configuration is needed for search
 outputs:
   home:

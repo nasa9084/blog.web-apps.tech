@@ -1,10 +1,5 @@
 ---
 author: nasa9084
-categories:
-- docker
-- docker-machine
-- rancher
-- rancheros
 date: "2017-08-24T02:14:41Z"
 description: ""
 draft: false
@@ -13,10 +8,10 @@ cover:
   relative: true
 slug: docker-machine-with-rancheros
 tags:
-- docker
-- docker-machine
-- rancher
-- rancheros
+  - docker
+  - docker-machine
+  - rancher
+  - rancheros
 title: docker-machineでRancherOSを使う
 ---
 

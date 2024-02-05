@@ -1,8 +1,5 @@
 ---
 author: nasa9084
-categories:
-- golang
-- release
 date: "2017-08-28T01:41:47Z"
 description: ""
 draft: false
@@ -11,8 +8,8 @@ cover:
   relative: true
 slug: go-1-9-is-released
 tags:
-- golang
-- release
+  - golang
+  - release
 title: Go 1.9 is released
 ---
 

@@ -1,10 +1,5 @@
 ---
 author: nasa9084
-categories:
-- cncf
-- nats
-- cloud-native
-- messaging
 date: "2019-02-06T07:52:05Z"
 description: ""
 draft: false
@@ -13,10 +8,10 @@ cover:
   relative: true
 slug: messaging-system-nats
 tags:
-- cncf
-- nats
-- cloud-native
-- messaging
+  - cncf
+  - nats
+  - cloud-native
+  - messaging
 title: NATSを触ってみた
 ---
 

@@ -1,15 +1,12 @@
 ---
 author: nasa9084
-categories:
-- "2020"
-- gadget
 date: "2020-12-23T16:38:13Z"
 description: ""
 draft: false
 slug: 2020-good-buy
 tags:
-- "2020"
-- gadget
+  - "2020"
+  - gadget
 title: 2020年買って良かった物
 ---
 

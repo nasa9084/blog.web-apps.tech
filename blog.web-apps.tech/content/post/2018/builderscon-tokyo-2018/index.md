@@ -1,11 +1,5 @@
 ---
 author: nasa9084
-categories:
-- builderscon
-- tokyo
-- "2018"
-- event
-- conference
 date: "2018-09-10T06:10:44Z"
 description: ""
 draft: false
@@ -14,11 +8,11 @@ cover:
   relative: true
 slug: builderscon-tokyo-2018
 tags:
-- builderscon
-- tokyo
-- "2018"
-- event
-- conference
+  - builderscon
+  - tokyo
+  - "2018"
+  - event
+  - conference
 title: builderscon tokyo 2018
 ---
 

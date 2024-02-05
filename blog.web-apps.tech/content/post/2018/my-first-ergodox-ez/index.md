@@ -1,9 +1,5 @@
 ---
 author: nasa9084
-categories:
-- keyboard
-- ergodox ez
-- separated
 date: "2018-10-31T05:57:26Z"
 description: ""
 draft: false
@@ -11,9 +7,9 @@ cover:
   image: images/2e827bb4-bf25-4a2a-9a6b-f21fd9e944cb-1.jpg
 slug: my-first-ergodox-ez
 tags:
-- keyboard
-- ergodox ez
-- separated
+  - keyboard
+  - ergodox ez
+  - separated
 title: Ergodox EZを購入した
 ---
 

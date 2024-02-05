@@ -1,10 +1,5 @@
 ---
 author: nasa9084
-categories:
-- gadget
-- smart watch
-- tracker
-- health check
 date: "2021-08-30T04:12:05Z"
 description: ""
 draft: false
@@ -12,10 +7,10 @@ cover:
   image: images/PXL_20210820_021323994.jpg
 slug: huawei-band-6
 tags:
-- gadget
-- smart watch
-- tracker
-- health check
+  - gadget
+  - smart watch
+  - tracker
+  - health check
 title: Huawei Band 6を買った
 ---
 

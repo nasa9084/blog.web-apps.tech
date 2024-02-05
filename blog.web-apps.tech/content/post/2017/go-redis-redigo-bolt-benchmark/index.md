@@ -1,10 +1,5 @@
 ---
 author: nasa9084
-categories:
-- golang
-- redis
-- boltdb
-- benchmark
 date: "2017-09-07T04:40:01Z"
 description: ""
 draft: false
@@ -13,10 +8,10 @@ cover:
   relative: true
 slug: go-redis-redigo-bolt-benchmark
 tags:
-- golang
-- redis
-- boltdb
-- benchmark
+  - golang
+  - redis
+  - boltdb
+  - benchmark
 title: go-redis, redigo, boltのベンチマークを取ってみた
 ---
 

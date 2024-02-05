@@ -1,11 +1,5 @@
 ---
 author: nasa9084
-categories:
-- kubernetes
-- MetalLB
-- cluster
-- load balancer
-- service
 date: "2018-08-05T15:02:11Z"
 description: ""
 draft: false
@@ -14,11 +8,11 @@ cover:
   relative: true
 slug: type-loadbalancer_by_metallb
 tags:
-- kubernetes
-- MetalLB
-- cluster
-- load balancer
-- service
+  - kubernetes
+  - MetalLB
+  - cluster
+  - load balancer
+  - service
 title: 'MetalLBを使用してオンプレでもtype: LoadBalancerを使用する'
 ---
 

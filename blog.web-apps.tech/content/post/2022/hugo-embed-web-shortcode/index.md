@@ -3,11 +3,9 @@ title: BlogカードShortcodeを実装した
 author: nasa9084
 date: 2022-04-29T15:26:59+09:00
 draft: false
-categories:
-- hugo
 tags:
-- hugo
-- shortcode
+  - hugo
+  - shortcode
 cover:
   image: images/hugo.png
   relative: true

@@ -1,9 +1,5 @@
 ---
 author: nasa9084
-categories:
-- 自作
-- cable
-- keyboard
 date: "2019-02-04T17:00:46Z"
 description: ""
 draft: false
@@ -11,9 +7,9 @@ cover:
   image: images/connector_2-2.jpg
 slug: hand-made-trrs-cable
 tags:
-- 自作
-- cable
-- keyboard
+  - 自作
+  - cable
+  - keyboard
 title: 初めての自作ケーブル
 ---
 

@@ -1,8 +1,5 @@
 ---
 author: nasa9084
-categories:
-- gadget
-- iPhone
 date: "2021-09-26T13:19:01Z"
 description: ""
 draft: false
@@ -10,8 +7,8 @@ cover:
   image: images/4F7548AD-F21C-4625-95F7-1BCB4EB4C4DC.JPEG
 slug: iphone13mini
 tags:
-- gadget
-- iPhone
+  - gadget
+  - iPhone
 title: iPhone 13 miniを買った
 ---
 

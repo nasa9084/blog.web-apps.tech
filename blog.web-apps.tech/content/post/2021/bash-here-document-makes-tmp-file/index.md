@@ -1,8 +1,5 @@
 ---
 author: nasa9084
-categories:
-- bash
-- shell
 date: "2021-09-08T09:33:25Z"
 description: ""
 draft: false
@@ -11,8 +8,8 @@ cover:
   relative: true
 slug: bash-here-document-makes-tmp-file
 tags:
-- bash
-- shell
+  - bash
+  - shell
 title: bashのhere-documentは一時ファイルを作成するらしい
 ---
 

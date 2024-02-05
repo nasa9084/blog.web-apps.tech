@@ -2,12 +2,9 @@
 title: 2023年買って良かったモノ
 author: nasa9084
 date: 2023-12-16T02:09:00+09:00
-categories:
-- 2023
-- gadget
 tags:
-- 2023
-- gadget
+  - 2023
+  - gadget
 slug: 2023-must-buy
 ---
 

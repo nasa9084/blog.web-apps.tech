@@ -1,11 +1,5 @@
 ---
 author: nasa9084
-categories:
-- kubernetes
-- kubespray
-- docker
-- ansible
-- cluster
 date: "2018-02-23T14:45:49Z"
 description: ""
 draft: false
@@ -14,11 +8,11 @@ cover:
   relative: true
 slug: deploy-k8s-with-kubespray-2
 tags:
-- kubernetes
-- kubespray
-- docker
-- ansible
-- cluster
+  - kubernetes
+  - kubespray
+  - docker
+  - ansible
+  - cluster
 title: kubesprayを使用してkubernetes clusterを構築する(2)
 ---
 

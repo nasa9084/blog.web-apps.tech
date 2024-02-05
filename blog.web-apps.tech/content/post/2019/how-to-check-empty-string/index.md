@@ -1,9 +1,5 @@
 ---
 author: nasa9084
-categories:
-- golang
-- string
-- benchmark
 date: "2019-10-09T07:02:52Z"
 description: ""
 draft: false
@@ -11,9 +7,9 @@ cover:
   image: images/gG9QcK.jpg
 slug: how-to-check-empty-string
 tags:
-- golang
-- string
-- benchmark
+  - golang
+  - string
+  - benchmark
 title: 空文字列確認は長さをとるべきか？
 ---
 

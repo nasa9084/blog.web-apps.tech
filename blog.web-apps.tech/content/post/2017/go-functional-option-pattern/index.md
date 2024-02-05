@@ -1,9 +1,5 @@
 ---
 author: nasa9084
-categories:
-- golang
-- design pattern
-- functional option pattern
 date: "2017-09-26T01:44:53Z"
 description: ""
 draft: false
@@ -12,9 +8,9 @@ cover:
   relative: true
 slug: go-functional-option-pattern
 tags:
-- golang
-- design pattern
-- functional option pattern
+  - golang
+  - design pattern
+  - functional option pattern
 title: Functional Option Pattern
 ---
 

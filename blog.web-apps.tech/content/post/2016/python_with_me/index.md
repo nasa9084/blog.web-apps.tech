@@ -1,9 +1,5 @@
 ---
 author: nasa9084
-categories:
-- advent  calendar
-- pycon jp
-- python
 date: "2016-12-05T08:13:00Z"
 description: ""
 draft: false
@@ -11,9 +7,9 @@ cover:
   image: images/python.jpg
 slug: python_with_me
 tags:
-- advent  calendar
-- pycon jp
-- python
+  - advent calendar
+  - pycon jp
+  - python
 title: Pythonとわたし
 ---
 

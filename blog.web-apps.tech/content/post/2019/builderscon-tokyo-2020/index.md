@@ -1,9 +1,5 @@
 ---
 author: nasa9084
-categories:
-- builderscon
-- "2020"
-- tokyo
 date: "2019-12-03T09:00:00Z"
 description: ""
 draft: false
@@ -12,9 +8,9 @@ cover:
   relative: true
 slug: builderscon-tokyo-2020
 tags:
-- builderscon
-- "2020"
-- tokyo
+  - builderscon
+  - "2020"
+  - tokyo
 title: builderscon tokyo 2020やるぞ！という話
 ---
 

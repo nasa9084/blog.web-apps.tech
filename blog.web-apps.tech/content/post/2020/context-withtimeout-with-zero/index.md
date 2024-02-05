@@ -1,9 +1,5 @@
 ---
 author: nasa9084
-categories:
-- golang
-- context
-- time
 date: "2020-04-08T04:17:35Z"
 description: ""
 draft: false
@@ -12,9 +8,9 @@ cover:
   relative: true
 slug: context-withtimeout-with-zero
 tags:
-- golang
-- context
-- time
+  - golang
+  - context
+  - time
 title: context.WithTimeoutに0を与えるとどうなるのか
 ---
 

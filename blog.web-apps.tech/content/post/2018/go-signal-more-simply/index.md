@@ -1,11 +1,5 @@
 ---
 author: nasa9084
-categories:
-- golang
-- context
-- goroutine
-- signal
-- syscall
 date: "2018-03-06T14:32:00Z"
 description: ""
 draft: false
@@ -14,11 +8,11 @@ cover:
   relative: true
 slug: go-signal-more-simply
 tags:
-- golang
-- context
-- goroutine
-- signal
-- syscall
+  - golang
+  - context
+  - goroutine
+  - signal
+  - syscall
 title: 'Golang: 手軽にシグナルをListenしてcallback関数を呼ぶ'
 ---
 

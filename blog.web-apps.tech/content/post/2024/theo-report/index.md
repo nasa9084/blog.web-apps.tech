@@ -2,10 +2,8 @@
 title: THEO解約レポート
 author: nasa9084
 date: 2024-02-05T22:00:00+09:00
-categories:
-- money
 tags:
-- money
+  - money
 cover:
   image: images/graph.png
   relative: true

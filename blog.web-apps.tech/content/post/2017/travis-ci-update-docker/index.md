@@ -1,11 +1,5 @@
 ---
 author: nasa9084
-categories:
-- docker
-- dockerfile
-- travis-ci
-- test
-- ci
 date: "2017-10-18T09:17:00Z"
 description: ""
 draft: false
@@ -14,11 +8,11 @@ cover:
   relative: true
 slug: travis-ci-update-docker
 tags:
-- docker
-- dockerfile
-- travis-ci
-- test
-- ci
+  - docker
+  - dockerfile
+  - travis-ci
+  - test
+  - ci
 title: Travis CIでdockerのバージョンを最新にする
 ---
 

@@ -1,7 +1,5 @@
 ---
 author: nasa9084
-categories:
-- gadget
 date: "2020-04-27T08:56:45Z"
 description: ""
 draft: false
@@ -9,7 +7,7 @@ cover:
   image: images/IMG_20200427_165812-1.jpg
 slug: yobybo-card20
 tags:
-- gadget
+  - gadget
 title: YOBYBO CARD20
 ---
 

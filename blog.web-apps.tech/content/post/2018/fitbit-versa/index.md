@@ -1,11 +1,5 @@
 ---
 author: nasa9084
-categories:
-- fitbit
-- smart watch
-- gadget
-- tracker
-- health check
 date: "2018-09-01T14:48:35Z"
 description: ""
 draft: false
@@ -13,11 +7,11 @@ cover:
   image: images/fitbit_versa.jpg
 slug: fitbit-versa
 tags:
-- fitbit
-- smart watch
-- gadget
-- tracker
-- health check
+  - fitbit
+  - smart watch
+  - gadget
+  - tracker
+  - health check
 title: fitbit versaを購入したので開封の儀
 ---
 

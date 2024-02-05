@@ -1,9 +1,5 @@
 ---
 author: nasa9084
-categories:
-- kubernetes
-- 技術書典
-- 同人誌
 date: "2018-09-25T11:04:55Z"
 description: ""
 draft: false
@@ -12,9 +8,9 @@ cover:
   relative: true
 slug: chofu-tech-k8s-book
 tags:
-- kubernetes
-- 技術書典
-- 同人誌
+  - kubernetes
+  - 技術書典
+  - 同人誌
 title: 調布技研でKubernetesの薄い本を出します
 ---
 

@@ -3,12 +3,10 @@ title: 二つのファイルの共通行(または共通しない行)を得る
 author: nasa9084
 date: 2022-09-28T23:59:17+09:00
 draft: false
-categories:
-- bash
 tags:
-- bash
-- shell
-- zsh
+  - bash
+  - shell
+  - zsh
 cover:
   image: images/shell_prompt.png
   relative: true

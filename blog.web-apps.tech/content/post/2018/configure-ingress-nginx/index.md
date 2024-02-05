@@ -1,10 +1,5 @@
 ---
 author: nasa9084
-categories:
-- ingress-nginx
-- nginx
-- kubernetes
-- Ingress
 date: "2018-09-16T17:06:14Z"
 description: ""
 draft: false
@@ -13,10 +8,10 @@ cover:
   relative: true
 slug: configure-ingress-nginx
 tags:
-- ingress-nginx
-- nginx
-- kubernetes
-- Ingress
+  - ingress-nginx
+  - nginx
+  - kubernetes
+  - Ingress
 title: ingress-nginxで諸々設定する
 ---
 

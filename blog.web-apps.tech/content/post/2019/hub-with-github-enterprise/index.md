@@ -1,9 +1,5 @@
 ---
 author: nasa9084
-categories:
-- git
-- github
-- tool
 date: "2019-08-22T10:30:00Z"
 description: ""
 draft: false
@@ -11,9 +7,9 @@ cover:
   image: images/github.jpg
 slug: hub-with-github-enterprise
 tags:
-- git
-- github
-- tool
+  - git
+  - github
+  - tool
 title: hubコマンドにGitHub Enterprise環境を追加する
 ---
 

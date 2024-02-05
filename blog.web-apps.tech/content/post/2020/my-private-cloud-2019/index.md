@@ -1,17 +1,5 @@
 ---
 author: nasa9084
-categories:
-- kubernetes
-- kubespray
-- docker
-- ingress-nginx
-- nginx
-- ceph
-- ceph rbd
-- letsencrypt
-- cert-manager
-- opennebula
-- Prometheus
 date: "2020-01-06T09:06:45Z"
 description: ""
 draft: false
@@ -20,17 +8,17 @@ cover:
   relative: true
 slug: my-private-cloud-2019
 tags:
-- kubernetes
-- kubespray
-- docker
-- ingress-nginx
-- nginx
-- ceph
-- ceph rbd
-- letsencrypt
-- cert-manager
-- opennebula
-- Prometheus
+  - kubernetes
+  - kubespray
+  - docker
+  - ingress-nginx
+  - nginx
+  - ceph
+  - ceph rbd
+  - letsencrypt
+  - cert-manager
+  - opennebula
+  - Prometheus
 title: 趣味サーバーのインフラを再構成した件
 ---
 

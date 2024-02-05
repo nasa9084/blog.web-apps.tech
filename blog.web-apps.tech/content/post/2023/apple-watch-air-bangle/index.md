@@ -2,10 +2,8 @@
 title: Air Bangle
 author: nasa9084
 date: 2023-02-21T23:00:06+09:00
-categories:
-- gadget
 tags:
-- gadget
+  - gadget
 cover:
   image: images/apple-watch-air-bangle.jpeg
   relative: true

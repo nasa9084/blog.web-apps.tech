@@ -1,9 +1,5 @@
 ---
 author: nasa9084
-categories:
-- Anova
-- cooking
-- sous vide
 date: "2020-03-03T05:30:29Z"
 description: ""
 draft: false
@@ -11,9 +7,9 @@ cover:
   image: images/IMG_20200302_222037-1.jpg
 slug: salmon-sous-vide-miso
 tags:
-- Anova
-- cooking
-- sous vide
+  - Anova
+  - cooking
+  - sous vide
 title: サーモンをAnovaでやる
 ---
 

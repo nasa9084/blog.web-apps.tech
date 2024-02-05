@@ -1,10 +1,5 @@
 ---
 author: nasa9084
-categories:
-- git
-- alias
-- advent  calendar
-- "2018"
 date: "2018-12-12T06:16:37Z"
 description: ""
 draft: false
@@ -13,10 +8,10 @@ cover:
   relative: true
 slug: git-aliases
 tags:
-- git
-- alias
-- advent  calendar
-- "2018"
+  - git
+  - alias
+  - advent calendar
+  - "2018"
 title: gitにもaliasの指定ができる件
 ---
 
@@ -40,7 +35,7 @@ title: gitにもaliasの指定ができる件
 ### aliasの登録方法
 
 `.gitconfig`は基本的にiniファイルです。そのため、次のように登録します。
-    
+
 ``` ini
 [alias]
 aliasname1 = some command 1st
@@ -140,6 +135,3 @@ ignore = !curl -L -s https://www.gitignore.io/api/$@
 これで、`git ignore`コマンドが使えるようになり、`git ignore macos > .gitignore`の形で簡単に`.gitignore`のテンプレートを作れるようになりました。
 
 なお、普段私が使っている`.gitconfig`は[GitHubで](https://github.com/nasa9084/dotfiles/blob/master/.gitconfig)公開しています。
-
-
-

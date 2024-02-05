@@ -1,12 +1,5 @@
 ---
 author: nasa9084
-categories:
-- kubernetes
-- ceph rbd
-- ceph
-- storageclass
-- persistent volume
-- cluster
 date: "2018-10-23T07:08:35Z"
 description: ""
 draft: false
@@ -15,12 +8,12 @@ cover:
   relative: true
 slug: ceph-rbd-storageclass
 tags:
-- kubernetes
-- ceph rbd
-- ceph
-- storageclass
-- persistent volume
-- cluster
+  - kubernetes
+  - ceph rbd
+  - ceph
+  - storageclass
+  - persistent volume
+  - cluster
 title: Ceph RBDをKubernetesのStorageClassとして登録する
 ---
 

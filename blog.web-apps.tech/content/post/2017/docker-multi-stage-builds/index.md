@@ -1,8 +1,5 @@
 ---
 author: nasa9084
-categories:
-- docker
-- dockerfile
 date: "2017-08-17T02:06:00Z"
 description: ""
 draft: false
@@ -11,8 +8,8 @@ cover:
   relative: true
 slug: docker-multi-stage-builds
 tags:
-- docker
-- dockerfile
+  - docker
+  - dockerfile
 title: Docker multi-stage builds
 ---
 

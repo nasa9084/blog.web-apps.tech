@@ -3,10 +3,8 @@ title: RenovateでGitHub Actionsで使っているHugoを更新する
 author: nasa9084
 date: 2022-09-27T01:53:45+09:00
 draft: false
-categories:
-- github
 tags:
-- github
+  - github
 cover:
   image: images/renovate_logo.jpg
   relative: true

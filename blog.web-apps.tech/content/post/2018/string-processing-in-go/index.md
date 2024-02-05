@@ -1,12 +1,5 @@
 ---
 author: nasa9084
-categories:
-- golang
-- string
-- regexp
-- strings
-- strconv
-- unicode
 date: "2018-03-05T14:00:00Z"
 description: ""
 draft: false
@@ -15,12 +8,12 @@ cover:
   relative: true
 slug: string-processing-in-go
 tags:
-- golang
-- string
-- regexp
-- strings
-- strconv
-- unicode
+  - golang
+  - string
+  - regexp
+  - strings
+  - strconv
+  - unicode
 title: Go言語で文字列を処理する
 ---
 

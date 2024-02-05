@@ -1,11 +1,5 @@
 ---
 author: nasa9084
-categories:
-- rancher
-- haproxy
-- hsts
-- reverse proxy
-- load balancer
 date: "2017-09-02T16:49:12Z"
 description: ""
 draft: false
@@ -17,11 +11,11 @@ summary: |-
   HSTSはHTTP Strict Transport Securityの略で、HTTPでの接続を強制的にHTTPSへと変更するようウェブブラウザへ伝達するセキュリティ機構です。
   Rancher-HAProxyでロードバランシングしている場合にもHSTSを使えるように設定してみました。
 tags:
-- rancher
-- haproxy
-- hsts
-- reverse proxy
-- load balancer
+  - rancher
+  - haproxy
+  - hsts
+  - reverse proxy
+  - load balancer
 title: Rancher-HAProxyでHSTSを設定する
 ---
 

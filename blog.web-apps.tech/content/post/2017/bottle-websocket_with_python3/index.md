@@ -1,10 +1,5 @@
 ---
 author: nasa9084
-categories:
-- python
-- python3
-- websocket
-- bottle
 date: "2017-01-10T17:05:00Z"
 description: ""
 draft: false
@@ -12,10 +7,10 @@ cover:
   image: images/python-1.jpg
 slug: bottle-websocket_with_python3
 tags:
-- python
-- python3
-- websocket
-- bottle
+  - python
+  - python3
+  - websocket
+  - bottle
 title: Python 3でbottle-websocketを使う
 ---
 

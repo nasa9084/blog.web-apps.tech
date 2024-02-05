@@ -1,9 +1,5 @@
 ---
 author: nasa9084
-categories:
-- cooking
-- "2021"
-- 梅仕事
 date: "2021-05-26T07:53:09Z"
 description: ""
 draft: false
@@ -11,9 +7,9 @@ cover:
   image: images/PXL_20210526_073535973-1.jpg
 slug: ume-2021-1
 tags:
-- cooking
-- "2021"
-- 梅仕事
+  - cooking
+  - "2021"
+  - 梅仕事
 title: 梅仕事2021 (1)
 ---
 

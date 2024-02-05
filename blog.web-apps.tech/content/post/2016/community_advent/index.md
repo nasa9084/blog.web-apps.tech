@@ -1,9 +1,5 @@
 ---
 author: nasa9084
-categories:
-- conference
-- community
-- advent  calendar
 date: "2016-12-17T06:37:00Z"
 description: ""
 draft: false
@@ -12,9 +8,9 @@ cover:
   relative: true
 slug: community_advent
 tags:
-- conference
-- community
-- advent  calendar
+  - conference
+  - community
+  - advent calendar
 title: 学生が勉強会/コミュニティを運営するということ
 ---
 

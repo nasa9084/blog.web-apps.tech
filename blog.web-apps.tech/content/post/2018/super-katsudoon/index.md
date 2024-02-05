@@ -1,9 +1,5 @@
 ---
 author: nasa9084
-categories:
-- sous vide
-- Anova
-- cooking
 date: "2018-06-04T10:00:00Z"
 description: ""
 draft: false
@@ -11,9 +7,9 @@ cover:
   image: images/IMG_20180531_212641-1.jpg
 slug: super-katsudoon
 tags:
-- sous vide
-- Anova
-- cooking
+  - sous vide
+  - Anova
+  - cooking
 title: 超級カツ丼をAnovaでやった
 ---
 

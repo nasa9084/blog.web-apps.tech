@@ -1,10 +1,5 @@
 ---
 author: nasa9084
-categories:
-- golang
-- goroutine
-- sync
-- stdlib
 date: "2017-09-01T07:03:07Z"
 description: ""
 draft: false
@@ -13,10 +8,10 @@ cover:
   relative: true
 slug: how-to-use-sync-waitgroup
 tags:
-- golang
-- goroutine
-- sync
-- stdlib
+  - golang
+  - goroutine
+  - sync
+  - stdlib
 title: sync.WaitGroup
 ---
 

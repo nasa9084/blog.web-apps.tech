@@ -1,11 +1,5 @@
 ---
 author: nasa9084
-categories:
-- rancher
-- reverse proxy
-- load balancer
-- nginx
-- mixed content blocking
 date: "2017-09-04T10:25:25Z"
 description: ""
 draft: false
@@ -17,11 +11,11 @@ summary: |-
   常時SSLの環境で二重にリバースプロキシされた環境のRancherは、公式ドキュメント通りの設定を行っても正常に動作しません。
   X-Forwarded-ProtoがHTTPSの状態でRancher Serverまで届くように設定することで問題を解消できます。
 tags:
-- rancher
-- reverse proxy
-- load balancer
-- nginx
-- mixed content blocking
+  - rancher
+  - reverse proxy
+  - load balancer
+  - nginx
+  - mixed content blocking
 title: 二重にプロキシされたRancher Serverのリバースプロキシ設定
 ---
 

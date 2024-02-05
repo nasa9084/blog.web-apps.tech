@@ -1,8 +1,5 @@
 ---
 author: nasa9084
-categories:
-- javascript
-- package bundler
 date: "2017-12-12T15:00:00Z"
 description: ""
 draft: false
@@ -11,8 +8,8 @@ cover:
   relative: true
 slug: parcel-riot-js
 tags:
-- javascript
-- package bundler
+  - javascript
+  - package bundler
 title: Parcel + Riot.js
 ---
 

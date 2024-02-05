@@ -1,8 +1,5 @@
 ---
 author: nasa9084
-categories:
-- Anker
-- gadget
 date: "2021-01-26T06:42:34Z"
 description: ""
 draft: false
@@ -10,8 +7,8 @@ cover:
   image: images/PXL_20210126_053643159-1.jpg
 slug: soundcore-life-q30
 tags:
-- Anker
-- gadget
+  - Anker
+  - gadget
 title: Soundcore Life Q30
 ---
 

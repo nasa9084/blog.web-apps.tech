@@ -1,15 +1,5 @@
 ---
 author: nasa9084
-categories:
-- golang
-- crypto/sha1
-- encoding/binary
-- crypto/hmac
-- bytes
-- totp
-- 2fa-auth
-- hotp
-- rfc
 date: "2018-03-30T17:03:45Z"
 description: ""
 draft: false
@@ -18,15 +8,15 @@ cover:
   relative: true
 slug: implementing_totp
 tags:
-- golang
-- crypto/sha1
-- encoding/binary
-- crypto/hmac
-- bytes
-- totp
-- 2fa-auth
-- hotp
-- rfc
+  - golang
+  - crypto/sha1
+  - encoding/binary
+  - crypto/hmac
+  - bytes
+  - totp
+  - 2fa-auth
+  - hotp
+  - rfc
 title: TOTPを実装する
 ---
 

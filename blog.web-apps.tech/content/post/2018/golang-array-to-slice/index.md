@@ -1,13 +1,5 @@
 ---
 author: nasa9084
-categories:
-- golang
-- crypto/sha512
-- encoding/hex
-- bytes
-- array
-- slice
-- stdlib
 date: "2018-03-16T02:19:13Z"
 description: ""
 draft: false
@@ -16,13 +8,13 @@ cover:
   relative: true
 slug: golang-array-to-slice
 tags:
-- golang
-- crypto/sha512
-- encoding/hex
-- bytes
-- array
-- slice
-- stdlib
+  - golang
+  - crypto/sha512
+  - encoding/hex
+  - bytes
+  - array
+  - slice
+  - stdlib
 title: 'Golang: 配列からスライスに変換する'
 ---
 

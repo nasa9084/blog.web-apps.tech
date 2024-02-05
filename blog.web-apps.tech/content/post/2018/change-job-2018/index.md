@@ -1,7 +1,5 @@
 ---
 author: nasa9084
-categories:
-- 転職
 date: "2018-09-18T09:19:26Z"
 description: ""
 draft: false
@@ -9,7 +7,7 @@ cover:
   image: images/20180406104539.jpg
 slug: change-job-2018
 tags:
-- 転職
+  - 転職
 title: 日本仮想化技術(株)を退職します
 ---
 

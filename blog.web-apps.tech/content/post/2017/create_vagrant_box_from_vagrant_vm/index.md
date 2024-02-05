@@ -1,9 +1,5 @@
 ---
 author: nasa9084
-categories:
-- vagrant
-- vm
-- box
 date: "2017-07-11T02:39:00Z"
 description: ""
 draft: false
@@ -12,9 +8,9 @@ cover:
   relative: true
 slug: create_vagrant_box_from_vagrant_vm
 tags:
-- vagrant
-- vm
-- box
+  - vagrant
+  - vm
+  - box
 title: Vagrantで起動したVMからBOXを作る
 ---
 

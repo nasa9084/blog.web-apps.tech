@@ -1,11 +1,5 @@
 ---
 author: nasa9084
-categories:
-- git
-- golang
-- github
-- command-line
-- tool
 date: "2018-02-21T04:56:49Z"
 description: ""
 draft: false
@@ -14,11 +8,11 @@ cover:
   relative: true
 slug: generate_license_with_gitlicense
 tags:
-- git
-- golang
-- github
-- command-line
-- tool
+  - git
+  - golang
+  - github
+  - command-line
+  - tool
 title: 'Generates LICENSE file: git-license'
 ---
 

@@ -1,10 +1,5 @@
 ---
 author: nasa9084
-categories:
-- vagrant
-- vmware
-- fusion
-- nested-vm
 date: "2017-12-28T04:29:59Z"
 description: ""
 draft: false
@@ -13,10 +8,10 @@ cover:
   relative: true
 slug: vagrant-vmware-fusion-nested-vm
 tags:
-- vagrant
-- vmware
-- fusion
-- nested-vm
+  - vagrant
+  - vmware
+  - fusion
+  - nested-vm
 title: Vagrant/vmware-fusionでハードウェア仮想化を有効にしたVMを作成する
 ---
 

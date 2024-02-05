@@ -1,8 +1,5 @@
 ---
 author: nasa9084
-categories:
-- firefox
-- macos
 date: "2021-02-02T06:49:47Z"
 description: ""
 draft: false
@@ -11,8 +8,8 @@ cover:
   relative: true
 slug: disable-firefox-83-pinch-zoom
 tags:
-- firefox
-- macos
+  - firefox
+  - macos
 title: Firefox 83で導入されたピンチズームを無効にする
 ---
 

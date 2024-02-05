@@ -1,9 +1,5 @@
 ---
 author: nasa9084
-categories:
-- kubernetes
-- security
-- best practices
 date: "2018-04-19T05:18:30Z"
 description: ""
 draft: false
@@ -12,9 +8,9 @@ cover:
   relative: true
 slug: k8s-security-best-practices-by-ianlewis
 tags:
-- kubernetes
-- security
-- best practices
+  - kubernetes
+  - security
+  - best practices
 title: Kubernetesのセキュリティのベストプラクティス by Ian Lewis
 ---
 

@@ -1,11 +1,5 @@
 ---
 author: nasa9084
-categories:
-- fitbit
-- tracker
-- health check
-- smart watch
-- gadget
 date: "2018-09-04T14:46:50Z"
 description: ""
 draft: false
@@ -13,11 +7,11 @@ cover:
   image: images/fitbit_versa-1.jpg
 slug: fitbit-versa-3days
 tags:
-- fitbit
-- tracker
-- health check
-- smart watch
-- gadget
+  - fitbit
+  - tracker
+  - health check
+  - smart watch
+  - gadget
 title: fitbit versa三日目レビュー
 ---
 

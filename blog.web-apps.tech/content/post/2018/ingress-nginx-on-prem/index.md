@@ -1,16 +1,5 @@
 ---
 author: nasa9084
-categories:
-- kubernetes
-- load balancer
-- service
-- Ingress
-- ingress-nginx
-- letsencrypt
-- tls
-- reverse proxy
-- kubespray
-- nginx
 date: "2018-08-06T05:37:02Z"
 description: ""
 draft: false
@@ -19,16 +8,16 @@ cover:
   relative: true
 slug: ingress-nginx-on-prem
 tags:
-- kubernetes
-- load balancer
-- service
-- Ingress
-- ingress-nginx
-- letsencrypt
-- tls
-- reverse proxy
-- kubespray
-- nginx
+  - kubernetes
+  - load balancer
+  - service
+  - Ingress
+  - ingress-nginx
+  - letsencrypt
+  - tls
+  - reverse proxy
+  - kubespray
+  - nginx
 title: ingress-nginxを使用してオンプレでもIngressを使用する
 ---
 

@@ -1,7 +1,5 @@
 ---
 author: nasa9084
-categories:
-- cooking
 date: "2020-04-08T15:38:24Z"
 description: ""
 draft: false
@@ -9,7 +7,7 @@ cover:
   image: images/IMG_20200408_203758-1.jpg
 slug: birthday-paella
 tags:
-- cooking
+  - cooking
 title: 誕生日パエリア
 ---
 

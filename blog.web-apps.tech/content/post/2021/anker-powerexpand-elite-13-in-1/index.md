@@ -1,10 +1,5 @@
 ---
 author: nasa9084
-categories:
-- Anker
-- gadget
-- USB type-C
-- macbook
 date: "2021-01-22T07:47:47Z"
 description: ""
 draft: false
@@ -12,10 +7,10 @@ cover:
   image: images/PXL_20210122_023903344.jpg
 slug: anker-powerexpand-elite-13-in-1
 tags:
-- Anker
-- gadget
-- USB type-C
-- macbook
+  - Anker
+  - gadget
+  - USB type-C
+  - macbook
 title: Anker PowerExpand Elite 13-in-1 Thunderbolt 3 Dock
 ---
 

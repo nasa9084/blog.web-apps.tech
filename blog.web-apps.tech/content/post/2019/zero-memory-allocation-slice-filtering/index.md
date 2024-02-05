@@ -1,8 +1,5 @@
 ---
 author: nasa9084
-categories:
-- golang
-- slice
 date: "2019-02-04T07:30:29Z"
 description: ""
 draft: false
@@ -11,8 +8,8 @@ cover:
   relative: true
 slug: zero-memory-allocation-slice-filtering
 tags:
-- golang
-- slice
+  - golang
+  - slice
 title: zero memory allocation slice filtering
 ---
 

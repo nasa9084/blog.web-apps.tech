@@ -1,15 +1,5 @@
 ---
 author: nasa9084
-categories:
-- Alertmanager
-- Prometheus
-- kubernetes
-- Secret
-- confd
-- security
-- tool
-- dockerfile
-- initContainer
 date: "2018-08-20T08:06:47Z"
 description: ""
 draft: false
@@ -18,15 +8,15 @@ cover:
   relative: true
 slug: alertmanager-config-to-secret-with-confd
 tags:
-- Alertmanager
-- Prometheus
-- kubernetes
-- Secret
-- confd
-- security
-- tool
-- dockerfile
-- initContainer
+  - Alertmanager
+  - Prometheus
+  - kubernetes
+  - Secret
+  - confd
+  - security
+  - tool
+  - dockerfile
+  - initContainer
 title: confd + initContainerでAlertmanagerの設定をSecretに逃がす
 ---
 

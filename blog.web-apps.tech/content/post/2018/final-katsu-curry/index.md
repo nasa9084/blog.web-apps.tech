@@ -1,9 +1,5 @@
 ---
 author: nasa9084
-categories:
-- sous vide
-- Anova
-- cooking
 date: "2018-08-15T14:04:46Z"
 description: ""
 draft: false
@@ -11,9 +7,9 @@ cover:
   image: images/P_20180815_205622-1.jpg
 slug: final-katsu-curry
 tags:
-- sous vide
-- Anova
-- cooking
+  - sous vide
+  - Anova
+  - cooking
 title: ファイナルカツカレーをつくった
 ---
 

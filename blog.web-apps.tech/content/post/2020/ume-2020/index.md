@@ -1,9 +1,5 @@
 ---
 author: nasa9084
-categories:
-- cooking
-- "2020"
-- 梅仕事
 date: "2020-06-06T16:53:33Z"
 description: ""
 draft: false
@@ -11,9 +7,9 @@ cover:
   image: images/IMG_20200606_181702-1.jpg
 slug: ume-2020
 tags:
-- cooking
-- "2020"
-- 梅仕事
+  - cooking
+  - "2020"
+  - 梅仕事
 title: 梅仕事2020
 ---
 

@@ -1,9 +1,5 @@
 ---
 author: nasa9084
-categories:
-- gnu
-- mo
-- gettext
 date: "2017-11-06T09:08:27Z"
 description: ""
 draft: false
@@ -13,9 +9,9 @@ cover:
 slug: gnu_mo_format
 summary: GNU MOファイルの内部構造について、最小限ですが解説します。
 tags:
-- gnu
-- mo
-- gettext
+  - gnu
+  - mo
+  - gettext
 title: GNU MOファイルの構造
 ---
 

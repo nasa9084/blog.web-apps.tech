@@ -1,9 +1,5 @@
 ---
 author: nasa9084
-categories:
-- git
-- tool
-- command-line
 date: "2018-11-13T02:07:39Z"
 description: ""
 draft: false
@@ -12,9 +8,9 @@ cover:
   relative: true
 slug: gitignore-from-cli
 tags:
-- git
-- tool
-- command-line
+  - git
+  - tool
+  - command-line
 title: git ignoreコマンドで.gitignoreを取得する
 ---
 

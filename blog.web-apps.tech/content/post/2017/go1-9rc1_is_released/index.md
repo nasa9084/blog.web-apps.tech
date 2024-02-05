@@ -1,8 +1,5 @@
 ---
 author: nasa9084
-categories:
-- golang
-- release
 date: "2017-07-26T01:24:00Z"
 description: ""
 draft: false
@@ -11,8 +8,8 @@ cover:
   relative: true
 slug: go1-9rc1_is_released
 tags:
-- golang
-- release
+  - golang
+  - release
 title: Go1.9rc1 is released!
 ---
 

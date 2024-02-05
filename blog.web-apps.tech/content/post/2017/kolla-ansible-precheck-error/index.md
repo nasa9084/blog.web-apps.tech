@@ -1,9 +1,5 @@
 ---
 author: nasa9084
-categories:
-- ansible
-- openstack
-- kolla
 date: "2017-09-29T14:20:16Z"
 description: ""
 draft: false
@@ -13,9 +9,9 @@ cover:
 slug: kolla-ansible-precheck-error
 summary: 「OpenStack Kolla(Ocata)環境の構築」を参考にOpenStack Kollaのセットアップを行っていたら、エラーが出ました。
 tags:
-- ansible
-- openstack
-- kolla
+  - ansible
+  - openstack
+  - kolla
 title: Kolla-ansible precheckで発生するエラーの対処
 ---
 

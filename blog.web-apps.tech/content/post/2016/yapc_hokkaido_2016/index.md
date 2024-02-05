@@ -1,13 +1,5 @@
 ---
 author: nasa9084
-categories:
-- yapc
-- hokkaido
-- perl
-- "2016"
-- sapporo
-- conference
-- event
 date: "2016-12-09T16:34:00Z"
 description: ""
 draft: false
@@ -16,13 +8,13 @@ cover:
   relative: true
 slug: yapc_hokkaido_2016
 tags:
-- yapc
-- hokkaido
-- perl
-- "2016"
-- sapporo
-- conference
-- event
+  - yapc
+  - hokkaido
+  - perl
+  - "2016"
+  - sapporo
+  - conference
+  - event
 title: YAPC::Hokkaido 2016 SAPPOROに行ってきました
 ---
 

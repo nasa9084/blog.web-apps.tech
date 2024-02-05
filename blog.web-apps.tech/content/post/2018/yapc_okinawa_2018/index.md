@@ -1,12 +1,5 @@
 ---
 author: nasa9084
-categories:
-- yapc
-- okinawa
-- perl
-- "2018"
-- conference
-- event
 date: "2018-03-04T13:44:24Z"
 description: ""
 draft: false
@@ -15,12 +8,12 @@ cover:
   relative: true
 slug: yapc_okinawa_2018
 tags:
-- yapc
-- okinawa
-- perl
-- "2018"
-- conference
-- event
+  - yapc
+  - okinawa
+  - perl
+  - "2018"
+  - conference
+  - event
 title: YAPC::Okinawa 2018 ONNASONに行ってきました
 ---
 

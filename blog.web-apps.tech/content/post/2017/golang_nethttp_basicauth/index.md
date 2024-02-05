@@ -1,9 +1,5 @@
 ---
 author: nasa9084
-categories:
-- golang
-- net/http
-- basic
 date: "2017-05-02T05:06:00Z"
 description: ""
 draft: false
@@ -12,9 +8,9 @@ cover:
   relative: true
 slug: golang_nethttp_basicauth
 tags:
-- golang
-- net/http
-- basic
+  - golang
+  - net/http
+  - basic
 title: 'golang: net/httpでBASIC認証'
 ---
 

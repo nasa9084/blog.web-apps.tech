@@ -1,7 +1,5 @@
 ---
 author: nasa9084
-categories:
-- gadget
 date: "2021-08-12T13:20:12Z"
 description: ""
 draft: false
@@ -9,7 +7,7 @@ cover:
   image: images/PXL_20210808_045849649.jpg
 slug: re-sticking-sesame3
 tags:
-- gadget
+  - gadget
 title: 剥がれかけたSesame 3を貼り直す
 ---
 

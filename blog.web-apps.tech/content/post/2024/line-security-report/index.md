@@ -2,10 +2,8 @@
 title: LINE証券解約レポート
 author: nasa9084
 date: 2024-01-31T21:15:00+09:00
-categories:
-- money
 tags:
-- money
+  - money
 cover:
   image: images/graph.png
   relative: true

@@ -1,11 +1,5 @@
 ---
 author: nasa9084
-categories:
-- gitlab
-- git
-- docker
-- automation
-- ci
 date: "2017-11-22T01:17:14Z"
 description: ""
 draft: false
@@ -14,11 +8,11 @@ cover:
   relative: true
 slug: gitlab-docker-init-runners-reg-token
 tags:
-- gitlab
-- git
-- docker
-- automation
-- ci
+  - gitlab
+  - git
+  - docker
+  - automation
+  - ci
 title: 'GitLab Docker: initial runners registration token'
 ---
 

@@ -1,8 +1,5 @@
 ---
 author: nasa9084
-categories:
-- github
-- git
 date: "2022-03-20T14:14:15Z"
 description: ""
 draft: false
@@ -11,8 +8,8 @@ cover:
   relative: true
 slug: github-disabled-git-protocol
 tags:
-- github
-- git
+  - github
+  - git
 title: GitHubがgit://を無効にした件
 ---
 

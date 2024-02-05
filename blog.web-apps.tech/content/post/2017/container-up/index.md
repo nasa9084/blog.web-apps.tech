@@ -1,8 +1,5 @@
 ---
 author: nasa9084
-categories:
-- golang
-- docker
 date: "2017-12-22T04:23:39Z"
 description: ""
 draft: false
@@ -11,8 +8,8 @@ cover:
   relative: true
 slug: container-up
 tags:
-- golang
-- docker
+  - golang
+  - docker
 title: container-upというツールを書いた
 ---
 

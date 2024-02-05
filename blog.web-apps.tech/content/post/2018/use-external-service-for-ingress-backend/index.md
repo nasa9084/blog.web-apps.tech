@@ -1,12 +1,5 @@
 ---
 author: nasa9084
-categories:
-- kubernetes
-- load balancer
-- service
-- Ingress
-- reverse proxy
-- cluster
 date: "2018-08-07T02:20:57Z"
 description: ""
 draft: false
@@ -15,12 +8,12 @@ cover:
   relative: true
 slug: use-external-service-for-ingress-backend
 tags:
-- kubernetes
-- load balancer
-- service
-- Ingress
-- reverse proxy
-- cluster
+  - kubernetes
+  - load balancer
+  - service
+  - Ingress
+  - reverse proxy
+  - cluster
 title: 外部サービスをIngress backendとして使用する
 ---
 

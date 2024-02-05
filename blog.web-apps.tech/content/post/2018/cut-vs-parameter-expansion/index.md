@@ -1,10 +1,5 @@
 ---
 author: nasa9084
-categories:
-- bash
-- zsh
-- shell
-- command-line
 date: "2018-02-26T08:07:11Z"
 description: ""
 draft: false
@@ -13,10 +8,10 @@ cover:
   relative: true
 slug: cut-vs-parameter-expansion
 tags:
-- bash
-- zsh
-- shell
-- command-line
+  - bash
+  - zsh
+  - shell
+  - command-line
 title: cut vs. parameter expansion
 ---
 

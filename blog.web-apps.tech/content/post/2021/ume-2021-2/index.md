@@ -1,8 +1,5 @@
 ---
 author: nasa9084
-categories:
-- 梅仕事
-- "2021"
 date: "2021-06-18T15:34:24Z"
 description: ""
 draft: false
@@ -10,8 +7,8 @@ cover:
   image: images/PXL_20210618_145632642-1.jpg
 slug: ume-2021-2
 tags:
-- 梅仕事
-- "2021"
+  - 梅仕事
+  - "2021"
 title: 梅仕事2021 (2)
 ---
 

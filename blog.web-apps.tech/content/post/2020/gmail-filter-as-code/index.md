@@ -1,8 +1,5 @@
 ---
 author: nasa9084
-categories:
-- automation
-- ci
 date: "2020-05-08T01:00:00Z"
 description: ""
 draft: false
@@ -11,8 +8,8 @@ cover:
   relative: true
 slug: gmail-filter-as-code
 tags:
-- automation
-- ci
+  - automation
+  - ci
 title: Gmail Filter as Code
 ---
 

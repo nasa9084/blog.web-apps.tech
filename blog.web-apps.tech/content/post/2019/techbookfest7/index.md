@@ -1,8 +1,5 @@
 ---
 author: nasa9084
-categories:
-- 技術書典
-- golang
 date: "2019-09-19T01:00:00Z"
 description: ""
 draft: false
@@ -11,8 +8,8 @@ cover:
   relative: true
 slug: techbookfest7
 tags:
-- 技術書典
-- golang
+  - 技術書典
+  - golang
 title: 技術書典7でGo言語の本を頒布します
 ---
 
