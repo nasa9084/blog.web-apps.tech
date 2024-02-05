@@ -1,7 +1,6 @@
 ---
 author: nasa9084
 date: "2021-06-18T15:34:24Z"
-description: ""
 cover:
   image: images/PXL_20210618_145632642-1.jpg
 slug: ume-2021-2

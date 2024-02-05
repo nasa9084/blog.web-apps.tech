@@ -1,7 +1,6 @@
 ---
 author: nasa9084
 date: "2017-06-06T01:45:00Z"
-description: ""
 cover:
   image: images/relay.jpg
 slug: fujitsu_facom128b

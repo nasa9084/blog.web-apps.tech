@@ -1,7 +1,6 @@
 ---
 author: nasa9084
 date: "2021-08-02T14:55:54Z"
-description: ""
 cover:
   image: images/---------1.png
   relative: true

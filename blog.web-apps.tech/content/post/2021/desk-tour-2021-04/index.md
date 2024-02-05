@@ -1,7 +1,6 @@
 ---
 author: nasa9084
 date: "2021-04-11T15:12:31Z"
-description: ""
 cover:
   image: images/PXL_20210411_135948586.jpg
 slug: desk-tour-2021-04

@@ -1,7 +1,6 @@
 ---
 author: nasa9084
 date: "2016-12-05T04:34:00Z"
-description: ""
 cover:
   image: images/builderscon_logo.png
   relative: true

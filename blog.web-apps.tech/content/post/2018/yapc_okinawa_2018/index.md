@@ -1,7 +1,6 @@
 ---
 author: nasa9084
 date: "2018-03-04T13:44:24Z"
-description: ""
 cover:
   image: images/yapc_okinawa_logo.png
   relative: true

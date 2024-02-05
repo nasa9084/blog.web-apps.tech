@@ -1,7 +1,6 @@
 ---
 author: nasa9084
 date: "2021-01-29T13:17:22Z"
-description: ""
 cover:
   image: images/PXL_20210129_100801232-1.jpg
 slug: tika-no-nanbanduke

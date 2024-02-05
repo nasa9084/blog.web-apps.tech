@@ -1,7 +1,6 @@
 ---
 author: nasa9084
 date: "2021-03-23T09:00:00Z"
-description: ""
 cover:
   image: images/switchbot-logo.png
   relative: true

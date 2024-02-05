@@ -1,7 +1,6 @@
 ---
 author: nasa9084
 date: "2017-05-09T00:49:00Z"
-description: ""
 cover:
   image: images/emacs_logo-1.png
   relative: true

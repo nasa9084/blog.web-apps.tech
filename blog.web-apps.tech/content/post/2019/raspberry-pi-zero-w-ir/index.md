@@ -1,7 +1,6 @@
 ---
 author: nasa9084
 date: "2019-07-30T15:11:28Z"
-description: ""
 cover:
   image: images/P_20190730_233921-1.jpg
 slug: raspberry-pi-zero-w-ir

@@ -1,7 +1,6 @@
 ---
 author: nasa9084
 date: "2019-10-09T07:02:52Z"
-description: ""
 cover:
   image: images/gG9QcK.jpg
 slug: how-to-check-empty-string

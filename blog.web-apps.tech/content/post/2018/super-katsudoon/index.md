@@ -1,7 +1,6 @@
 ---
 author: nasa9084
 date: "2018-06-04T10:00:00Z"
-description: ""
 cover:
   image: images/IMG_20180531_212641-1.jpg
 slug: super-katsudoon

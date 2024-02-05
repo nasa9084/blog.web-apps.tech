@@ -1,7 +1,6 @@
 ---
 author: nasa9084
 date: "2017-09-02T16:49:12Z"
-description: ""
 cover:
   image: images/rancher.png
   relative: true

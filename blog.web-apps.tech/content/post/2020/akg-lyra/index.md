@@ -1,7 +1,6 @@
 ---
 author: nasa9084
 date: "2020-06-01T08:29:47Z"
-description: ""
 cover:
   image: images/IMG_20200522_220005.jpg
 slug: akg-lyra

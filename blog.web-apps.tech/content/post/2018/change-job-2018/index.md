@@ -1,7 +1,6 @@
 ---
 author: nasa9084
 date: "2018-09-18T09:19:26Z"
-description: ""
 cover:
   image: images/20180406104539.jpg
 slug: change-job-2018

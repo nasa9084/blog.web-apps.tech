@@ -1,7 +1,6 @@
 ---
 author: nasa9084
 date: "2018-03-06T14:32:00Z"
-description: ""
 cover:
   image: images/gopher-2.png
   relative: true

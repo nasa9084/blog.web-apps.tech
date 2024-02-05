@@ -1,7 +1,6 @@
 ---
 author: nasa9084
 date: "2018-02-26T08:07:11Z"
-description: ""
 cover:
   image: images/shell_prompt.png
   relative: true

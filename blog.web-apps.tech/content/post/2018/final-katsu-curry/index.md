@@ -1,7 +1,6 @@
 ---
 author: nasa9084
 date: "2018-08-15T14:04:46Z"
-description: ""
 cover:
   image: images/P_20180815_205622-1.jpg
 slug: final-katsu-curry

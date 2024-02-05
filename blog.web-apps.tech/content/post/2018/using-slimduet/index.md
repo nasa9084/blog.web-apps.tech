@@ -1,7 +1,6 @@
 ---
 author: nasa9084
 date: "2018-05-07T08:50:39Z"
-description: ""
 cover:
   image: images/slimduet.jpg
 slug: using-slimduet

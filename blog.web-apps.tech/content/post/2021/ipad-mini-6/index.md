@@ -1,7 +1,6 @@
 ---
 author: nasa9084
 date: "2021-10-19T23:29:54Z"
-description: ""
 cover:
   image: images/IMG_1374.jpg
 slug: ipad-mini-6

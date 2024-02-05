@@ -1,7 +1,6 @@
 ---
 author: nasa9084
 date: "2021-10-18T07:38:35Z"
-description: ""
 cover:
   image: images/drone_logo.png
   relative: true

@@ -1,7 +1,6 @@
 ---
 author: nasa9084
 date: "2017-03-05T04:12:00Z"
-description: ""
 cover:
   image: images/yapc_kansai_2017.png
   relative: true

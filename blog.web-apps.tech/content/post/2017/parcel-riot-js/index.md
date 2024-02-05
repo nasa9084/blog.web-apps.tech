@@ -1,7 +1,6 @@
 ---
 author: nasa9084
 date: "2017-12-12T15:00:00Z"
-description: ""
 cover:
   image: images/parcel.png
   relative: true

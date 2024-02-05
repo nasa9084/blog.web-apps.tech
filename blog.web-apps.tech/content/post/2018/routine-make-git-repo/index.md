@@ -1,7 +1,6 @@
 ---
 author: nasa9084
 date: "2018-12-07T03:19:52Z"
-description: ""
 cover:
   image: images/git.png
   relative: true

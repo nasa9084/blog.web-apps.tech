@@ -1,7 +1,6 @@
 ---
 author: nasa9084
 date: "2017-12-22T04:23:39Z"
-description: ""
 cover:
   image: images/container-up.png
   relative: true

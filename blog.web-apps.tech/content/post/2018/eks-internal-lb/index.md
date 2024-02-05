@@ -1,7 +1,6 @@
 ---
 author: nasa9084
 date: "2018-09-02T03:04:50Z"
-description: ""
 cover:
   image: images/eks_logo.png
   relative: true

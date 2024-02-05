@@ -1,7 +1,6 @@
 ---
 author: nasa9084
 date: "2017-02-18T09:45:00Z"
-description: ""
 cover:
   image: images/influxdb.png
   relative: true

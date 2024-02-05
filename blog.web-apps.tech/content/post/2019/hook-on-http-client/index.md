@@ -1,7 +1,6 @@
 ---
 author: nasa9084
 date: "2019-11-01T05:48:19Z"
-description: ""
 cover:
   image: images/gG9QcK.jpg
 slug: hook-on-http-client

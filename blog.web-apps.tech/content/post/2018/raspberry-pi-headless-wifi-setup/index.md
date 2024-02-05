@@ -1,7 +1,6 @@
 ---
 author: nasa9084
 date: "2018-04-18T09:17:54Z"
-description: ""
 cover:
   image: images/raspberry_pi.png
   relative: true

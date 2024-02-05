@@ -1,7 +1,6 @@
 ---
 author: nasa9084
 date: "2021-12-30T02:00:00Z"
-description: ""
 slug: retrospective-2021
 tags:
   - "2022"

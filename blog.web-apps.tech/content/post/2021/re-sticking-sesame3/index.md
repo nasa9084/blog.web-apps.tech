@@ -1,7 +1,6 @@
 ---
 author: nasa9084
 date: "2021-08-12T13:20:12Z"
-description: ""
 cover:
   image: images/PXL_20210808_045849649.jpg
 slug: re-sticking-sesame3

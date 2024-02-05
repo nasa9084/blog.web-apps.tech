@@ -1,7 +1,6 @@
 ---
 author: nasa9084
 date: "2019-09-19T01:00:00Z"
-description: ""
 cover:
   image: images/----------2019-09-19-1.00.03.png
   relative: true

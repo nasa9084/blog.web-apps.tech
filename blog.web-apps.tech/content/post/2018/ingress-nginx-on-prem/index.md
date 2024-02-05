@@ -1,7 +1,6 @@
 ---
 author: nasa9084
 date: "2018-08-06T05:37:02Z"
-description: ""
 cover:
   image: images/kubernetes_logo-1.png
   relative: true

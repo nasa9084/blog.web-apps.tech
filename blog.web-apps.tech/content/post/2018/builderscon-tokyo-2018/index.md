@@ -1,7 +1,6 @@
 ---
 author: nasa9084
 date: "2018-09-10T06:10:44Z"
-description: ""
 cover:
   image: images/bcon-top.png
   relative: true

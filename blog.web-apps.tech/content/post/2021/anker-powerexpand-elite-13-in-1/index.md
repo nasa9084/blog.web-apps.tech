@@ -1,7 +1,6 @@
 ---
 author: nasa9084
 date: "2021-01-22T07:47:47Z"
-description: ""
 cover:
   image: images/PXL_20210122_023903344.jpg
 slug: anker-powerexpand-elite-13-in-1

@@ -1,7 +1,6 @@
 ---
 author: nasa9084
 date: "2017-07-19T01:15:00Z"
-description: ""
 cover:
   image: images/riot_logo.png
   relative: true
