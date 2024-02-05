@@ -6,6 +6,7 @@ draft: false
 tags:
   - cooking
   - 梅仕事
+  - 2022
 cover:
   image: images/IMG_1795.png
   relative: true
