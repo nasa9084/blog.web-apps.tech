@@ -2,7 +2,6 @@
 author: nasa9084
 date: "2020-04-15T09:24:39Z"
 description: ""
-draft: false
 cover:
   image: images/IMG_20200415_174608-1.jpg
 slug: aeron-remastered

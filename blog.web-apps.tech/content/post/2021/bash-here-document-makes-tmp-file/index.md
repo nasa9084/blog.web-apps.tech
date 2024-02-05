@@ -2,7 +2,6 @@
 author: nasa9084
 date: "2021-09-08T09:33:25Z"
 description: ""
-draft: false
 cover:
   image: images/shell_prompt.png
   relative: true

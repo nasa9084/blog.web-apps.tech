@@ -2,7 +2,6 @@
 author: nasa9084
 date: "2020-04-01T17:05:46Z"
 description: ""
-draft: false
 cover:
   image: images/IMG_20200401_165601-1.jpg
 slug: anker-soundcore-motionb

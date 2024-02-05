@@ -2,7 +2,6 @@
 author: nasa9084
 date: "2020-04-12T10:05:44Z"
 description: ""
-draft: false
 slug: 2020-april-goods
 tags:
   - "2020"

@@ -2,7 +2,6 @@
 title: Exa to Eza
 author: nasa9084
 date: 2023-09-18T21:26:50+09:00
-draft: false
 tags:
   - zsh
   - bash

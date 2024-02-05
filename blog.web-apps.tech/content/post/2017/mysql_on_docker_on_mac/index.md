@@ -2,7 +2,6 @@
 author: nasa9084
 date: "2017-05-02T06:57:00Z"
 description: ""
-draft: false
 cover:
   image: images/docker-mysql.jpg
 slug: mysql_on_docker_on_mac

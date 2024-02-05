@@ -2,7 +2,6 @@
 author: nasa9084
 date: "2020-01-06T09:06:45Z"
 description: ""
-draft: false
 cover:
   image: images/private-cloud-diagram-1.png
   relative: true

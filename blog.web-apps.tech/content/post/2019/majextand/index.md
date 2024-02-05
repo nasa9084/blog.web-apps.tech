@@ -2,7 +2,6 @@
 author: nasa9084
 date: "2019-01-28T08:55:49Z"
 description: ""
-draft: false
 cover:
   image: images/P_20190127_165642-1.jpg
 slug: majextand

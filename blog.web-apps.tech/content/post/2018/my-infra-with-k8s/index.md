@@ -2,7 +2,6 @@
 author: nasa9084
 date: "2018-08-23T04:53:46Z"
 description: ""
-draft: false
 cover:
   image: images/web-apps-tech-1--1.png
   relative: true

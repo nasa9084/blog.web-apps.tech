@@ -2,7 +2,6 @@
 author: nasa9084
 date: "2017-12-28T04:29:59Z"
 description: ""
-draft: false
 cover:
   image: images/vagrant-1.png
   relative: true

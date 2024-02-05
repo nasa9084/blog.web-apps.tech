@@ -2,7 +2,6 @@
 author: nasa9084
 date: "2018-05-30T13:24:37Z"
 description: ""
-draft: false
 cover:
   image: images/IMG_20180527_220827-1.jpg
 slug: anova-hello-world

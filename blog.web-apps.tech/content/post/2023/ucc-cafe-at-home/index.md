@@ -2,7 +2,6 @@
 title: UCC Cafe@Home
 author: nasa9084
 date: 2023-10-06T00:45:18+09:00
-draft: false
 tags:
   - coffee
 cover:

@@ -2,7 +2,6 @@
 author: nasa9084
 date: "2017-11-22T01:17:14Z"
 description: ""
-draft: false
 cover:
   image: images/gitlab.png
   relative: true

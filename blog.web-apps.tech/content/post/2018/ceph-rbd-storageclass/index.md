@@ -2,7 +2,6 @@
 author: nasa9084
 date: "2018-10-23T07:08:35Z"
 description: ""
-draft: false
 cover:
   image: images/ceph_logo.png
   relative: true

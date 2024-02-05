@@ -2,7 +2,6 @@
 author: nasa9084
 date: "2021-08-30T04:12:05Z"
 description: ""
-draft: false
 cover:
   image: images/PXL_20210820_021323994.jpg
 slug: huawei-band-6

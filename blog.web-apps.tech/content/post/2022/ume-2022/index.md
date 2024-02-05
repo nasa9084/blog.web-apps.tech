@@ -2,7 +2,6 @@
 title: 梅仕事2022
 author: nasa9084
 date: 2022-06-05T19:45:00+09:00
-draft: false
 tags:
   - cooking
   - 梅仕事

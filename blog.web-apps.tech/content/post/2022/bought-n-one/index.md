@@ -2,7 +2,6 @@
 title: N-ONEを買いました
 author: nasa9084
 date: 2022-05-28T23:57:21+09:00
-draft: false
 tags:
   - car
 cover:

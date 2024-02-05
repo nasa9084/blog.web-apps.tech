@@ -2,7 +2,6 @@
 author: nasa9084
 date: "2020-12-23T16:38:13Z"
 description: ""
-draft: false
 slug: 2020-good-buy
 tags:
   - "2020"

@@ -2,7 +2,6 @@
 author: nasa9084
 date: "2019-02-04T17:00:46Z"
 description: ""
-draft: false
 cover:
   image: images/connector_2-2.jpg
 slug: hand-made-trrs-cable

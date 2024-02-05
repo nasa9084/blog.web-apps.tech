@@ -2,7 +2,6 @@
 author: nasa9084
 date: "2020-04-19T06:20:25Z"
 description: ""
-draft: false
 cover:
   image: images/IMG_20200419_140359-1.jpg
 slug: gyolasagna

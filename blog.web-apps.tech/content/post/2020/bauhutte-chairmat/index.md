@@ -2,7 +2,6 @@
 author: nasa9084
 date: "2020-04-10T15:44:39Z"
 description: ""
-draft: false
 cover:
   image: images/81b9X7AsE3L._AC_SL1500_.jpg
 slug: bauhutte-chairmat

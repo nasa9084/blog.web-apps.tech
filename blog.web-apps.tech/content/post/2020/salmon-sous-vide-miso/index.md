@@ -2,7 +2,6 @@
 author: nasa9084
 date: "2020-03-03T05:30:29Z"
 description: ""
-draft: false
 cover:
   image: images/IMG_20200302_222037-1.jpg
 slug: salmon-sous-vide-miso

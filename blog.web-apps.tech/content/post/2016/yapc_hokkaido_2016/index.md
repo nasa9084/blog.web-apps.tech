@@ -2,7 +2,6 @@
 author: nasa9084
 date: "2016-12-09T16:34:00Z"
 description: ""
-draft: false
 cover:
   image: images/yapc_hokkaido.png
   relative: true

@@ -2,7 +2,6 @@
 author: nasa9084
 date: "2021-02-02T06:49:47Z"
 description: ""
-draft: false
 cover:
   image: images/firefox.png
   relative: true

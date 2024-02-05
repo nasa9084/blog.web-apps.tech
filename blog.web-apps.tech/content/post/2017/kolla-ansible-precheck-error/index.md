@@ -2,7 +2,6 @@
 author: nasa9084
 date: "2017-09-29T14:20:16Z"
 description: ""
-draft: false
 cover:
   image: images/OpenStack_logo.png
   relative: true

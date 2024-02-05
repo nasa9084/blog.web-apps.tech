@@ -2,7 +2,6 @@
 author: nasa9084
 date: "2022-03-20T14:14:15Z"
 description: ""
-draft: false
 cover:
   image: images/git.png
   relative: true

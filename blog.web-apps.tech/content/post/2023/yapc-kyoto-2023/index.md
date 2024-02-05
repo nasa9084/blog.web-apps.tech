@@ -2,7 +2,6 @@
 title: YAPC::Kyoto 2023に参加してきた
 author: nasa9084
 date: 2023-03-21T00:54:00+09:00
-draft: false
 tags:
   - yapc
   - kyoto

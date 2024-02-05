@@ -2,7 +2,6 @@
 author: nasa9084
 date: "2021-10-19T23:49:46Z"
 description: ""
-draft: false
 cover:
   image: images/IMG_1388.jpg
 slug: my-first-apple-watch-series-7

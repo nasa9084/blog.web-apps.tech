@@ -2,7 +2,6 @@
 author: nasa9084
 date: "2021-01-26T06:42:34Z"
 description: ""
-draft: false
 cover:
   image: images/PXL_20210126_053643159-1.jpg
 slug: soundcore-life-q30

@@ -2,7 +2,6 @@
 author: nasa9084
 date: "2018-11-21T02:51:41Z"
 description: ""
-draft: false
 cover:
   image: images/4BC8BFCB-70EA-48DA-A544-E1EB520DE44A.jpg
 slug: line-developer-day-2018

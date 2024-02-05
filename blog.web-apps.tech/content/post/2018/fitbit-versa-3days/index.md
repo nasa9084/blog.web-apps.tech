@@ -2,7 +2,6 @@
 author: nasa9084
 date: "2018-09-04T14:46:50Z"
 description: ""
-draft: false
 cover:
   image: images/fitbit_versa-1.jpg
 slug: fitbit-versa-3days

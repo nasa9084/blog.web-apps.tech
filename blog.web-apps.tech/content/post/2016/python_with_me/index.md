@@ -2,7 +2,6 @@
 author: nasa9084
 date: "2016-12-05T08:13:00Z"
 description: ""
-draft: false
 cover:
   image: images/python.jpg
 slug: python_with_me

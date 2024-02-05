@@ -2,7 +2,6 @@
 author: nasa9084
 date: "2017-08-17T02:06:00Z"
 description: ""
-draft: false
 cover:
   image: images/docker.png
   relative: true

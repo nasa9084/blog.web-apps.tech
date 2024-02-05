@@ -2,7 +2,6 @@
 author: nasa9084
 date: "2021-05-16T15:08:14Z"
 description: ""
-draft: false
 cover:
   image: images/PXL_20210516_135759784-1.jpg
 slug: anker-powerconf-c300

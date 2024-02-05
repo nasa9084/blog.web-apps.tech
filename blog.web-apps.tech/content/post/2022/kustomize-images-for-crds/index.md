@@ -2,7 +2,6 @@
 title: Kustomizeのimages transformerをCustomResourceでも使う
 author: nasa9084
 date: 2022-05-25T18:19:05+09:00
-draft: false
 tags:
   - kubernetes
 cover:

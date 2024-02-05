@@ -2,7 +2,6 @@
 author: nasa9084
 date: "2020-05-20T02:54:27Z"
 description: ""
-draft: false
 cover:
   image: images/----------2020-05-20-11.52.53.png
   relative: true

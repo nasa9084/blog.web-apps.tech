@@ -2,7 +2,6 @@
 author: nasa9084
 date: "2020-06-13T11:27:54Z"
 description: ""
-draft: false
 cover:
   image: images/MVIMG_20200612_175719-1.jpg
 slug: rakuten-mini-unpacking

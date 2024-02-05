@@ -2,7 +2,6 @@
 title: y-or-n for kill modified buffer
 author: nasa9084
 date: 2023-09-26T23:13:06+09:00
-draft: false
 tags:
   - emacs
 cover:

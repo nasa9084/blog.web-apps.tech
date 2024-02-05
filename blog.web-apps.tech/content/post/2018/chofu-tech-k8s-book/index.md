@@ -2,7 +2,6 @@
 author: nasa9084
 date: "2018-09-25T11:04:55Z"
 description: ""
-draft: false
 cover:
   image: images/---------2.png
   relative: true

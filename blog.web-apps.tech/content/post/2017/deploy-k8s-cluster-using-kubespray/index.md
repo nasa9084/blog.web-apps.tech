@@ -2,7 +2,6 @@
 author: nasa9084
 date: "2017-11-30T09:04:06Z"
 description: ""
-draft: false
 cover:
   image: images/kubernetes.png
   relative: true

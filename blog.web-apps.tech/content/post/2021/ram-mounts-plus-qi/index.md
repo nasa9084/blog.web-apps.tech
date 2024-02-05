@@ -2,7 +2,6 @@
 author: nasa9084
 date: "2021-04-27T03:26:23Z"
 description: ""
-draft: false
 cover:
   image: images/IMG_20210424_134921928.jpg
 slug: ram-mounts-plus-qi

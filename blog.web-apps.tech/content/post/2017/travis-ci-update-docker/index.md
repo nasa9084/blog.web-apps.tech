@@ -2,7 +2,6 @@
 author: nasa9084
 date: "2017-10-18T09:17:00Z"
 description: ""
-draft: false
 cover:
   image: images/TravisCI-Full-Color.png
   relative: true

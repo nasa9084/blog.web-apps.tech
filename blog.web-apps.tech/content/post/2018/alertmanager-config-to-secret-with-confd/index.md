@@ -2,7 +2,6 @@
 author: nasa9084
 date: "2018-08-20T08:06:47Z"
 description: ""
-draft: false
 cover:
   image: images/prometheus.png
   relative: true

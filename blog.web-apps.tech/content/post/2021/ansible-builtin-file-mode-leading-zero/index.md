@@ -2,7 +2,6 @@
 author: nasa9084
 date: "2021-12-13T10:45:28Z"
 description: ""
-draft: false
 cover:
   image: images/ansible.png
   relative: true

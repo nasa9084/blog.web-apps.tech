@@ -2,7 +2,6 @@
 author: nasa9084
 date: "2020-02-07T08:19:29Z"
 description: ""
-draft: false
 cover:
   image: images/gopher.png
   relative: true

@@ -2,7 +2,6 @@
 author: nasa9084
 date: "2020-06-06T16:53:33Z"
 description: ""
-draft: false
 cover:
   image: images/IMG_20200606_181702-1.jpg
 slug: ume-2020

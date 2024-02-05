@@ -2,7 +2,6 @@
 author: nasa9084
 date: "2017-07-03T02:04:00Z"
 description: ""
-draft: false
 cover:
   image: images/yapc_fukuoka_2017.png
   relative: true

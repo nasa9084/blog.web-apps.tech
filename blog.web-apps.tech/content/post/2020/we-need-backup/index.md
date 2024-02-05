@@ -2,7 +2,6 @@
 author: nasa9084
 date: "2020-10-06T06:18:33Z"
 description: ""
-draft: false
 slug: we-need-backup
 tags:
   - service

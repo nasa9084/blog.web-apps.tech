@@ -2,7 +2,6 @@
 author: nasa9084
 date: "2017-01-10T17:05:00Z"
 description: ""
-draft: false
 cover:
   image: images/python-1.jpg
 slug: bottle-websocket_with_python3

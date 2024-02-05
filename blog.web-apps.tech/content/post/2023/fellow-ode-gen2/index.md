@@ -2,7 +2,6 @@
 title: Fellow Ode Gen2を買った
 author: nasa9084
 date: 2023-05-11T22:00:00+09:00
-draft: false
 tags:
   - coffee
 cover:

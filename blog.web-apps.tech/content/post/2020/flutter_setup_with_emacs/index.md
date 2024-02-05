@@ -2,7 +2,6 @@
 author: nasa9084
 date: "2020-01-18T15:18:55Z"
 description: ""
-draft: false
 cover:
   image: images/flutter_logo.png
   relative: true

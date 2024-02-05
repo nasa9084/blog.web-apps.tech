@@ -2,7 +2,6 @@
 author: nasa9084
 date: "2018-09-01T14:48:35Z"
 description: ""
-draft: false
 cover:
   image: images/fitbit_versa.jpg
 slug: fitbit-versa

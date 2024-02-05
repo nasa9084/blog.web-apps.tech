@@ -2,7 +2,6 @@
 author: nasa9084
 date: "2019-02-06T07:52:05Z"
 description: ""
-draft: false
 cover:
   image: images/nats-server.png
   relative: true

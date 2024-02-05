@@ -2,7 +2,6 @@
 author: nasa9084
 date: "2018-09-16T17:06:14Z"
 description: ""
-draft: false
 cover:
   image: images/nginx.png
   relative: true

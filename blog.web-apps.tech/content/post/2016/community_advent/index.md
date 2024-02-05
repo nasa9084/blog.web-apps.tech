@@ -2,7 +2,6 @@
 author: nasa9084
 date: "2016-12-17T06:37:00Z"
 description: ""
-draft: false
 cover:
   image: images/digiporo_logo.png
   relative: true

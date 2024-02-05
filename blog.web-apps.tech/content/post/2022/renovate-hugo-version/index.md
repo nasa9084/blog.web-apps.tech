@@ -2,7 +2,6 @@
 title: RenovateでGitHub Actionsで使っているHugoを更新する
 author: nasa9084
 date: 2022-09-27T01:53:45+09:00
-draft: false
 tags:
   - github
 cover:
