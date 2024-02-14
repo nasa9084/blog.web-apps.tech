@@ -35,4 +35,4 @@ serve: ## serve locally for development.
 	@docker stop getogp
 
 new/%: ## create a new article
-	@cd $(DOMAIN); hugo new --kind post --editor=emacs post/$(THIS_YEAR)/$(notdir $@)
+	@cd $(DOMAIN); hugo new --kind post post/$(THIS_YEAR)/$(notdir $@) | sed -E 's/Content dir "(.+)" created/\1/' | tr -d "\n" | pbcopy; pbpaste | xargs open
