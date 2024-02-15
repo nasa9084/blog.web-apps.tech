@@ -2,7 +2,6 @@
 title: Introduce Tree Sitter to Emacs
 author: nasa9084
 date: 2024-02-14T23:20:00+09:00
-draft: true
 tags:
   - emacs
   - tree-sitter
