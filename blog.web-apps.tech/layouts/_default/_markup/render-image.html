@@ -1,0 +1,6 @@
+{{/* based on https://github.com/adityatelange/hugo-PaperMod/blob/b288ede80cbd70151e2f07f2e09ad6258e64f7fa/layouts/_default/_markup/render-image.html  */}}
+{{/* but added image processing */}}
+
+{{ $image := .Page.Resources.Get .Destination }}
+{{ $image := $image.Resize "720x MitchellNetravali" }}
+<img loading="lazy" src="{{ $image.RelPermalink | safeURL }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}" {{ end }} />

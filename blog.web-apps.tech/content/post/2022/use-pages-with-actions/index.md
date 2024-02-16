@@ -16,7 +16,7 @@ slug: use-pages-with-actions
 
 まず、リポジトリのSettings > Pagesから、SourceをGitHub Actionsに変更します。
 
-![](./images/gh-pages-config.png)
+![](images/gh-pages-config.png)
 
 次に、GitHub Actionsのworkflow設定を[actions/starter-workflows](https://github.com/actions/starter-workflows/tree/main/pages)を参考に書き換えます。重要なのは2点で、`actions/upload-pages-artifact`を使って生成済みページをartifactとしてアップロードする点と、`actions/deploy-pages`を使ってGitHub Pagesにデプロイをすることです。
 
