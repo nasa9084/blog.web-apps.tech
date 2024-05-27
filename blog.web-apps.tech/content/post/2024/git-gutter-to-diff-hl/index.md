@@ -2,7 +2,6 @@
 title: git-gutter to diff-hl
 author: nasa9084
 date: 2024-05-24T18:32:40+09:00
-draft: true
 tags:
   - emacs
 cover:
