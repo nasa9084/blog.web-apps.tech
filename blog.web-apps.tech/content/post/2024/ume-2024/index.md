@@ -9,7 +9,7 @@ tags:
 cover:
   image: images/ume.jpg
   relative: true
-slug: ume-2023
+slug: ume-2024
 ---
 
 6月ですよ！今年も梅酒を漬けましたので記録をしておきます。
