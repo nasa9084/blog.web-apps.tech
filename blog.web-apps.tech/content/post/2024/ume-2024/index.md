@@ -2,7 +2,6 @@
 title: 梅仕事2024
 author: nasa9084
 date: 2024-06-03T12:18:34+09:00
-draft: true
 tags:
   - Cooking
   - 梅仕事
