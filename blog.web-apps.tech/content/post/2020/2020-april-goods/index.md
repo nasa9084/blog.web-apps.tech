@@ -3,7 +3,7 @@ author: nasa9084
 date: "2020-04-12T10:05:44Z"
 slug: 2020-april-goods
 tags:
-  - "2020"
+  - 2020
   - gadget
   - home
 title: 2020年3月時点での自宅機材・消耗品類まとめ

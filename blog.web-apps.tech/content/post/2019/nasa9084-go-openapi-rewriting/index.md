@@ -8,8 +8,8 @@ slug: nasa9084-go-openapi-rewriting
 tags:
   - golang
   - openapi
-  - advent  calendar
-  - "2019"
+  - advent calendar
+  - 2019
 title: go-openapi を書き直しています
 ---
 

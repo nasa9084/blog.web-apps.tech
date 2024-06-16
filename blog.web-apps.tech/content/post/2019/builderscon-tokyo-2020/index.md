@@ -7,7 +7,7 @@ cover:
 slug: builderscon-tokyo-2020
 tags:
   - builderscon
-  - "2020"
+  - 2020
   - tokyo
 title: builderscon tokyo 2020やるぞ！という話
 ---

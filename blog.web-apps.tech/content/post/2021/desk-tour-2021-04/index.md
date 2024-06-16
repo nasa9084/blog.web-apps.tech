@@ -6,7 +6,7 @@ cover:
 slug: desk-tour-2021-04
 tags:
   - gadget
-  - "2021"
+  - 2021
 title: Desk Tour 2021.04
 ---
 

@@ -3,7 +3,7 @@ author: nasa9084
 date: "2020-12-23T16:38:13Z"
 slug: 2020-good-buy
 tags:
-  - "2020"
+  - 2020
   - gadget
 title: 2020年買って良かった物
 ---

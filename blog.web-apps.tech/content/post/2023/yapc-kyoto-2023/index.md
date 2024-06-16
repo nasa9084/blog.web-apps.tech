@@ -6,7 +6,7 @@ tags:
   - yapc
   - kyoto
   - perl
-  - "2023"
+  - 2023
   - conference
   - event
 cover:

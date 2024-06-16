@@ -3,7 +3,7 @@ author: nasa9084
 date: "2020-01-08T04:58:54Z"
 slug: 2019-review
 tags:
-  - "2019"
+  - 2019
 title: 2019年の振り返り
 ---
 

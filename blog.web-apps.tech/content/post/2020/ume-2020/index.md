@@ -6,7 +6,7 @@ cover:
 slug: ume-2020
 tags:
   - cooking
-  - "2020"
+  - 2020
   - 梅仕事
 title: 梅仕事2020
 ---

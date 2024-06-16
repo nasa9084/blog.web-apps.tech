@@ -11,7 +11,7 @@ tags:
   - event
   - fukuoka
   - hakata
-  - "2017"
+  - 2017
   - perl
 title: YAPC::Fukuoka 2017 HAKATAに行ってきました
 ---

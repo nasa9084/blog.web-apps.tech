@@ -10,7 +10,7 @@ tags:
   - conference
   - event
   - tokyo
-  - "2016"
+  - 2016
 title: builderscon tokyo 2016 を開催しました！
 ---
 

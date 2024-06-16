@@ -9,7 +9,7 @@ tags:
   - git
   - alias
   - advent calendar
-  - "2018"
+  - 2018
 title: gitにもaliasの指定ができる件
 ---
 

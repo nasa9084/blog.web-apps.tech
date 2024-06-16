@@ -11,7 +11,7 @@ tags:
   - Europe
   - Copenhagen
   - CloudNativeCon
-  - "2018"
+  - 2018
 title: KubeCon + CloudNativeCon Europe 2018にいってきた
 ---
 

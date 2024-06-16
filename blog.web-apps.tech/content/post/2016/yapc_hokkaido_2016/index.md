@@ -9,7 +9,7 @@ tags:
   - yapc
   - hokkaido
   - perl
-  - "2016"
+  - 2016
   - sapporo
   - conference
   - event

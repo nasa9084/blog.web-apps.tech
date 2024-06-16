@@ -7,7 +7,7 @@ slug: line-developer-day-2018
 tags:
   - conference
   - event
-  - "2018"
+  - 2018
   - LINE DEVELOPER DAY
 title: LINE DEVELOPER DAY 2018に参加した
 ---

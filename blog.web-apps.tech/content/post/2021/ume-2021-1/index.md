@@ -6,7 +6,7 @@ cover:
 slug: ume-2021-1
 tags:
   - cooking
-  - "2021"
+  - 2021
   - 梅仕事
 title: 梅仕事2021 (1)
 ---

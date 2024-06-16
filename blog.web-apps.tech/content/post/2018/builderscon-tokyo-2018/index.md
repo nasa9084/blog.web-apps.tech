@@ -8,7 +8,7 @@ slug: builderscon-tokyo-2018
 tags:
   - builderscon
   - tokyo
-  - "2018"
+  - 2018
   - event
   - conference
 title: builderscon tokyo 2018

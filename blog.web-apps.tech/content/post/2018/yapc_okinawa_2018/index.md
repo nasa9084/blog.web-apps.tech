@@ -9,7 +9,7 @@ tags:
   - yapc
   - okinawa
   - perl
-  - "2018"
+  - 2018
   - conference
   - event
 title: YAPC::Okinawa 2018 ONNASONに行ってきました

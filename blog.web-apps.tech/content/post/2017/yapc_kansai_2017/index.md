@@ -10,7 +10,7 @@ tags:
   - kansai
   - perl
   - osaka
-  - "2017"
+  - 2017
   - conference
   - event
 title: YAPC::Kansai 2017 OSAKAに行ってきました
