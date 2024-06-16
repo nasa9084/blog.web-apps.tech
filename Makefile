@@ -34,5 +34,12 @@ serve: ## serve locally for development.
 	@hugo server --baseURL "http://localhost" --environment development --buildDrafts
 	@docker stop getogp
 
+.PHONY: server
+server: serve ## I do this typo frequently
+
+.PHONY: tags
+tags: ## list tags already defined
+	@find -name index.md -exec yq --front-matter extract --unwrapScalar '.tags' {} \; | sort | uniq
+
 new/%: ## create a new article
 	@cd $(DOMAIN); hugo new --kind post post/$(THIS_YEAR)/$(notdir $@) | sed -E 's/Content dir "(.+)" created/\1/' | tr -d "\n" | pbcopy; pbpaste | xargs open
