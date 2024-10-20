@@ -42,6 +42,10 @@ YAPCはPerlのイベントで、“Yet Another Perl Conference"の略です。tw
 
 当日スタッフとしては朝はスポンサーブース設営手伝い、受付手伝い、うろうろしてブースの写真を撮ってDiscordに流す、ゴミ袋やスケッチブックを買いに行く、問題がありそうなところの報告や、人手が足りないところの手伝いをする、などをしました。
 
+トークプロポーザルは残念ながら通らなかったのですが、それをそのまま突っ込んだLTプロポーザルは通り、それなりにウケたので大変良かったですね。
+
+<iframe class="speakerdeck-iframe" style="border: 0px; background: rgba(0, 0, 0, 0.1) padding-box; margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 315;" frameborder="0" src="https://speakerdeck.com/player/07ecbdcb9e4341e4a7f310ab52d9d23b" title="e-book title normalization" allowfullscreen="true" data-ratio="1.7777777777777777"></iframe>
+
 終わった後は最終居残り組として残って、余ったノベルティを懇親会場に運ぶ、ということで車を積極活用しました。
 
 ## 懇親会
