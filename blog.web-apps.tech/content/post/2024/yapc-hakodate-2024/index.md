@@ -1,8 +1,7 @@
 ---
 title: YAPC::Hakodate 2024
 author: nasa9084
-date: 2024-10-20T21:04:47+09:00
-draft: true
+date: 2024-10-21T10:00:00+09:00
 tags:
   - conference
   - event
