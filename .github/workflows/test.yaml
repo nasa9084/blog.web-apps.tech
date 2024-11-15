@@ -1,0 +1,29 @@
+---
+name: Test
+on: [pull_request]
+
+jobs:
+  test_build:
+    runs-on: ubuntu-22.04
+    env:
+      HUGO_VERSION: v0.132.1
+    services:
+      getogp:
+        image: ghcr.io/nasa9084/getogp:v0.0.2
+        ports:
+          - 8080:8080
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+          fetch-depth: 0
+
+      - name: Setup Hugo
+        run: |
+          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/${HUGO_VERSION}/hugo_extended_${HUGO_VERSION#v*}_Linux-amd64.deb \
+          && sudo dpkg -i ${{ runner.temp }}/hugo.deb
+
+      - name: Build
+        working-directory: ./blog.web-apps.tech
+        run: hugo --minify
