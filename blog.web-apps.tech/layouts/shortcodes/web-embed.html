@@ -2,8 +2,17 @@
 
 {{/* LINE Store specific config */}}
 {{ if and (hasPrefix $url "https://store.line.me") (not (strings.HasSuffix $url "/ja")) }}{{ $url = print $url "/ja" }}{{ end }}
-
-{{ $data := getJSON "http://localhost:8080/ogp?url=" $url }}
+{{ $data := dict }}
+{{ $targetURL := printf "http://localhost:8080/ogp?url=%s" $url }}
+{{ with resources.GetRemote $targetURL }}
+  {{ with .Err }}
+    {{ errorf "%s" . }}
+  {{ else }}
+    {{ $data = .Content | transform.Unmarshal }}
+  {{ end }}
+{{ else }}
+  {{ errorf "Unable to get OGP data" }}
+{{ end }}
 {{ $title := $data.title }}
 {{ $image := (index $data.image 0).url}}
 {{ $description := $data.description }}
