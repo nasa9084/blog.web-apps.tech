@@ -86,7 +86,7 @@
 /* CommentSingle */ .chroma .c1 { color: var(--yellow-light); font-style: italic }
 /* CommentSpecial */ .chroma .cs { color: var(--yellow-light); font-style: italic }
 /* CommentPreproc */ .chroma .cp { color: var(--yellow-light); font-style: italic }
-/* CommentPreprocFile */ .chroma .cpf { color: var(--yellow-light; font-style: italic }
+/* CommentPreprocFile */ .chroma .cpf { color: var(--yellow-light); font-style: italic }
 /* Generic */ .chroma .g {  }
 /* GenericDeleted */ .chroma .gd { color: #f92672 }
 /* GenericEmph */ .chroma .ge { font-style: italic }
