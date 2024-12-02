@@ -5,6 +5,7 @@ date: 2024-04-01T23:20:00+09:00
 tags:
   - cloud-native
   - kubernetes
+  - event
 slug: kubernetes-upstream-training-japan-2024-03
 ---
 
