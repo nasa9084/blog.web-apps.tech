@@ -2,7 +2,6 @@
 title: Kubernetes Upstream Training in Japan at CNDW2024
 author: nasa9084
 date: 2024-12-02T23:58:44+09:00
-draft: true
 tags:
   - Kubernetes
   - event
