@@ -4,11 +4,11 @@
 {{ if and (hasPrefix $url "https://store.line.me") (not (strings.HasSuffix $url "/ja")) }}{{ $url = print $url "/ja" }}{{ end }}
 {{ $data := dict }}
 {{ $targetURL := printf "http://localhost:8080/ogp?url=%s" $url }}
-{{ with resources.GetRemote $targetURL }}
+{{ with try (resources.GetRemote $targetURL) }}
   {{ with .Err }}
     {{ errorf "%s" . }}
   {{ else }}
-    {{ $data = .Content | transform.Unmarshal }}
+    {{ $data = .Value.Content | transform.Unmarshal }}
   {{ end }}
 {{ else }}
   {{ errorf "Unable to get OGP data" }}
