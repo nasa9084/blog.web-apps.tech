@@ -35,7 +35,7 @@ Hugoには[shortcode](https://gohugo.io/content-management/shortcodes/)という
 
 と書くと
 
-{{< tweet user="nasa9084" id="1519598305554362370" >}}
+{{< x user="nasa9084" id="1519598305554362370" >}}
 
 の様に展開されます。なので今回は
 

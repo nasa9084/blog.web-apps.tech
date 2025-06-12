@@ -12,7 +12,7 @@ slug: migrate-ghost-to-hugo
 
 いつの頃からだったか、もう記憶もあやふやではあるけれど、ブログプラットフォームとして[Ghost](https://github.com/TryGhost/Ghost)を使っていた。[twitter](https://twitter.com/nasa9084/status/928539254304645121)を見る限り、2017年の11月頃には既にGhostを使っていて、確かこの時はDockerでセットアップしていた様な記憶がある。
 
-{{< tweet user="nasa9084" id="928539254304645121" >}}
+{{< x user="nasa9084" id="928539254304645121" >}}
 
 Ghostは結構更新が頻繁で、特にdocker-composeとかも使わずに運用していたので(使っても良かったんだけど、当時はDBもsqliteを使っていてコンテナ一つと永続ボリューム一つ、という単純な構成だったので使わなくて良いか、と思っていた)微妙にイメージの更新が面倒で、[container-up](/container-up/)というツールを書いてみたりもした。
 
