@@ -1,8 +1,7 @@
 ---
 title: 苗字が変わりました
 author: nasa9084
-date: 2025-09-10T22:27:00+09:00
-draft: true
+date: 2025-09-18T01:30:00+09:00
 tags:
   - 人生
 slug: change-family-name
