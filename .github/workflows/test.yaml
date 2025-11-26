@@ -8,7 +8,7 @@ jobs:
   test_build:
     runs-on: ubuntu-24.04
     env:
-      HUGO_VERSION: v0.148.2
+      HUGO_VERSION: v0.152.2
     services:
       getogp:
         image: ghcr.io/nasa9084/getogp:v0.0.2
