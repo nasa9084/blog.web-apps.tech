@@ -7,7 +7,7 @@
 {{ with try (resources.GetRemote $targetURL) }}
   {{ with .Err }}
     {{ errorf "%s" . }}
-  {{ else }}
+  {{ else with .Value }}
     {{ $data = .Value.Content | transform.Unmarshal }}
   {{ end }}
 {{ else }}
