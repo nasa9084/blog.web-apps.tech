@@ -9,7 +9,6 @@ tags:
   - golang
   - encrypt
   - openpgp
-  - x/crypto/openpgp
 title: x/crypto/openpgpでデータを暗号化する
 ---
 

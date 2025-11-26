@@ -6,8 +6,6 @@ cover:
 slug: anova-hello-world
 tags:
   - Anova
-  - Hello World
-  - Beef
   - cooking
   - sous vide
 title: Anovaが届いたのでHello Worldした

@@ -4,9 +4,9 @@ author: nasa9084
 date: 2025-06-25T20:00:00+09:00
 tags:
   - KubeCon
-  - ClodNativeCon
-  - Conference
-  - Event
+  - CloudNativeCon
+  - conference
+  - event
   - 2025
 cover:
   image: images/kcjp25_black.svg

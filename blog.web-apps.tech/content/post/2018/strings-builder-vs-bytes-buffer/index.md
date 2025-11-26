@@ -7,9 +7,6 @@ cover:
 slug: strings-builder-vs-bytes-buffer
 tags:
   - golang
-  - string
-  - strings
-  - bytes
   - benchmark
 title: strings.Builderとbytes.BufferのWrite系関数のベンチマーク
 ---

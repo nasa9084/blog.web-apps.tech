@@ -7,9 +7,7 @@ cover:
 slug: future-pattern
 tags:
   - golang
-  - goroutine
   - design pattern
-  - future pattern
 title: Future Pattern
 ---
 

@@ -7,7 +7,7 @@ cover:
 slug: i-went-to-kubecon-cloudnativecon-eu-2018
 tags:
   - conference
-  - Kubecon
+  - KubeCon
   - Europe
   - Copenhagen
   - CloudNativeCon

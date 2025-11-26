@@ -8,7 +8,6 @@ slug: go-functional-option-pattern
 tags:
   - golang
   - design pattern
-  - functional option pattern
 title: Functional Option Pattern
 ---
 

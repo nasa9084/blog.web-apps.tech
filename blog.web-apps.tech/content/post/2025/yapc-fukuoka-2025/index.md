@@ -3,12 +3,12 @@ title: YAPC::Fukuoka 2025
 author: nasa9084
 date: 2025-11-25T23:42:00+09:00
 tags:
-  - Conference
-  - Event
-  - YAPC
+  - conference
+  - event
+  - yapc
   - 2025
-  - Fukuoka
-  - Perl
+  - fukuoka
+  - perl
 cover:
   image: images/yapc_fukuoka_2025.png
   relative: true

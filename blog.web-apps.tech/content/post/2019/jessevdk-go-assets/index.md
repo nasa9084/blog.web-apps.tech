@@ -7,8 +7,6 @@ cover:
 slug: jessevdk-go-assets
 tags:
   - golang
-  - assets
-  - package bundler
 title: jessevdk/go-assetsでファイルを埋め込む
 ---
 

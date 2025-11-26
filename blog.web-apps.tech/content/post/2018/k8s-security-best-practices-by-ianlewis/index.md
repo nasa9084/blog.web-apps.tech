@@ -8,7 +8,6 @@ slug: k8s-security-best-practices-by-ianlewis
 tags:
   - kubernetes
   - security
-  - best practices
 title: Kubernetesのセキュリティのベストプラクティス by Ian Lewis
 ---
 

@@ -7,9 +7,6 @@ cover:
 slug: output-columned-text
 tags:
   - golang
-  - stdlib
-  - text/tabwriter
-  - string
 title: テキストを列ごとにそろえて出力する
 ---
 

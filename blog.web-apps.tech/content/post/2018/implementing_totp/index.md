@@ -7,10 +7,6 @@ cover:
 slug: implementing_totp
 tags:
   - golang
-  - crypto/sha1
-  - encoding/binary
-  - crypto/hmac
-  - bytes
   - totp
   - 2fa-auth
   - hotp

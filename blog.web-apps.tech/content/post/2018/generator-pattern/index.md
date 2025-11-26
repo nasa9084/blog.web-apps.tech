@@ -8,8 +8,6 @@ slug: generator-pattern
 tags:
   - golang
   - design pattern
-  - goroutine
-  - generator pattern
 title: Generator Pattern
 ---
 

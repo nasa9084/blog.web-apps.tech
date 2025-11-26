@@ -7,9 +7,6 @@ cover:
 slug: package-specified-context
 tags:
   - golang
-  - context
-  - stdlib
-  - net/http
 title: Application Specific Context
 ---
 

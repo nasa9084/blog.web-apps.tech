@@ -7,8 +7,6 @@ cover:
 slug: first-impression-unubo
 tags:
   - golang
-  - Hello World
-  - PaaS
 title: Unuboでアプリケーションをサクッとデプロイする
 ---
 

@@ -7,8 +7,6 @@ cover:
 slug: benchmark-iowriter-and-fprintf
 tags:
   - golang
-  - io
-  - fmt
   - benchmark
 title: io.Writer.Write()とfmt.Fprintf()のBenchmark
 ---

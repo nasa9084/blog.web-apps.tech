@@ -7,7 +7,6 @@ cover:
 slug: go-smtp-sendmail-without-mailserver
 tags:
   - golang
-  - net/smtp
 title: Goで(メールサーバを用意せずに)メールを送る
 ---
 

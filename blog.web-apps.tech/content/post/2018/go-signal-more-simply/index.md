@@ -7,10 +7,6 @@ cover:
 slug: go-signal-more-simply
 tags:
   - golang
-  - context
-  - goroutine
-  - signal
-  - syscall
 title: 'Golang: 手軽にシグナルをListenしてcallback関数を呼ぶ'
 ---
 

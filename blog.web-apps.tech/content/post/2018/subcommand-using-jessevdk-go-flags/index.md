@@ -7,8 +7,6 @@ cover:
 slug: subcommand-using-jessevdk-go-flags
 tags:
   - golang
-  - command-line
-  - flag
 title: jessevdk/go-flagsでサブコマンドを実装する
 ---
 

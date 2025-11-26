@@ -7,9 +7,6 @@ cover:
 slug: graceful-shutdown-with-syg
 tags:
   - golang
-  - signal
-  - syscall
-  - net/http
 title: sygを使用したgraceful shutdown serverパターン
 ---
 

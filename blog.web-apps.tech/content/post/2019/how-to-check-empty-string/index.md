@@ -6,7 +6,6 @@ cover:
 slug: how-to-check-empty-string
 tags:
   - golang
-  - string
   - benchmark
 title: 空文字列確認は長さをとるべきか？
 ---

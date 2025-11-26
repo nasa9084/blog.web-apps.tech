@@ -3,8 +3,8 @@ title: Tech Rock Festival 2025.11.22
 author: nasa9084
 date: 2025-11-26T21:57:45+09:00
 tags:
-  - Music
-  - Event
+  - music
+  - event
 cover:
   image: images/logo.png
   relative: true

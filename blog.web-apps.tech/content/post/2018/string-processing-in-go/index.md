@@ -7,11 +7,6 @@ cover:
 slug: string-processing-in-go
 tags:
   - golang
-  - string
-  - regexp
-  - strings
-  - strconv
-  - unicode
 title: Go言語で文字列を処理する
 ---
 

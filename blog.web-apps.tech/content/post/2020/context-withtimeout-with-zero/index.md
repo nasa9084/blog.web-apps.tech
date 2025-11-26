@@ -7,8 +7,6 @@ cover:
 slug: context-withtimeout-with-zero
 tags:
   - golang
-  - context
-  - time
 title: context.WithTimeoutに0を与えるとどうなるのか
 ---
 

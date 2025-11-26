@@ -7,9 +7,6 @@ cover:
 slug: how-to-use-sync-waitgroup
 tags:
   - golang
-  - goroutine
-  - sync
-  - stdlib
 title: sync.WaitGroup
 ---
 

@@ -7,9 +7,6 @@ cover:
 slug: benchmark_in_func
 tags:
   - golang
-  - array
-  - slice
-  - string
   - benchmark
 title: array/sliceに対する存在確認関数のベンチマーク
 ---
