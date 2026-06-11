@@ -28,7 +28,7 @@ jobs:
           tags: |
             type=match,pattern=getogp/(.*),group=1
 
-      - uses: docker/build-push-action@v6
+      - uses: docker/build-push-action@v7
         with:
           context: ./getogp
           push: true
