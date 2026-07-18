@@ -14,11 +14,6 @@ security:
   http:
     urls:
       - '^http://localhost:8080'
-      # default settings
-      - '(?i)^https?://[a-z0-9]'
-      - '! ^https?://\d+\.'
-      - '! (?i)localhost'
-      - '! (?i)^https?://[^/?#]*@'
 
 markup:
   goldmark:
