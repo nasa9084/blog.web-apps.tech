@@ -10,6 +10,16 @@ copyright: '&copy; @nasa9084'
 
 googleAnalytics: G-HSVYNY8B1T
 
+security:
+  http:
+    urls:
+      - 'localhost:8080'
+      # default settings
+      - '(?i)^https?://[a-z0-9]'
+      - '! ^https?://\d+\.'
+      - '! (?i)localhost'
+      - '! (?i)^https?://[^/?#]*@'
+
 markup:
   goldmark:
     renderer:
