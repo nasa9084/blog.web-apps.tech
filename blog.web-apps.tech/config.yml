@@ -13,7 +13,7 @@ googleAnalytics: G-HSVYNY8B1T
 security:
   http:
     urls:
-      - 'localhost:8080'
+      - '^http://localhost:8080'
       # default settings
       - '(?i)^https?://[a-z0-9]'
       - '! ^https?://\d+\.'
