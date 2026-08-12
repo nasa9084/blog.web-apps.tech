@@ -14,8 +14,8 @@ cover:
 slug: kubecon-japan-2025
 ---
 
-2025年6月17日/18日に開催された[KubeCon + CloudNativeCon Japan 2025](https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/)に参加してきました。
-また、その前日16日にCo-located Eventとして[Japan Community Day](https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/features-add-ons/co-located-events/#japan-community-day)の一部としてDoc Sprintというイベントを実施しました。
+2025年6月17日/18日に開催された[KubeCon + CloudNativeCon Japan 2025](https://events.linuxfoundation.org/archive/2025/kubecon-cloudnativecon-japan/)に参加してきました。
+また、その前日16日にCo-located Eventとして[Japan Community Day](https://events.linuxfoundation.org/archive/2025/kubecon-cloudnativecon-japan/features-add-ons/co-located-events/#japan-community-day)の一部としてDoc Sprintというイベントを実施しました。
 
 KubeConは[Kubernetes](https://kubernetes.io)のイベントで、Cloud Native Computing Foundation (CNCF)が主催しています。
 日本での開催は初めてということで、コミュニティからの期待も大きかったのですが、結果としては大盛況で、1500枚のチケットが完売だったということです。
