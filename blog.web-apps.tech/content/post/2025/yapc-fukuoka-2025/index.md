@@ -5,7 +5,7 @@ date: 2025-11-25T23:42:00+09:00
 tags:
   - conference
   - event
-  - yapc
+  - YAPC
   - 2025
   - fukuoka
   - perl

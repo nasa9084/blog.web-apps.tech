@@ -6,7 +6,7 @@ cover:
   relative: true
 slug: yapc_okinawa_2018
 tags:
-  - yapc
+  - YAPC
   - okinawa
   - perl
   - 2018

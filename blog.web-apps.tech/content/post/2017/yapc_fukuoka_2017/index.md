@@ -6,7 +6,7 @@ cover:
   relative: true
 slug: yapc_fukuoka_2017
 tags:
-  - yapc
+  - YAPC
   - conference
   - event
   - fukuoka

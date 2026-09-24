@@ -5,7 +5,7 @@ date: 2024-10-21T10:00:00+09:00
 tags:
   - conference
   - event
-  - yapc
+  - YAPC
   - 2024
   - hakodate
   - perl

@@ -5,7 +5,7 @@ date: 2024-02-12T02:51:00+09:00
 tags:
   - conference
   - event
-  - yapc
+  - YAPC
   - 2024
   - hiroshima
   - perl

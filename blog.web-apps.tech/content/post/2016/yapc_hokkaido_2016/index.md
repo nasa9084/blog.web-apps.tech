@@ -6,7 +6,7 @@ cover:
   relative: true
 slug: yapc_hokkaido_2016
 tags:
-  - yapc
+  - YAPC
   - hokkaido
   - perl
   - 2016

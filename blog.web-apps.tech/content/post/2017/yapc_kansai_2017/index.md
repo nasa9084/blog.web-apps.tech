@@ -6,7 +6,7 @@ cover:
   relative: true
 slug: yapc_kansai_2017
 tags:
-  - yapc
+  - YAPC
   - kansai
   - perl
   - osaka
